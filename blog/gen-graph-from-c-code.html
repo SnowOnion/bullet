@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+    <title>从 C 源码生成 函数/模块 调用图 &#8212; 银色子弹</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ablog.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/blog/gen-graph-from-c-code.html" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+    <link rel="apple-touch-icon" href="../_static/logo.png" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="c">
+<h1>从 C 源码生成 函数/模块 调用图<a class="headerlink" href="#c" title="永久链接至标题">¶</a></h1>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 <a class="reference external" href="https://github.com/SilverRainZ/bullet">⛺SilverRainZ/bullet</a> 反馈</p>
+</div>
+<p>前天是操作系统课程设计的截止日期，这意味这 <a class="reference external" href="https://github.com/SilverRainZ/OS67">OS67 这个坑</a>
+已经告一段落了，接下来的事情是写报告，不过鉴于 OS 的老师这一学期都没出现过，
+报告应该可以随便水过去，据说连答辩都可以省掉了……</p>
+<p>前面说的都是废话，报告里要求画出函数调用图，于是就打算直接用软件生成好了。</p>
+<p>用到的软件有 graphviz，egypt<sup>AUR</sup>，cinclude2dot<sup>AUR</sup>，
+<a class="reference internal" href="../about/friends.html#friend-farseerfc" title="friend farseerfc"><code class="xref any any-friend docutils literal notranslate"><span class="pre">👤farseerfc</span></code></a> 推荐了 <a class="reference external" href="http://makepp.sourceforge.net/">makepp</a>，
+然而 AUR 里面没有就作罢了。</p>
+<section id="id1">
+<h2>生成函数调用图<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>安装 egypt 直接 <code class="code docutils literal notranslate"><span class="pre">yaourt</span> <span class="pre">-S</span> <span class="pre">egypt</span></code> 即可，
+之后在 makefile 里面的 CFLAG 里面增加一句 <code class="code docutils literal notranslate"><span class="pre">-fdump-rtl-expand</span></code>，
+再 make 一次，gcc 会在 bulid 目录下生成 <code class="code docutils literal notranslate"><span class="pre">*.expand</span></code> 文件，
+这是 egypt 生成 call graph 所需要的信息。</p>
+<blockquote>
+<div><p>我这里生成的文件的后缀都是 <code class="code docutils literal notranslate"><span class="pre">*.192r.expand</span></code>，并不知道是什么意思……</p>
+</div></blockquote>
+<p>之后执行 <code class="code docutils literal notranslate"><span class="pre">egypt</span> <span class="pre">*.expand</span> <span class="pre">&gt;</span> <span class="pre">main.dot</span></code>
+就能生成代表整个项目里所有的 C 函数的调用关系的 dot 文件了。</p>
+<p>dot 文件大概长这样，每一行代表连接两个顶点的边
+用 Graphviz 的 dot 命令可以从 dot 文件生成 png。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>digraph callgraph {
+&quot;move_cur&quot; -&gt; &quot;outb&quot; [style=solid];
+&quot;cls&quot; -&gt; &quot;move_cur&quot; [style=solid];
+&quot;iunlock&quot; -&gt; &quot;panic&quot; [style=solid];
+&quot;puts&quot; -&gt; &quot;putchar&quot; [style=solid];
+&quot;puts&quot; -&gt; &quot;_puts&quot; [style=solid];
+&quot;sys_sleep&quot; -&gt; &quot;argint&quot; [style=solid];
+&quot;sys_sleep&quot; -&gt; &quot;sleep&quot; [style=solid];
+&quot;sys_unlink&quot; -&gt; &quot;iupdate&quot; [style=solid];
+    ...
+</pre></div>
+</div>
+<p>执行 <code class="code docutils literal notranslate"><span class="pre">dot</span> <span class="pre">main.dot</span> <span class="pre">-Tpng</span> <span class="pre">-o</span> <span class="pre">main.png</span></code>，于是从整个 OS67 生成了这么一张可怕的图片：</p>
+<img alt="" src="../_images/os67-func-call-graph.png" />
+<p>这么大的图片用在报告里显然是不行的，不过函数间的调用逻辑也就那样了，
+没法做什么简化，所以对于整个项目我只生成了后面的模块调用图。</p>
+<p>既然整个项目的图太大了，那就生成模块内部的调用图好了，OS67 的项目结构长这样，
+模块和文件夹基本上是一一对应的：</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tree -d
+<span class="go">.</span>
+<span class="go">├── bin</span>
+<span class="go">│   └── rootfs</span>
+<span class="go">├── boot    # bootloader</span>
+<span class="go">├── dev     # 设备文件</span>
+<span class="go">├── drv     # 驱动程序</span>
+<span class="go">├── fs      # 文件系统</span>
+<span class="go">├── inc     # 头文件</span>
+<span class="go">├── kern    # 保护模式相关代码</span>
+<span class="go">├── libs    # 库文件</span>
+<span class="go">├── lst</span>
+<span class="go">├── mm      # 内存管理</span>
+<span class="go">├── notes</span>
+<span class="go">├── proc    # 进程管理</span>
+<span class="go">├── script  # 各种配置文件和链接脚本</span>
+<span class="go">└── usr     # 用户例程</span>
+</pre></div>
+</div>
+<p>需要生成调用图的模块有 <code class="code docutils literal notranslate"><span class="pre">dev</span> <span class="pre">drv</span> <span class="pre">fs</span> <span class="pre">kern</span> <span class="pre">libs</span> <span class="pre">mm</span> <span class="pre">proc</span></code>，来写个小脚本自动生成好了：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/sh</span>
+<span class="nv">mods</span><span class="o">=</span><span class="s1">&#39;dev drv fs kern libs mm proc&#39;</span>
+
+<span class="k">for</span> arg <span class="k">in</span> <span class="nv">$mods</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nv">files</span><span class="o">=</span><span class="sb">`</span>ls -1 <span class="nv">$arg</span>/ <span class="p">|</span> grep <span class="s1">&#39;\.c&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/\.c/.c.192r.expand/g&#39;</span><span class="sb">`</span>
+    <span class="nb">cd</span> bin
+    egypt <span class="nv">$files</span> &gt; <span class="nv">$arg</span>.dot
+    dot <span class="nv">$arg</span>.dot -Tpng -o ../<span class="nv">$arg</span>.png
+    <span class="nb">cd</span> ..
+<span class="k">done</span>
+</pre></div>
+</div>
+<p>生成出来的图片除了 fs 模块比较大之外其他都还行，下面是 kern 模块的 call graph
+（用 kolourpaint 做了点调整）：</p>
+<img alt="" src="../_images/os67-kern-func-call-graph.png" />
+<blockquote>
+<div><p>注意：这里没有处理 boot 模块和 usr 模块，因为 boot 里面都是汇编程序，
+而 usr 里面的用户程序都有 main 函数会导致冲突而画出奇怪的图，所以就没有包含了。</p>
+</div></blockquote>
+<p><span class="sphinxnotes-strike">另外 graphviz 还支持把 dot 文件转成 dia 格式，所以如果对各个顶点的位置不满意的话，我们可以用 Dia 来调整。</span></p>
+<blockquote>
+<div><p>刚说完就被打脸了，graphviz 的 dia 输出支持在 2.26.0 的时候被移除了。</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>生成模块调用图<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>接下来来生成模块间的调用图吧，
+我在网上找到一个根据 #include 生成文件间调用关系的 dot 的 prel 脚本：
+<a class="reference external" href="https://www.flourish.org/cinclude2dot/">flourish.org/cinclude2dot/</a>。</p>
+<blockquote>
+<div><p>AUR 里面没有所以顺手给打了一个包：
+<code class="code docutils literal notranslate"><span class="pre">cinclude2dot\</span> <span class="pre">:sup:`AUR</span></code> &lt;<a class="reference external" href="https://aur.archlinux.org/packages/cinclude2dot/">https://aur.archlinux.org/packages/cinclude2dot/</a>&gt;`_，
+所以现在也可以直接用 yaourt 装 cinclude2dot 了。</p>
+</div></blockquote>
+<p>执行 <code class="code docutils literal notranslate"><span class="pre">cinclude2dot</span> <span class="pre">--include</span> <span class="pre">inc</span> <span class="pre">&gt;</span> <span class="pre">main.dot</span></code> 会在当前目录递归地找 <code class="code docutils literal notranslate"><span class="pre">*.c</span></code> 文件，
+然后在 <code class="code docutils literal notranslate"><span class="pre">inc</span></code> 目录找对应的头文件，生成 c 文件到头文件包含关系的 dot 文件。
+如果启用 <code class="code docutils literal notranslate"><span class="pre">--merge</span> <span class="pre">module</span></code> 的话，会把 <code class="code docutils literal notranslate"><span class="pre">xxx.c</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">xxx.h</span></code> 合并为一个模块 <code class="code docutils literal notranslate"><span class="pre">xxx</span></code>，
+然而这样生成的图片还是太大了点。</p>
+<img alt="" src="../_images/os67-mod-include-graph.png" />
+<p>cinclude2dot 还提供了一个 <code class="code docutils literal notranslate"><span class="pre">--merge</span> <span class="pre">directory</span></code> 选项，把相同目录的文件合并为一个模块，
+这正是我想要的功能，然而这样生成的图过分简单，
+所有的目录都指向了存放头文件的目录 <code class="code docutils literal notranslate"><span class="pre">inc</span></code>。试了一下 directory 和 module 选项也不能一起用，
+果然还是得自己在 dot 文件上改一改。</p>
+<p>执行 <code class="code docutils literal notranslate"><span class="pre">cinclude2dot</span> <span class="pre">--include</span> <span class="pre">inc</span> <span class="pre">--merge</span> <span class="pre">module</span> <span class="pre">&gt;</span> <span class="pre">$dotfile</span></code>，得到各个「文件」间的调用关系。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>digraph &quot;source tree&quot; {
+    &quot;ls&quot; -&gt; &quot;usys&quot;
+    &quot;tty&quot; -&gt; &quot;printk&quot;
+    &quot;ide&quot; -&gt; &quot;isr&quot;
+    &quot;dev&quot; -&gt; &quot;tty&quot;
+    &quot;isr&quot; -&gt; &quot;vmm&quot;
+    &quot;cinit&quot; -&gt; &quot;uio&quot;
+    &quot;p2i&quot; -&gt; &quot;type&quot;
+    &quot;proc&quot; -&gt; &quot;isr&quot;
+    &quot;fstest&quot; -&gt; &quot;string&quot;
+    &quot;timer&quot; -&gt; &quot;isr&quot;
+    ...
+</pre></div>
+</div>
+<p>如果 dev/tty.c 包含了 inc/printk.h，说明它调用了 libs/printk.c 里的函数，
+那就有关系 <code class="code docutils literal notranslate"><span class="pre">&quot;tty&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;printk&quot;</span></code>，
+那可以考虑把文件名替换为该文件所在的目录名，那关系就变成了 <code class="code docutils literal notranslate"><span class="pre">&quot;dev&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;libs&quot;</span></code>。</p>
+<p>这样替换要注意的是：</p>
+<ul class="simple">
+<li><p>不能将头文件目录当成一个模块，如 <code class="code docutils literal notranslate"><span class="pre">&quot;tty&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;printk&quot;</span></code> 的关系的右边本来就是一个头文件，
+在这里它应当属于 libs 模块而不属于 inc，
+如果强行加入 inc 的话结果就和上面用 <code class="code docutils literal notranslate"><span class="pre">--merge</span> <span class="pre">directory</span></code> 的效果差不多了：
+每个顶点会都指向 inc</p></li>
+<li><p>排除 inc 后，要注意的是有些只包含宏定义的头文件并没有对应的 <code class="code docutils literal notranslate"><span class="pre">*.c</span></code> 文件，
+比如上面的 <code class="code docutils literal notranslate"><span class="pre">&quot;p2i&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;type&quot;</span></code> 存在 inc/type.h ，但是并没有 type.c 这么一个文件，
+那么这一行应当删除掉</p></li>
+<li><p>将文件名替换成目录名后会出现重复的项目，<code class="code docutils literal notranslate"><span class="pre">&quot;ide&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;printk&quot;</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">&quot;vga&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;printk&quot;</span></code>
+替换后的结果都是 <code class="code docutils literal notranslate"><span class="pre">&quot;drv&quot;</span> <span class="pre">-&gt;</span> <span class="pre">&quot;libs&quot;</span></code>，需要去重</p></li>
+</ul>
+<p>把这些事情交给脚本吧，从每个要统计的模块（目录）里面取得文件列表，
+把文件名替换为目录名，去除单独的 <code class="code docutils literal notranslate"><span class="pre">*.h</span></code> 文件对应的行，去除重复行。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/sh</span>
+
+<span class="nv">mods</span><span class="o">=</span><span class="s1">&#39;kern drv proc mm usr dev fs libs&#39;</span>
+<span class="nv">dotfile</span><span class="o">=</span>main.dot
+
+cinclude2dot --include inc --merge module &gt; <span class="nv">$dotfile</span>
+<span class="k">for</span> arg <span class="k">in</span> <span class="nv">$mods</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nv">files</span><span class="o">=</span><span class="sb">`</span>ls -1 <span class="nv">$arg</span> <span class="p">|</span> cut -f <span class="m">1</span> -d <span class="s1">&#39;.&#39;</span><span class="sb">`</span>
+    <span class="k">for</span> f <span class="k">in</span> <span class="nv">$files</span><span class="p">;</span> <span class="k">do</span>
+        sed -i <span class="s2">&quot;s/\&quot;</span><span class="nv">$f</span><span class="s2">\&quot;/\&quot;</span><span class="nv">$arg</span><span class="s2">\&quot;/g&quot;</span> <span class="nv">$dotfile</span>
+    <span class="k">done</span>
+<span class="k">done</span>
+<span class="nv">files</span><span class="o">=</span><span class="sb">`</span>ls -1 inc <span class="p">|</span> cut -f <span class="m">1</span> -d <span class="s1">&#39;.&#39;</span><span class="sb">`</span>
+<span class="k">for</span> f <span class="k">in</span> <span class="nv">$files</span><span class="p">;</span> <span class="k">do</span> sed -i <span class="s2">&quot;/</span><span class="nv">$f</span><span class="s2">/d&quot;</span> <span class="nv">$dotfile</span><span class="p">;</span> <span class="k">done</span>
+awk <span class="s1">&#39; !x[$0]++&#39;</span> <span class="nv">$dotfile</span> &gt; tmpfile
+mv tmpfile <span class="nv">$dotfile</span>
+dot <span class="nv">$dotfile</span> -Tpng -o <span class="si">${</span><span class="nv">dotfile</span><span class="p">%.*</span><span class="si">}</span>.png
+</pre></div>
+</div>
+<p>最后我们得到了一张还算不错的， OS67 的模块调用关系图：</p>
+<img alt="" src="../_images/os67-mod-include-graph-good.png" />
+<p>好困睡觉。</p>
+<div class="topic">
+<p class="topic-title">评论</p>
+<p>如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/blog/gen-graph-from-c-code" data-title="从 C 源码生成 函数/模块 调用图" id="isso-thread"></section></div>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="2015-huashangctf-re300.html">
+      <i class="fa fa-arrow-circle-left"></i> 2015 华山杯 CTF Reverse 300
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="overthewire-leviathan.html">
+      OverTheWire Leviathan <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Yes silver bullet here.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=SilverRainZ&repo=bullet&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+  
+<h2>
+   <i class="fa fa-calendar"></i>
+  2015-12-25 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="author/shengyu-zhang.html">Shengyu Zhang</a>  
+</li>
+  
+<li id="language">
+  <span
+    ><i class="fa-fw fa fa-language"></i></span
+  >
+   
+  <a href="language/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87.html">简体中文</a>  
+</li>
+  
+<li id="tags">
+  <span
+    ><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
+  >
+   
+  <a href="tag/c.html">C</a>  
+</li>
+ 
+</ul>
+
+  <div>
+    <h3><a href="../index.html">目录</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">从 C 源码生成 函数/模块 调用图</a><ul>
+<li><a class="reference internal" href="#id1">生成函数调用图</a></li>
+<li><a class="reference internal" href="#id2">生成模块调用图</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+<h3>
+  <a href="../blog.html">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="funtional-programming-in-go-generics.html"
+      >27 October - 函数式编程在 Go 泛型下的实用性探索</a
+    >
+  </li>
+  
+  <li>
+    <a href="xzzh-after-40-yrs.html"
+      >03 July - 四十年后再看西藏组画</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx-as-note-taking-system-2.html"
+      >25 May - 我如何用 Sphinx 建立笔记系统（二）系统架构</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx-as-note-taking-system-1.html"
+      >24 May - 我如何用 Sphinx 建立笔记系统（一）选择 Sphinx 的理由</a
+    >
+  </li>
+  
+  <li>
+    <a href="new-boy.html"
+      >21 March - 嘿，我去 2010</a
+    >
+  </li>
+  
+</ul>
+
+<h3><a href="tag.html">Tags</a></h3>
+<style type="text/css">
+  ul.ablog-cloud {
+    list-style: none;
+    overflow: auto;
+  }
+  ul.ablog-cloud li {
+    float: left;
+    height: 20pt;
+    line-height: 18pt;
+    margin-right: 5px;
+  }
+  ul.ablog-cloud a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  li.ablog-cloud-1 {
+    font-size: 80%;
+  }
+  li.ablog-cloud-2 {
+    font-size: 95%;
+  }
+  li.ablog-cloud-3 {
+    font-size: 110%;
+  }
+  li.ablog-cloud-4 {
+    font-size: 125%;
+  }
+  li.ablog-cloud-5 {
+    font-size: 140%;
+  }
+</style>
+<ul class="ablog-cloud">
+   
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/arch-linux.html">Arch Linux</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/c.html">C</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/ctf.html">CTF</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/gsoc.html">GSoC</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/gtk.html">GTK</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/golang.html">Golang</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/haskell.html">Haskell</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/irc.html">IRC</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/isso.html">Isso</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/linux.html">Linux</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/makefile.html">Makefile</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/os.html">OS</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/python.html">Python</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/reverse.html">Reverse</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/sphinx.html">Sphinx</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/srain.html">Srain</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/teeworlds.html">Teeworlds</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/vim.html">Vim</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/windows.html">Windows</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/restructuredtext.html">reStructuredText</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B.html">函数式编程</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%8F%98%E6%9B%B4.html">变更</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%A4%9A%E8%AF%B4.html">多说</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%B1%95%E8%A7%88.html">展览</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%94%9F%E6%B4%BB.html">生活</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%9E%8E%E6%89%AF.html">瞎扯</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F.html">笔记系统</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%BB%98%E7%94%BB.html">绘画</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E8%AE%BE%E5%A4%87.html">设备</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E9%99%88%E4%B8%B9%E9%9D%92.html">陈丹青</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="category.html">Categories</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="category/gsoc-2016.html">GSoc 2016 (2)</a>
+  </li>
+    
+  <li>
+    <a href="category/%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8-sphinx-%E5%BB%BA%E7%AB%8B%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F.html">我如何用 Sphinx 建立笔记系统 (2)</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="archive.html">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="2021.html">2021 (5)</a>
+  </li>
+    
+  <li>
+    <a href="2020.html">2020 (2)</a>
+  </li>
+    
+  <li>
+    <a href="2017.html">2017 (2)</a>
+  </li>
+    
+  <li>
+    <a href="2016.html">2016 (6)</a>
+  </li>
+    
+  <li>
+    <a href="2015.html">2015 (18)</a>
+  </li>
+   
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020-2022, Shengyu Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/blog/gen-graph-from-c-code.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/SilverRainZ/bullet" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

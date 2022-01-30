@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+    <title>七月 &#8212; 银色子弹</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/ablog.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/misc/2021/07.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="六月" href="06.html" />
+    <link rel="prev" title="八月" href="08.html" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+    <link rel="apple-touch-icon" href="../../_static/logo.png" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="id1">
+<h1>七月<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="contents local topic" id="id2">
+<ul class="simple">
+<li><p><a class="reference internal" href="#b" id="id4">毛剑 - B站高可用架构实践</a></p></li>
+<li><p><a class="reference internal" href="#ebpf" id="id5">eBPF</a></p></li>
+<li><p><a class="reference internal" href="#zbs-smartx" id="id6">ZBS：SmartX 分布式块存储 - 元数据篇</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id7">素描研究群 作业点评</a></p></li>
+</ul>
+</div>
+<section id="b">
+<h2>毛剑 - B站高可用架构实践<a class="headerlink" href="#b" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Date</dt>
+<dd class="field-odd"><p>2021-07-18</p>
+</dd>
+<dt class="field-even">URL</dt>
+<dd class="field-even"><p><a class="reference external" href="https://zhuanlan.zhihu.com/p/139258985">https://zhuanlan.zhihu.com/p/139258985</a></p>
+</dd>
+</dl>
+<dl>
+<dt>负载均衡</dt><dd><ul class="simple">
+<li><p>前端负载均衡 以 DNS 为主</p>
+<ul>
+<li><p>尽量选择最近节点</p></li>
+<li><p>基于带宽策略调度选择 API 进入机房</p></li>
+<li><p>基于 <em>可用服务容量</em> 平衡流量</p></li>
+</ul>
+</li>
+<li><p>数据中心内部负载均衡</p>
+<ul>
+<li><p>均衡流量分发</p></li>
+<li><p><em>可靠识别异常节点</em></p></li>
+<li><p>scale-out，增加同质节点以扩容</p></li>
+<li><p>减少错误，提高可用性</p></li>
+</ul>
+</li>
+</ul>
+<p>为客户端分配 backend 子集：<a class="reference external" href="https://duckduckgo.com/?q=Deterministic Subsetting">🔍Deterministic Subsetting</a></p>
+<p>JQS（最闲轮训）负载均衡算法</p>
+</dd>
+<dt>限流</dt><dd><ul class="simple">
+<li><p>分布式限流： Quota Server</p></li>
+<li><p>客户端限流</p></li>
+</ul>
+<p>过载保护</p>
+</dd>
+<dt>重试</dt><dd><ul class="simple">
+<li><p>要限制重试的次数，以及基于重试分布的策略</p></li>
+<li><p>只应该在失败层进行重试，当重试仍然失败时，我们需要全局约定错误码，避免级联重试</p></li>
+<li><p>使用随机化、指数型递增的充实周期，参考 Exponential Backoff 和 Jitter</p></li>
+<li><p>设定重试速率指标（？），用于诊断故障</p></li>
+</ul>
+<p>客户端限速</p>
+</dd>
+<dt>超时</dt><dd><ul class="simple">
+<li><p>进程内超时控制</p></li>
+<li><p>跨进程超时控制（依赖 RPC 框架）</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">名词解释</p>
+<dl class="any">
+<dt class="sig sig-object any" id="term-8a7305e">
+<span class="sig-name descname"><span class="pre">BFE</span></span><a class="headerlink" href="#term-8a7305e" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">领域</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-计算机" title="term 计算机"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">计算机</span></code></a></p>
+</dd>
+</dl>
+<p>这里说的是 Bilibili Front End，理解为边缘节点的 proxy 即可</p>
+</dd></dl>
+
+<dl class="any">
+<dt class="sig sig-object any" id="term-abb5a72">
+<span class="sig-name descname"><span class="pre">SLE</span></span><a class="headerlink" href="#term-abb5a72" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">领域</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-计算机" title="term 计算机"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">计算机</span></code></a></p>
+</dd>
+</dl>
+<p>Server Load Balancing</p>
+</dd></dl>
+
+<dl class="any">
+<dt class="sig sig-object any" id="term-30d4876">
+<span class="sig-name descname"><span class="pre">BFF</span></span><a class="headerlink" href="#term-30d4876" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">领域</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-计算机" title="term 计算机"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">计算机</span></code></a></p>
+</dd>
+</dl>
+<p>Backend for Frontend</p>
+</dd></dl>
+
+</section>
+<section id="ebpf">
+<h2>eBPF<a class="headerlink" href="#ebpf" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">URL</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://blog.fleeto.us/post/what-is-ebpf/">https://blog.fleeto.us/post/what-is-ebpf/</a></p>
+</dd>
+</dl>
+</section>
+<section id="zbs-smartx">
+<h2>ZBS：SmartX 分布式块存储 - 元数据篇<a class="headerlink" href="#zbs-smartx" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Date</dt>
+<dd class="field-odd"><p>2021-07-28</p>
+</dd>
+<dt class="field-even">URL</dt>
+<dd class="field-even"><p><a class="reference external" href="https://zhuanlan.zhihu.com/p/36138609">https://zhuanlan.zhihu.com/p/36138609</a></p>
+</dd>
+</dl>
+<dl>
+<dt>分布式存储中通常需要解决的问题：</dt><dd><ul>
+<li><p>元数据服务</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>集群成员管理</p></li>
+<li><p>数据寻址</p></li>
+<li><p>副本分配</p></li>
+<li><p>负载均衡</p></li>
+<li><p>心跳</p></li>
+<li><p>垃圾回收</p></li>
+<li><p>…</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>数据存储引擎</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>单机存储</p></li>
+<li><p>本地磁盘的管理</p></li>
+<li><p>磁盘故障处理</p></li>
+<li><p>…</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>一致性协议</p></li>
+</ul>
+</dd>
+<dt>元数据服务</dt><dd><dl>
+<dt>需求</dt><dd><ul>
+<li><p>可靠性</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>多副本</p></li>
+<li><p>故障转移（Failover）</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>高性能</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>响应时间短</p></li>
+<li><p>高吞吐</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>轻量级</p></li>
+</ul>
+</dd>
+<dt>解决方案</dt><dd><ul class="simple">
+<li><p>LevelDB + ZooKeeper</p></li>
+<li><p>Log Replication</p></li>
+</ul>
+<p>Meta Server Leader 将数据库 log 操作写入 Zk，写入成功后将修改提交到本地 LevelDB，Meta Server Standby 从 Zk 读取 log 提交到本地 LevelDB</p>
+</dd>
+<dt>故障转移</dt><dd><p>Leader 发生故障，其他 Meta Server 再次进行选主，新选的 Leader 会从 Zk 同步所有未消耗的 log，提交后则对外提供服务</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2>素描研究群 作业点评<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Date</dt>
+<dd class="field-odd"><p>2021-07-30</p>
+</dd>
+</dl>
+<p>有温度的画面。</p>
+<p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨霍克尼</span></code> 的人物写生</p>
+<div class="topic">
+<p class="topic-title">评论</p>
+<p>如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/misc/2021/07" data-title="七月" id="isso-thread"></section></div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Yes silver bullet here.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=SilverRainZ&repo=bullet&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>导航</h3>
+<p class="caption" role="heading"><span class="caption-text">笔记</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/zxsys/index.html">造型实验室</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/artstory/index.html">增量艺术史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/books/index.html">读书笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/music-theory/index.html">乐理笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/6-lectures-on-sketch.html">素描六讲</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/2021-interview/index.html">2021 面试记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/docutils/index.html">Docutils 文档阅读</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/go-internal/index.html">Golang Internal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/leetcode/index.html">Leetcode 刷题记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/wizard/index.html">配置向导</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/writeups/index.html">Capture the Flag</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">博客</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blog/index.html">博客首页</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">手册</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sphinx/index.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/awk.html">Awk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gdb.html">GDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gpg.html">GnuPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/grep.html">Grep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/irc.html">IRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/krita.html">Krita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/latex.html">LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/lily.html">LilyPond</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/magick.html">ImageMagick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/make.html">Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/pacman.html">Pacman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/py.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/rst.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sh.html">Shell Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/vim.html">Vim</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">随记</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../2022/index.html">2022</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2021</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="12.html">十二月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">十一月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">十月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html">九月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html">八月</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">七月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html">六月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">五月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">四月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html">三月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">二月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html">一月</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2020/index.html">2020</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2017/index.html">2017</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">收集室</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/github-halloween.html">Github 万圣节彩蛋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/art-works/index.html">Art Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/scores/index.html">乐谱夹</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/me.html">我</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/site.html">本站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/friends.html">友人帐</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/resume.html">简历</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">2021</a><ul>
+      <li>Previous: <a href="08.html" title="上一章">八月</a></li>
+      <li>Next: <a href="06.html" title="下一章">六月</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020-2022, Shengyu Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/misc/2021/07.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/SilverRainZ/bullet" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

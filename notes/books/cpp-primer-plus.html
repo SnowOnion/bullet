@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+    <title>C++ Primer Plus &#8212; 银色子弹</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/ablog.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/notes/books/cpp-primer-plus.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="查尔斯巴尔格素描教程" href="drawing-course-of-charles-bargue-and-jean-leon-gerome.html" />
+    <link rel="prev" title="哈默手稿" href="codex-hammer.html" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+    <link rel="apple-touch-icon" href="../../_static/logo.png" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section class="any" id="c-primer-plus">
+<span id="book-9787115279460"></span><h1>C++ Primer Plus<a class="headerlink" href="#c-primer-plus" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">ISBN</dt>
+<dd class="field-odd"><p>9787115279460</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>因为懒所以跳着看，记下一些感觉需要记的东西，但是看起来似乎还是会一遗漏很多东西啊……</p>
+</div>
+<section id="ch3">
+<h2>ch3 处理数据<a class="headerlink" href="#ch3" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><p>使用 <code class="code docutils literal notranslate"><span class="pre">cout</span> <span class="pre">&lt;&lt;</span> <span class="pre">hex;</span></code> 控制程序以 16 进制输出数字，类似的控制符有
+<code class="code docutils literal notranslate"><span class="pre">oct</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">dec</span></code> 如果想要声明变量 <code class="code docutils literal notranslate"><span class="pre">hex</span></code> 则要用 <code class="code docutils literal notranslate"><span class="pre">std::hex</span></code>
+来表示该控制符</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">int</span> <span class="pre">func(void)</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">int</span> <span class="pre">func()</span></code> 都表示该程序不接受任何参数</p>
+<blockquote>
+<div><p>NOTE: 在 C语言中， <code class="code docutils literal notranslate"><span class="pre">int</span> <span class="pre">func()</span></code> 则表示接受任意多的参数</p>
+</div></blockquote>
+</li>
+<li><p>强制类型转换：</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>列表初始化（list-initialztion）： 不允许使用变量，不允许 narrowing
+（即往更小的数据类型转换）</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span><span class="w">     </span><span class="c1">// allowed</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span><span class="w">       </span><span class="c1">// allowed: C++ 的列表初始化可省略等号，下同</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">};</span><span class="w">       </span><span class="c1">// NOT allowed</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">111111</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// NOT allowed</span>
+</pre></div>
+</div>
+</section>
+<section id="ch4">
+<h2>ch4 复合类型<a class="headerlink" href="#ch4" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>若初始化数组时只指定了部分元素，余下的元素都会被置 0</p></li>
+<li><p>字符串拼接： 任意两个以空白符号分隔的字符串可会被自动合并</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;aaa&quot;</span><span class="w"> </span><span class="s">&quot;bbb&quot;</span><span class="w">  </span><span class="o">&lt;=&gt;</span><span class="w"> </span><span class="s">&quot;aaabbb</span><span class="se">\0</span><span class="s">&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">cin</span> <span class="pre">&lt;&lt;</span> <span class="pre">str</span></code> 的读取以空白符号为终点，使用
+<code class="code docutils literal notranslate"><span class="pre">cin.getline(str,</span> <span class="pre">size)</span></code> 可破： 读取指定数目，遇到换行停止，而
+<code class="code docutils literal notranslate"><span class="pre">cin.get(str,</span> <span class="pre">size)</span></code> 则不丢弃换行</p></li>
+<li><p>C++ 风格的字符串：<code class="code docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;string&gt;</span></code> 可以用 <code class="code docutils literal notranslate"><span class="pre">+</span></code> 拼接，更加安全</p></li>
+<li><p>声明结构体变量允许省略 <code class="code docutils literal notranslate"><span class="pre">struct</span></code> 关键字</p></li>
+<li><p>不允许直接将整数赋给指针</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xb800</span><span class="p">;</span><span class="w">  </span><span class="c1">// no allowed</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="mh">0xb800</span><span class="p">;</span><span class="w">  </span><span class="c1">// allowed</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>使用 new 分配内存，delete 回收内存：</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">;</span><span class="w"></span>
+<span class="k">delete</span><span class="w"> </span><span class="n">ptr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">parr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w"></span>
+<span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">parr</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>new 和 delete 要一一对应</p>
+</section>
+<section id="ch5">
+<h2>ch5 循环和关系表达式<a class="headerlink" href="#ch5" title="永久链接至标题">¶</a></h2>
+<p>新的 for 语法：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">})</span><span class="w"> </span><span class="p">{...}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="topic">
+<p class="topic-title">评论</p>
+<p>如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/notes/books/cpp-primer-plus" data-title="C++ Primer Plus" id="isso-thread"></section></div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Yes silver bullet here.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=SilverRainZ&repo=bullet&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>导航</h3>
+<p class="caption" role="heading"><span class="caption-text">笔记</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../zxsys/index.html">造型实验室</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../artstory/index.html">增量艺术史</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">读书笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../music-theory/index.html">乐理笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6-lectures-on-sketch.html">素描六讲</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2021-interview/index.html">2021 面试记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docutils/index.html">Docutils 文档阅读</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go-internal/index.html">Golang Internal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../leetcode/index.html">Leetcode 刷题记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wizard/index.html">配置向导</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writeups/index.html">Capture the Flag</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">博客</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blog/index.html">博客首页</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">手册</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sphinx/index.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/awk.html">Awk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gdb.html">GDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gpg.html">GnuPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/grep.html">Grep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/irc.html">IRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/krita.html">Krita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/latex.html">LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/lily.html">LilyPond</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/magick.html">ImageMagick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/make.html">Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/pacman.html">Pacman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/py.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/rst.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sh.html">Shell Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/vim.html">Vim</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">随记</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/2022/index.html">2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/2021/index.html">2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/2020/index.html">2020</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/2017/index.html">2017</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">收集室</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/github-halloween.html">Github 万圣节彩蛋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/art-works/index.html">Art Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/scores/index.html">乐谱夹</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/me.html">我</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/site.html">本站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/friends.html">友人帐</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/resume.html">简历</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">读书笔记</a><ul>
+      <li>Previous: <a href="codex-hammer.html" title="上一章">哈默手稿</a></li>
+      <li>Next: <a href="drawing-course-of-charles-bargue-and-jean-leon-gerome.html" title="下一章">查尔斯巴尔格素描教程</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020-2022, Shengyu Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/notes/books/cpp-primer-plus.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/SilverRainZ/bullet" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

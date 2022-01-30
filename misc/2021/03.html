@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+    <title>三月 &#8212; 银色子弹</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/ablog.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/misc/2021/03.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="二月" href="02.html" />
+    <link rel="prev" title="四月" href="04.html" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+    <link rel="apple-touch-icon" href="../../_static/logo.png" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="id1">
+<h1>三月<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="wayland">
+<h2>切换到 Wayland<a class="headerlink" href="#wayland" title="永久链接至标题">¶</a></h2>
+<p>GTK 很早就实现了能用的 Wayland 后端，在之后 Firefox 实验性地支持 Wayland ，
+就没有任何非运行在 X 下不可的软件了。<a class="reference external" href="https://github.com/fcitx/fcitx5">⛺fcitx/fcitx5</a> 在 Wayland 下更是达到了
+开箱即用的水平，是时候抛弃 X 了。</p>
+<dl class="simple">
+<dt>XMonad →  Sway</dt><dd><p>Arch 源里为数不多的 Wayland compositor，再也不想写看不懂的 Haskell 配置文件了，
+Sway 能 hot reloading 很香，比 <code class="code docutils literal notranslate"><span class="pre">xmonad</span> <span class="pre">--recompile</span></code> 不知道高到哪里里去了</p>
+</dd>
+<dt>dzen2 →  Waybar</dt><dd><p>Sway 自带的 Swaybar 不够好用，很多系统信息还有手动获取，
+而 Waybar 有很多方便的模块，改改配置就非常好看</p>
+</dd>
+<dt>xscreensaver →  Swaylock</dt><dd><p>Swaylock 应该和 i3lock 一样，曾经看 <a class="reference external" href="https://github.com/cbmixx">👤cbmixx</a> 用过，总之比 xscreensaver
+好太多</p>
+</dd>
+<dt>xfce-notifyd →  Mako</dt><dd><p>Mako 比 xfce-notifyd 好定制，默认又比 dunst 好看</p>
+</dd>
+<dt>Wob</dt><dd><p>之前没用过类似的东西，挺有意思</p>
+</dd>
+</dl>
+<p>使用启动管理器的用户自然不必忧心如何 Sway，WM 用户可以在 <code class="code docutils literal notranslate"><span class="pre">.profile</span></code> 中加入以下代码，
+方便从 TTY1 登陆的时候自动进入 Sway:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># If running from tty1 start sway</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="k">$(</span>tty<span class="k">)</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;/dev/tty1&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">source</span> ~/.config/sway/pre-startup
+    <span class="nb">exec</span> sway
+<span class="k">fi</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="code docutils literal notranslate"><span class="pre">.xprofile</span></code> 文件不会再被 source，其中的环境变量应当寻找合适的地方存放，
+我将其放在了 <code class="code docutils literal notranslate"><span class="pre">~/.config/sway/pre-startup</span></code> 中</p>
+</div>
+<dl class="simple">
+<dt>Firefox</dt><dd><p>设置 <code class="code docutils literal notranslate"><span class="pre">MOZ_ENABLE_WAYLAND=1</span></code> 以启用 Wayland 支持</p>
+</dd>
+</dl>
+</section>
+<section id="midi-js">
+<h2>Midi.js 的一个有趣应用<a class="headerlink" href="#midi-js" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://lexcast.github.io/orchestra/">https://lexcast.github.io/orchestra/</a></p>
+</section>
+<section id="systemd-service">
+<h2>修改 systemd service 的正确姿势<a class="headerlink" href="#systemd-service" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2021-03-10</p>
+</dd>
+</dl>
+<p>Arch 上的 syncthing 包提供的 service 启用了 <code class="code docutils literal notranslate"><span class="pre">-no-browser</span></code> 选项，
+因此没有网页管理界面可用，运行在我的 pi3 上的 syncthing 也因此不好管理。</p>
+<p>直接修改 service 文件是不可取的，会在下一次系统更新时被覆盖。systemd 提供了
+<code class="code docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">edit</span></code> 命令来修改 service，但实际上并没有修改 service 本身，
+而是创建了 <code class="code docutils literal notranslate"><span class="pre">/etc/systemd/system/xxx.service.d/override.conf</span></code> 来覆盖原 service
+的行为:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1"># /etc/systemd/system/syncthing@la.service.d/override.conf</span><span class="w"></span>
+<span class="k">[Service]</span><span class="w"></span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="w"></span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/syncthing -gui-address=&quot;http://la-pi3:8384&quot; -no-restart -logflags=0</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注意 <code class="code docutils literal notranslate"><span class="pre">ExecStart=</span></code> 用来清空之前的值，
+不然 systemd 会认为你指定了多个 <code class="code docutils literal notranslate"><span class="pre">ExecStart</span></code> <a class="footnote-reference brackets" href="#id4" id="id2">1</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>使用 <code class="code docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">revert</span></code> 来取消你的 override <a class="footnote-reference brackets" href="#id5" id="id3">2</a></p>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://unix.stackexchange.com/a/468067">https://unix.stackexchange.com/a/468067</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p><a class="reference external" href="https://unix.stackexchange.com/a/449053">https://unix.stackexchange.com/a/449053</a></p>
+</dd>
+</dl>
+</section>
+<section id="silverrainz-me-let-s-encrypt-wildcard">
+<h2>为 silverrainz.me 申请 Let’s Encrypt Wildcard 证书<a class="headerlink" href="#silverrainz-me-let-s-encrypt-wildcard" title="永久链接至标题">¶</a></h2>
+<p>用 acme.sh 来自动化申请流程，Wildcard 证书目前只能通过 dns-01 验证的方式申请。 <a class="footnote-reference brackets" href="#id8" id="id6">3</a>
+意味着需要 acme.sh 支持你的 DNS 提供商的 API。</p>
+<p>CloudFlare 当然是支持的，但是 CF 的 free domain 不支持用 API key 修改记录。 <a class="footnote-reference brackets" href="#id9" id="id7">4</a>
+不得已将 DNS 解析从 CF 搬回 GoDaddy，好在迁移方便，导出 zone file 再导入即可。</p>
+<p>其他看文档即可。</p>
+<dl class="footnote brackets">
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><a class="reference external" href="https://letsencrypt.org/docs/faq/#does-let-s-encrypt-issue-wildcard-certificates">https://letsencrypt.org/docs/faq/#does-let-s-encrypt-issue-wildcard-certificates</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id7">4</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi#1-cloudflare-option">https://github.com/acmesh-official/acme.sh/wiki/dnsapi#1-cloudflare-option</a></p>
+</dd>
+</dl>
+</section>
+<section id="sphinx-isso">
+<h2>让 Sphinx 支持 Isso 评论<a class="headerlink" href="#sphinx-isso" title="永久链接至标题">¶</a></h2>
+<p>一言以蔽之，用最近写的 <a class="reference external" href="https://sphinx-notes.github.io/isso/">sphinxnotes-isso</a> 即可，在文档的任意位置插入 <code class="code docutils literal notranslate"><span class="pre">..</span> <span class="pre">isso::</span></code>
+既可有最下面的效果。</p>
+<section id="isso">
+<h3>Isso 部署<a class="headerlink" href="#isso" title="永久链接至标题">¶</a></h3>
+<p>Isso 本身的部署需要费些功夫。手头有一台 Arch + Vultr 和一台 openSUSE + 腾讯云，
+考虑到国内的加载速度还是使用了腾讯云。</p>
+<p>使用 Isso 官方提供的 Dockerfile build 出镜像，</p>
+<p>考虑多个实例，每个实例在单独目录下，必须有 <code class="file docutils literal notranslate"><span class="pre">comments.db</span></code> 和 <code class="file docutils literal notranslate"><span class="pre">isso.cfg</span></code>
+两个文件。用如下脚本实现多个实例的启动:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">name</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">port</span><span class="o">=</span><span class="nv">$2</span>
+
+docker run <span class="se">\</span>
+    --detach <span class="se">\</span>
+    --name isso-<span class="nv">$name</span> <span class="se">\</span>
+    --publish <span class="m">127</span>.0.0.1:<span class="nv">$port</span>:8080 <span class="se">\</span>
+    --volume <span class="nv">$PWD</span>/<span class="nv">$name</span>:/config <span class="se">\</span>
+    --volume <span class="nv">$PWD</span>/<span class="nv">$name</span>:/db <span class="se">\</span>
+    isso
+</pre></div>
+</div>
+</section>
+<section id="smtp">
+<h3>SMTP 服务<a class="headerlink" href="#smtp" title="永久链接至标题">¶</a></h3>
+<p>SMTP 服务不需要自己搭，作为 Yandex 的域名邮箱用户，我为 <code class="code docutils literal notranslate"><span class="pre">noreply&#64;silverrainz.me</span></code>
+分配了一个账户，使用了单独的密码，直接使用 Yandex 的 SMTP 服务：</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[smtp]</span><span class="w"></span>
+<span class="na">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">noreply@silverrainz.me</span><span class="w"></span>
+<span class="na">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">**********</span><span class="w"></span>
+<span class="na">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">smtp.yandex.ru</span><span class="w"></span>
+<span class="na">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">465</span><span class="w"></span>
+<span class="na">security</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssl</span><span class="w"></span>
+<span class="na">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Shengyu Zhang&quot; &lt;comments@silverrainz.me&gt;</span><span class="w"></span>
+<span class="na">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Silver Bullet&quot; &lt;noreply@silverrainz.me&gt;</span><span class="w"></span>
+<span class="na">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id10">
+<h2>被处死的君王<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2021-03-31</p>
+</dd>
+</dl>
+<p>其实只是画 <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-yourself.html#artwork-xfczk-043" title="artwork xfczk-043"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《xfczk-043》</span></code></a> 的时候联想到的，权当学点没用的：</p>
+<p>路易十六是法国历史上唯一一个被处死的君王。</p>
+<blockquote>
+<div><p>路易十六是个好人，把他处死是件悲剧，但也是不可避免的。
+——法国总统密特朗 <a class="footnote-reference brackets" href="#id13" id="id11">5</a></p>
+</div></blockquote>
+<p><span class="sphinxnotes-strike">全世界</span> 欧洲范围内，被处死的君王还有两人： <a class="footnote-reference brackets" href="#id14" id="id12">6</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://zh.wikipedia.org/wiki/查理一世 (英格兰)">📖查理一世 (英格兰)</a></p></li>
+<li><p><a class="reference external" href="https://zh.wikipedia.org/wiki/尼古拉二世 (俄罗斯)">📖尼古拉二世 (俄罗斯)</a></p></li>
+</ul>
+<dl class="footnote brackets">
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id11">5</a></span></dt>
+<dd><p><a class="reference external" href="https://zh.wikipedia.org/wiki/路易十六">📖路易十六</a></p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dd><p><a class="reference external" href="https://www.sohu.com/a/276828349_100161166">https://www.sohu.com/a/276828349_100161166</a></p>
+</dd>
+</dl>
+<div class="topic">
+<p class="topic-title">评论</p>
+<p>如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/misc/2021/03" data-title="三月" id="isso-thread"></section></div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Yes silver bullet here.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=SilverRainZ&repo=bullet&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>导航</h3>
+<p class="caption" role="heading"><span class="caption-text">笔记</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/zxsys/index.html">造型实验室</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/artstory/index.html">增量艺术史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/books/index.html">读书笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/music-theory/index.html">乐理笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/6-lectures-on-sketch.html">素描六讲</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/2021-interview/index.html">2021 面试记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/docutils/index.html">Docutils 文档阅读</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/go-internal/index.html">Golang Internal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/leetcode/index.html">Leetcode 刷题记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/wizard/index.html">配置向导</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/writeups/index.html">Capture the Flag</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">博客</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blog/index.html">博客首页</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">手册</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sphinx/index.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/awk.html">Awk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gdb.html">GDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gpg.html">GnuPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/grep.html">Grep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/irc.html">IRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/krita.html">Krita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/latex.html">LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/lily.html">LilyPond</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/magick.html">ImageMagick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/make.html">Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/pacman.html">Pacman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/py.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/rst.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sh.html">Shell Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/vim.html">Vim</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">随记</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../2022/index.html">2022</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2021</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="12.html">十二月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">十一月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">十月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html">九月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html">八月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">七月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html">六月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">五月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">四月</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">三月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">二月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html">一月</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2020/index.html">2020</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2017/index.html">2017</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">收集室</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/github-halloween.html">Github 万圣节彩蛋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/art-works/index.html">Art Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/scores/index.html">乐谱夹</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/me.html">我</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/site.html">本站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/friends.html">友人帐</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/resume.html">简历</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">2021</a><ul>
+      <li>Previous: <a href="04.html" title="上一章">四月</a></li>
+      <li>Next: <a href="02.html" title="下一章">二月</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020-2022, Shengyu Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/misc/2021/03.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/SilverRainZ/bullet" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

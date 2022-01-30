@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+    <title>The Rust Programming Language &#8212; 银色子弹</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/ablog.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/notes/books/the-rust-programming-language.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="艺术的故事" href="the-story-of-art.html" />
+    <link rel="prev" title="Learning Scheme" href="teach-yourself-scheme-in-fixnum-days.html" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+    <link rel="apple-touch-icon" href="../../_static/logo.png" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section class="any" id="the-rust-programming-language">
+<span id="book-9781718500440"></span><h1>The Rust Programming Language<a class="headerlink" href="#the-rust-programming-language" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">ISBN</dt>
+<dd class="field-odd"><p>9781718500440</p>
+</dd>
+<dt class="field-even">开始于</dt>
+<dd class="field-even"><p><a class="reference internal" href="#book-9781718500440" title="book 2020-03-11"><code class="xref any any-book.startat docutils literal notranslate"><span class="pre">2020-03-11</span></code></a></p>
+</dd>
+</dl>
+<div class="contents local topic" id="id1">
+<ul class="simple">
+<li><p><a class="reference internal" href="#ch1" id="id7">ch1</a></p></li>
+<li><p><a class="reference internal" href="#ch2" id="id8">ch2</a></p></li>
+<li><p><a class="reference internal" href="#ch3" id="id9">ch3</a></p></li>
+<li><p><a class="reference internal" href="#ch4" id="id10">ch4</a></p></li>
+<li><p><a class="reference internal" href="#ch5" id="id11">ch5</a></p></li>
+<li><p><a class="reference internal" href="#ch6" id="id12">ch6</a></p></li>
+<li><p><a class="reference internal" href="#ch7" id="id13">ch7 模块系统</a></p></li>
+<li><p><a class="reference internal" href="#ch8" id="id14">ch8 数据结构</a></p></li>
+<li><p><a class="reference internal" href="#ch9" id="id15">ch9 错误处理</a></p></li>
+<li><p><a class="reference internal" href="#ch10-trait" id="id16">ch10 泛型、trait 和生命周期</a></p></li>
+<li><p><a class="reference internal" href="#ch11" id="id17">ch11 编写自动化测试</a></p></li>
+<li><p><a class="reference internal" href="#ch12" id="id18">ch12 构建一个命令行程序</a></p></li>
+<li><p><a class="reference internal" href="#ch13" id="id19">ch13 迭代器与闭包</a></p></li>
+<li><p><a class="reference internal" href="#ch14-release-profiles" id="id20">ch14 Release Profiles</a></p></li>
+<li><p><a class="reference internal" href="#ch15" id="id21">ch15 智能指针</a></p></li>
+</ul>
+</div>
+<section id="ch1">
+<h2>ch1<a class="headerlink" href="#ch1" title="永久链接至标题">¶</a></h2>
+<p>使用 community/rustup 包而不是 community/rust 包，方便获取比官方源还新的 rust。
+community/rustup 没有自带 toolchain，和书中的描述不符。 但不重要，使用
+<code class="code docutils literal notranslate"><span class="pre">rustup</span> <span class="pre">toolchain</span> <span class="pre">install</span> <span class="pre">nightly</span></code> 即可。</p>
+<p>使用 <code class="code docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">update</span></code> 来更新 lock 文件，但默认只会 bump semver 的 fix 部分，
+即 <code class="code docutils literal notranslate"><span class="pre">1.1.1</span> <span class="pre">-&gt;</span> <span class="pre">1.1.2</span></code> 而不是 <code class="code docutils literal notranslate"><span class="pre">1.1.1</span> <span class="pre">-&gt;</span> <span class="pre">1.2.0</span></code> 。若确定要更新，需要手动更改
+<code class="code docutils literal notranslate"><span class="pre">Cargo.toml</span></code> 并重新 <code class="code docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">build</span></code> 。</p>
+</section>
+<section id="ch2">
+<h2>ch2<a class="headerlink" href="#ch2" title="永久链接至标题">¶</a></h2>
+<p>需要 <code class="code docutils literal notranslate"><span class="pre">use</span> <span class="pre">namespace::of::trait</span></code> 才能使用某个实现了 trait 的 struct 对应的方法。
+需要 use的 trait 可以通过 <code class="code docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">doc</span> <span class="pre">--open</span></code> 生成的本地依赖的文档查看。</p>
+<p>模式匹配真香！！！</p>
+<p>Rust 允许重新声明变量，不会出现命名难题。这也很香。</p>
+</section>
+<section id="ch3">
+<h2>ch3<a class="headerlink" href="#ch3" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>变量默认不可变</dt><dd><p><span class="sphinxnotes-strike">那为啥要叫变量</span> ， 好处是安全 &amp; 并发友好，有利于优等等等等。</p>
+</dd>
+</dl>
+<p><code class="code docutils literal notranslate"><span class="pre">isize</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">usize</span></code> 类似 <code class="code docutils literal notranslate"><span class="pre">size_t</span></code> in C</p>
+<p>只有 <code class="code docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">build</span> <span class="pre">--debug</span></code> 才会检测整数溢出并 panic。</p>
+<p>Rust 的 <code class="code docutils literal notranslate"><span class="pre">char</span></code> 有 4 byte 长，足够容纳 unicode。</p>
+<p>Tuple 可以用模式匹配或者 <code class="code docutils literal notranslate"><span class="pre">x.1</span></code> 这样的下标索引。</p>
+<p>函数返回值是最后一个表达式的值 -&gt; 那就没法随时 return 了？
+有 return 关键字，这设计有点奇怪。</p>
+</section>
+<section id="ch4">
+<h2>ch4<a class="headerlink" href="#ch4" title="永久链接至标题">¶</a></h2>
+<dl>
+<dt>所有权规则：</dt><dd><ol class="arabic simple">
+<li><p>每一个值都有一个所被其称为所有者（owner）的变量</p></li>
+<li><p>值在任一时刻有且只有一个所有者</p></li>
+<li><p>当所有者（变量）离开作用域，这个值将被丢弃</p></li>
+</ol>
+</dd>
+<dt>移动语义</dt><dd><ul class="simple">
+<li><p>借用（borrowing）而不是浅拷贝（shadow copy）</p></li>
+<li><p>永远不会自动 “deep copy”</p></li>
+</ul>
+<p>提供了 <code class="code docutils literal notranslate"><span class="pre">Copy</span></code> trait 为简单类型提供支持。</p>
+</dd>
+<dt>Reference</dt><dd><p>使用 reference <code class="code docutils literal notranslate"><span class="pre">&amp;</span></code> 来借用数据到一个更小的作用域。
+同一份数据的 mutable reference 只能有一个。
+reference 的作用域是「从声明开始到最后一次使用」。</p>
+</dd>
+</dl>
+</section>
+<section id="ch5">
+<h2>ch5<a class="headerlink" href="#ch5" title="永久链接至标题">¶</a></h2>
+<p>Struct init:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">email</span>: <span class="nb">String</span> <span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">new</span><span class="p">(</span><span class="s">&quot;i@example.com&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">email</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Struct update:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">user2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="o">..</span><span class="n">user1</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Tuple struct:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">Color</span><span class="p">(</span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>使用 <code class="code docutils literal notranslate"><span class="pre">#[derive(Debug)]</span></code> 自动实现 <code class="code docutils literal notranslate"><span class="pre">Debug</span></code> trait，便于被 <code class="code docutils literal notranslate"><span class="pre">println!(&quot;{:?}&quot;)</span></code>
+答应出来。</p>
+<p>Struct method:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">foo</span><span class="p">;</span><span class="w"></span>
+<span class="k">impl</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">bar</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">u32</span> <span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="mi">1</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注意 self 的借用方式</p>
+</div>
+<dl class="simple">
+<dt>Automatic referencing and dereferencing</dt><dd><p>消除了 C/C++ 中 <code class="code docutils literal notranslate"><span class="pre">foo.bar</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">foo-&gt;bar</span></code> 的区别</p>
+</dd>
+<dt>Associated function</dt><dd><p>类似 class function，使用 <code class="code docutils literal notranslate"><span class="pre">::</span></code> 操作符</p>
+</dd>
+</dl>
+</section>
+<section id="ch6">
+<h2>ch6<a class="headerlink" href="#ch6" title="永久链接至标题">¶</a></h2>
+<p>Variant 翻译为「成员」似乎不妥？</p>
+<p>为枚举成员（ <span class="sphinxnotes-strike">等等，我不是说不妥吗？</span> ）附加类型，表达能力很强:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span> <span class="nc">IpAddr</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">V4</span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="kt">u8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">V6</span><span class="p">(</span><span class="nb">String</span><span class="p">),</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<dl>
+<dt><code class="code docutils literal notranslate"><span class="pre">Option&lt;T&gt;</span></code></dt><dd><p>避免了空值的泛滥</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>然而空值是广泛存在于现实的，因为「太好实现了」</p>
+</div>
+</dd>
+</dl>
+<p><code class="code docutils literal notranslate"><span class="pre">if</span> <span class="pre">let</span></code> 语法怪怪的:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_u8_value</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;three&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="ch7">
+<h2>ch7 模块系统<a class="headerlink" href="#ch7" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>Rust module system:</dt><dd><ul class="simple">
+<li><p>Packages</p></li>
+<li><p>Crates</p></li>
+<li><p>Modules：<code class="code docutils literal notranslate"><span class="pre">mod</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">use</span></code> 关键字</p></li>
+<li><p>Path?</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>各种符号默认私有</p></li>
+<li><p>结构体成员默认私有，所以构造函数必须与结构体关联（associate）</p></li>
+<li><p>枚举成员默认公有</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">use</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">use</span> <span class="pre">...</span> <span class="pre">as</span></code> 之于 <code class="code docutils literal notranslate"><span class="pre">import</span></code> 、 <code class="code docutils literal notranslate"><span class="pre">import</span> <span class="pre">...</span> <span class="pre">as</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">pub</span> <span class="pre">use</span></code> 允许外部调用 use 的 module</p></li>
+<li><p>支持 <code class="code docutils literal notranslate"><span class="pre">use</span> <span class="pre">mod::{foo,bar}</span></code></p></li>
+<li><p>支持 <code class="code docutils literal notranslate"><span class="pre">use</span> <span class="pre">mod::*</span></code></p></li>
+</ul>
+<dl>
+<dt><code class="code docutils literal notranslate"><span class="pre">mod</span></code> 关键字</dt><dd><p>有点奇妙，引发了我对模块系统的疑惑…</p>
+<p>Q:</p>
+<ol class="arabic simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">mod</span> <span class="pre">foo;</span></code> 加载 foo 模块的内容</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">mod</span> <span class="pre">foo</span> <span class="pre">{};</span></code> 实现 foo 模块的内容</p></li>
+</ol>
+<p>There’s no implicit mapping between file system tree to module tree, so:</p>
+<blockquote>
+<div><p>We need to explicitly build the module tree in Rust, there’s no
+implicit mapping to file system. <a class="footnote-reference brackets" href="#id5" id="id2">1</a></p>
+</div></blockquote>
+<p>A:</p>
+<ol class="arabic simple">
+<li><p>A module without a body is loaded from an external file. <a class="footnote-reference brackets" href="#f1" id="id3">2</a></p></li>
+<li><p>When the module does not have a path attribute, the path to
+the file mirrors the logical module path. <a class="footnote-reference brackets" href="#f1" id="id4">2</a></p></li>
+</ol>
+</dd>
+</dl>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="http://www.sheshbabu.com/posts/rust-module-system/">http://www.sheshbabu.com/posts/rust-module-system/</a></p>
+</dd>
+<dt class="label" id="f1"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://doc.rust-lang.org/reference/items/modules.html">https://doc.rust-lang.org/reference/items/modules.html</a></p>
+</dd>
+</dl>
+</section>
+<section id="ch8">
+<h2>ch8 数据结构<a class="headerlink" href="#ch8" title="永久链接至标题">¶</a></h2>
+<p>泛型 Yes!</p>
+<dl class="simple">
+<dt><code class="code docutils literal notranslate"><span class="pre">Vector&lt;T&gt;</span></code></dt><dd><ul class="simple">
+<li><p>持有元素引用时不可变 – 考虑 realloc</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">&amp;vec</span> <span class="pre">{}</span></code> 遍历</p></li>
+<li><p>可以存储枚举 wrap 的不同类型的数据</p></li>
+</ul>
+</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">&amp;str</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">String</span></code></dt><dd><ul class="simple">
+<li><p>字面量是 <code class="code docutils literal notranslate"><span class="pre">&amp;str</span></code> ，使用 <code class="code docutils literal notranslate"><span class="pre">&quot;foo&quot;.to_string()</span></code> 或者 <code class="code docutils literal notranslate"><span class="pre">String::from(&quot;foo&quot;)</span></code>
+从字面量创建 <code class="code docutils literal notranslate"><span class="pre">String()</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">+</span></code> 会移动所有权</p></li>
+</ul>
+</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">let</span> <span class="pre">s3</span> <span class="pre">=</span> <span class="pre">s1</span> <span class="pre">+</span> <span class="pre">&amp;s2</span></code></dt><dd><p>s1 会被转移以避免复制，s2 会被复制</p>
+</dd>
+</dl>
+<p>运行时索引字符串 slice 会导致 panic</p>
+<p><code class="code docutils literal notranslate"><span class="pre">entry().or_insert()</span></code> 返回一个 <code class="code docutils literal notranslate"><span class="pre">&amp;mut</span></code> 很香，可以优雅地写 counter</p>
+</section>
+<section id="ch9">
+<h2>ch9 错误处理<a class="headerlink" href="#ch9" title="永久链接至标题">¶</a></h2>
+<p><em>No Exception!</em></p>
+<p><code class="code docutils literal notranslate"><span class="pre">panic!</span></code> and <code class="code docutils literal notranslate"><span class="pre">Result&lt;T,E&gt;</span></code></p>
+<p>一种 match 语句的消除方法： <code class="code docutils literal notranslate"><span class="pre">Result.unwrap_or_else()</span></code></p>
+<p><code class="code docutils literal notranslate"><span class="pre">?</span></code> for error propagating，好大一颗糖，支持链式调用，
+确实比 <code class="code docutils literal notranslate"><span class="pre">if</span> <span class="pre">err</span> <span class="pre">!=</span> <span class="pre">nil</span></code> 香</p>
+<p>迷之 <code class="code docutils literal notranslate"><span class="pre">Box&lt;dyn</span> <span class="pre">Error&gt;</span></code> : 见 <a class="reference internal" href="#ch12"><span class="std std-ref">ch12 构建一个命令行程序</span></a></p>
+</section>
+<section id="ch10-trait">
+<h2>ch10 泛型、trait 和生命周期<a class="headerlink" href="#ch10-trait" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>T</dt><dd><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> 语法可用于函数、结构体、枚举、impl block</p></li>
+<li><p>可以为泛型的某一个特化提供实现</p></li>
+<li><p>用 单态化（monomorphization）避免泛型的运行时开销</p></li>
+</ul>
+</dd>
+<dt>trait</dt><dd><ul class="simple">
+<li><p>要使用 trait 方法必须引入 use trait</p></li>
+<li><p>无法为外部类型实现外部 trait</p></li>
+<li><p>trait 可以自带默认实现，但重载实现中无法调用默认实现</p></li>
+<li><p>当作为类型参数时用 <code class="code docutils literal notranslate"><span class="pre">impl</span> <span class="pre">TraitName</span></code>
+or <code class="code docutils literal notranslate"><span class="pre">fn</span> <span class="pre">foo&lt;T:</span> <span class="pre">TraitName&gt;</span></code> 然后用 <code class="code docutils literal notranslate"><span class="pre">T</span></code>， 后者更为完备</p></li>
+<li><p>blanket implementation?</p></li>
+</ul>
+</dd>
+<dt>lifetimes</dt><dd><ul class="simple">
+<li><p>数据当然总是活的比引用长</p></li>
+<li><p>喜欢乖乖</p></li>
+<li><p>生命周期注解是一种约束</p></li>
+<li><p>对于常见的模式支持省略生命周期注解</p></li>
+</ul>
+</dd>
+<dt>编译器对入参出参的生命周期预设</dt><dd><ul class="simple">
+<li><p>每一个入参都有独立的生命周期参数</p></li>
+<li><p>如果只有一个输入生命周期参数，那么它同时也是输出生命周期参数</p></li>
+<li><p>如果有多个输入生命周期参数并且其中一个是 <code class="code docutils literal notranslate"><span class="pre">&amp;self</span></code> 或者 <code class="code docutils literal notranslate"><span class="pre">&amp;mut</span> <span class="pre">self</span></code>
+则输出生命周期参数即为 <code class="code docutils literal notranslate"><span class="pre">self</span></code> 的生命周期</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="ch11">
+<h2>ch11 编写自动化测试<a class="headerlink" href="#ch11" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">user</span> <span class="pre">super::*</span></code> 比较方便</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">#[should_panic]</span></code> 标记一个会 panic 的 case</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">#[test]</span></code> 修饰的函数亦可用 <code class="code docutils literal notranslate"><span class="pre">Result&lt;T,E&gt;</span></code> 作为返回值</p></li>
+<li><p>用 <code class="code docutils literal notranslate"><span class="pre">--</span></code> 区分给 cargo test 的参数和给 test binary 的参数</p></li>
+<li><p>集成测试放置于特殊的 “tests” 目录，模块不需要 <code class="code docutils literal notranslate"><span class="pre">#[cfg(test)]</span></code> 修饰</p></li>
+</ul>
+</section>
+<section id="ch12">
+<span id="id6"></span><h2>ch12 构建一个命令行程序<a class="headerlink" href="#ch12" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">std::env::args()</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">std::proecss::exit(exit_code)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Box&lt;dyn</span> <span class="pre">Error&gt;</span></code> 代表任意实现了 <code class="code docutils literal notranslate"><span class="pre">Error</span></code> 的类型，编译时不会单态化，
+有一定的动态性</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">eprintln!</span></code></p></li>
+</ul>
+</section>
+<section id="ch13">
+<h2>ch13 迭代器与闭包<a class="headerlink" href="#ch13" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>闭包</dt><dd><p>可以捕获 scope 的 匿名函数，捕获方式有三种：</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">FnOnce</span></code> 移动所有权</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">FnMut</span></code> 可变借用</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Fn</span></code> 不可变借用</p></li>
+</ul>
+</dd>
+<dt>Iterator Adaptor</dt><dd><p>对 Iterator 做变换，返回另一个迭代器，可形成链式调用</p>
+</dd>
+</dl>
+</section>
+<section id="ch14-release-profiles">
+<h2>ch14 Release Profiles<a class="headerlink" href="#ch14-release-profiles" title="永久链接至标题">¶</a></h2>
+<p><code class="code docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">doc</span> <span class="pre">--open</span></code> 很方便</p>
+<p>翻译有点儿怪……</p>
+<p>可以用 <code class="code docutils literal notranslate"><span class="pre">pub</span> <span class="pre">use</span></code> 重导出，在统一的地方管理公开 API</p>
+<dl class="simple">
+<dt>Cargo workspace</dt><dd><p>很有意思，一堆项目共享同一个 <code class="code docutils literal notranslate"><span class="pre">Cargo.lock</span></code> ：确保所有 create 使用相同版本的依赖</p>
+</dd>
+<dt>Cargo subcommand</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">xxx</span></code> 会执行 <code class="code docutils literal notranslate"><span class="pre">$PATH</span></code> 中的 <code class="code docutils literal notranslate"><span class="pre">cargo-xxx</span></code> ，略粗暴</p>
+</dd>
+</dl>
+</section>
+<section id="ch15">
+<h2>ch15 智能指针<a class="headerlink" href="#ch15" title="永久链接至标题">¶</a></h2>
+<p><span class="sphinxnotes-strike">说实话 C++ 里的智能指针让我感到「非用不可」而不是「用得舒服」</span></p>
+<p>常见的智能指针</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">Box&lt;T&gt;</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Rc&lt;T&gt;</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Ref&lt;T&gt;</span></code> <code class="code docutils literal notranslate"><span class="pre">RefMut&lt;T&gt;</span></code> <code class="code docutils literal notranslate"><span class="pre">RefCell&lt;T&gt;</span></code></p></li>
+</ul>
+<div class="topic">
+<p class="topic-title">评论</p>
+<p>如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/notes/books/the-rust-programming-language" data-title="The Rust Programming Language" id="isso-thread"></section></div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Yes silver bullet here.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=SilverRainZ&repo=bullet&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>导航</h3>
+<p class="caption" role="heading"><span class="caption-text">笔记</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../zxsys/index.html">造型实验室</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../artstory/index.html">增量艺术史</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">读书笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../music-theory/index.html">乐理笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6-lectures-on-sketch.html">素描六讲</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2021-interview/index.html">2021 面试记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docutils/index.html">Docutils 文档阅读</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go-internal/index.html">Golang Internal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../leetcode/index.html">Leetcode 刷题记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wizard/index.html">配置向导</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writeups/index.html">Capture the Flag</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">博客</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blog/index.html">博客首页</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">手册</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sphinx/index.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/awk.html">Awk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gdb.html">GDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gpg.html">GnuPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/grep.html">Grep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/irc.html">IRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/krita.html">Krita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/latex.html">LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/lily.html">LilyPond</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/magick.html">ImageMagick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/make.html">Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/pacman.html">Pacman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/py.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/rst.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sh.html">Shell Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/vim.html">Vim</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">随记</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/2022/index.html">2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/2021/index.html">2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/2020/index.html">2020</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/2017/index.html">2017</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">收集室</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/github-halloween.html">Github 万圣节彩蛋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/art-works/index.html">Art Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/scores/index.html">乐谱夹</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/me.html">我</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/site.html">本站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/friends.html">友人帐</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/resume.html">简历</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">读书笔记</a><ul>
+      <li>Previous: <a href="teach-yourself-scheme-in-fixnum-days.html" title="上一章">Learning Scheme</a></li>
+      <li>Next: <a href="the-story-of-art.html" title="下一章">艺术的故事</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020-2022, Shengyu Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/notes/books/the-rust-programming-language.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/SilverRainZ/bullet" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

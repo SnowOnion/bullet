@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+    <title>Python 初试 &#8212; 银色子弹</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ablog.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/blog/first-attempt-of-python.html" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+    <link rel="apple-touch-icon" href="../_static/logo.png" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="python">
+<h1>Python 初试<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h1>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 <a class="reference external" href="https://github.com/SilverRainZ/bullet">⛺SilverRainZ/bullet</a> 反馈</p>
+</div>
+<p>因为现在经常在三个系统(Win, openSUSE, Arch)之间切换, 一些软件的配置文件的部署成了问题,
+每次都从一台机复制到另一台实在麻烦, 而且不知道哪台电脑上使用的配置是最新改动的.</p>
+<p>所以后来就把配置文件托管到了GitCafe, 后来因为用不惯 GitCafe 的 web 界面,
+还是在把配置文件放在 GitHub 上了:
+<a class="reference external" href="https://github.com/SilverRainZ/dotfiles">https://github.com/SilverRainZ/dotfiles</a>
+(不过还是觉得更新这些配置文件的 Commit 太影响我的 ContributionsCalendar 了)</p>
+<p>即使托管到 Github, 每次把文件拉下来都要复制到相应的位置上去, 依然麻烦,
+所以就打算写个脚本来帮忙, 但是我并不会任何一门脚本
+(Batch和Shell这些不跨平台的就算了…写起来又麻烦), 所以就现学现卖用 Python 试一试,
+花了一个晚上, 写了个100来行的小脚本(有够慢的).
+<a class="reference external" href="https://github.com/SilverRainZ/dotfiles/blob/master/sync.py">https://github.com/SilverRainZ/dotfiles/blob/master/sync.py</a></p>
+<section id="id1">
+<h2>脚本<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>这个脚本的功能很简单, 就是根据指定的参数, 把指定的配置从仓库中复制到用户目录(deploy),
+或者把用户目录下的配置复制到仓库(collect).<span class="sphinxnotes-strike">这样都能写100多行!</span></p>
+<p>现在只支持我常用的三个软件的配置: vim, pentadacytl, zsh.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sync</span>   <span class="o">--</span> <span class="n">a</span> <span class="n">simple</span> <span class="n">script</span> <span class="n">used</span> <span class="n">to</span> <span class="n">sync</span> <span class="n">profile</span>
+<span class="n">python</span> <span class="n">sync</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="n">operation</span><span class="p">]</span>
+<span class="n">python</span> <span class="n">sync</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="n">operation</span><span class="p">]</span> <span class="p">[</span><span class="n">target</span><span class="p">]</span>
+<span class="n">operation</span><span class="p">:</span>
+    <span class="n">deploy</span>   <span class="p">[</span><span class="n">target</span><span class="p">]:</span> <span class="n">copy</span> <span class="n">target</span><span class="s1">&#39;s profiles form repo to local</span>
+    <span class="n">collect</span>  <span class="p">[</span><span class="n">target</span><span class="p">]:</span> <span class="n">copy</span> <span class="n">target</span><span class="s1">&#39;s profiles form local to repo</span>
+    <span class="n">push</span><span class="p">:</span>    <span class="n">push</span> <span class="n">profiles</span> <span class="n">to</span> <span class="n">reomote</span> <span class="n">repo</span>
+    <span class="n">pull</span><span class="p">:</span>    <span class="n">pull</span> <span class="n">profiles</span> <span class="n">form</span> <span class="n">reomote</span> <span class="n">repo</span>
+<span class="n">target</span><span class="p">:</span>
+    <span class="n">vim</span>
+    <span class="n">zsh</span>
+    <span class="n">pen</span><span class="p">(</span><span class="n">pentadactyl</span><span class="p">)</span>
+    <span class="nb">all</span> <span class="o">=</span> <span class="n">vim</span> <span class="o">+</span> <span class="n">zsh</span> <span class="o">+</span> <span class="n">pen</span>
+<span class="n">require</span><span class="p">:</span> <span class="n">python3</span> <span class="ow">or</span> <span class="n">above</span><span class="p">,</span> <span class="n">git</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>缩进<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>Python 的一大特点就是用缩进来划分代码块, 这会让 if 的嵌套变得很不清晰,
+偏偏又不提供 switch 语句或者 Pattern Matching, 所以代码中的各种 if 又省不了,
+这个有点痛苦. 不过 <code class="code docutils literal notranslate"><span class="pre">if</span> <span class="pre">xx</span> <span class="pre">in</span> <span class="pre">[...]</span></code> 这样的语法我倒是觉得挺好的,
+避免了<code class="code docutils literal notranslate"><span class="pre">if</span> <span class="pre">a==xx</span> <span class="pre">||</span> <span class="pre">a</span> <span class="pre">==</span> <span class="pre">xxx</span> <span class="pre">||</span> <span class="pre">...</span></code> 这样的超长 if.</p>
+</section>
+<section id="id3">
+<h2>函数式特性<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>再跑一下题, 我在这学期看了F叔的「Haskell趣学指南」, 自觉 Haskell 这门语言难以入门,
+至今写过的代码也不过寥寥数行, 只能算是大概了解了他的语法, 却因此沾染上了一些「恶习」,
+老想在其他语言里使用那些FP的语法特性, 或者是当用这些特定可以让代码更好的时候,
+抱怨 xxx 怎么没有这个语法. 我自己都觉得有点可笑, 不过, Python 一定程度上满足了我这奇怪的要求.</p>
+</section>
+<section id="id4">
+<h2>高阶函数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>很高兴 Python 里面提供了部分函数式语言的特性, 我在这个小脚本里用<code class="code docutils literal notranslate"><span class="pre">map</span></code>用得很爽.
+sync.py 这个脚本是一个带参数运行的小工具, 需要输出 help 信息, 本来我是这样写的:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sync -- a simple script used to sync profile&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;python sync.py [operation]&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;python sync.py [operation] [target]&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>有了<code class="code docutils literal notranslate"><span class="pre">map</span></code>, 可以把所有的 help 信息放在一个 list 里面, 再用<code class="code docutils literal notranslate"><span class="pre">map</span></code>对每个元素应用<code class="code docutils literal notranslate"><span class="pre">print</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">helpstr</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;sync -- a simple script used to sync profile&#39;</span>
+          <span class="p">,</span> <span class="s1">&#39;python sync.py [operation]&#39;</span>
+          <span class="p">,</span> <span class="s1">&#39;python sync.py [operation] [target]&#39;</span>
+          <span class="p">]</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">print</span><span class="p">,</span> <span class="n">helpstr</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>注意这里不能直接<code class="code docutils literal notranslate"><span class="pre">map(print,</span> <span class="pre">helpstr)</span></code>, <code class="code docutils literal notranslate"><span class="pre">map</span></code>返回一个<code class="code docutils literal notranslate"><span class="pre">generator</span></code>,
+而<code class="code docutils literal notranslate"><span class="pre">list()</span></code>接受一个<code class="code docutils literal notranslate"><span class="pre">generator</span></code>得到一个列表, 这样<code class="code docutils literal notranslate"><span class="pre">print</span></code>才会得以执行.(大概是这样?)</p>
+<p><code class="code docutils literal notranslate"><span class="pre">map</span></code>不仅在这里有用到, <code class="code docutils literal notranslate"><span class="pre">deploy</span></code>和<code class="code docutils literal notranslate"><span class="pre">collect</span></code>是两个相反的操作, 无非是把两个地址交换,
+地址被存在一个二元组的列表里, 所以可以用<code class="code docutils literal notranslate"><span class="pre">map</span></code>翻转:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;deploy&#39;</span><span class="p">:</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">path</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>被弃用的元组参数解包<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>本来上面那个翻转元组的 lambda 在 Python 2+ 可以这么写:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>类似模式匹配的写法感觉很不错, 可是不知道为什么在 3.0 中这个语法被移除了.</p>
+</section>
+<section id="id6">
+<h2>部分应用<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p><code class="code docutils literal notranslate"><span class="pre">map</span></code>只能对 list 映射只有一个参数的函数, 在 Haskell 中我们可以用部分应用
+获得一个只需要一个参数的函数, 在 Python 中似乎不能直接做到, 但我们有折衷的办法:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deploy</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+<span class="c1"># ...</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">deploy</span><span class="p">(</span><span class="n">op</span><span class="p">,</span><span class="n">x</span><span class="p">),</span><span class="n">g_target</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+</pre></div>
+</div>
+<p>用一个 lambda 来使得<code class="code docutils literal notranslate"><span class="pre">deploy</span></code>对外只有一个参数.</p>
+</section>
+<section id="id7">
+<h2>库<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>Python 库大概是 Python 备受推崇的一个重要原因, 可惜我的脚本只是在做文件复制,
+没有用到什么特别的库.</p>
+<p>不过拜 Python 良好的跨平台能力, 我不需要为处理 Windows 和 Linux 下不同的文件操作各写一份代码,
+只需要对路径做些处理就行了.</p>
+<p><span class="sphinxnotes-strike">感觉好像什么都没写啊(摔…</span></p>
+<div class="topic">
+<p class="topic-title">评论</p>
+<p>如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/blog/first-attempt-of-python" data-title="Python 初试" id="isso-thread"></section></div>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="threee-way-of-anti-debug.html">
+      <i class="fa fa-arrow-circle-left"></i> 几种简单的反调试方法
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="install-vim-plugins.html">
+      Vim 插件折腾记录 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Yes silver bullet here.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=SilverRainZ&repo=bullet&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+  
+<h2>
+   <i class="fa fa-calendar"></i>
+  2015-06-15 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="author/shengyu-zhang.html">Shengyu Zhang</a>  
+</li>
+  
+<li id="language">
+  <span
+    ><i class="fa-fw fa fa-language"></i></span
+  >
+   
+  <a href="language/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87.html">简体中文</a>  
+</li>
+  
+<li id="tags">
+  <span
+    ><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
+  >
+   
+  <a href="tag/python.html">Python</a>  
+</li>
+ 
+</ul>
+
+  <div>
+    <h3><a href="../index.html">目录</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Python 初试</a><ul>
+<li><a class="reference internal" href="#id1">脚本</a></li>
+<li><a class="reference internal" href="#id2">缩进</a></li>
+<li><a class="reference internal" href="#id3">函数式特性</a></li>
+<li><a class="reference internal" href="#id4">高阶函数</a></li>
+<li><a class="reference internal" href="#id5">被弃用的元组参数解包</a></li>
+<li><a class="reference internal" href="#id6">部分应用</a></li>
+<li><a class="reference internal" href="#id7">库</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+<h3>
+  <a href="../blog.html">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="funtional-programming-in-go-generics.html"
+      >27 October - 函数式编程在 Go 泛型下的实用性探索</a
+    >
+  </li>
+  
+  <li>
+    <a href="xzzh-after-40-yrs.html"
+      >03 July - 四十年后再看西藏组画</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx-as-note-taking-system-2.html"
+      >25 May - 我如何用 Sphinx 建立笔记系统（二）系统架构</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx-as-note-taking-system-1.html"
+      >24 May - 我如何用 Sphinx 建立笔记系统（一）选择 Sphinx 的理由</a
+    >
+  </li>
+  
+  <li>
+    <a href="new-boy.html"
+      >21 March - 嘿，我去 2010</a
+    >
+  </li>
+  
+</ul>
+
+<h3><a href="tag.html">Tags</a></h3>
+<style type="text/css">
+  ul.ablog-cloud {
+    list-style: none;
+    overflow: auto;
+  }
+  ul.ablog-cloud li {
+    float: left;
+    height: 20pt;
+    line-height: 18pt;
+    margin-right: 5px;
+  }
+  ul.ablog-cloud a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  li.ablog-cloud-1 {
+    font-size: 80%;
+  }
+  li.ablog-cloud-2 {
+    font-size: 95%;
+  }
+  li.ablog-cloud-3 {
+    font-size: 110%;
+  }
+  li.ablog-cloud-4 {
+    font-size: 125%;
+  }
+  li.ablog-cloud-5 {
+    font-size: 140%;
+  }
+</style>
+<ul class="ablog-cloud">
+   
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/arch-linux.html">Arch Linux</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/c.html">C</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/ctf.html">CTF</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/gsoc.html">GSoC</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/gtk.html">GTK</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/golang.html">Golang</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/haskell.html">Haskell</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/irc.html">IRC</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/isso.html">Isso</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/linux.html">Linux</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/makefile.html">Makefile</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/os.html">OS</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/python.html">Python</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/reverse.html">Reverse</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/sphinx.html">Sphinx</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/srain.html">Srain</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/teeworlds.html">Teeworlds</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/vim.html">Vim</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/windows.html">Windows</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/restructuredtext.html">reStructuredText</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B.html">函数式编程</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%8F%98%E6%9B%B4.html">变更</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%A4%9A%E8%AF%B4.html">多说</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%B1%95%E8%A7%88.html">展览</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%94%9F%E6%B4%BB.html">生活</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%9E%8E%E6%89%AF.html">瞎扯</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F.html">笔记系统</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%BB%98%E7%94%BB.html">绘画</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E8%AE%BE%E5%A4%87.html">设备</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E9%99%88%E4%B8%B9%E9%9D%92.html">陈丹青</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="category.html">Categories</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="category/gsoc-2016.html">GSoc 2016 (2)</a>
+  </li>
+    
+  <li>
+    <a href="category/%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8-sphinx-%E5%BB%BA%E7%AB%8B%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F.html">我如何用 Sphinx 建立笔记系统 (2)</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="archive.html">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="2021.html">2021 (5)</a>
+  </li>
+    
+  <li>
+    <a href="2020.html">2020 (2)</a>
+  </li>
+    
+  <li>
+    <a href="2017.html">2017 (2)</a>
+  </li>
+    
+  <li>
+    <a href="2016.html">2016 (6)</a>
+  </li>
+    
+  <li>
+    <a href="2015.html">2015 (18)</a>
+  </li>
+   
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020-2022, Shengyu Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/blog/first-attempt-of-python.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/SilverRainZ/bullet" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

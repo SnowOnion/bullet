@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+    <title>八月 &#8212; 银色子弹</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/ablog.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/misc/2020/08.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="七月" href="07.html" />
+    <link rel="prev" title="十一月" href="11.html" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+    <link rel="apple-touch-icon" href="../../_static/logo.png" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="id1">
+<h1>八月<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="gtk-3-99-gtk-development-blog">
+<h2>GTK 3.99 - GTK Development Blog<a class="headerlink" href="#gtk-3-99-gtk-development-blog" title="永久链接至标题">¶</a></h2>
+<p>&#64;mclasen 在这篇博客 <a class="footnote-reference brackets" href="#id7" id="id2">1</a> 里大概讲了一下 3.98 之后引入的新 feature：</p>
+<dl class="simple">
+<dt>Event controllers for keyboard shortcuts:</dt><dd><p>说的应该是 <code class="code docutils literal notranslate"><span class="pre">GtkShortcutControllers</span></code> <a class="footnote-reference brackets" href="#id8" id="id3">2</a></p>
+<ul class="simple">
+<li><p>Event Controller 看起来 <a class="footnote-reference brackets" href="#id9" id="id4">3</a> 是将 GTK3 中各种输入事件的处理从 <code class="code docutils literal notranslate"><span class="pre">GtkWidget</span></code>
+中拆出来的工具类</p></li>
+<li><p>在 GTK3 中，全局的键盘快捷键是通过 <code class="code docutils literal notranslate"><span class="pre">GtkAccelGroup</span></code> 或者绑定
+<code class="code docutils literal notranslate"><span class="pre">::button-press-event</span></code> 实现的，前者的 API 我一眼没看懂……
+<code class="code docutils literal notranslate"><span class="pre">GtkShortcutControllers</span></code> 看起来直观多了</p></li>
+</ul>
+</dd>
+<dt>Movable popovers</dt><dd><p>Gnome3 之后他们一直很喜欢这种风格的交互</p>
+</dd>
+<dt>Row-recycling list and grid views</dt><dd><p>可以看这篇博客 <a class="footnote-reference brackets" href="#id10" id="id5">4</a> ，我还没细看，只浏览了下关键字：
+比如说对于列表控件 ，数据（data）存储在 <code class="code docutils literal notranslate"><span class="pre">GListModel</span></code> 中，
+而表示一个行的控件（view）仅会创建视野中能看到的那部分，
+滚动浏览的时候，新出现的 row 会复用消失掉的 row 的控件，
+对于有大量 row 的 list 和 grid 的场景会有显著的性能提升（Srain 有救了</p>
+</dd>
+<dt>Revamped accessibility infrastructure</dt><dd><p>对 a11y 没有太多了解</p>
+</dd>
+<dt>Animation API</dt><dd><p>同样没有了解，Media in GTK 4 <a class="footnote-reference brackets" href="#id11" id="id6">5</a> 有涉及到这个</p>
+</dd>
+</dl>
+<p>最后，GTK4 真的要来了：</p>
+<blockquote>
+<div><p>We are committed to releasing GTK 4 before the end of year.
+Between now and then, we are doing more work on accessibility backends,
+improving the macOS backend, writing documentation, and examples.</p>
+</div></blockquote>
+<dl class="footnote brackets">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://blog.gtk.org/2020/07/31/gtk-3-99/">https://blog.gtk.org/2020/07/31/gtk-3-99/</a></p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p><a class="reference external" href="https://developer.gnome.org/gtk4/stable/GtkShortcutController.html">https://developer.gnome.org/gtk4/stable/GtkShortcutController.html</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p><a class="reference external" href="https://blog.gtk.org/2020/04/29/custom-widgets-in-gtk-4-input/">https://blog.gtk.org/2020/04/29/custom-widgets-in-gtk-4-input/</a></p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p><a class="reference external" href="https://blog.gtk.org/2020/06/07/scalable-lists-in-gtk-4/">https://blog.gtk.org/2020/06/07/scalable-lists-in-gtk-4/</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
+<dd><p><a class="reference external" href="https://blog.gtk.org/2020/05/20/media-in-gtk-4/">https://blog.gtk.org/2020/05/20/media-in-gtk-4/</a></p>
+</dd>
+</dl>
+</section>
+<section id="pptp-l2tp">
+<h2>PPTP &amp; L2TP<a class="headerlink" href="#pptp-l2tp" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>PPTP</dt><dd><ul class="simple">
+<li><p>Pros: 速度快</p></li>
+<li><p>Cons:</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="id12">
+<h2>测试磁盘读写速度<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<p>测试连续写 <a class="footnote-reference brackets" href="#id14" id="id13">6</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">of</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">img</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">G</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span> <span class="n">oflag</span><span class="o">=</span><span class="n">dsync</span>
+</pre></div>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id13">6</a></span></dt>
+<dd><p><a class="reference external" href="https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/">https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/</a></p>
+</dd>
+</dl>
+</section>
+<section id="free-reed">
+<h2>自由簧 (Free reed)<a class="headerlink" href="#free-reed" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="openssh-8-4-load-pubkey-key-file-path-invalid-format">
+<h2>openSSH 8.4 后出现  load pubkey “/key/file/path”: invalid format<a class="headerlink" href="#openssh-8-4-load-pubkey-key-file-path-invalid-format" title="永久链接至标题">¶</a></h2>
+<p>之前版本的 openSSH 默认使用的密钥类型 “ssh-rsa” 使用 sha1 签 <a class="footnote-reference brackets" href="#id17" id="id15">7</a> 名，
+而 sha1 已经被证明是不安全的了。</p>
+<blockquote>
+<div><p>It is now possible to perform chosen-prefix attacks against the
+SHA-1 algorithm for less than USD$50K. For this reason, we will be
+disabling the “ssh-rsa” public key signature algorithm by default in a
+near-future release. <a class="footnote-reference brackets" href="#id18" id="id16">8</a></p>
+</div></blockquote>
+<dl class="footnote brackets">
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
+<dd><p><em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/1/SSH-KEYGEN">SSH-KEYGEN(1)</a></em></p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
+<dd><p><a class="reference external" href="https://lwn.net/Articles/821544/">https://lwn.net/Articles/821544/</a></p>
+</dd>
+</dl>
+</section>
+<section id="motif-theme">
+<span id="motif-of-music"></span><h2>作曲中的动机（motif）和主题（theme）<a class="headerlink" href="#motif-theme" title="永久链接至标题">¶</a></h2>
+<p>动机是一组短小的音乐材料（可能是旋律或节奏），是曲子的起源。</p>
+<p>动机发展出短句，短句拼凑成乐句和乐段，并加以巩固贯穿全曲，然后这叫主题。 <a class="footnote-reference brackets" href="#id20" id="id19">9</a></p>
+<dl class="footnote brackets">
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id19">9</a></span></dt>
+<dd><p><a class="reference external" href="https://www.zhihu.com/question/35722383/answer/64156534">https://www.zhihu.com/question/35722383/answer/64156534</a></p>
+</dd>
+</dl>
+</section>
+<section id="id21">
+<h2>手机投屏到电脑和树莓派<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<p>kodi &amp; scrcpy</p>
+<div class="topic">
+<p class="topic-title">评论</p>
+<p>如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/misc/2020/08" data-title="八月" id="isso-thread"></section></div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Yes silver bullet here.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=SilverRainZ&repo=bullet&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>导航</h3>
+<p class="caption" role="heading"><span class="caption-text">笔记</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/zxsys/index.html">造型实验室</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/artstory/index.html">增量艺术史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/books/index.html">读书笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/music-theory/index.html">乐理笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/6-lectures-on-sketch.html">素描六讲</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/2021-interview/index.html">2021 面试记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/docutils/index.html">Docutils 文档阅读</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/go-internal/index.html">Golang Internal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/leetcode/index.html">Leetcode 刷题记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/wizard/index.html">配置向导</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/writeups/index.html">Capture the Flag</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">博客</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blog/index.html">博客首页</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">手册</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sphinx/index.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/awk.html">Awk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gdb.html">GDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/gpg.html">GnuPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/grep.html">Grep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/irc.html">IRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/krita.html">Krita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/latex.html">LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/lily.html">LilyPond</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/magick.html">ImageMagick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/make.html">Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/pacman.html">Pacman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/py.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/rst.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/sh.html">Shell Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../man/vim.html">Vim</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">随记</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../2022/index.html">2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2021/index.html">2021</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2020</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="12.html">十二月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">十一月</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">八月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">七月</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html">六月</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2017/index.html">2017</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">收集室</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/github-halloween.html">Github 万圣节彩蛋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/art-works/index.html">Art Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collections/scores/index.html">乐谱夹</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/me.html">我</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/site.html">本站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/friends.html">友人帐</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/resume.html">简历</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">2020</a><ul>
+      <li>Previous: <a href="11.html" title="上一章">十一月</a></li>
+      <li>Next: <a href="07.html" title="下一章">七月</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020-2022, Shengyu Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/misc/2020/08.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/SilverRainZ/bullet" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
