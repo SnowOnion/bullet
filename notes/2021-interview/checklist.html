@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -17,25 +16,42 @@
         </script>
     
     <title>知识点 Check List &#8212; 银色子弹</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/alabaster-custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/ablog.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.2/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/asciinema-player_2.6.1.js"></script>
     <script src="../../_static/translations.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/notes/2021-interview/checklist.html" />
@@ -44,14 +60,12 @@
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="Leetcode 刷题日记" href="leetcode.html" />
     <link rel="prev" title="2021 面试记录" href="index.html" /> 
-   
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  
-    <link rel="apple-touch-icon" href="../../_static/logo.png" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -84,143 +98,1766 @@
   }
 </style>
 
-  </head><body>
-  
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">银色子弹</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  笔记
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../zxsys/index.html">
+   造型实验室
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/prelude.html">
+     暴露问题
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/light-and-shadow.html">
+     光影分解训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/indoor-sketching.html">
+     室内场景训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/outdoor-sketching.html">
+     室外夜景训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/modeling.html">
+     形体分解训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/fast-modeling.html">
+     快速形体分解
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../zxsys/way-to-artist/index.html">
+     艺术创作方法
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zxsys/way-to-artist/prepare.html">
+       课前准备
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zxsys/way-to-artist/find-yourself.html">
+       找自己
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zxsys/way-to-artist/find-topic.html">
+       找主题
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zxsys/way-to-artist/find-language.html">
+       找语言
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zxsys/way-to-artist/exhibition.html">
+       参展须知
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/learn-from-master.html">
+     向大师学绘画
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/string-modeling.html">
+     线造型训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/tips.html">
+     一些零碎知识
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../zxsys/glossary.html">
+     术语
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../artstory/index.html">
+   增量艺术史
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../artstory/artistory.html">
+     艺术家史
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../artstory/gallery.html">
+     画廊
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../artstory/gossip.html">
+     逸闻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../books/index.html">
+   读书笔记
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/code-complete-2.html">
+     代码大全 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/codex-hammer.html">
+     哈默手稿
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/cpp-primer-plus.html">
+     C++ Primer Plus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/drawing-course-of-charles-bargue-and-jean-leon-gerome.html">
+     查尔斯巴尔格素描教程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/drawing-lessons-from-the-great-masters.html">
+     向大师学绘画·素描基础
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/teach-yourself-scheme-in-fixnum-days.html">
+     Learning Scheme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/the-rust-programming-language.html">
+     The Rust Programming Language
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/the-story-of-art.html">
+     艺术的故事
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/a-modern-method-for-guitar-vol1/index.html">
+     伯克利现代吉他教程·卷一
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../books/linux-kernel-development/index.html">
+     Linux Kernel Development
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../books/linux-kernel-development/chapter-1_2.html">
+       Chapter 1 and 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../books/linux-kernel-development/compile-and-run-kernel-in-qemu.html">
+       Compile and Run Kernel in Qemu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../books/linux-kernel-development/misc.html">
+       一些零碎的东西
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../music-theory/index.html">
+   乐理笔记
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../music-theory/cadge-system.html">
+     CAGED 系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../music-theory/interval-of-music.html">
+     音程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../music-theory/ionian/index.html">
+     大调训练计划
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../music-theory/solfeggio-lesson-of-daluobei/index.html">
+     大萝北的视唱课
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6-lectures-on-sketch.html">
+   素描六讲
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   2021 面试记录
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     知识点 Check List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leetcode.html">
+     Leetcode 刷题日记
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dp.html">
+     动态规划
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../docutils/index.html">
+   Docutils 文档阅读
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../docutils/doctree.html">
+     The Docutils Document Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../docutils/docutils-hacker-guide.html">
+     Docutils Hacker’s Guide
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../go-internal/index.html">
+   Golang Internal
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go-internal/asm.html">
+     Go’s Assembler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go-internal/type-assertion.html">
+     Type Assertion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../leetcode/index.html">
+   Leetcode 刷题记录
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../wizard/index.html">
+   配置向导
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../wizard/pi.html">
+     家用树莓派 3B+ 配置
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../writeups/index.html">
+   Capture the Flag
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../writeups/wargame-leviathan.html">
+     wargame-leviathan
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../writeups/seedlabs/index.html">
+     Seed Lab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../writeups/seedlabs/format-string-vulnerability-lab/index.html">
+       Format String Vulnerability Lab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../writeups/wargame-bandit/index.html">
+     wargme-bandit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../writeups/wargame-narnia/index.html">
+     wargame-narnia
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  博客
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../blog/index.html">
+   博客首页
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  手册
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../man/sphinx/index.html">
+   Sphinx
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../man/sphinx/extension-development.html">
+     扩展开发
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/awk.html">
+   Awk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/gdb.html">
+   GDB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/gpg.html">
+   GnuPG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/grep.html">
+   Grep
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/irc.html">
+   IRC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/krita.html">
+   Krita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/latex.html">
+   LaTeX
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/lily.html">
+   LilyPond
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/magick.html">
+   ImageMagick
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/make.html">
+   Makefile
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/pacman.html">
+   Pacman
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/py.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/rst.html">
+   reStructuredText
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/sh.html">
+   Shell Script
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/vim.html">
+   Vim
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  随记
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../misc/2022/index.html">
+   2022
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2022/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../misc/2021/index.html">
+   2021
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/12.html">
+     十二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/11.html">
+     十一月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/10.html">
+     十月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/09.html">
+     九月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/08.html">
+     八月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/05.html">
+     五月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/03.html">
+     三月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/02.html">
+     二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2021/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../misc/2020/index.html">
+   2020
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2020/12.html">
+     十二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2020/11.html">
+     十一月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2020/08.html">
+     八月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2020/07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2020/06.html">
+     六月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../misc/2017/index.html">
+   2017
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2017/06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2017/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../misc/2017/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  收集室
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../collections/github-halloween.html">
+   Github 万圣节彩蛋
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../collections/art-works/index.html">
+   Art Works
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../collections/scores/index.html">
+   乐谱夹
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  关于
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/me.html">
+   我
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/site.html">
+   本站
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/friends.html">
+   友人帐
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/resume.html">
+   简历
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
           
 
-          <div class="body" role="main">
-             <section id="check-list">
-<h1>知识点 Check List<a class="headerlink" href="#check-list" title="永久链接至标题">¶</a></h1>
-<div class="contents local topic" id="id1">
-<ul class="simple">
-<li><p><a class="reference internal" href="#id2" id="id49">计算机网络</a></p>
-<ul>
-<li><p><a class="reference internal" href="#tcp-x" id="id50">TCP 三次握手 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id3" id="id51">TCP 四次挥手 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#tcp-udp-x" id="id52">TCP UDP 区别 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#select-epoll-x" id="id53">select，epoll ✔️</a></p></li>
-<li><p><a class="reference internal" href="#web" id="id54">Web</a></p>
-<ul>
-<li><p><a class="reference internal" href="#https-x" id="id55">HTTPS 原理 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#session-cookie-x" id="id56">Session 和 Cookie ✔️</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id4" id="id57">分布式</a></p>
-<ul>
-<li><p><a class="reference internal" href="#map-reduce-x" id="id58">Map-Reduce 概述 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id-x" id="id59">分布式 ID 生成 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id5" id="id60">选主</a></p></li>
-<li><p><a class="reference internal" href="#id6" id="id61">脑裂</a></p></li>
-<li><p><a class="reference internal" href="#cap-x" id="id62">CAP ✔️</a></p></li>
-<li><p><a class="reference internal" href="#x" id="id63">分布式锁 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id7" id="id64">分布式定时器 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id8" id="id65">一致性级别 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id9" id="id66">两阶段提交</a></p></li>
-<li><p><a class="reference internal" href="#topn" id="id67">海量数据 TopN</a></p></li>
-<li><p><a class="reference internal" href="#paxos" id="id68">Paxos</a></p></li>
-<li><p><a class="reference internal" href="#raft-x" id="id69">Raft ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id10" id="id70">外部排序</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id11" id="id71">关系型数据库</a></p>
-<ul>
-<li><p><a class="reference internal" href="#id12" id="id72">数据库范式 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#acid-x" id="id73">ACID ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id13" id="id74">事务隔离级别</a></p></li>
-<li><p><a class="reference internal" href="#id14" id="id75">索引 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id15" id="id76">分表与分片</a></p></li>
-<li><p><a class="reference internal" href="#id16" id="id77">并发控制 ✔️</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id17" id="id78">架构</a></p>
-<ul>
-<li><p><a class="reference internal" href="#id18" id="id79">微服务概述</a></p></li>
-<li><p><a class="reference internal" href="#id19" id="id80">服务降级</a></p></li>
-<li><p><a class="reference internal" href="#id20" id="id81">服务重试</a></p></li>
-<li><p><a class="reference internal" href="#id21" id="id82">限流器 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id22" id="id83">负载均衡 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id23" id="id84">一致性哈希 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id24" id="id85">灰度测试</a></p></li>
-<li><p><a class="reference internal" href="#id25" id="id86">并发和吞吐</a></p></li>
-<li><p><a class="reference internal" href="#id26" id="id87">故障转移</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id27" id="id88">中间件</a></p>
-<ul>
-<li><p><a class="reference internal" href="#redis" id="id89">Redis 等缓存</a></p></li>
-<li><p><a class="reference internal" href="#kafka" id="id90">Kafka</a></p></li>
-<li><p><a class="reference internal" href="#etcd-zk" id="id91">etcd zk 等集群协同</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id28" id="id92">操作系统</a></p>
-<ul>
-<li><p><a class="reference internal" href="#id29" id="id93">进程、线程和协程 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#fork-exec-x" id="id94">fork &amp; exec ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id30" id="id95">进程间通信方式概述 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#dma-x" id="id96">DMA ✔️</a></p></li>
-<li><p><a class="reference internal" href="#huge-page-x" id="id97">Huge Page ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id31" id="id98">死锁 ✔️</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#golang" id="id99">Golang</a></p>
-<ul>
-<li><p><a class="reference internal" href="#id32" id="id100">调度问题 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id33" id="id101">垃圾回收</a></p>
-<ul>
-<li><p><a class="reference internal" href="#gc-x" id="id102">经典 GC 算法 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#go-x" id="id103">Go 的垃圾回收 ✔️</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id34" id="id104">内存管理</a></p></li>
-<li><p><a class="reference internal" href="#channel-x" id="id105">Channel ✔️</a></p></li>
-<li><p><a class="reference internal" href="#sync-mutex-x" id="id106"><code class="code docutils literal notranslate"><span class="pre">sync.Mutex</span></code> ✔️</a></p></li>
-<li><p><a class="reference internal" href="#sync-rwmutex-x" id="id107"><code class="code docutils literal notranslate"><span class="pre">sync.RWMutex</span></code> ✔️</a></p></li>
-<li><p><a class="reference internal" href="#sync-map-x" id="id108"><code class="code docutils literal notranslate"><span class="pre">sync.Map</span></code> ✔️</a></p></li>
-<li><p><a class="reference internal" href="#defer" id="id109">Defer</a></p></li>
-<li><p><a class="reference internal" href="#id35" id="id110"><code class="code docutils literal notranslate"><span class="pre">&amp;^</span></code> 操作符 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#interface" id="id111"><code class="code docutils literal notranslate"><span class="pre">interface{}</span></code></a></p></li>
-<li><p><a class="reference internal" href="#id36" id="id112">内存泄漏</a></p></li>
-<li><p><a class="reference internal" href="#id37" id="id113">死锁检测 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id38" id="id114">数据竞争</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#sync-cond-x" id="id115"><code class="code docutils literal notranslate"><span class="pre">sync.Cond</span></code> 的虚假唤醒 ✔️</a></p></li>
-<li><p><a class="reference internal" href="#id39" id="id116">云原生</a></p>
-<ul>
-<li><p><a class="reference internal" href="#k8s" id="id117">k8s</a></p></li>
-<li><p><a class="reference internal" href="#docker-x" id="id118">Docker ✔️</a></p>
-<ul>
-<li><p><a class="reference internal" href="#id40" id="id119">隔离</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id41" id="id120">虚拟化</a></p>
-<ul>
-<li><p><a class="reference internal" href="#kvm-x" id="id121">KVM ✔️</a></p></li>
-<li><p><a class="reference internal" href="#libvirt" id="id122">libvirt</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id43" id="id123">流处理</a></p>
-<ul>
-<li><p><a class="reference internal" href="#flink-checkpoint" id="id124">Flink CheckPoint</a></p></li>
-<li><p><a class="reference internal" href="#pler-vs-flink" id="id125">PLER vs Flink</a></p></li>
-<li><p><a class="reference internal" href="#id44" id="id126">逻辑计划优化</a></p></li>
-<li><p><a class="reference internal" href="#id45" id="id127">乱序元素</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id46" id="id128">算法</a></p></li>
-</ul>
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="源库"><i
+                    class="fab fa-github"></i>资料库</button></a>
+        
+        
+    </div>
 </div>
-<section id="id2">
-<h2>计算机网络<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<section id="tcp-x">
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   计算机网络
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tcp-x">
+     TCP 三次握手 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     TCP 四次挥手 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tcp-udp-x">
+     TCP UDP 区别 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select-epoll-x">
+     select，epoll ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#web">
+     Web
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#https-x">
+       HTTPS 原理 ✔️
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#session-cookie-x">
+       Session 和 Cookie ✔️
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   分布式
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#map-reduce-x">
+     Map-Reduce 概述 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id-x">
+     分布式 ID 生成 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     选主
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     脑裂
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cap-x">
+     CAP ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x">
+     分布式锁 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     分布式定时器 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     一致性级别 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     两阶段提交
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topn">
+     海量数据 TopN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#paxos">
+     Paxos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#raft-x">
+     Raft ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     外部排序
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   关系型数据库
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     数据库范式 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acid-x">
+     ACID ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     事务隔离级别
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     索引 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     分表与分片
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     并发控制 ✔️
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   架构
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     微服务概述
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     服务降级
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     服务重试
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     限流器 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     负载均衡 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id22">
+     一致性哈希 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id23">
+     灰度测试
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id24">
+     并发和吞吐
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id25">
+     故障转移
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id26">
+   中间件
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redis">
+     Redis 等缓存
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kafka">
+     Kafka
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etcd-zk">
+     etcd zk 等集群协同
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id27">
+   操作系统
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id28">
+     进程、线程和协程 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fork-exec-x">
+     fork &amp; exec ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id29">
+     进程间通信方式概述 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dma-x">
+     DMA ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#huge-page-x">
+     Huge Page ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id30">
+     死锁 ✔️
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#golang">
+   Golang
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id31">
+     调度问题 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id32">
+     垃圾回收
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gc-x">
+       经典 GC 算法 ✔️
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#go-x">
+       Go 的垃圾回收 ✔️
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id33">
+     内存管理
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#channel-x">
+     Channel ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sync-mutex-x">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       sync.Mutex
+      </span>
+     </code>
+     ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sync-rwmutex-x">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       sync.RWMutex
+      </span>
+     </code>
+     ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sync-map-x">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       sync.Map
+      </span>
+     </code>
+     ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defer">
+     Defer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id34">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       &amp;^
+      </span>
+     </code>
+     操作符 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interface">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       interface{}
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id35">
+     内存泄漏
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id36">
+     死锁检测 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id37">
+     数据竞争
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sync-cond-x">
+   <code class="code docutils literal notranslate">
+    <span class="pre">
+     sync.Cond
+    </span>
+   </code>
+   的虚假唤醒 ✔️
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id38">
+   云原生
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k8s">
+     k8s
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#docker-x">
+     Docker ✔️
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id39">
+       隔离
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id40">
+   虚拟化
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kvm-x">
+     KVM ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#libvirt">
+     libvirt
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id42">
+   流处理
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flink-checkpoint">
+     Flink CheckPoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pler-vs-flink">
+     PLER vs Flink
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id43">
+     逻辑计划优化
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id44">
+     乱序元素
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id45">
+   算法
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>知识点 Check List</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   计算机网络
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tcp-x">
+     TCP 三次握手 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     TCP 四次挥手 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tcp-udp-x">
+     TCP UDP 区别 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select-epoll-x">
+     select，epoll ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#web">
+     Web
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#https-x">
+       HTTPS 原理 ✔️
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#session-cookie-x">
+       Session 和 Cookie ✔️
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   分布式
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#map-reduce-x">
+     Map-Reduce 概述 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id-x">
+     分布式 ID 生成 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     选主
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     脑裂
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cap-x">
+     CAP ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x">
+     分布式锁 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     分布式定时器 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     一致性级别 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     两阶段提交
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topn">
+     海量数据 TopN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#paxos">
+     Paxos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#raft-x">
+     Raft ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     外部排序
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   关系型数据库
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     数据库范式 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acid-x">
+     ACID ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     事务隔离级别
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     索引 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     分表与分片
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     并发控制 ✔️
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   架构
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     微服务概述
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     服务降级
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     服务重试
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     限流器 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     负载均衡 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id22">
+     一致性哈希 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id23">
+     灰度测试
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id24">
+     并发和吞吐
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id25">
+     故障转移
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id26">
+   中间件
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redis">
+     Redis 等缓存
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kafka">
+     Kafka
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etcd-zk">
+     etcd zk 等集群协同
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id27">
+   操作系统
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id28">
+     进程、线程和协程 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fork-exec-x">
+     fork &amp; exec ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id29">
+     进程间通信方式概述 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dma-x">
+     DMA ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#huge-page-x">
+     Huge Page ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id30">
+     死锁 ✔️
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#golang">
+   Golang
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id31">
+     调度问题 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id32">
+     垃圾回收
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gc-x">
+       经典 GC 算法 ✔️
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#go-x">
+       Go 的垃圾回收 ✔️
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id33">
+     内存管理
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#channel-x">
+     Channel ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sync-mutex-x">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       sync.Mutex
+      </span>
+     </code>
+     ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sync-rwmutex-x">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       sync.RWMutex
+      </span>
+     </code>
+     ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sync-map-x">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       sync.Map
+      </span>
+     </code>
+     ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defer">
+     Defer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id34">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       &amp;^
+      </span>
+     </code>
+     操作符 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interface">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       interface{}
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id35">
+     内存泄漏
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id36">
+     死锁检测 ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id37">
+     数据竞争
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sync-cond-x">
+   <code class="code docutils literal notranslate">
+    <span class="pre">
+     sync.Cond
+    </span>
+   </code>
+   的虚假唤醒 ✔️
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id38">
+   云原生
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k8s">
+     k8s
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#docker-x">
+     Docker ✔️
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id39">
+       隔离
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id40">
+   虚拟化
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kvm-x">
+     KVM ✔️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#libvirt">
+     libvirt
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id42">
+   流处理
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flink-checkpoint">
+     Flink CheckPoint
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pler-vs-flink">
+     PLER vs Flink
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id43">
+     逻辑计划优化
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id44">
+     乱序元素
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id45">
+   算法
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="check-list">
+<h1>知识点 Check List<a class="headerlink" href="#check-list" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>计算机网络<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="tcp-x">
 <h3>TCP 三次握手 ✔️<a class="headerlink" href="#tcp-x" title="永久链接至标题">¶</a></h3>
 <p>由 client 执行 <em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/3/connect">connect(3)</a></em> 触发。</p>
 <a class="reference external image-reference" href="https://hit-alibaba.github.io/interview/basic/network/TCP.html"><img alt="../../_images/tcp-connection-made-three-way-handshake.png" src="../../_images/tcp-connection-made-three-way-handshake.png" /></a>
@@ -233,9 +1870,9 @@
 <dt>半连接队列</dt><dd><p>服务端第一次受到 SYN 包（<code class="code docutils literal notranslate"><span class="pre">SYN_RCVD</span></code>）的队列</p>
 </dd>
 </dl>
-</section>
-<section id="id3">
-<h3>TCP 四次挥手 ✔️<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id2">
+<h3>TCP 四次挥手 ✔️<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p>由任意一方执行 <em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/3/close">close(3)</a></em> 触发。</p>
 <a class="reference external image-reference" href="https://hit-alibaba.github.io/interview/basic/network/TCP.html"><img alt="../../_images/tcp-connection-closed-four-way-handshake.png" src="../../_images/tcp-connection-closed-four-way-handshake.png" /></a>
 <dl>
@@ -252,8 +1889,8 @@
 <dt>Server 大量 <code class="code docutils literal notranslate"><span class="pre">CLOSE_WAIT</span></code></dt><dd><p>Client 端主动关连接，Server 没有发第二个 FIN</p>
 </dd>
 </dl>
-</section>
-<section id="tcp-udp-x">
+</div>
+<div class="section" id="tcp-udp-x">
 <h3>TCP UDP 区别 ✔️<a class="headerlink" href="#tcp-udp-x" title="永久链接至标题">¶</a></h3>
 <dl class="simple">
 <dt>TCP</dt><dd><p>全双工，面向连接，可靠，一对一通信</p>
@@ -261,8 +1898,8 @@
 <dt>UDP</dt><dd><p>无连接，不可靠，可多播、广播</p>
 </dd>
 </dl>
-</section>
-<section id="select-epoll-x">
+</div>
+<div class="section" id="select-epoll-x">
 <h3>select，epoll ✔️<a class="headerlink" href="#select-epoll-x" title="永久链接至标题">¶</a></h3>
 <dl class="simple">
 <dt><a class="reference external" href="https://zh.wikipedia.org/wiki/Select_(Unix)">📖Select_(Unix)</a></dt><dd><ul class="simple">
@@ -279,10 +1916,10 @@
 </ul>
 </dd>
 </dl>
-</section>
-<section id="web">
+</div>
+<div class="section" id="web">
 <h3>Web<a class="headerlink" href="#web" title="永久链接至标题">¶</a></h3>
-<section id="https-x">
+<div class="section" id="https-x">
 <h4>HTTPS 原理 ✔️<a class="headerlink" href="#https-x" title="永久链接至标题">¶</a></h4>
 <dl>
 <dt>对称加密</dt><dd><dl class="field-list simple">
@@ -315,16 +1952,14 @@
 </ol>
 </li>
 </ol>
-<figure class="align-default" id="id48">
+<div class="figure align-default" id="id47">
 <a class="reference external image-reference" href="https://segmentfault.com/a/1190000021494676"><img alt="../../_images/2641864607-5e11d65c74244_fix732.webp" src="../../_images/2641864607-5e11d65c74244_fix732.webp" /></a>
-<figcaption>
-<p><span class="caption-text">HTTPS 加密、解密、验证及数据传输过程</span><a class="headerlink" href="#id48" title="永久链接至图片">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">HTTPS 加密、解密、验证及数据传输过程</span><a class="headerlink" href="#id47" title="永久链接至图片">¶</a></p>
+</div>
 </dd>
 </dl>
-</section>
-<section id="session-cookie-x">
+</div>
+<div class="section" id="session-cookie-x">
 <h4>Session 和 Cookie ✔️<a class="headerlink" href="#session-cookie-x" title="永久链接至标题">¶</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
@@ -334,16 +1969,16 @@
 <p>对无状态的 HTTP 协议的补充。</p>
 <p><a class="reference external" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a> 用来向客户端设置 Cookie，假如域名不能涵盖原始服务器的域名，那么应该被用户代理拒绝</p>
 <p>Session 一般用 Cookie 存。</p>
-</section>
-</section>
-</section>
-<section id="id4">
-<h2>分布式<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<section id="map-reduce-x">
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>分布式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="map-reduce-x">
 <h3>Map-Reduce 概述 ✔️<a class="headerlink" href="#map-reduce-x" title="永久链接至标题">¶</a></h3>
 <p>映射（可并行） -&gt; 归纳</p>
-</section>
-<section id="id-x">
+</div>
+<div class="section" id="id-x">
 <h3>分布式 ID 生成 ✔️<a class="headerlink" href="#id-x" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
@@ -436,14 +2071,14 @@
 </dl>
 </dd>
 </dl>
-</section>
-<section id="id5">
-<h3>选主<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="id6">
-<h3>脑裂<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="cap-x">
+</div>
+<div class="section" id="id4">
+<h3>选主<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id5">
+<h3>脑裂<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="cap-x">
 <h3>CAP ✔️<a class="headerlink" href="#cap-x" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>对于一个分布式计算系统来说，不可能同时满足以下三点：</p>
@@ -455,8 +2090,8 @@
 <p class="attribution">—— <a class="reference external" href="https://zh.wikipedia.org/wiki/CAP定理">📖CAP定理</a></p>
 </div></blockquote>
 <p>P（分区容错性）是说这个系统要允许分区？</p>
-</section>
-<section id="x">
+</div>
+<div class="section" id="x">
 <h3>分布式锁 ✔️<a class="headerlink" href="#x" title="永久链接至标题">¶</a></h3>
 <dl class="simple">
 <dt>场景</dt><dd><p>分布式事务</p>
@@ -485,9 +2120,9 @@
 </ul>
 </dd>
 </dl>
-</section>
-<section id="id7">
-<h3>分布式定时器 ✔️<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id6">
+<h3>分布式定时器 ✔️<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <dl class="simple">
 <dt>实现</dt><dd><ul class="simple">
 <li><p>公平的分布式锁实现：etcd</p></li>
@@ -495,9 +2130,9 @@
 </ul>
 </dd>
 </dl>
-</section>
-<section id="id8">
-<h3>一致性级别 ✔️<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id7">
+<h3>一致性级别 ✔️<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://zhuanlan.zhihu.com/p/86999794">https://zhuanlan.zhihu.com/p/86999794</a></p>
@@ -515,14 +2150,14 @@
 <p>读操作未必能够及时得到此前其他进程对同一数据的写更新，但是每个进程读到的该数据不同值的顺序却是一致的。</p>
 </dd>
 </dl>
-</section>
-<section id="id9">
-<h3>两阶段提交<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="topn">
+</div>
+<div class="section" id="id8">
+<h3>两阶段提交<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="topn">
 <h3>海量数据 TopN<a class="headerlink" href="#topn" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="paxos">
+</div>
+<div class="section" id="paxos">
 <h3>Paxos<a class="headerlink" href="#paxos" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>一种基于消息传递且具有高度容错特性的共识（consensus）算法。</p>
@@ -536,8 +2171,8 @@
 </dd>
 </dl>
 <p>好复杂…… 看看就行吧，不强求懂了。</p>
-</section>
-<section id="raft-x">
+</div>
+<div class="section" id="raft-x">
 <h3>Raft ✔️<a class="headerlink" href="#raft-x" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>Raft能为在计算机集群之间部署有限状态机提供一种通用方法，并确保集群内的任意节点在某种状态转换上保持一致。</p>
@@ -554,15 +2189,15 @@
 </dd>
 </dl>
 <p>看 Wiki 即可，好懂多了。</p>
-</section>
-<section id="id10">
-<h3>外部排序<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
-</section>
-</section>
-<section id="id11">
-<h2>关系型数据库<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
-<section id="id12">
-<h3>数据库范式 ✔️<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id9">
+<h3>外部排序<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>关系型数据库<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id11">
+<h3>数据库范式 ✔️<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <dl class="simple">
 <dt>1NF</dt><dd><p>原子性，属性都不可再分</p>
 </dd>
@@ -573,8 +2208,8 @@
 <dt>BCNF</dt><dd><p>任何属性（包括非主属性和主属性）都不能被非主属性所决定。</p>
 </dd>
 </dl>
-</section>
-<section id="acid-x">
+</div>
+<div class="section" id="acid-x">
 <h3>ACID ✔️<a class="headerlink" href="#acid-x" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">A</dt>
@@ -590,9 +2225,9 @@
 <dd class="field-even"><p>Durability 持久性 数据库的 redo log</p>
 </dd>
 </dl>
-</section>
-<section id="id13">
-<h3>事务隔离级别<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id12">
+<h3>事务隔离级别<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://tech.meituan.com/2014/08/20/innodb-lock.html">https://tech.meituan.com/2014/08/20/innodb-lock.html</a></p>
@@ -614,9 +2249,9 @@
 </dl>
 <p>表级别锁和行级别锁</p>
 <p>幻读？</p>
-</section>
-<section id="id14">
-<h3>索引 ✔️<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id13">
+<h3>索引 ✔️<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <dl class="simple">
 <dt>作用</dt><dd><ul class="simple">
 <li><p>提高查询效率</p></li>
@@ -641,12 +2276,12 @@
 </dd>
 </dl>
 <p>局部性原理</p>
-</section>
-<section id="id15">
-<h3>分表与分片<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="id16">
-<h3>并发控制 ✔️<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id14">
+<h3>分表与分片<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id15">
+<h3>并发控制 ✔️<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <p>数据库中的并发控制的任务是确保在多个事务同时访问数据库中同一数据时不破坏事务的隔离性和统一性以及数据库的统一性。</p>
 <dl>
 <dt>乐观锁</dt><dd><p>假设不冲突，冲突则回滚：</p>
@@ -694,22 +2329,22 @@
 </div></blockquote>
 </dd>
 </dl>
-</section>
-</section>
-<section id="id17">
-<h2>架构<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
-<section id="id18">
-<h3>微服务概述<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="id19">
-<h3>服务降级<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="id20">
-<h3>服务重试<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>架构<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id17">
+<h3>微服务概述<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id18">
+<h3>服务降级<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id19">
+<h3>服务重试<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <p>幂等性</p>
-</section>
-<section id="id21">
-<h3>限流器 ✔️<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id20">
+<h3>限流器 ✔️<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.infoq.cn/article/qg2tx8fyw5vt-f3hh673">https://www.infoq.cn/article/qg2tx8fyw5vt-f3hh673</a></p>
@@ -725,9 +2360,9 @@
 <p class="admonition-title">参见</p>
 <p>流量整形</p>
 </div>
-</section>
-<section id="id22">
-<h3>负载均衡 ✔️<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id21">
+<h3>负载均衡 ✔️<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
 <dl class="simple">
 <dt>方向</dt><dd><ul class="simple">
 <li><p>客户端侧</p></li>
@@ -754,33 +2389,33 @@
 </ul>
 </dd>
 </dl>
-</section>
-<section id="id23">
-<h3>一致性哈希 ✔️<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id22">
+<h3>一致性哈希 ✔️<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
 <p>解决了简单哈希算法在分布式哈希表（Distributed Hash Table，DHT）中存在的动态伸缩等问题 。在移除或者添加一个服务器时，能够尽可能小地改变已存在的服务请求与处理请求服务器之间的映射关系</p>
 <p>环状哈希</p>
 <p>虚拟节点</p>
 <p>查找距离这个对象的 hash 值最近的节点的 hash（在排好序的哈希数组里二分），即是这个对象所属的节点</p>
-</section>
-<section id="id24">
-<h3>灰度测试<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id23">
+<h3>灰度测试<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <p>A/B Test</p>
 <p>实现</p>
-</section>
-<section id="id25">
-<h3>并发和吞吐<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id24">
+<h3>并发和吞吐<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
 <p>协程 异步 读写分离</p>
-</section>
-<section id="id26">
-<h3>故障转移<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
-</section>
-</section>
-<section id="id27">
-<h2>中间件<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
-<section id="redis">
+</div>
+<div class="section" id="id25">
+<h3>故障转移<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>中间件<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
+<div class="section" id="redis">
 <h3>Redis 等缓存<a class="headerlink" href="#redis" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="kafka">
+</div>
+<div class="section" id="kafka">
 <h3>Kafka<a class="headerlink" href="#kafka" title="永久链接至标题">¶</a></h3>
 <p>基于 topic 的订阅模式。</p>
 <dl class="simple">
@@ -797,24 +2432,24 @@
 </dl>
 </dd>
 </dl>
-</section>
-<section id="etcd-zk">
+</div>
+<div class="section" id="etcd-zk">
 <h3>etcd zk 等集群协同<a class="headerlink" href="#etcd-zk" title="永久链接至标题">¶</a></h3>
-</section>
-</section>
-<section id="id28">
-<h2>操作系统<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
-<section id="id29">
-<h3>进程、线程和协程 ✔️<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id27">
+<h2>操作系统<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id28">
+<h3>进程、线程和协程 ✔️<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
 <p>进程有独立地址空间，线程无</p>
 <p>协程：纯粹的用户态实现</p>
-</section>
-<section id="fork-exec-x">
+</div>
+<div class="section" id="fork-exec-x">
 <h3>fork &amp; exec ✔️<a class="headerlink" href="#fork-exec-x" title="永久链接至标题">¶</a></h3>
 <p>没啥好说。</p>
-</section>
-<section id="id30">
-<h3>进程间通信方式概述 ✔️<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id29">
+<h3>进程间通信方式概述 ✔️<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>文件</p></li>
 <li><p>信号</p></li>
@@ -826,13 +2461,13 @@
 <li><p>Shared Memory</p></li>
 <li><p>Mapped File</p></li>
 </ul>
-</section>
-<section id="dma-x">
+</div>
+<div class="section" id="dma-x">
 <h3>DMA ✔️<a class="headerlink" href="#dma-x" title="永久链接至标题">¶</a></h3>
 <p>Direct Memory Access，允许某些电脑内部的硬件子系统（电脑外设），可以独立地直接读写系统内存，而不需 CPU 介入处理 。</p>
 <p>每一个DMA通道有一个16位地址寄存器和一个16位计数寄存器。要初始化资料传输时，设备驱动程序一起设置DMA通道的地址和计数寄存器，以及资料传输的方向，读取或写入。然后指示DMA硬件开始这个传输动作。当传输结束的时候，设备就会以中断的方式通知中央处理器。</p>
-</section>
-<section id="huge-page-x">
+</div>
+<div class="section" id="huge-page-x">
 <h3>Huge Page ✔️<a class="headerlink" href="#huge-page-x" title="永久链接至标题">¶</a></h3>
 <p>4K -&gt; ??</p>
 <ul class="simple">
@@ -840,16 +2475,16 @@
 <li><p>减少了页面数量，页表也少了一级，使得缺页中断的数量大大减少，缺页中断的处理效率也有了提高</p></li>
 </ul>
 <p>透明巨型页。</p>
-</section>
-<section id="id31">
-<h3>死锁 ✔️<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id30">
+<h3>死锁 ✔️<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
 <p>讲一下操作系统死锁是如何发生的，以及如何解决死锁</p>
-</section>
-</section>
-<section id="golang">
+</div>
+</div>
+<div class="section" id="golang">
 <h2>Golang<a class="headerlink" href="#golang" title="永久链接至标题">¶</a></h2>
-<section id="id32">
-<h3>调度问题 ✔️<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id31">
+<h3>调度问题 ✔️<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.douban.com/note/300631999/">https://www.douban.com/note/300631999/</a></p>
@@ -891,15 +2526,15 @@
 </div></blockquote>
 </dd>
 </dl>
-</section>
-<section id="id33">
-<h3>垃圾回收<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id32">
+<h3>垃圾回收<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="http://legendtkl.com/2017/04/28/golang-gc/">http://legendtkl.com/2017/04/28/golang-gc/</a></p>
 </dd>
 </dl>
-<section id="gc-x">
+<div class="section" id="gc-x">
 <h4>经典 GC 算法 ✔️<a class="headerlink" href="#gc-x" title="永久链接至标题">¶</a></h4>
 <dl>
 <dt>经典的 GC 算法</dt><dd><ul class="simple">
@@ -986,8 +2621,8 @@
 </dl>
 </dd>
 </dl>
-</section>
-<section id="go-x">
+</div>
+<div class="section" id="go-x">
 <h4>Go 的垃圾回收 ✔️<a class="headerlink" href="#go-x" title="永久链接至标题">¶</a></h4>
 <dl>
 <dt>何时触发 GC 检测</dt><dd><dl class="field-list simple">
@@ -1025,10 +2660,10 @@
 </dl>
 </dd>
 </dl>
-</section>
-</section>
-<section id="id34">
-<h3>内存管理<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id33">
+<h3>内存管理<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
 <p>逃逸分析: <code class="code docutils literal notranslate"><span class="pre">go</span> <span class="pre">run</span></code> with <code class="code docutils literal notranslate"><span class="pre">-gcflags</span> <span class="pre">'-m</span> <span class="pre">-l'</span></code></p>
 <dl class="simple">
 <dt>如何得知变量是分配在栈（stack）上还是堆（heap）上？</dt><dd><p>不需要关心，由 go 内部决定</p>
@@ -1046,16 +2681,16 @@
 </dl>
 </dd>
 </dl>
-</section>
-<section id="channel-x">
+</div>
+<div class="section" id="channel-x">
 <h3>Channel ✔️<a class="headerlink" href="#channel-x" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://golang.design/under-the-hood/zh-cn/part2runtime/ch09lang/chan/">https://golang.design/under-the-hood/zh-cn/part2runtime/ch09lang/chan/</a></p>
 </dd>
 </dl>
-</section>
-<section id="sync-mutex-x">
+</div>
+<div class="section" id="sync-mutex-x">
 <h3><code class="code docutils literal notranslate"><span class="pre">sync.Mutex</span></code> ✔️<a class="headerlink" href="#sync-mutex-x" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
@@ -1082,8 +2717,8 @@
 </dd>
 </dl>
 <p>还是蛮复杂的，记个差不多就行。</p>
-</section>
-<section id="sync-rwmutex-x">
+</div>
+<div class="section" id="sync-rwmutex-x">
 <h3><code class="code docutils literal notranslate"><span class="pre">sync.RWMutex</span></code> ✔️<a class="headerlink" href="#sync-rwmutex-x" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
@@ -1160,8 +2795,8 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="sync-map-x">
+</div>
+<div class="section" id="sync-map-x">
 <h3><code class="code docutils literal notranslate"><span class="pre">sync.Map</span></code> ✔️<a class="headerlink" href="#sync-map-x" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
@@ -1175,8 +2810,8 @@
 <dt>检测 “concurrent map read and map write”</dt><dd><p>用 <a class="reference external" href="https://github.com/golang/go/blob/master/src/runtime/map.go#L102">hashWriting</a> bit 表示当前是否在进行写操作</p>
 </dd>
 </dl>
-</section>
-<section id="defer">
+</div>
+<div class="section" id="defer">
 <h3>Defer<a class="headerlink" href="#defer" title="永久链接至标题">¶</a></h3>
 <p>小坑点：参数是提前求值的</p>
 <p><code class="code docutils literal notranslate"><span class="pre">struct</span> <span class="pre">runtime._defer</span></code> 组成了一条 defer link list。</p>
@@ -1191,20 +2826,20 @@
 <dd class="field-odd"><p>Open coded</p>
 </dd>
 </dl>
-</section>
-<section id="id35">
-<h3><code class="code docutils literal notranslate"><span class="pre">&amp;^</span></code> 操作符 ✔️<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id34">
+<h3><code class="code docutils literal notranslate"><span class="pre">&amp;^</span></code> 操作符 ✔️<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
 <p>日常是很少用上，标准库代码里见得多。</p>
 <p>Bit clear，<code class="code docutils literal notranslate"><span class="pre">a</span> <span class="pre">&amp;^</span> <span class="pre">b</span> <span class="pre">==</span> <span class="pre">a</span> <span class="pre">&amp;</span> <span class="pre">^b</span></code>。</p>
-</section>
-<section id="interface">
+</div>
+<div class="section" id="interface">
 <h3><code class="code docutils literal notranslate"><span class="pre">interface{}</span></code><a class="headerlink" href="#interface" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="id36">
-<h3>内存泄漏<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="id37">
-<h3>死锁检测 ✔️<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id35">
+<h3>内存泄漏<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id36">
+<h3>死锁检测 ✔️<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>当两个以上的运算单元，双方都在等待对方停止运行，以获取系统资源，但是没有一方提前退出时，就称为死锁</p>
 <p class="attribution">——  <a class="reference external" href="https://zh.wikipedia.org/wiki/死锁">📖死锁</a></p>
@@ -1244,12 +2879,12 @@
 </ul>
 </li>
 </ul>
-</section>
-<section id="id38">
-<h3>数据竞争<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
-</section>
-</section>
-<section id="sync-cond-x">
+</div>
+<div class="section" id="id37">
+<h3>数据竞争<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="sync-cond-x">
 <h2><code class="code docutils literal notranslate"><span class="pre">sync.Cond</span></code> 的虚假唤醒 ✔️<a class="headerlink" href="#sync-cond-x" title="永久链接至标题">¶</a></h2>
 <p>因为 condition 的判断是用户代码，在 <code class="code docutils literal notranslate"><span class="pre">Wait()</span></code> 返回之后，因此只能要求用户用忙等的方式等到 condition 满足的时刻：</p>
 <blockquote>
@@ -1263,13 +2898,13 @@
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="id39">
-<h2>云原生<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
-<section id="k8s">
+</div>
+<div class="section" id="id38">
+<h2>云原生<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
+<div class="section" id="k8s">
 <h3>k8s<a class="headerlink" href="#k8s" title="永久链接至标题">¶</a></h3>
-</section>
-<section id="docker-x">
+</div>
+<div class="section" id="docker-x">
 <h3>Docker ✔️<a class="headerlink" href="#docker-x" title="永久链接至标题">¶</a></h3>
 <dl>
 <dt>共享内核</dt><dd><p>Docker image 里不包含内核，程序共享宿主机内核</p>
@@ -1333,25 +2968,25 @@
 </dl>
 </dd>
 </dl>
-<section id="id40">
-<h4>隔离<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id39">
+<h4>隔离<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">网络</dt>
 <dd class="field-odd"><p>namespace</p>
 </dd>
 </dl>
-</section>
-</section>
-</section>
-<section id="id41">
-<h2>虚拟化<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h2>
-<section id="kvm-x">
+</div>
+</div>
+</div>
+<div class="section" id="id40">
+<h2>虚拟化<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h2>
+<div class="section" id="kvm-x">
 <h3>KVM ✔️<a class="headerlink" href="#kvm-x" title="永久链接至标题">¶</a></h3>
 <p>Kernel-based Virtual Machine</p>
 <p>在 Linux 中，通过设备 <code class="code docutils literal notranslate"><span class="pre">/dev/kvm</span></code> + <code class="code docutils literal notranslate"><span class="pre">ioctl</span></code> 进行通信。</p>
 <dl>
 <dt>CPU 虚拟化</dt><dd><p>VMX 指令集</p>
-<p>VMX的非根操作模式是一个相对受限的执行环境，为了适应虚拟化而专门做了一定的修改；在客户机中执行的一些特殊的敏感指令或者一些异常会触发“VM Exit”退到虚拟机监控器中，从而运行在VMX根模式。正是这样的限制，让虚拟机监控器保持了对处理器资源的控制 <a class="footnote-reference brackets" href="#id47" id="id42">1</a></p>
+<p>VMX的非根操作模式是一个相对受限的执行环境，为了适应虚拟化而专门做了一定的修改；在客户机中执行的一些特殊的敏感指令或者一些异常会触发“VM Exit”退到虚拟机监控器中，从而运行在VMX根模式。正是这样的限制，让虚拟机监控器保持了对处理器资源的控制 <a class="footnote-reference brackets" href="#id46" id="id41">1</a></p>
 </dd>
 <dt>内存虚拟化</dt><dd><p>CR3 控制寄存器 存放页目录地址</p>
 <p>给虚拟客户机操作系统提供一个从0地址开始的连续物理内存空间，同时在多个客户机之间实现隔离和调度</p>
@@ -1389,36 +3024,36 @@ EPT的控制权在 Hypervisor 掌握，因此不需要 VMexit，只有当CPU工�
 </ol>
 </dd>
 </dl>
-</section>
-<section id="libvirt">
+</div>
+<div class="section" id="libvirt">
 <h3>libvirt<a class="headerlink" href="#libvirt" title="永久链接至标题">¶</a></h3>
 <p>是一套用于管理硬件虚拟化的开源API、守护进程与管理工具</p>
-</section>
-</section>
-<section id="id43">
-<h2>流处理<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h2>
-<section id="flink-checkpoint">
+</div>
+</div>
+<div class="section" id="id42">
+<h2>流处理<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h2>
+<div class="section" id="flink-checkpoint">
 <h3>Flink CheckPoint<a class="headerlink" href="#flink-checkpoint" title="永久链接至标题">¶</a></h3>
 <p>Operator State
 Keyed State</p>
-</section>
-<section id="pler-vs-flink">
+</div>
+<div class="section" id="pler-vs-flink">
 <h3>PLER vs Flink<a class="headerlink" href="#pler-vs-flink" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>CheckPoint</p></li>
 <li><p>UDF</p></li>
 <li><p>Watermark</p></li>
 </ul>
-</section>
-<section id="id44">
-<h3>逻辑计划优化<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id43">
+<h3>逻辑计划优化<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>常量折叠</p></li>
 <li><p>列裁剪</p></li>
 </ul>
-</section>
-<section id="id45">
-<h3>乱序元素<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id44">
+<h3>乱序元素<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.cnblogs.com/rossiXYZ/p/12286407.html">https://www.cnblogs.com/rossiXYZ/p/12286407.html</a></p>
@@ -1433,10 +3068,10 @@ Keyed State</p>
 <dd class="field-even"><p>指定窗口已经彻底关闭后，就会把所有过期延迟数据放到侧输出流，让用户决定如何处理</p>
 </dd>
 </dl>
-</section>
-</section>
-<section id="id46">
-<h2>算法<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+<div class="section" id="id45">
+<h2>算法<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h2>
 <dl class="simple">
 <dt>树</dt><dd><ul class="simple">
 <li><p>树的遍历 ✔️</p></li>
@@ -1454,7 +3089,7 @@ Keyed State</p>
 </dl>
 <p class="rubric">脚注</p>
 <dl class="footnote brackets">
-<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id42">1</a></span></dt>
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id41">1</a></span></dt>
 <dd><p><a class="reference external" href="https://developer.aliyun.com/article/724399">https://developer.aliyun.com/article/724399</a></p>
 </dd>
 </dl>
@@ -1471,153 +3106,52 @@ Keyed State</p>
     )
 );</script> 回复你。</p>
 <section data-isso-id="/notes/2021-interview/checklist" data-title="知识点 Check List" id="isso-thread"></section></div>
-</section>
-</section>
+</div>
+</div>
 
 <div class="section">
    
 </div>
 
-          </div>
-          
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">2021 面试记录</p>
         </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<p class="logo">
-  <a href="../../index.html">
-    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
-    
-  </a>
-</p>
-
-
-
-<p class="blurb">Yes silver bullet here.</p>
-
-
-
-
-<p>
-<iframe src="https://ghbtns.com/github-btn.html?user=SilverRainZ&repo=bullet&type=star&count=true&size=large&v=2"
-  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
-</p>
-
-
-
-
-
-<h3>导航</h3>
-<p class="caption" role="heading"><span class="caption-text">笔记</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../zxsys/index.html">造型实验室</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../artstory/index.html">增量艺术史</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../books/index.html">读书笔记</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../music-theory/index.html">乐理笔记</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6-lectures-on-sketch.html">素描六讲</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">2021 面试记录</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../docutils/index.html">Docutils 文档阅读</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../go-internal/index.html">Golang Internal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../leetcode/index.html">Leetcode 刷题记录</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wizard/index.html">配置向导</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../writeups/index.html">Capture the Flag</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">博客</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../blog/index.html">博客首页</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">手册</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../man/sphinx/index.html">Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/awk.html">Awk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/gdb.html">GDB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/git.html">Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/gpg.html">GnuPG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/grep.html">Grep</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/irc.html">IRC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/krita.html">Krita</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/latex.html">LaTeX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/lily.html">LilyPond</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/magick.html">ImageMagick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/make.html">Makefile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/pacman.html">Pacman</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/py.html">Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/rst.html">reStructuredText</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/sh.html">Shell Script</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../man/vim.html">Vim</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">随记</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../misc/2022/index.html">2022</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../misc/2021/index.html">2021</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../misc/2020/index.html">2020</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../misc/2017/index.html">2017</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">收集室</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../collections/github-halloween.html">Github 万圣节彩蛋</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../collections/art-works/index.html">Art Works</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../collections/scores/index.html">乐谱夹</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">关于</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/me.html">我</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/site.html">本站</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/friends.html">友人帐</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/resume.html">简历</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="index.html">2021 面试记录</a><ul>
-      <li>Previous: <a href="index.html" title="上一章">2021 面试记录</a></li>
-      <li>Next: <a href="leetcode.html" title="下一章">Leetcode 刷题日记</a></li>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020-2022, Shengyu Zhang.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="../../_sources/notes/2021-interview/checklist.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-    <a href="https://github.com/SilverRainZ/bullet" class="github">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
     </a>
+    <a class='right-next' id="next-link" href="leetcode.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">Leetcode 刷题日记</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
     
+      通过 Shengyu Zhang<br/>
+    
+        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
+      上次更新时间： 2022-02-01.<br/>
+  </p>
+</footer>
+</main>
 
-    
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
   </body>
 </html>
