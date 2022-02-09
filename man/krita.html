@@ -1,0 +1,1118 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+  <meta property="og:title" content="Krita" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://silverrainz.me/man/krita.html" />
+  <meta property="og:site_name" content="银色子弹" />
+  <meta property="og:description" content="快捷键: e:, 切换画笔和橡皮,, v:, 画直线,,+/-:, 放大缩小，不需要按 shift,, 按住 space+ 拖动:, 移动画布,, shift+ space+ 拖动:, 旋转画布,, 5/ 4/ 6:, 复位画布角度/左旋 15 度/右旋 15 度,, shift+ 拖动:, 调整笔刷大小,, ctrl+ shift+ a:, 取消选区,. 来自 👤frantic1048 的..." />
+  <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
+  <meta property="og:image:alt" content="银色子弹" />
+  
+    <title>Krita &#8212; 银色子弹</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ablog-custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/man/krita.html" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="LaTeX" href="latex.html" />
+    <link rel="prev" title="IRC" href="irc.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">银色子弹</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  笔记
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/zxsys/index.html">
+   造型实验室
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/prelude.html">
+     暴露问题
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/light-and-shadow.html">
+     光影分解训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/indoor-sketching.html">
+     室内场景训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/outdoor-sketching.html">
+     室外夜景训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/modeling.html">
+     形体分解训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/fast-modeling.html">
+     快速形体分解
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../notes/zxsys/way-to-artist/index.html">
+     艺术创作方法
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/prepare.html">
+       课前准备
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/find-yourself.html">
+       找自己
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/find-topic.html">
+       找主题
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/find-language.html">
+       找语言
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/exhibition.html">
+       参展须知
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/learn-from-master.html">
+     向大师学绘画
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/string-modeling.html">
+     线造型训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/tips.html">
+     一些零碎知识
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/zxsys/glossary.html">
+     术语
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/artstory/index.html">
+   增量艺术史
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/artstory/artistory.html">
+     艺术家史
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/artstory/gallery.html">
+     画廊
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/artstory/gossip.html">
+     逸闻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/books/index.html">
+   读书笔记
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/code-complete-2.html">
+     代码大全 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/codex-hammer.html">
+     哈默手稿
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/cpp-primer-plus.html">
+     C++ Primer Plus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/drawing-course-of-charles-bargue-and-jean-leon-gerome.html">
+     查尔斯巴尔格素描教程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/drawing-lessons-from-the-great-masters.html">
+     向大师学绘画·素描基础
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/teach-yourself-scheme-in-fixnum-days.html">
+     Learning Scheme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/the-rust-programming-language.html">
+     The Rust Programming Language
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/the-story-of-art.html">
+     艺术的故事
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/books/a-modern-method-for-guitar-vol1/index.html">
+     伯克利现代吉他教程·卷一
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../notes/books/linux-kernel-development/index.html">
+     Linux Kernel Development
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/books/linux-kernel-development/chapter-1_2.html">
+       Chapter 1 and 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/books/linux-kernel-development/compile-and-run-kernel-in-qemu.html">
+       Compile and Run Kernel in Qemu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/books/linux-kernel-development/misc.html">
+       一些零碎的东西
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/music-theory/index.html">
+   乐理笔记
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/music-theory/cadge-system.html">
+     CAGED 系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/music-theory/interval-of-music.html">
+     音程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/music-theory/ionian/index.html">
+     大调训练计划
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/music-theory/solfeggio-lesson-of-daluobei/index.html">
+     大萝北的视唱课
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/6-lectures-on-sketch.html">
+   素描六讲
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/2021-interview/index.html">
+   2021 面试记录
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/2021-interview/checklist.html">
+     知识点 Check List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/2021-interview/leetcode.html">
+     Leetcode 刷题日记
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/2021-interview/dp.html">
+     动态规划
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/docutils/index.html">
+   Docutils 文档阅读
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/docutils/doctree.html">
+     The Docutils Document Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/docutils/docutils-hacker-guide.html">
+     Docutils Hacker’s Guide
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/go-internal/index.html">
+   Golang Internal
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/go-internal/asm.html">
+     Go’s Assembler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/go-internal/type-assertion.html">
+     Type Assertion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/leetcode/index.html">
+   Leetcode 刷题记录
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/wizard/index.html">
+   配置向导
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/wizard/pi.html">
+     家用树莓派 3B+ 配置
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notes/writeups/index.html">
+   Capture the Flag
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/writeups/wargame-leviathan.html">
+     wargame-leviathan
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../notes/writeups/seedlabs/index.html">
+     Seed Lab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notes/writeups/seedlabs/format-string-vulnerability-lab/index.html">
+       Format String Vulnerability Lab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/writeups/wargame-bandit/index.html">
+     wargme-bandit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/writeups/wargame-narnia/index.html">
+     wargame-narnia
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  博客
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../blog/index.html">
+   博客首页
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  手册
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="sphinx/index.html">
+   Sphinx
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sphinx/extension-development.html">
+     扩展开发
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="awk.html">
+   Awk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gdb.html">
+   GDB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gpg.html">
+   GnuPG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="grep.html">
+   Grep
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="irc.html">
+   IRC
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Krita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="latex.html">
+   LaTeX
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lily.html">
+   LilyPond
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magick.html">
+   ImageMagick
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="make.html">
+   Makefile
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pacman.html">
+   Pacman
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rst.html">
+   reStructuredText
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sh.html">
+   Shell Script
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vim.html">
+   Vim
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  随记
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../misc/2022/index.html">
+   2022
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2022/02.html">
+     二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2022/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../misc/2021/index.html">
+   2021
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/12.html">
+     十二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/11.html">
+     十一月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/10.html">
+     十月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/09.html">
+     九月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/08.html">
+     八月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/05.html">
+     五月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/03.html">
+     三月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/02.html">
+     二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2021/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../misc/2020/index.html">
+   2020
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2020/12.html">
+     十二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2020/11.html">
+     十一月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2020/08.html">
+     八月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2020/07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2020/06.html">
+     六月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../misc/2017/index.html">
+   2017
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2017/06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2017/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/2017/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  收集室
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collections/github-halloween.html">
+   Github 万圣节彩蛋
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collections/art-works/index.html">
+   Art Works
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collections/scores/index.html">
+   乐谱夹
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  关于
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/me.html">
+   我
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/site.html">
+   本站
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/friends.html">
+   友人帐
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/resume.html">
+   简历
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="源库"><i
+                    class="fab fa-github"></i>资料库</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   快捷键
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips">
+   Tips
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     至少建立三个图层
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     线稿透明化
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Krita</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   快捷键
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips">
+   Tips
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     至少建立三个图层
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     线稿透明化
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="krita">
+<h1>Krita<a class="headerlink" href="#krita" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>快捷键<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt><code class="code docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>切换画笔和橡皮</p>
+</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">v</span></code>:</dt><dd><p>画直线</p>
+</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">+</span></code>/<code class="code docutils literal notranslate"><span class="pre">-</span></code>:</dt><dd><p>放大缩小，不需要按 <code class="code docutils literal notranslate"><span class="pre">shift</span></code></p>
+</dd>
+<dt>按住 <code class="code docutils literal notranslate"><span class="pre">space</span></code> + 拖动:</dt><dd><p>移动画布</p>
+</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">shift</span></code> + <code class="code docutils literal notranslate"><span class="pre">space</span></code> + 拖动:</dt><dd><p>旋转画布</p>
+</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">5</span></code>/<code class="code docutils literal notranslate"><span class="pre">4</span></code>/<code class="code docutils literal notranslate"><span class="pre">6</span></code>:</dt><dd><p>复位画布角度/左旋 15 度/右旋 15 度</p>
+</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">shift</span></code> + 拖动:</dt><dd><p>调整笔刷大小</p>
+</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">ctrl</span></code> + <code class="code docutils literal notranslate"><span class="pre">shift</span></code> + <code class="code docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>取消选区</p>
+</dd>
+</dl>
+<p>来自 <a class="reference internal" href="../about/friends.html#friend-frantic1048" title="friend frantic1048"><code class="xref any any-friend docutils literal notranslate"><span class="pre">👤frantic1048</span></code></a> 的一图流。</p>
+<img alt="../_images/krita-shortcut.png" src="../_images/krita-shortcut.png" />
+</div>
+<div class="section" id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id2">
+<h3>至少建立三个图层<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>背景图层 bg，线稿图层 sketch，明暗图层 Ink。</p>
+</div>
+<div class="section" id="id3">
+<h3>线稿透明化<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>将线稿转换为透明度高的颜色可以更方便地勾线，通常以蓝色为宜。</p>
+<ol class="arabic simple">
+<li><p>转换线稿为蓝色</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>在图层的属性(Porperties)的活动通道(Acitve Channel)中取消蓝色通道的选择</p></li>
+<li><p>或者使用油漆桶工具选取蓝色（或者其他透明度高的颜色），再选中工具栏中的
+Preserve Alpha 选项，接着对图层进行着色</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>调整图层的透明度</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>Preserve alpha will keep the transparency of the layer you’re applying
+a filter or FX (whatever when applicable) intact, meaning the effect/filter
+etc will not affect/expand to the transparent areas.
+即，透明区域不会被当前的操作影响到。</p>
+</div>
+<div class="topic">
+<p class="topic-title">评论</p>
+<p>如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/man/krita" data-title="Krita" id="isso-thread"></section></div>
+</div>
+</div>
+</div>
+
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="irc.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">IRC</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="latex.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">LaTeX</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 Shengyu Zhang<br/>
+    
+        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
+      上次更新时间： 2022-02-09.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
