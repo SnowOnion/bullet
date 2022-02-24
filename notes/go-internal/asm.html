@@ -15,13 +15,19 @@
             
         </script>
     
-  <meta property="og:title" content="Go’s Assembler" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://silverrainz.me/notes/go-internal/asm.html" />
-  <meta property="og:site_name" content="银色子弹" />
-  <meta property="og:description" content="Go’s assembler is that it is not a direct representation of the underlying machine: It is chosen to match what the compiler generates. Tools: View compiler asm (semi-abstract instruction set): View..." />
-  <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
-  <meta property="og:image:alt" content="银色子弹" />
+<meta property="og:title" content="Go’s Assembler" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://silverrainz.me/notes/go-internal/asm.html" />
+  
+<meta property="og:site_name" content="银色子弹" />
+  
+<meta property="og:description" content="Go’s assembler is that it is not a direct representation of the underlying machine: It is chosen to match what the compiler generates. Tools: View compiler asm (semi-abstract instruction set): View..." />
+  
+<meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
+  
+<meta property="og:image:alt" content="银色子弹" />
   
     <title>Go’s Assembler &#8212; 银色子弹</title>
     
@@ -582,6 +588,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../man/go.html">
+   Golang Compiler and Related Tools
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../man/gpg.html">
    GnuPG
   </a>
@@ -1135,11 +1146,11 @@
 <dt class="field-odd">x-8(SP)</dt>
 <dd class="field-odd"><p>The local variable named “x”</p>
 </dd>
+<dt class="field-even">x+8(SP)</dt>
+<dd class="field-even"><p>The function argument named “x”</p>
+</dd>
 </dl>
-<div class="admonition hint">
-<p class="admonition-title">提示</p>
-<p>Use negative offsets (<code class="code docutils literal notranslate"><span class="pre">-</span></code> but not <code class="code docutils literal notranslate"><span class="pre">+</span></code>) because <code class="code docutils literal notranslate"><span class="pre">SP</span></code> points to the highest address within the local stack frame</p>
-</div>
+<p>Positive offsets (<code class="code docutils literal notranslate"><span class="pre">+</span></code>) for function argument and negative offsets (<code class="code docutils literal notranslate"><span class="pre">-</span></code>) for local variable. <code class="code docutils literal notranslate"><span class="pre">SP</span></code> points to the highest address within the local stack frame</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>On architectures with a hardware register named SP, x-8(SP) and -8(SP) are different memory locations:</p>
@@ -1291,7 +1302,7 @@
       通过 Shengyu Zhang<br/>
     
         &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-02-12.<br/>
+      上次更新时间： 2022-02-24.<br/>
   </p>
 </footer>
 </main>

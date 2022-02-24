@@ -15,13 +15,19 @@
             
         </script>
     
-  <meta property="og:title" content="二月" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://silverrainz.me/misc/2022/02.html" />
-  <meta property="og:site_name" content="银色子弹" />
-  <meta property="og:description" content="OnePlus 6 从 LineageOS 18.1 刷回氢 OS 10: Date, 2020-02-05,. 感谢 👤xiaoqing.wu 的指点。 上次 📅Oneplus6 刷机 LineageOS 18.01 后觉得 LineageOS 还是太过粗糙，自带应用的体验很差，耗电也飞快。 所以还是决定换回原生的 {氢,氧} OS。 因为已经刷过一次了，所以 OEM 解锁 和 Bootl..." />
-  <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
-  <meta property="og:image:alt" content="银色子弹" />
+<meta property="og:title" content="二月" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://silverrainz.me/misc/2022/02.html" />
+  
+<meta property="og:site_name" content="银色子弹" />
+  
+<meta property="og:description" content="OnePlus 6 从 LineageOS 18.1 刷回氢 OS 10: Date, 2020-02-05,. 感谢 👤xiaoqing.wu 的指点。 上次 📅Oneplus6 刷机 LineageOS 18.01 后觉得 LineageOS 还是太过粗糙，自带应用的体验很差，耗电也飞快。 所以还是决定换回原生的 {氢,氧} OS。 因为已经刷过一次了，所以 OEM 解锁 和 Bootl..." />
+  
+<meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
+  
+<meta property="og:image:alt" content="银色子弹" />
   
     <title>二月 &#8212; 银色子弹</title>
     
@@ -582,6 +588,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../man/go.html">
+   Golang Compiler and Related Tools
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../man/gpg.html">
    GnuPG
   </a>
@@ -949,6 +960,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#go-compiler-ssa-optimization-rules-description-language">
+   Go compiler: SSA optimization rules description language
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -990,6 +1006,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#go-compiler-ssa-optimization-rules-description-language">
+   Go compiler: SSA optimization rules description language
+  </a>
  </li>
 </ul>
 
@@ -1067,6 +1088,21 @@ $ sudo adb start-server
 <dd><p><a class="reference external" href="https://itsfoss.com/fix-error-insufficient-permissions-device/">https://itsfoss.com/fix-error-insufficient-permissions-device/</a></p>
 </dd>
 </dl>
+</div>
+</div>
+<div class="section" id="go-compiler-ssa-optimization-rules-description-language">
+<h2>Go compiler: SSA optimization rules description language<a class="headerlink" href="#go-compiler-ssa-optimization-rules-description-language" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Date</dt>
+<dd class="field-odd"><p>2022-02-24</p>
+</dd>
+<dt class="field-even">URL</dt>
+<dd class="field-even"><p><a class="reference external" href="https://quasilyte.dev/blog/post/go_ssa_rules/">https://quasilyte.dev/blog/post/go_ssa_rules/</a></p>
+</dd>
+</dl>
+<p>Go 编译器定义了一种类似 Lisp S-Expr 的 DSL 用以表达 SSA 的优化规则，但仅适合用于 rewrite SSA 中的 <code class="code docutils literal notranslate"><span class="pre">ssa.Value</span></code> 对象，因为 <code class="code docutils literal notranslate"><span class="pre">ssa.BasicBlock</span></code> 以及其组成的 Control Flow Graph (CFG) 难以描述为树状结构，自然也无法用 S-Expr 表达。</p>
+<p>每条规则的形式为 <code class="code docutils literal notranslate"><span class="pre">S-Expr</span> <span class="pre">-&gt;</span> <span class="pre">S-Expr</span></code>，类似模式匹配，能被左侧 S-Expr 匹配的 <code class="code docutils literal notranslate"><span class="pre">ssa.Value</span></code> 会被 transform 为右侧的形式。</p>
+<p>规则文件以 <code class="code docutils literal notranslate"><span class="pre">.rules</span></code> 结尾，位于 <a class="reference external" href="https://github.com/golang/go/blob/master/src/cmd/compile/internal/ssa/gen/">src/cmd/compile/internal/ssa/gen/</a> 目录下。</p>
 <div class="topic">
 <p class="topic-title">评论</p>
 <p>如果你有任何意见，请在此评论。
@@ -1080,7 +1116,6 @@ $ sudo adb start-server
     )
 );</script> 回复你。</p>
 <section data-isso-id="/misc/2022/02" data-title="二月" id="isso-thread"></section></div>
-</div>
 </div>
 </div>
 
@@ -1117,7 +1152,7 @@ $ sudo adb start-server
       通过 Shengyu Zhang<br/>
     
         &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-02-12.<br/>
+      上次更新时间： 2022-02-24.<br/>
   </p>
 </footer>
 </main>
