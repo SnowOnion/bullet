@@ -15,64 +15,64 @@
             
         </script>
     
-<meta property="og:title" content="Art Works" />
+<meta property="og:title" content="Golang Compiler and Related Tools" />
   
 <meta property="og:type" content="website" />
   
-<meta property="og:url" content="https://silverrainz.me/collections/art-works/index.html" />
+<meta property="og:url" content="https://silverrainz.me/man/go.html" />
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="All things list here is not “artworks”, just my works that dedicated to art, 作品命名, 不以媒介、题材作为命名的绝对依据，而以 创作目的（purpose） 来命名作品。 要解决何种问题，要达成什么效果等，均是创作的目的。同个目的的多个练习， 以三位阿拉伯数字编号（serial no），空位补零。目的和编号以阿拉伯数..." />
+<meta property="og:description" content="Date, 2022-02-08,. 编译: 逃逸分析: 输出逃逸分析日志: 传递两次可以显示更详细的信息: 可能出现的 log 如下： 🙋51520445 XXX escapes to heap, moved to heap: XXX, XXX does not escape, leaking param: XXX, XXX ignoring self-assignment in YYY ..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
 <meta property="og:image:alt" content="银色子弹" />
   
-    <title>Art Works &#8212; 银色子弹</title>
+    <title>Golang Compiler and Related Tools &#8212; 银色子弹</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ablog-custom.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/asciinema-player_2.6.1.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
-    <link rel="canonical" href="https://silverrainz.me/collections/art-works/index.html" />
-    <link rel="shortcut icon" href="../../_static/favicon.png"/>
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="乐谱夹" href="../scores/index.html" />
-    <link rel="prev" title="Github 万圣节彩蛋" href="../github-halloween.html" /> 
+    <link rel="canonical" href="https://silverrainz.me/man/go.html" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="GnuPG" href="gpg.html" />
+    <link rel="prev" title="Git" href="git.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -82,7 +82,7 @@
 <link
   rel="alternate"
   type="application/atom+xml"
-  href="../../blog/atom.xml"
+  href="../blog/atom.xml"
   title="银色子弹"
 />
  
@@ -129,19 +129,19 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">银色子弹</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -153,7 +153,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/zxsys/index.html">
+  <a class="reference internal" href="../notes/zxsys/index.html">
    造型实验室
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -163,37 +163,37 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/prelude.html">
+    <a class="reference internal" href="../notes/zxsys/prelude.html">
      暴露问题
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/light-and-shadow.html">
+    <a class="reference internal" href="../notes/zxsys/light-and-shadow.html">
      光影分解训练
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/indoor-sketching.html">
+    <a class="reference internal" href="../notes/zxsys/indoor-sketching.html">
      室内场景训练
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/outdoor-sketching.html">
+    <a class="reference internal" href="../notes/zxsys/outdoor-sketching.html">
      室外夜景训练
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/modeling.html">
+    <a class="reference internal" href="../notes/zxsys/modeling.html">
      形体分解训练
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/fast-modeling.html">
+    <a class="reference internal" href="../notes/zxsys/fast-modeling.html">
      快速形体分解
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../notes/zxsys/way-to-artist/index.html">
+    <a class="reference internal" href="../notes/zxsys/way-to-artist/index.html">
      艺术创作方法
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -203,56 +203,56 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/zxsys/way-to-artist/prepare.html">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/prepare.html">
        课前准备
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-yourself.html">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/find-yourself.html">
        找自己
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-topic.html">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/find-topic.html">
        找主题
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-language.html">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/find-language.html">
        找语言
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/zxsys/way-to-artist/exhibition.html">
+      <a class="reference internal" href="../notes/zxsys/way-to-artist/exhibition.html">
        参展须知
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/learn-from-master.html">
+    <a class="reference internal" href="../notes/zxsys/learn-from-master.html">
      向大师学绘画
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/string-modeling.html">
+    <a class="reference internal" href="../notes/zxsys/string-modeling.html">
      线造型训练
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/tips.html">
+    <a class="reference internal" href="../notes/zxsys/tips.html">
      一些零碎知识
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/zxsys/glossary.html">
+    <a class="reference internal" href="../notes/zxsys/glossary.html">
      术语
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/artstory/index.html">
+  <a class="reference internal" href="../notes/artstory/index.html">
    增量艺术史
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -262,24 +262,24 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/artstory/artistory.html">
+    <a class="reference internal" href="../notes/artstory/artistory.html">
      艺术家史
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/artstory/gallery.html">
+    <a class="reference internal" href="../notes/artstory/gallery.html">
      画廊
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/artstory/gossip.html">
+    <a class="reference internal" href="../notes/artstory/gossip.html">
      逸闻
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/books/index.html">
+  <a class="reference internal" href="../notes/books/index.html">
    读书笔记
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -289,52 +289,52 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/code-complete-2.html">
+    <a class="reference internal" href="../notes/books/code-complete-2.html">
      代码大全 2
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/codex-hammer.html">
+    <a class="reference internal" href="../notes/books/codex-hammer.html">
      哈默手稿
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/cpp-primer-plus.html">
+    <a class="reference internal" href="../notes/books/cpp-primer-plus.html">
      C++ Primer Plus
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/drawing-course-of-charles-bargue-and-jean-leon-gerome.html">
+    <a class="reference internal" href="../notes/books/drawing-course-of-charles-bargue-and-jean-leon-gerome.html">
      查尔斯巴尔格素描教程
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/drawing-lessons-from-the-great-masters.html">
+    <a class="reference internal" href="../notes/books/drawing-lessons-from-the-great-masters.html">
      向大师学绘画·素描基础
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/teach-yourself-scheme-in-fixnum-days.html">
+    <a class="reference internal" href="../notes/books/teach-yourself-scheme-in-fixnum-days.html">
      Learning Scheme
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/the-rust-programming-language.html">
+    <a class="reference internal" href="../notes/books/the-rust-programming-language.html">
      The Rust Programming Language
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/the-story-of-art.html">
+    <a class="reference internal" href="../notes/books/the-story-of-art.html">
      艺术的故事
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/books/a-modern-method-for-guitar-vol1/index.html">
+    <a class="reference internal" href="../notes/books/a-modern-method-for-guitar-vol1/index.html">
      伯克利现代吉他教程·卷一
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../notes/books/linux-kernel-development/index.html">
+    <a class="reference internal" href="../notes/books/linux-kernel-development/index.html">
      Linux Kernel Development
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -344,17 +344,17 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/books/linux-kernel-development/chapter-1_2.html">
+      <a class="reference internal" href="../notes/books/linux-kernel-development/chapter-1_2.html">
        Chapter 1 and 2
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/books/linux-kernel-development/compile-and-run-kernel-in-qemu.html">
+      <a class="reference internal" href="../notes/books/linux-kernel-development/compile-and-run-kernel-in-qemu.html">
        Compile and Run Kernel in Qemu
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/books/linux-kernel-development/misc.html">
+      <a class="reference internal" href="../notes/books/linux-kernel-development/misc.html">
        一些零碎的东西
       </a>
      </li>
@@ -363,7 +363,7 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/music-theory/index.html">
+  <a class="reference internal" href="../notes/music-theory/index.html">
    乐理笔记
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -373,34 +373,34 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/music-theory/cadge-system.html">
+    <a class="reference internal" href="../notes/music-theory/cadge-system.html">
      CAGED 系统
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/music-theory/interval-of-music.html">
+    <a class="reference internal" href="../notes/music-theory/interval-of-music.html">
      音程
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/music-theory/ionian/index.html">
+    <a class="reference internal" href="../notes/music-theory/ionian/index.html">
      大调训练计划
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/music-theory/solfeggio-lesson-of-daluobei/index.html">
+    <a class="reference internal" href="../notes/music-theory/solfeggio-lesson-of-daluobei/index.html">
      大萝北的视唱课
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../notes/6-lectures-on-sketch.html">
+  <a class="reference internal" href="../notes/6-lectures-on-sketch.html">
    素描六讲
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/2021-interview/index.html">
+  <a class="reference internal" href="../notes/2021-interview/index.html">
    2021 面试记录
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
@@ -410,24 +410,24 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/2021-interview/checklist.html">
+    <a class="reference internal" href="../notes/2021-interview/checklist.html">
      知识点 Check List
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/2021-interview/leetcode.html">
+    <a class="reference internal" href="../notes/2021-interview/leetcode.html">
      Leetcode 刷题日记
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/2021-interview/dp.html">
+    <a class="reference internal" href="../notes/2021-interview/dp.html">
      动态规划
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/docutils/index.html">
+  <a class="reference internal" href="../notes/docutils/index.html">
    Docutils 文档阅读
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
@@ -437,19 +437,19 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/docutils/doctree.html">
+    <a class="reference internal" href="../notes/docutils/doctree.html">
      The Docutils Document Tree
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/docutils/docutils-hacker-guide.html">
+    <a class="reference internal" href="../notes/docutils/docutils-hacker-guide.html">
      Docutils Hacker’s Guide
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/go-internal/index.html">
+  <a class="reference internal" href="../notes/go-internal/index.html">
    Golang Internal
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
@@ -459,24 +459,24 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/go-internal/asm.html">
+    <a class="reference internal" href="../notes/go-internal/asm.html">
      Go’s Assembler
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/go-internal/type-assertion.html">
+    <a class="reference internal" href="../notes/go-internal/type-assertion.html">
      Type Assertion
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../notes/leetcode/index.html">
+  <a class="reference internal" href="../notes/leetcode/index.html">
    Leetcode 刷题记录
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/wizard/index.html">
+  <a class="reference internal" href="../notes/wizard/index.html">
    配置向导
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -486,14 +486,14 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/wizard/pi.html">
+    <a class="reference internal" href="../notes/wizard/pi.html">
      家用树莓派 3B+ 配置
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/writeups/index.html">
+  <a class="reference internal" href="../notes/writeups/index.html">
    Capture the Flag
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
@@ -503,12 +503,12 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/writeups/wargame-leviathan.html">
+    <a class="reference internal" href="../notes/writeups/wargame-leviathan.html">
      wargame-leviathan
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../notes/writeups/seedlabs/index.html">
+    <a class="reference internal" href="../notes/writeups/seedlabs/index.html">
      Seed Lab
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
@@ -518,19 +518,19 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../notes/writeups/seedlabs/format-string-vulnerability-lab/index.html">
+      <a class="reference internal" href="../notes/writeups/seedlabs/format-string-vulnerability-lab/index.html">
        Format String Vulnerability Lab
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/writeups/wargame-bandit/index.html">
+    <a class="reference internal" href="../notes/writeups/wargame-bandit/index.html">
      wargme-bandit
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/writeups/wargame-narnia/index.html">
+    <a class="reference internal" href="../notes/writeups/wargame-narnia/index.html">
      wargame-narnia
     </a>
    </li>
@@ -544,7 +544,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../blog/index.html">
+  <a class="reference internal" href="../blog/index.html">
    博客首页
   </a>
  </li>
@@ -554,9 +554,9 @@
   手册
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../man/sphinx/index.html">
+  <a class="reference internal" href="sphinx/index.html">
    Sphinx
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
@@ -566,94 +566,94 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../man/sphinx/extension-development.html">
+    <a class="reference internal" href="sphinx/extension-development.html">
      扩展开发
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/awk.html">
+  <a class="reference internal" href="awk.html">
    Awk
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/gdb.html">
+  <a class="reference internal" href="gdb.html">
    GDB
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/git.html">
+  <a class="reference internal" href="git.html">
    Git
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../man/go.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Golang Compiler and Related Tools
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/gpg.html">
+  <a class="reference internal" href="gpg.html">
    GnuPG
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/grep.html">
+  <a class="reference internal" href="grep.html">
    Grep
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/irc.html">
+  <a class="reference internal" href="irc.html">
    IRC
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/krita.html">
+  <a class="reference internal" href="krita.html">
    Krita
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/latex.html">
+  <a class="reference internal" href="latex.html">
    LaTeX
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/lily.html">
+  <a class="reference internal" href="lily.html">
    LilyPond
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/magick.html">
+  <a class="reference internal" href="magick.html">
    ImageMagick
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/make.html">
+  <a class="reference internal" href="make.html">
    Makefile
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/pacman.html">
+  <a class="reference internal" href="pacman.html">
    Pacman
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/py.html">
+  <a class="reference internal" href="py.html">
    Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/rst.html">
+  <a class="reference internal" href="rst.html">
    reStructuredText
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/sh.html">
+  <a class="reference internal" href="sh.html">
    Shell Script
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../man/vim.html">
+  <a class="reference internal" href="vim.html">
    Vim
   </a>
  </li>
@@ -665,7 +665,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../misc/2022/index.html">
+  <a class="reference internal" href="../misc/2022/index.html">
    2022
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
@@ -675,19 +675,19 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2022/02.html">
+    <a class="reference internal" href="../misc/2022/02.html">
      二月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2022/01.html">
+    <a class="reference internal" href="../misc/2022/01.html">
      一月
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../misc/2021/index.html">
+  <a class="reference internal" href="../misc/2021/index.html">
    2021
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
@@ -697,69 +697,69 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/12.html">
+    <a class="reference internal" href="../misc/2021/12.html">
      十二月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/11.html">
+    <a class="reference internal" href="../misc/2021/11.html">
      十一月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/10.html">
+    <a class="reference internal" href="../misc/2021/10.html">
      十月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/09.html">
+    <a class="reference internal" href="../misc/2021/09.html">
      九月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/08.html">
+    <a class="reference internal" href="../misc/2021/08.html">
      八月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/07.html">
+    <a class="reference internal" href="../misc/2021/07.html">
      七月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/06.html">
+    <a class="reference internal" href="../misc/2021/06.html">
      六月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/05.html">
+    <a class="reference internal" href="../misc/2021/05.html">
      五月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/04.html">
+    <a class="reference internal" href="../misc/2021/04.html">
      四月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/03.html">
+    <a class="reference internal" href="../misc/2021/03.html">
      三月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/02.html">
+    <a class="reference internal" href="../misc/2021/02.html">
      二月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2021/01.html">
+    <a class="reference internal" href="../misc/2021/01.html">
      一月
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../misc/2020/index.html">
+  <a class="reference internal" href="../misc/2020/index.html">
    2020
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
@@ -769,34 +769,34 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2020/12.html">
+    <a class="reference internal" href="../misc/2020/12.html">
      十二月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2020/11.html">
+    <a class="reference internal" href="../misc/2020/11.html">
      十一月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2020/08.html">
+    <a class="reference internal" href="../misc/2020/08.html">
      八月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2020/07.html">
+    <a class="reference internal" href="../misc/2020/07.html">
      七月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2020/06.html">
+    <a class="reference internal" href="../misc/2020/06.html">
      六月
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../misc/2017/index.html">
+  <a class="reference internal" href="../misc/2017/index.html">
    2017
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
@@ -806,17 +806,17 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2017/06.html">
+    <a class="reference internal" href="../misc/2017/06.html">
      六月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2017/04.html">
+    <a class="reference internal" href="../misc/2017/04.html">
      四月
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../misc/2017/01.html">
+    <a class="reference internal" href="../misc/2017/01.html">
      一月
     </a>
    </li>
@@ -828,19 +828,19 @@
   收集室
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../github-halloween.html">
+  <a class="reference internal" href="../collections/github-halloween.html">
    Github 万圣节彩蛋
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collections/art-works/index.html">
    Art Works
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../scores/index.html">
+  <a class="reference internal" href="../collections/scores/index.html">
    乐谱夹
   </a>
  </li>
@@ -852,22 +852,22 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../about/me.html">
+  <a class="reference internal" href="../about/me.html">
    我
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../about/site.html">
+  <a class="reference internal" href="../about/site.html">
    本站
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../about/friends.html">
+  <a class="reference internal" href="../about/friends.html">
    友人帐
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../about/resume.html">
+  <a class="reference internal" href="../about/resume.html">
    简历
   </a>
  </li>
@@ -933,6 +933,48 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 内容
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   编译
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     逃逸分析
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   测试
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#profiling">
+     Profiling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     覆盖率
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#runtime">
+   Runtime
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -940,50 +982,118 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Art Works</h1>
+                <h1>Golang Compiler and Related Tools</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> 内容 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   编译
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     逃逸分析
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   测试
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#profiling">
+     Profiling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     覆盖率
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#runtime">
+   Runtime
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
-                 <div class="section" id="art-works">
-<h1>Art Works<a class="headerlink" href="#art-works" title="永久链接至标题">¶</a></h1>
-<p class="centered">
-<strong>All things list here is not “artworks”, just my works that dedicated to art</strong></p><dl>
-<dt>作品命名</dt><dd><p>不以媒介、题材作为命名的绝对依据，而以 <em>创作目的（purpose）</em> 来命名作品。
-要解决何种问题，要达成什么效果等，均是创作的目的。同个目的的多个练习，
-以三位阿拉伯数字编号（serial no），空位补零。目的和编号以阿拉伯数字相连。
-即 <code class="code docutils literal notranslate"><span class="pre">&lt;purpose&gt;-&lt;serial_no&gt;</span></code>。</p>
-<p>比如，晓飞老师创作课的第一张作业，可以将其命名为 <code class="code docutils literal notranslate"><span class="pre">xfczk-001</span></code> 。</p>
+                 <div class="section" id="golang-compiler-and-related-tools">
+<h1>Golang Compiler and Related Tools<a class="headerlink" href="#golang-compiler-and-related-tools" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Date</dt>
+<dd class="field-odd"><p>2022-02-08</p>
 </dd>
 </dl>
-<table class="table">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>索引类型</p></td>
-<td><p>索引页面</p></td>
-</tr>
-<tr class="row-even"><td><p>编号</p></td>
-<td><p><a class="reference internal" href="../../any-artwork.id.html"><span class="std std-ref">Artwork Id Reference Index</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>媒介</p></td>
-<td><p><a class="reference internal" href="../../any-artwork.medium.html"><span class="std std-ref">Artwork Medium Reference Index</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p>尺幅</p></td>
-<td><p><a class="reference internal" href="../../any-artwork.size.html"><span class="std std-ref">Artwork Size Reference Index</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>日期</p></td>
-<td><p><a class="reference internal" href="../../any-artwork.date.html"><span class="std std-ref">Artwork Date Reference Index</span></a></p></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="id1">
+<h2>编译<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id2">
+<h3>逃逸分析<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>输出逃逸分析日志:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>go build -gcflags<span class="o">=</span>-m main.go
+</pre></div>
+</div>
+<p>传递两次可以显示更详细的信息:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>go build -gcflags<span class="o">=</span><span class="s1">&#39;-m -m&#39;</span> main.go
+</pre></div>
+</div>
+<p>可能出现的 log 如下：</p>
+<p><a class="reference external" href="https://stackoverflow.com/a/51520445">🙋51520445</a></p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">XXX</span> <span class="pre">escapes</span> <span class="pre">to</span> <span class="pre">heap</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">moved</span> <span class="pre">to</span> <span class="pre">heap:</span> <span class="pre">XXX</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">XXX</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">escape</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">leaking</span> <span class="pre">param:</span> <span class="pre">XXX</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">XXX</span> <span class="pre">ignoring</span> <span class="pre">self-assignment</span> <span class="pre">in</span> <span class="pre">YYY</span> <span class="pre">=</span> <span class="pre">ZZZ</span></code> <a href="#id3"><span class="problematic" id="id4">:ghissue:`golang/go#27772`</span></a></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">can</span> <span class="pre">inline</span> <span class="pre">XXX</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">inlining</span> <span class="pre">call</span> <span class="pre">to</span> <span class="pre">XXX</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>测试<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="section" id="profiling">
+<h3>Profiling<a class="headerlink" href="#profiling" title="永久链接至标题">¶</a></h3>
+<p>生成 pprof 文件:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>go <span class="nb">test</span> ./foo -cpuprofile cpu.pprof
+</pre></div>
+</div>
+<p>查看火焰图:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>go tool pprof -http :8080 cpu.pprof
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>覆盖率<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>显示覆盖率:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>go <span class="nb">test</span> ./... -cover
+</pre></div>
+</div>
+<p>测试覆盖报告:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>go <span class="nb">test</span> -coverprofile<span class="o">=</span>c.out ./iter/...
+<span class="gp">$ </span>go tool cover -html<span class="o">=</span>c.out
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="runtime">
+<h2>Runtime<a class="headerlink" href="#runtime" title="永久链接至标题">¶</a></h2>
 <div class="topic">
 <p class="topic-title">评论</p>
 <p>如果你有任何意见，请在此评论。
@@ -996,7 +1106,8 @@
         }
     )
 );</script> 回复你。</p>
-<section data-isso-id="/collections/art-works/index" data-title="Art Works" id="isso-thread"></section></div>
+<section data-isso-id="/man/go" data-title="Golang Compiler and Related Tools" id="isso-thread"></section></div>
+</div>
 </div>
 
 <div class="section">
@@ -1008,17 +1119,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../github-halloween.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="git.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">Github 万圣节彩蛋</p>
+            <p class="prev-next-title">Git</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../scores/index.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="gpg.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">乐谱夹</p>
+        <p class="prev-next-title">GnuPG</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -1041,7 +1152,7 @@
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
