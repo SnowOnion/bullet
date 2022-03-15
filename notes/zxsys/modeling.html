@@ -223,13 +223,13 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="way-to-artist/exhibition.html">
-       参展须知
+      <a class="reference internal" href="way-to-artist/stealing.html">
+       偷师学艺
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="way-to-artist/stealing.html">
-       偷师学艺
+      <a class="reference internal" href="way-to-artist/exhibition.html">
+       参展须知
       </a>
      </li>
     </ul>
@@ -577,7 +577,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../man/go.html">
-   Golang Compiler and Related Tools
+   Go Tools
   </a>
  </li>
  <li class="toctree-l1">
@@ -1297,12 +1297,10 @@
 <p class="topic-title">什么是形体？</p>
 <p>不同形状、方向的面组成的凸体</p>
 <p>可以认为和建模。</p>
-<blockquote>
-<div><div class="admonition seealso">
+<div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p>更详细的解释，参见 <a class="reference internal" href="../6-lectures-on-sketch.html#id13"><span class="std std-ref">单元形体</span></a></p>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="id4">
 <h3>分解形体的依据<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
@@ -1523,9 +1521,14 @@
 </div>
 <div class="section" id="n">
 <span id="id20"></span><h3>2~N. 梳理形体<a class="headerlink" href="#n" title="永久链接至标题">¶</a></h3>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>首先确定要梳理的形体</p></li>
 <li><p>在形体中找面：这个形体由哪些面组成，面从哪里开始，在哪里结束</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>如何找面？
+面总是从转折开始。对于转折均匀的形体，要结合光源选取一个合适的转折</p>
+</div>
 </li>
 </ol>
 <ul>
@@ -1543,34 +1546,28 @@
 <ol class="arabic">
 <li><p>通过色层：为每个面分配颜色（白、浅灰、深灰、黑、中黑、浅黑）
 分配的依据主要是方向</p>
-<blockquote>
-<div><div class="admonition note">
+<div class="admonition note">
 <p class="admonition-title">备注</p>
-<blockquote>
-<div><p><em>不要看颜色，看方向</em> ，和 <a class="reference internal" href="light-and-shadow.html#id5"><span class="std std-ref">2. 增加中黑和浅灰</span></a> 一致：</p>
+<p><em>不要看颜色，看方向</em> ，和 <a class="reference internal" href="light-and-shadow.html#id5"><span class="std std-ref">2. 增加中黑和浅灰</span></a> 一致：</p>
 <ul class="simple">
 <li><p>方向不同的面往往受光不同，因而呈现出不同的颜色</p></li>
 <li><p>同方向的面在颜色上往往可以归纳为一类</p></li>
 </ul>
 <p>推断出一个面的颜色，所有同方向面的颜色就都能确定了</p>
-</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>给颜色时 <em>不要平涂</em> ，用线的方向要跟随 <em>形体的走势</em></p>
 <p>平涂是 <a class="reference internal" href="light-and-shadow.html"><span class="doc">光影分解训练</span></a> 中的要求，在全因素素描中， 笔触的方向能够为形体的方向提供暗示，
 若方向一致， 能带来比平涂更强烈的空间感。若不一致，则会使画面的空间感混乱。
 因此： <em>笔触的方向应当总和形体的方向一致，否则，不要在画面中出现任何笔触</em>  。</p>
-<dl>
-<dt>如何判断用线的方向？</dt><dd><p>一般来说，用线的方向就是画者的视角看， 该形体 <em>在空间上跨度最大的方向</em></p>
+<p>如何判断用线的方向？
+一般来说，用线的方向就是画者的视角看， 该形体 <em>在空间上跨度最大的方向</em></p>
 <div class="admonition-todo admonition" id="id21">
 <p class="admonition-title">待处理</p>
 <p>补图例</p>
 </div>
-</dd>
-</dl>
 </div>
 </div>
-</div></blockquote>
 </li>
 <li><p>通过结构：</p>
 <div class="admonition note">
@@ -1935,7 +1932,7 @@
       通过 Shengyu Zhang<br/>
     
         &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-13.<br/>
+      上次更新时间： 2022-03-15.<br/>
   </p>
 </footer>
 </main>
