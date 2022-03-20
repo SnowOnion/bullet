@@ -23,7 +23,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="ISBN, 9787103037393,, 开始于, 2021-01-03,, 状态, Reading,. Sea to Sea:, 评论: 如果你有任何意见，请在此评论。 如果你留下了电子邮箱，我可能会通过 回复你。" />
+<meta property="og:description" content="ISBN, 9787103037393,, 开始于, 2021-01-03,, 状态, Reading,. Sea to Sea:, One, Two, Tree, Four:, 评论: 如果你有任何意见，请在此评论。 如果你留下了电子邮箱，我可能会通过 回复你。" />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -936,6 +936,11 @@
    Sea to Sea
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-two-tree-four">
+   One, Two, Tree, Four
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -959,6 +964,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sea-to-sea">
    Sea to Sea
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-two-tree-four">
+   One, Two, Tree, Four
   </a>
  </li>
 </ul>
@@ -989,11 +999,11 @@
 <div class="section" id="sea-to-sea">
 <h2>Sea to Sea<a class="headerlink" href="#sea-to-sea" title="永久链接至标题">¶</a></h2>
 <div class="lilypond">
-<p><img class="lilypond-score" src="../../.././_lilypond/93f87c6e826828050777ec9a9f985af3ddc139ee/music-page1.png" alt="\version &quot;2.20.0&quot;
+<p><img class="lilypond-score" src="../../.././_lilypond/e8120fa2264d17862f291e4d1ac6200a80f6d331/music-page1.png" alt="\version &quot;2.20.0&quot;
 \header {
-  title = &quot;Sea to Sea, Guitar 2&quot;
+  title = &quot;Sea to Sea&quot;
+  subtitle = &quot;(二重奏)&quot;
   composer = &quot;A Mordern Method for Guitar&quot;
-
 }
 
 symbolsGuitarA =  {
@@ -1122,11 +1132,11 @@ symbolsGuitarB =  {
   \midi { }
   \layout { }
 }" style="width:100%;"/>
-<img class="lilypond-score" src="../../.././_lilypond/93f87c6e826828050777ec9a9f985af3ddc139ee/music-page2.png" alt="\version &quot;2.20.0&quot;
+<img class="lilypond-score" src="../../.././_lilypond/e8120fa2264d17862f291e4d1ac6200a80f6d331/music-page2.png" alt="\version &quot;2.20.0&quot;
 \header {
-  title = &quot;Sea to Sea, Guitar 2&quot;
+  title = &quot;Sea to Sea&quot;
+  subtitle = &quot;(二重奏)&quot;
   composer = &quot;A Mordern Method for Guitar&quot;
-
 }
 
 symbolsGuitarA =  {
@@ -1255,8 +1265,118 @@ symbolsGuitarB =  {
   \midi { }
   \layout { }
 }" style="width:100%;"/>
-<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/93f87c6e826828050777ec9a9f985af3ddc139ee/music.mp3" loop>
-</audio></p></div><div class="topic">
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/e8120fa2264d17862f291e4d1ac6200a80f6d331/music.mp3" loop>
+</audio></p></div></div>
+<div class="section" id="one-two-tree-four">
+<h2>One, Two, Tree, Four<a class="headerlink" href="#one-two-tree-four" title="永久链接至标题">¶</a></h2>
+<div class="lilypond">
+<p><img class="lilypond-score" src="../../.././_lilypond/0c0176e172ced681a5c9718895101106b5ffadff/music.png" alt="\version &quot;2.20.0&quot;
+\header {
+  title = &quot;One, Two, Tree, Four&quot;
+  subtitle = &quot;(二重奏)&quot;
+  composer = &quot;A Mordern Method for Guitar&quot;
+
+}
+
+snippetA =  {
+  &lt;e g c'&gt;2 &lt;e g c'&gt;
+  &lt;f g d'&gt;2 &lt;f g d'&gt;2
+  &lt;g c' e'&gt;2 &lt;g c' e'&gt;
+  &lt;a c' f'&gt;1
+}
+
+snippetB =  {
+  &lt;g b g'&gt;2 &lt;g b f'&gt;
+  &lt;f a&gt;2 &lt;f g b&gt;
+  &lt;f a c'&gt;2 &lt;f g d'&gt;
+}
+
+symbolsGuitarA =  {
+  \time 4/4
+  \tempo 4 = 75
+
+  \drums { hh4 hh hh hh }
+
+  % 1
+  \snippetA \break
+
+  % 4
+  \snippetB
+  &lt;e g c'&gt;4 g a b  \break
+
+  % 8
+  \snippetA \break
+
+  % 12
+  \snippetB
+  &lt;e g c'&gt;4 g f e \break
+
+  % 16
+  d4 d2 e4
+  f4 f2 g4
+  a4 g2 f4
+  e4 b a g \break
+
+  % 20
+  &lt;f a&gt;2 &lt;g b&gt;
+  &lt;a c'&gt;2 d'4 e'
+  &lt;a c' f'&gt;2 &lt;f a&gt;
+  &lt;f g d'&gt;2 &lt;f g b&gt; \break
+
+  % 24
+  \snippetA \break
+
+  % 28
+  \snippetB
+  &lt;e g c'&gt;1 \break
+
+  \bar &quot;|.&quot;
+}
+
+symbolsGuitarB =  {
+  r1
+
+  % 1
+  c4 e2 g4
+  c'4 b2 a4
+  a4 g2 c4
+  d4 f a c'
+
+  % 4
+  e'4 d'2 a4
+  c'4 b2 f'4
+  a4 g2 f4
+  e1
+
+  % 8
+  c4 e2 g4
+  c'4 b2 a4
+  a4 g2 c4
+  d4 f a c'
+
+  % 12
+}
+
+\score {
+  &lt;&lt;
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbolsGuitarA
+    }
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbolsGuitarB
+    }
+  &gt;&gt;
+  \midi { }
+  \layout { }
+}" style="width:100%;"/>
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/0c0176e172ced681a5c9718895101106b5ffadff/music.mp3" loop>
+</audio></p></div><div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">待处理</p>
+<p>Guitar2</p>
+</div>
+<div class="topic">
 <p class="topic-title">评论</p>
 <p>如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
