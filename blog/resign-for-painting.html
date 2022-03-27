@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>辞职为学画 &#8212; 银色子弹</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../_static/translations.js"></script>
     <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/blog/resign-for-painting.html" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -110,7 +109,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -119,14 +132,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -141,7 +150,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>  
 <h2>
    <i
@@ -414,7 +423,17 @@
   </li>
    
 </ul>
-
+</div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -422,57 +441,84 @@
 
 
           
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-            <!-- Source interaction buttons -->
+    <div class="header-article row sticky-top noprint">
+        
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
         
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
    模糊的萌芽
@@ -510,12 +556,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>辞职为学画</h1>
@@ -524,7 +569,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -569,10 +614,11 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="id1">
-<h1>辞职为学画<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                 <section id="id1">
+<h1>辞职为学画<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">待处理</p>
 <p>这只是草稿</p>
@@ -588,8 +634,8 @@
 </div></blockquote>
 <p>回答差不多总是这样子，并不是说谎，我不期望这一年里能画出什么名堂，计划上过了一年就回来继续上班，结果上也确实如此。只是回想起这些话，总觉得难过，有些对不起自己。</p>
 <p>我不是这样想的。</p>
-<div class="section" id="id3">
-<h2>模糊的萌芽<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<section id="id3">
+<h2>模糊的萌芽<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
 <p>我从小喜欢画画，但画画是什么东西？我从来没想过。</p>
 <p>三年级的时候因为搬家转学，新学校的体育老师是个白了一半头发的大肚子爷爷，村里的小学没有什么体育设施可言，每次上课的时候只要让大家在沙地上集合点名，从储物间里拉出两箩筐七零八落的器材，大家一拥而上，先到先得。箩筐里有凑不成对儿的铁质羽毛球拍、花花绿绿的跳绳、总是不太有精神的篮球。爱打球的小朋友要是没抢到打满了气的好球，可以跟老师要球针，憋红了脸吹一吹还能顶一节课。</p>
 <p>学校那会儿已经盖起了三层的教学楼，但体育老师的办公室还在平房的一个小单间里，没课的时候他在屋里画国画，那个时候他就是我的对画画认知的全部来源。我已经忘记我是怎么缠着他跟他要画儿的，能记得的是他给过我两张画，其中一张题字「小草」，前景是浓墨画的一奇石、两丛草，远景是淡淡的三座山。我将其视作珍宝，在还没长大的很长一段时间内，我的所谓「画画」就是一遍又一遍地，临摹老师送我的这张小画。</p>
@@ -598,20 +644,22 @@
 <p>喜欢这些动画片很大原因是因为里边炫酷的打打杀杀，自己也会画很多小人打打杀杀的场面，大部分在课本上，哪一科的老师越无聊，书上的战斗就越精彩些。「正经」画画的时候会临摹各种印刷品上的纸片人，可能是作业本的封面，也可能是特地买的动画片的贴纸。我不是一个非常耐心的人，用自动铅匆匆把线稿画好之后，就想着快点勾线，上色，享受「完成」的成就感。这样画出来的形象，其实是非常不准的，但和更小的时候一样，同学们都不画画，就显得我画得很好一样 —— 直到我的姐姐画了她的第一张画。</p>
 <p>姐姐是一个极聪明又有耐心的人，（在我看来）平时也不画画，有一天她突然窝在房间里很久，出来时给我看一张犬夜叉的线稿：非常干净的线，而我的纸上全是橡皮揉擦的痕迹。更重要的是，这太像了，和原画的观感一模一样，我甚至怀疑这是拓印的，但这显然不可能，姐姐不会说谎，两张画的大小也不一样。</p>
 <p>这件事情在当时让我有些妒忌，但长远看来没有什么其他影响。姐姐之后就不再画了，她的时间更多的花在课业上，而我也没有被触动然后奋发图强云云。现在想起，<em>只能感叹自己「没有天赋」这件事情，从很早以前就有迹可循了</em>。</p>
-</div>
-<div class="section" id="id4">
-<h2>勤奋的兴趣生<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id4">
+<h2>勤奋的兴趣生<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h2>
 <p>中考我差了三分没能上区一中，去到了顺位下来的另一个高中。这个学校文化课成绩不好不坏，美术倒是无可争议的全区第一（社团活动也很丰富，我也是在这里有了编程的启蒙）。那时我尚不懂「美术高考」为何物，只知道大家都是在教室里上课，一年升一级，参加一样的考试，划线决定下一个学校。对于这种认知外的选择，我根本不会去有什么妄想。</p>
 <p>学校在高一学生里招募打算参加艺考的学生组成专业班，同时也开设了针对仅仅是想画画的学生的兴趣班。专业班的同学在高中的前两年（最后一年是外出集训）每天下课都要到画室里接着上课，兴趣班的上课时间也一样，由当年外出集训的专业班老师兼任，所以只持续一年，强度上自然也不如专业班，退出机制也简单：不想上，就不上了呗。</p>
 <p>对这些事情有了解都是后来的事情了，当时听到兴趣班的消息的我充满了一种对未知的好奇，这听起来是在我认知内的：不需要慎重的考虑，一学期一百块钱的材料费就能上。于是我兴冲冲报了名，还反复考虑：「在要不要去的时候把以前的画给老师看」，「老师会不会夸我啊」云云。</p>
 <p>上课之前要准备铅笔和纸。我一直以为，只要是白纸就能画画，之前画「国画」虽然知道老师用的是宣纸，也从来没想过去买，一直用的是家里撕下的日历纸，白且大，当然「枯干渴润湿」的变化就不用想了，这样的纸仅仅是能沾上墨而已。当时住校也没有日历纸，我带上了平时做作业用的本子。</p>
-<div class="figure align-default" id="id15">
+<figure class="align-default" id="id15">
 <a class="reference internal image-reference" href="../_images/14340257593_652377082.jpg"><img alt="../_images/14340257593_652377082.jpg" src="../_images/14340257593_652377082.jpg" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">网上找到的同款图片</span><a class="headerlink" href="#id15" title="永久链接至图片">¶</a></p>
+<figcaption>
+<p><span class="caption-text">网上找到的同款图片</span><a class="headerlink" href="#id15" title="永久链接至图片">#</a></p>
 <div class="legend">
 <p>封面看起来比小时候用的厚多了</p>
 </div>
-</div>
+</figcaption>
+</figure>
 <p>到了画室才发现大家带的纸和我不一样，足足有一张小课桌那么大，装在一个同样大的袋子里。画室里的桌子看起来好少，中间的空地上摆了非常多的木架，架上放着一块块的「砧板」。在一大堆人里我开始局促不安，想给老师看画的念头完全抛到了脑后，取而代之的是各种各样的疑问：</p>
 <blockquote>
 <div><div class="line-block">
@@ -624,10 +672,12 @@
 <p>不一会儿我就知道了，这是素描纸，这是画架，这是 <a class="reference internal" href="../any-artwork.size.html#cap-4k" title="artwork 4k"><code class="xref any any-artwork.size docutils literal notranslate"><span class="pre">四开</span></code></a> 大的画板，我要画的是 <a class="reference internal" href="../any-artwork.medium.html#cap-铅笔" title="artwork 铅笔"><code class="xref any any-artwork.medium docutils literal notranslate"><span class="pre">素描</span></code></a>。我当然听过「素描」，难堪里不由得又冒出几分激动，于是更认真地在小小的一方纸上来回拉线，满心想让老师快点注意到我，以后教我更多的东西。</p>
 <p>拉几条线当然不能让老师注意到我，但不久后这个愿望还是实现了：每上一堂课，周围的人就少一大半，也许是觉得整天画线很无聊吧，到了画几何体结构的时候，人员基本上稳定在了十来人。某天老师在衬布上摆了一个石膏罐和几个水果，说你们几个可以不用画几何体了，来画静物，带光影的。</p>
 <p>于是我们几个人围了过去，换纸，削笔，一开始大家的画板都是横着放的，在下一张画的时候也没想过有什么改变。可我总觉得面对的这样一组静物，取景框是横的总显得奇怪，于是我把画板竖了起来。老师看见一堆画板里只有我的构图是竖着的，便过来夸奖了我一番，也许是从那个时候记住了我的名字？这就无从得知了。</p>
-<div class="figure align-default" id="id16">
+<figure class="align-default" id="id16">
 <a class="reference internal image-reference" href="../_images/1634486382099.jpg"><img alt="../_images/1634486382099.jpg" src="../_images/1634486382099.jpg" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">第一张全因素素描</span><a class="headerlink" href="#id16" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">第一张全因素素描</span><a class="headerlink" href="#id16" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>初学者的第一张画，除了构图之外再没有可圈可点之处了。当然那时候不这么想，我是一个极渴望被夸奖但又不敢表露的人，老师的夸奖给了我非常大的动力。我开始严格规划自己的每一天：</p>
 <ul class="simple">
 <li><p>中午不休息，回寝室借着中午的太阳晒热的水洗澡（那时候宿舍没接热水，打水洗澡浪费时间）</p></li>
@@ -638,9 +688,9 @@
 <p>这样的生活持续了大半个高一，时至今日，想起奶油面包的味道我还是觉得想吐，<span class="sphinxnotes-strike">奶茶倒没有喝腻</span>。</p>
 <p>努力当然就会有起色，与此同时隔壁专业班的学生还处于享受高中生活的懒散阶段，大家慢慢知道隔壁兴趣班有个画得比专业班还好的小个子，上课的时候会有人从隔壁探过头来看，我的虚荣心那时候得到了极大的满足。</p>
 <p><em>可惜留给我的时间不多了。</em></p>
-</div>
-<div class="section" id="id5">
-<h2>努力与选择<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id5">
+<h2>努力与选择<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
 <p>艺术楼里有三间画室，在我高一那年，从外到里分别是，兴趣班，高一专业班，高二专业班。每天准备离开的时候，其他画室基本上都没人了，我会开灯溜进去看看他们在画什么。</p>
 <p>排除有童子功的同学，美术生的画力基本是按年级来分的。</p>
 <p>高一开始基本只用四开的板子，画瓶瓶罐罐石膏体，上学期末或者下学期开始摸一摸水粉。</p>
@@ -649,13 +699,15 @@
 <p>集训回来后的学长学姐明显不一样了：速写再不需要起稿，一出手型就是准的，画出的线条没有磕磕绊绊的感觉。完成的一张画里很难找出哪里有不和谐的地方，似乎他们对如何在纸面上模拟这个世界，有了十足的把握。</p>
 <p>这样的分层给我一种错觉：只要我升上高年级，我也能画得和他们一样好吧。我没有想到的是， <em>因为选择不同，我和专业生们走的是截然不同的道路。</em></p>
 <p>高一的第一个寒假，和我过去的任何一个长假一样：我在家里呆着，看电视，写作业。和之前不同的是，我是一个画画的人了，我得画画呀。我买了一本那时候很流行的于小冬速写集，只要把这本书临完，我也可以不用起稿了吧？我还想画素描，从画室借了一本静物书，没有画架，就把四开纸铺在地上趴着画。</p>
-<div class="figure align-default" id="id17">
+<figure class="align-default" id="id17">
 <a class="reference internal image-reference" href="../_images/IMG_0274.jpg"><img alt="../_images/IMG_0274.jpg" src="../_images/IMG_0274.jpg" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">寒假在家画的唯一一张素描</span><a class="headerlink" href="#id17" title="永久链接至图片">¶</a></p>
+<figcaption>
+<p><span class="caption-text">寒假在家画的唯一一张素描</span><a class="headerlink" href="#id17" title="永久链接至图片">#</a></p>
 <div class="legend">
 <p>签名是回学校之后让伟敏帮我签的，我那时候还没开始「练字」</p>
 </div>
-</div>
+</figcaption>
+</figure>
 <p>看起来是很积极的规划，假期很快过去了，我并没有画多少张。</p>
 <p>回想起来我一直是这样的，总会在某个时间段的开始给自己画一张美好的蓝图，<em>填满时间表给我一种掌控一切的愉悦感，而这份愉悦总会在接下来的实施里统统还回去。</em></p>
 <p>寒假结束，回到画室，我一边懊悔着虚度的寒假，一边祈祷着同学们假期只顾着疯玩，最好一张都没有画。实际情况是，专业班的学生们按照惯例参加了校外的画室。这个寒假的几乎每一天，他们都在画画 ——</p>
@@ -667,16 +719,18 @@
 </ul>
 <p>一个寒假过后，我已经画得不如他们了 —— <em>选择走专业的他们，在正确的引导下付出了压倒性的时间成本。在这些面前，我的那么点努力算什么呢？</em></p>
 <p>在之后的好多年里，我陷入了对自己是否热爱画画的反复质疑。</p>
-<div class="figure align-default" id="id18">
+<figure class="align-default" id="id18">
 <a class="reference internal image-reference" href="../_images/火狐截图_2022-03-13T12-22-12.184Z.png"><img alt="../_images/火狐截图_2022-03-13T12-22-12.184Z.png" src="../_images/火狐截图_2022-03-13T12-22-12.184Z.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">挂在艺术楼里的优秀作业 <a class="footnote-reference brackets" href="#id12" id="id6">1</a></span><a class="headerlink" href="#id18" title="永久链接至图片">¶</a></p>
+<figcaption>
+<p><span class="caption-text">挂在艺术楼里的优秀作业 <a class="footnote-reference brackets" href="#id12" id="id6">1</a></span><a class="headerlink" href="#id18" title="永久链接至图片">#</a></p>
 <div class="legend">
 <p>我以为这是我「永远」都达不到的高度。</p>
 </div>
-</div>
-</div>
-<div class="section" id="id7">
-<h2>编外人员的挣扎<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+</figcaption>
+</figure>
+</section>
+<section id="id7">
+<h2>编外人员的挣扎<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h2>
 <p>高二，文理分科，对于专业生而言，这是不算太晚的退出时机；对于想要转专业的兴趣生，这也是能赶上进度的最后机会，如果不转的话，兴趣生的课程也就结束了。</p>
 <p>这时候专业生们要面临的道路，对我来说已经不再是认知外的事情了，甚至，它们成为了我生活中习以为常的一部分 —— 我动了一点想转专业的心思。</p>
 <p>拦在我面前的问题有两个：</p>
@@ -705,9 +759,9 @@
 <p>要是我那时候那时候和父母争吵一番呢？我想要画画，我想要和他们一样变得厉害，我想要确认自己不是不喜欢画画。结局我想不会改变，可是我心里那颗 <a class="reference internal" href="#id8"><span class="std std-ref">不甘心的种子</span></a>，就不会种下了吧。</p>
 <p>后来大学毕业后去北京工作，认识了一些广东省外的朋友，我才了解到其他地方的考学压力之大，超出了我的想象。我这样脆弱的人，在其他地方也许活不到现在吧。</p>
 </div>
-</div>
-<div class="section" id="id8">
-<span id="id9"></span><h2>黑客与画家<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id8">
+<span id="id9"></span><h2>黑客与画家<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h2>
 <p>我并没有因为离开了社团和画室，就把更多的时间放在学习上。高三的大部分时间，我都在和黑狗搏斗，没有人对我的成绩有要求。也许这样反而在心态上占据了优势，高考发挥得还不错，至少满足了家里人的最低期待。</p>
 <p>大学的专业是软件工程。相比于画画，编程给我带来的痛苦实在微不足道，在大部分时间我都非常享受和代码交流。学校提供的帮助有限，但我很幸运地沿着合理的路径依赖，慢慢地一步步往前走：</p>
 <dl class="field-list simple">
@@ -728,9 +782,9 @@
 </dd>
 </dl>
 <p>画画呢？</p>
-</div>
-<div class="section" id="id10">
-<h2>辞职为学画<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id10">
+<h2>辞职为学画<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h2>
 <p>高中想过选文科走美术高考，但因家里经济原因作罢，</p>
 <dl class="simple">
 <dt>工作陷入瓶颈</dt><dd><p>在前公司的工作氛围固然轻松，但同样的事情做久了会心生疲倦，也会怀疑自己是不是没进步了，会想去更大的平台</p>
@@ -747,9 +801,9 @@
 <p>一年没有收入不会焦虑吗？</p>
 <p>几乎不，三年的工作让我有了一些积蓄，学画这一年的所有开支（生活，房租，学费）也仅仅花掉了其中的三成不到。</p>
 <p>为什么回来了？你的冒险成功了吗？</p>
-</div>
-<div class="section" id="id11">
-<h2>画不准的底气<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id11">
+<h2>画不准的底气<a class="headerlink" href="#id11" title="永久链接至标题">#</a></h2>
 <p class="rubric">脚注</p>
 <dl class="footnote brackets">
 <dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id6">1</a></span></dt>
@@ -769,8 +823,8 @@
     )
 );</script> 回复你。</p>
 <section data-isso-id="/blog/resign-for-painting" data-title="辞职为学画" id="isso-thread"></section></div>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     
@@ -779,29 +833,35 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-24.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

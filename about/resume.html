@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>张盛宇 &#8212; 银色子弹</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../_static/translations.js"></script>
     <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/about/resume.html" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -111,7 +110,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -120,16 +133,22 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top">
 <link rel="stylesheet" type="text/css" href="../_static/nosidebar.css">
-
+</div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -137,57 +156,84 @@
 
 
           
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-            <!-- Source interaction buttons -->
+    <div class="header-article row sticky-top noprint">
+        
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
         
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    <span class="fa fa-graduation-cap">
@@ -322,12 +368,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>张盛宇</h1>
@@ -336,7 +381,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -478,10 +523,11 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="id1">
-<h1>张盛宇<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                 <section id="id1">
+<h1>张盛宇<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <p class="centered">
 <strong><span class="fa fa-envelope"></span> <script type="text/javascript">document.write(
     "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:wbo\100fvyireenvam\056zr\">wbo\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
@@ -491,8 +537,8 @@
             );
         }
     )
-);</script> | <span class="fa fa-phone"></span> (+86)176******** | <span class="fa fa-rss"></span> <a class="reference external" href="https://silverrainz.me">silverrainz.me</a></strong></p><div class="section" id="id2">
-<h2><span class="fa fa-graduation-cap"></span> 教育背景<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+);</script> | <span class="fa fa-phone"></span> (+86)176******** | <span class="fa fa-rss"></span> <a class="reference external" href="https://silverrainz.me">silverrainz.me</a></strong></p><section id="id2">
+<h2><span class="fa fa-graduation-cap"></span> 教育背景<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">华南农业大学</dt>
 <dd class="field-odd"><p>软件工程，2013 年 9 月 - 2017 年 5 月</p>
@@ -501,9 +547,9 @@
 <dd class="field-even"><p>古典素描，2020 年 6 月 - 2021 年 6 月</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id3">
-<h2><span class="fa fa-briefcase"></span> 从业经历<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id3">
+<h2><span class="fa fa-briefcase"></span> 从业经历<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">自由软件基金会 &amp; 谷歌</dt>
 <dd class="field-odd"><p>GSoC Student、GNU Hurd 开发者，2016 年</p>
@@ -515,13 +561,13 @@
 <dd class="field-odd"><p>研发工程师，2017 年 – 2020 年</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id4">
-<h2><span class="fa fa-search"></span> 关注领域<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id4">
+<h2><span class="fa fa-search"></span> 关注领域<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h2>
 <p>分布式系统 | 流处理系统 | 自由桌面软件 | 操作系统内核 | 开发效率工具</p>
-</div>
-<div class="section" id="id5">
-<h2><span class="fa fa-cogs"></span> 专业技能<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id5">
+<h2><span class="fa fa-cogs"></span> 专业技能<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
 <dl>
 <dt>语言</dt><dd><div class="line-block">
 <div class="line">熟练使用 C、Golang、Python</div>
@@ -545,11 +591,11 @@
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="id6">
-<h2><span class="fa fa-code"></span> 项目经历<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<div class="section" id="the-os67-kernel">
-<h3>The OS67 Kernel <a class="footnote-reference brackets" href="#id50" id="id7">1</a><a class="headerlink" href="#the-os67-kernel" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id6">
+<h2><span class="fa fa-code"></span> 项目经历<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h2>
+<section id="the-os67-kernel">
+<h3>The OS67 Kernel <a class="footnote-reference brackets" href="#id50" id="id7">1</a><a class="headerlink" href="#the-os67-kernel" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">时间</dt>
 <dd class="field-odd"><p>2014 年 10 月 – 2015 年 10 月</p>
@@ -574,9 +620,9 @@
 <li><p>类 UNIX 的文件描述符实现 IO 重定向</p></li>
 <li><p>简单的管道</p></li>
 </ul>
-</div>
-<div class="section" id="srain-irc-client">
-<h3>Srain IRC Client <a class="footnote-reference brackets" href="#id51" id="id8">2</a><a class="headerlink" href="#srain-irc-client" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="srain-irc-client">
+<h3>Srain IRC Client <a class="footnote-reference brackets" href="#id51" id="id8">2</a><a class="headerlink" href="#srain-irc-client" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">时间</dt>
 <dd class="field-odd"><p>2016 年 1 月 – 至今</p>
@@ -601,9 +647,9 @@ Srain 尝试为古老的 IRC 协议套上了「现代」的外壳</p>
 <li><p>支持优化显示来自其他 IM 的消息 <a class="footnote-reference brackets" href="#id52" id="id9">3</a></p></li>
 <li><p>支持插件系统</p></li>
 </ul>
-</div>
-<div class="section" id="xattr-support-for-gnu-hurd">
-<h3>XATTR Support for GNU/Hurd <a class="footnote-reference brackets" href="#id53" id="id10">4</a><a class="headerlink" href="#xattr-support-for-gnu-hurd" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="xattr-support-for-gnu-hurd">
+<h3>XATTR Support for GNU/Hurd <a class="footnote-reference brackets" href="#id53" id="id10">4</a><a class="headerlink" href="#xattr-support-for-gnu-hurd" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">时间</dt>
 <dd class="field-odd"><p>2016 年 5 月 – 2016 年 9 月</p>
@@ -622,9 +668,9 @@ Srain 尝试为古老的 IRC 协议套上了「现代」的外壳</p>
 为 GNU/Hurd 的 ext2 文件系统增加扩展文件属性（Extended File Attribute）的特性。
 我作为 GSoC Student 顺利地完成了该项目，相关的代码 <a class="footnote-reference brackets" href="#id54" id="id11">5</a> 已并入上游。</p>
 <p>这篇文章 <a class="footnote-reference brackets" href="#id55" id="id12">6</a> 详述了我所做的工作。</p>
-</div>
-<div class="section" id="sn-r">
-<h3>高性能流量转发服务器 SN*****r<a class="headerlink" href="#sn-r" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="sn-r">
+<h3>高性能流量转发服务器 SN*****r<a class="headerlink" href="#sn-r" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">时间</dt>
 <dd class="field-odd"><p>2016 年</p>
@@ -642,9 +688,9 @@ Srain 尝试为古老的 IRC 协议套上了「现代」的外壳</p>
 <p>该项目采用了类似 Nginx 的 Master/Slave/Monitor 多进程模型和类似的 Nginx 的模块组织方式。</p>
 <p>我作为实习生在其中负责了一些统计功能的开发。后基于 <em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/7/MQ_OVERVIEW">MQ_OVERVIEW(7)</a></em>
 开发了一个进程间消息队列模块，并在此基础上实现了 so library 的 hot reloading。</p>
-</div>
-<div class="section" id="ma-o">
-<h3>分布式结构化日志统计平台 Ma**o<a class="headerlink" href="#ma-o" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="ma-o">
+<h3>分布式结构化日志统计平台 Ma**o<a class="headerlink" href="#ma-o" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">时间</dt>
 <dd class="field-odd"><p>2017 年 – 2020 年</p>
@@ -663,9 +709,9 @@ Srain 尝试为古老的 IRC 协议套上了「现代」的外壳</p>
 文档维护都经过了多次的试错和修正，成为公司内部 Golang 项目的首选模板。</p>
 <p>该项目依托于 Golang 的 Frist-Class Coroutine 支持，实现了高吞吐的日志处理。
 大部分代码为业务逻辑，不便展开。</p>
-</div>
-<div class="section" id="lua-l-g">
-<h3>Lua 插件平台 L*g<a class="headerlink" href="#lua-l-g" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="lua-l-g">
+<h3>Lua 插件平台 L*g<a class="headerlink" href="#lua-l-g" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">时间</dt>
 <dd class="field-odd"><p>2017 年 – 2020 年</p>
@@ -690,9 +736,9 @@ Srain 尝试为古老的 IRC 协议套上了「现代」的外壳</p>
 <li><p>支持用 Go 实现 Lua module</p></li>
 <li><p>深度集成了 Lua coroutine 和 Goroutine ，最大化利用了 CPU 时间</p></li>
 </ul>
-</div>
-<div class="section" id="p-er">
-<h3>分布式实时流处理框架 P****er<a class="headerlink" href="#p-er" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="p-er">
+<h3>分布式实时流处理框架 P****er<a class="headerlink" href="#p-er" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">时间</dt>
 <dd class="field-odd"><p>2018 年 – 2020 年</p>
@@ -719,9 +765,9 @@ Srain 尝试为古老的 IRC 协议套上了「现代」的外壳</p>
 <li><p>支持类似 Flink Streaming SQL 的 SQL 语法，支持 JSON 类型，实验性支持 JOIN 和子查询</p></li>
 <li><p>支持任务管理，支持调试用途的任务可视化</p></li>
 </ul>
-</div>
-<div class="section" id="sphinx-notes">
-<h3>Sphinx Notes <a class="footnote-reference brackets" href="#id56" id="id13">7</a><a class="headerlink" href="#sphinx-notes" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="sphinx-notes">
+<h3>Sphinx Notes <a class="footnote-reference brackets" href="#id56" id="id13">7</a><a class="headerlink" href="#sphinx-notes" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">时间</dt>
 <dd class="field-odd"><p>2020 年 5 月 – 至今</p>
@@ -755,12 +801,12 @@ fzf/fzy/skim 等filter 快速筛选出想要的信息</p>
 <dt>sphinxnotes-isso <a class="footnote-reference brackets" href="#id62" id="id19">13</a></dt><dd><p>开源评论系统 Isso 的 Sphinx 扩展</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="id20">
-<h2><span class="fa fa-users"></span> 开源活动<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
-<div class="section" id="linux">
-<h3>Linux 相关<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id20">
+<h2><span class="fa fa-users"></span> 开源活动<a class="headerlink" href="#id20" title="永久链接至标题">#</a></h2>
+<section id="linux">
+<h3>Linux 相关<a class="headerlink" href="#linux" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>Arch Linux 中国社区 <a class="footnote-reference brackets" href="#id63" id="id21">14</a></dt><dd><p>2016 年至今，作为活跃成员，一直为中国社区软件仓库维护软件包 100 余个，
 提交数量排名 #14（截至 2021-02-18） <a class="footnote-reference brackets" href="#id64" id="id22">15</a></p>
@@ -770,9 +816,9 @@ fzf/fzy/skim 等filter 快速筛选出想要的信息</p>
 jekyll, vim-fcitx, ccls, gtk4 等。</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="irc">
-<h3>IRC 相关<a class="headerlink" href="#irc" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="irc">
+<h3>IRC 相关<a class="headerlink" href="#irc" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>Srain IRC Client</dt><dd><p>作为作者和维护者，从 2016 年至 2021 年，一直持续开发和维护项目，
 截至 2021-02-25，五年间：</p>
@@ -792,9 +838,9 @@ Gentoo overlay GURU、OpenBSD、OpenMandriva、openSUSE、NetBSD、Void Linux
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="golang">
-<h3>Golang 相关<a class="headerlink" href="#golang" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="golang">
+<h3>Golang 相关<a class="headerlink" href="#golang" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>The Go Language</dt><dd><ul class="simple">
 <li><p>修复标准库 <code class="code docutils literal notranslate"><span class="pre">text/scanner</span></code> 中一处 BUG <a class="footnote-reference brackets" href="#id68" id="id26">19</a></p></li>
@@ -808,9 +854,9 @@ Gentoo overlay GURU、OpenBSD、OpenMandriva、openSUSE、NetBSD、Void Linux
 （而非动态的 GoDoc），我为其实现了一部分功能 <a class="footnote-reference brackets" href="#id72" id="id30">23</a> 。</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id31">
-<h3>其他<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id31">
+<h3>其他<a class="headerlink" href="#id31" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>维护 PNMixer <a class="footnote-reference brackets" href="#id73" id="id32">24</a> 的中文翻译</p></li>
 <li><p>为书籍 <a class="reference internal" href="../notes/books/index.html#book-9787115335593" title="book Haskell 趣学指南"><code class="xref any any-book docutils literal notranslate"><span class="pre">《Haskell</span> <span class="pre">趣学指南》</span></code></a> 全书校正代码格式 <a class="footnote-reference brackets" href="#id74" id="id33">25</a></p></li>
@@ -818,12 +864,12 @@ Gentoo overlay GURU、OpenBSD、OpenMandriva、openSUSE、NetBSD、Void Linux
 <li><p>为中国科学技术大学 Linux 用户协会（USTCLUG）设计社团 LOGO <a class="footnote-reference brackets" href="#id76" id="id35">27</a></p></li>
 <li><p>为知名 C/C++ Language Server 项目 ccls 设计 LOGO <a class="footnote-reference brackets" href="#id77" id="id36">28</a></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id37">
-<h2><span class="fa fa-info"></span> 其他<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id38">
-<h3>文章<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id37">
+<h2><span class="fa fa-info"></span> 其他<a class="headerlink" href="#id37" title="永久链接至标题">#</a></h2>
+<section id="id38">
+<h3>文章<a class="headerlink" href="#id38" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>《我如何用Sphinx 建立笔记系统》系列文章 <a class="footnote-reference brackets" href="#id78" id="id39">29</a></p></li>
 <li><p>《Srain - Modern IRC Client written in GTK》 <a class="footnote-reference brackets" href="#id79" id="id40">30</a></p></li>
@@ -832,18 +878,18 @@ Gentoo overlay GURU、OpenBSD、OpenMandriva、openSUSE、NetBSD、Void Linux
 <li><p>《用户态进程的简单实现及调度(一)》 <a class="footnote-reference brackets" href="#id82" id="id43">33</a></p></li>
 <li><p>《Minix v1 文件系统的实现》 <a class="footnote-reference brackets" href="#id83" id="id44">34</a></p></li>
 </ul>
-</div>
-<div class="section" id="id45">
-<h3>专利<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id45">
+<h3>专利<a class="headerlink" href="#id45" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>Web 应用防火墙系统及计算机存储介质 <a class="footnote-reference brackets" href="#id84" id="id46">35</a></p></li>
 <li><p>一种 Web 应用防火墙自定义扩展功能的方法、装置、系统及电子设备 <a class="footnote-reference brackets" href="#id85" id="id47">36</a></p></li>
 <li><p>一种实时数据处理方法及装置 <a class="footnote-reference brackets" href="#id86" id="id48">37</a></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id49">
-<h2><span class="fa fa-external-link-alt"></span> 脚注<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id49">
+<h2><span class="fa fa-external-link-alt"></span> 脚注<a class="headerlink" href="#id49" title="永久链接至标题">#</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id7">1</a></span></dt>
 <dd><p><a class="reference external" href="https://github.com/SilverRainZ/OS67">https://github.com/SilverRainZ/OS67</a></p>
@@ -974,8 +1020,8 @@ Gentoo overlay GURU、OpenBSD、OpenMandriva、openSUSE、NetBSD、Void Linux
     )
 );</script> 回复你。</p>
 <section data-isso-id="/about/resume" data-title="张盛宇" id="isso-thread"></section></div>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
    
@@ -983,9 +1029,11 @@ Gentoo overlay GURU、OpenBSD、OpenMandriva、openSUSE、NetBSD、Void Linux
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="friends.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -994,25 +1042,29 @@ Gentoo overlay GURU、OpenBSD、OpenMandriva、openSUSE、NetBSD、Void Linux
         </div>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-24.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

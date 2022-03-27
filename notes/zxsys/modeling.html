@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>形体分解训练 &#8212; 银色子弹</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/notes/zxsys/modeling.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
@@ -112,7 +111,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -121,14 +134,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -143,7 +152,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
@@ -867,70 +876,102 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
         
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    要求
@@ -1087,12 +1128,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>形体分解训练</h1>
@@ -1101,7 +1141,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1265,10 +1305,11 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="id1">
-<h1>形体分解训练<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                 <section id="id1">
+<h1>形体分解训练<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">startat</dt>
 <dd class="field-odd"><p>2020-07-22</p>
@@ -1280,17 +1321,17 @@
 <dd class="field-odd"><p>Finished</p>
 </dd>
 </dl>
-<div class="section" id="id2">
-<h2>要求<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id2">
+<h2>要求<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <p>石膏像写生，光影为主，线条为辅，尽量使用直线，用最少的面画出形体。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>这个练习对工具有一些要求，如果使用铅笔作画，需要使用 260g 或以上的素描纸，
 并备好 H, 2H 的硬铅</p>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>形体及其分解<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id3">
+<h2>形体及其分解<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
 <p>同样，下面的内容在 <a class="reference internal" href="../6-lectures-on-sketch.html#id6"><span class="std std-ref">造型的诞生</span></a> 中已经讲过了。
 推荐阅读 <a class="reference internal" href="../books/drawing-lessons-from-the-great-masters.html#book-9787558600814" title="book 向大师学绘画·素描基础"><code class="xref any any-book docutils literal notranslate"><span class="pre">《向大师学绘画·素描基础》</span></code></a> 、伯里曼的随便什么书。</p>
 <div class="topic">
@@ -1302,8 +1343,8 @@
 <p>更详细的解释，参见 <a class="reference internal" href="../6-lectures-on-sketch.html#id13"><span class="std std-ref">单元形体</span></a></p>
 </div>
 </div>
-<div class="section" id="id4">
-<h3>分解形体的依据<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<section id="id4">
+<h3>分解形体的依据<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
 <p>写实绘画，以内在构造为主，外在形态为辅：</p>
 <ul class="simple">
 <li><p>内在构造：内部结构的组合关系（对于生物来说是解剖关系）</p></li>
@@ -1316,25 +1357,25 @@
 <li><p>观察该共性在所要描绘的物象上是否明显——根据情况强化或弱化</p></li>
 </ul>
 <p><a class="reference internal" href="../6-lectures-on-sketch.html#id15"><span class="std std-ref">形体的组合</span></a> 和形体的分解相反，从组合的视角出发能够更有目的地分解形体。</p>
-</div>
-<div class="section" id="id5">
-<span id="id6"></span><h3>分解形体的原则<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id5">
+<span id="id6"></span><h3>分解形体的原则<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>由大到小，先画大形体，再画小形体</p></li>
 <li><p>由暗到亮，先画暗面再画亮面（由作画媒介决定）</p></li>
 <li><p>由共性到特性，先根据对象的共性把体积感画出来，再调整形体突出对象的特性</p></li>
 <li><p>形体要挨着画，体积感是在形体和形体之间的连接产生的</p></li>
 </ul>
-</div>
-<div class="section" id="id7">
-<h3>结构体块<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id7">
+<h3>结构体块<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h3>
 <p><em>关键的形体不一定在起伏和深浅上明显，但在物象的内在构造中起着关键的衔接作用</em> 。</p>
 <p>晓飞老师把这些关键的形体叫做 <em>结构体块</em> ，结构体块往往是微小的不明显的起伏
 （大的明显的就不需要单独拎出来讲了，很直观），在画面上画出这些体块能够暗示物象
 的内在构造，增加画面的信息量。</p>
 <p>对内在构造的了解以及良好的观察力是识别结构体块的两大途径。</p>
-<div class="section" id="id8">
-<h4>人的结构体块<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
+<section id="id8">
+<h4>人的结构体块<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h4>
 <ul class="simple">
 <li><p>额丘中心的高点</p></li>
 <li><p>额头、后脑勺、侧脸的连接点</p></li>
@@ -1346,10 +1387,10 @@
 </li>
 <li><p>肩上的肌腱（分割了人的正面与背面）</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id9">
-<span id="id10"></span><h3>观察方式<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id9">
+<span id="id10"></span><h3>观察方式<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h3>
 <p>以下的几种观察方式都赖于良好的空间想象能力和空间感受能力。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
@@ -1375,9 +1416,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="id11">
-<h3>关键的起伏<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id11">
+<h3>关键的起伏<a class="headerlink" href="#id11" title="永久链接至标题">#</a></h3>
 <p>物体上的微小的关键起伏，往往暗示了其内在构造。
 我们需要看出单个形体和周边形体之间的联系，以及这个联系凸显出的关键起伏
 根据面的朝向画出轮廓，而非看轮廓线的角度</p>
@@ -1387,9 +1428,9 @@
 </div>
 <p>分析每一个面的走向（及形成该走向的原因：中立、拉力等）
 视觉上被严重压缩的形体尤要仔细分析</p>
-</div>
-<div class="section" id="id13">
-<span id="id14"></span><h3>寻找特征<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id13">
+<span id="id14"></span><h3>寻找特征<a class="headerlink" href="#id13" title="永久链接至标题">#</a></h3>
 <div class="admonition-todo admonition" id="id15">
 <p class="admonition-title">待处理</p>
 <p>暂时还不太能触及到，所以没有太多的总结</p>
@@ -1404,10 +1445,10 @@
 <p>以上的变化不能通过死盯着某个形得出，而应当通过对比共性，
 在 <em>大的视觉感受上</em> 的对比得出</p>
 </div>
-</div>
-</div>
-<div class="section" id="id16">
-<h2>作画步骤<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id16">
+<h2>作画步骤<a class="headerlink" href="#id16" title="永久链接至标题">#</a></h2>
 <p>作画步骤的意义在于 <em>指导在作画过程中，特定阶段的目的（抽象的），
 目标（具体的，能明确判断的）以及达成的手段</em> 。</p>
 <p>好的步骤的目的是有逻辑的，自洽的，目标是单一的，明确的。</p>
@@ -1434,8 +1475,8 @@
 <li><p>在进度停滞的时候，要注意自己是不是偏离了该阶段的目标</p></li>
 </ul>
 </div>
-<div class="section" id="id17">
-<span id="id18"></span><h3>0. 找亮暗面<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<section id="id17">
+<span id="id18"></span><h3>0. 找亮暗面<a class="headerlink" href="#id17" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">目的</dt>
 <dd class="field-odd"><p>起型</p>
@@ -1474,9 +1515,9 @@
 <li><p>为每一个投影明确投影物和投影所在物。换句话说，<em>明确每个投影的成因</em></p></li>
 <li><p>暗部是有明确的边界的。但因为深灰的影响，观感上似乎总是比实际上更大</p></li>
 </ul>
-</div>
-<div class="section" id="id19">
-<h3>1. 梳理秩序<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id19">
+<h3>1. 梳理秩序<a class="headerlink" href="#id19" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">目的</dt>
 <dd class="field-odd"><p>规划画面不同区域的用色</p>
@@ -1518,9 +1559,9 @@
 <li><p><em>限制才能带来秩序</em> ，颜色 <em>宁可雷同</em> 也不要超出六个色层的限制</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="n">
-<span id="id20"></span><h3>2~N. 梳理形体<a class="headerlink" href="#n" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="n">
+<span id="id20"></span><h3>2~N. 梳理形体<a class="headerlink" href="#n" title="永久链接至标题">#</a></h3>
 <ol class="arabic">
 <li><p>首先确定要梳理的形体</p></li>
 <li><p>在形体中找面：这个形体由哪些面组成，面从哪里开始，在哪里结束</p>
@@ -1588,12 +1629,12 @@
 <p class="admonition-title">备注</p>
 <p>在梳理过程中，应当避免修改大的形体，让现有的形体互相匹配即可</p>
 </div>
-<div class="section" id="id22">
-<h4>形体推移形成空间<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h4>
-</div>
-</div>
-<div class="section" id="n-1">
-<span id="id23"></span><h3>N+1. 画结构<a class="headerlink" href="#n-1" title="永久链接至标题">¶</a></h3>
+<section id="id22">
+<h4>形体推移形成空间<a class="headerlink" href="#id22" title="永久链接至标题">#</a></h4>
+</section>
+</section>
+<section id="n-1">
+<span id="id23"></span><h3>N+1. 画结构<a class="headerlink" href="#n-1" title="永久链接至标题">#</a></h3>
 <p>在现阶段的训练中，塑造是 <a class="reference internal" href="#id31"><span class="std std-ref">作画步骤</span></a> 的最后一步。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
@@ -1642,16 +1683,18 @@
 <p class="admonition-title">待处理</p>
 <p>何时用结构线，何时用交叉线？</p>
 </div>
-<div class="figure align-default" id="id41">
+<figure class="align-default" id="id41">
 <img alt="../../_images/IMG_20200908_163931.jpg" src="../../_images/IMG_20200908_163931.jpg" />
-<p class="caption"><span class="caption-text">塑造中的荷马像，局部 <sup>注：晓飞老师改过</sup></span><a class="headerlink" href="#id41" title="永久链接至图片">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="id26">
-<h2>被解开的疑惑<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id27">
-<span id="id28"></span><h3>如何起稿<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">塑造中的荷马像，局部 <sup>注：晓飞老师改过</sup></span><a class="headerlink" href="#id41" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id26">
+<h2>被解开的疑惑<a class="headerlink" href="#id26" title="永久链接至标题">#</a></h2>
+<section id="id27">
+<span id="id28"></span><h3>如何起稿<a class="headerlink" href="#id27" title="永久链接至标题">#</a></h3>
 <p>「如何起稿」是从我刚开始学习素描就一直苦恼的问题，在晓飞老师的训练中并不教你如何起稿。
 因为这不是需要被解决的问题，「不会起稿」仅仅是「不会画」的一个体现，
 而「不会画」则可以归因到「没有造型意识」，在初窥造型艺术的门径后，我总算能够总结出
@@ -1688,9 +1731,9 @@
 </li>
 <li><p>带着光感继续找更小的暗面，判标准同上，直至找完 <em>所有的</em> 暗面</p></li>
 </ol>
-</div>
-<div class="section" id="id29">
-<h3>什么是「形准」<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id29">
+<h3>什么是「形准」<a class="headerlink" href="#id29" title="永久链接至标题">#</a></h3>
 <p>广义来说，和谐的形就是准的。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
@@ -1698,9 +1741,9 @@
 </div>
 <p>从写实绘画的角度出发，<a class="reference internal" href="../6-lectures-on-sketch.html#id9"><span class="std std-ref">匹配</span></a> 的，有空间感的、
 特征明显的形就是准的。</p>
-</div>
-<div class="section" id="id30">
-<h3>在变化的视角下画画<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id30">
+<h3>在变化的视角下画画<a class="headerlink" href="#id30" title="永久链接至标题">#</a></h3>
 <p>在不用工具辅助的情况下，视角是一个难以控制的变量。即使 ref:<code class="code docutils literal notranslate"><span class="pre">在地面上标记了你的位置</span> <span class="pre">&lt;在地面上标记你的位置&gt;</span></code>
 也不能保证观察物象的你每次观察的时候挺直腰的程度，仰头的角度是一致的。
 在画大尺幅的画时，不可避免的还要靠近物象，此时视角中的物象更是和之前不同。</p>
@@ -1711,9 +1754,9 @@
 <p>「斜率」和「三角形形状」都会随着视角变化，由空间距离很远的边组成的三角形
 甚至会随着视角变化而产生剧烈的变化，导致最后画出来的形其实是若干个视角拼成的「多视图」</p>
 </div>
-</div>
-<div class="section" id="id31">
-<span id="id32"></span><h3>建立自己的作画步骤<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id31">
+<span id="id32"></span><h3>建立自己的作画步骤<a class="headerlink" href="#id31" title="永久链接至标题">#</a></h3>
 <p>在教学的过程中老师并没有说道明确的作画步骤，但要求每个人在学习过程中形成自己的作画步骤。
 好的作画步骤应当是明确的，明确每个步骤的 <em>要做的事情</em>  和 <em>期待的结果</em>
 以及 <em>停止的边界</em> 。</p>
@@ -1726,29 +1769,29 @@
 每一遍都要调整色度以保持光感最佳，直至梳理到最小的形体（实践上大概要 3～4 遍）</p></li>
 <li><p><a class="reference internal" href="#id23"><span class="std std-ref">N+1. 画结构</span></a></p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="id33">
-<h2>故障排除<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id34">
-<h3>找出来的形体没有体积感怎么办？<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id33">
+<h2>故障排除<a class="headerlink" href="#id33" title="永久链接至标题">#</a></h2>
+<section id="id34">
+<h3>找出来的形体没有体积感怎么办？<a class="headerlink" href="#id34" title="永久链接至标题">#</a></h3>
 <p>一般是陷入了抄形状的泥潭中，需要整理一下思路，从以下角度出发：</p>
 <ul class="simple">
 <li><p>找 <a class="reference internal" href="../6-lectures-on-sketch.html#id15"><span class="std std-ref">组合关系</span></a></p></li>
 <li><p>找形体的信息点</p></li>
 <li><p>找 <a class="reference internal" href="#id13"><span class="std std-ref">特征</span></a> ，寻找形体运动感的来源</p></li>
 </ul>
-</div>
-<div class="section" id="id35">
-<h3>如何处理多光源的情况？<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id35">
+<h3>如何处理多光源的情况？<a class="headerlink" href="#id35" title="永久链接至标题">#</a></h3>
 <p>先确定一个主光源，判断色层时主光源占主导地位。在 <a class="reference internal" href="#id20"><span class="std std-ref">2~N. 梳理形体</span></a> 的中间阶段再介入次光源。
 一般来说，多个光源叠加的暗部为中黑。</p>
-</div>
-</div>
-<div class="section" id="id36">
-<h2>作业<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
-<div class="any section" id="artwork-m-000">
-<span id="id37"></span><h3>荷马像<a class="headerlink" href="#artwork-m-000" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id36">
+<h2>作业<a class="headerlink" href="#id36" title="永久链接至标题">#</a></h2>
+<section class="any" id="artwork-m-000">
+<span id="id37"></span><h3>荷马像<a class="headerlink" href="#artwork-m-000" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>m-000</p>
@@ -1766,15 +1809,17 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id42">
+<figure class="align-default" id="id42">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_20200731_165720.jpg"><img alt="../../_images/IMG_20200731_165720.jpg" src="../../_images/IMG_20200731_165720.jpg" /></a>
-<p class="caption"><span class="caption-text">荷马像</span><a class="headerlink" href="#id42" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">荷马像</span><a class="headerlink" href="#id42" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>多光源下的 <a class="reference external" href="https://zh.wikipedia.org/wiki/荷马">📖荷马</a> 像，左 3/4 侧面。</p>
 <p>因为纸不好，只梳理了一遍就没有继续画下去。</p>
-</div>
-<div class="any section" id="artwork-m-001">
-<span id="id38"></span><h3>荷马像<a class="headerlink" href="#artwork-m-001" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-m-001">
+<span id="id38"></span><h3>荷马像<a class="headerlink" href="#artwork-m-001" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>m-001</p>
@@ -1792,16 +1837,18 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id43">
+<figure class="align-default" id="id43">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_20200914_190607__01.jpg"><img alt="../../_images/IMG_20200914_190607__01.jpg" src="../../_images/IMG_20200914_190607__01.jpg" /></a>
-<p class="caption"><span class="caption-text">荷马像</span><a class="headerlink" href="#id43" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">荷马像</span><a class="headerlink" href="#id43" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>多光源下的 <a class="reference external" href="https://zh.wikipedia.org/wiki/荷马">📖荷马</a> 像，右 3/4 侧面。</p>
 <p>整体来说画得非常顺利，过程中遭受了一些来自外界的痛苦，但活下来了。</p>
 <p>「顺利」不意味着我走在正确的道路上，最终的画面效果很好，但其实我是只是停留在对老师用笔的模仿上，彼时根本不了解「形体」为何物。</p>
-</div>
-<div class="any section" id="artwork-m-002">
-<span id="id39"></span><h3>高乃依像<a class="headerlink" href="#artwork-m-002" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-m-002">
+<span id="id39"></span><h3>高乃依像<a class="headerlink" href="#artwork-m-002" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>m-002</p>
@@ -1819,10 +1866,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="#artwork-m-002" title="artwork 装框"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">装框</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id44">
+<figure class="align-default" id="id44">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/0704_1.jpg"><img alt="../../_images/0704_1.jpg" src="../../_images/0704_1.jpg" /></a>
-<p class="caption"><span class="caption-text">高乃依像</span><a class="headerlink" href="#id44" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">高乃依像</span><a class="headerlink" href="#id44" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>多光源下的 <a class="reference external" href="https://zh.wikipedia.org/wiki/皮埃尔·高乃依">📖皮埃尔·高乃依</a> 像，右 3/4 侧面。</p>
 <p>这张画比起 <a class="reference internal" href="#artwork-m-001" title="artwork m-001"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《荷马像》</span></code></a> 的曲折多了，不止有来自外界的痛苦，画这张画的的前大半时间都是煎熬的。</p>
 <dl class="field-list simple">
@@ -1852,13 +1901,15 @@
 <a class="reference internal image-reference" href="../../_images/IMG_20210624_215111.jpg"><img alt="../../_images/IMG_20210624_215111.jpg" src="../../_images/IMG_20210624_215111.jpg" style="width: 30%;" /></a>
 <a class="reference internal image-reference" href="../../_images/IMG_20210624_215051.jpg"><img alt="../../_images/IMG_20210624_215051.jpg" src="../../_images/IMG_20210624_215051.jpg" style="width: 30%;" /></a>
 <a class="reference internal image-reference" href="../../_images/I2021-04-24T18_04_56.376+0800.jpg"><img alt="../../_images/I2021-04-24T18_04_56.376+0800.jpg" src="../../_images/I2021-04-24T18_04_56.376+0800.jpg" style="width: 30%;" /></a>
-<div class="figure align-default" id="id45">
+<figure class="align-default" id="id45">
 <a class="reference internal image-reference" href="../../_images/IMG_20201028_194543.jpg"><img alt="../../_images/IMG_20201028_194543.jpg" src="../../_images/IMG_20201028_194543.jpg" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">九月回家前的样子</span><a class="headerlink" href="#id45" title="永久链接至图片">¶</a></p>
-</div>
-</div>
-<div class="any section" id="artwork-m-003">
-<span id="id40"></span><h3>戴帽子的老人像<a class="headerlink" href="#artwork-m-003" title="永久链接至标题">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">九月回家前的样子</span><a class="headerlink" href="#id45" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section class="any" id="artwork-m-003">
+<span id="id40"></span><h3>戴帽子的老人像<a class="headerlink" href="#artwork-m-003" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>m-003</p>
@@ -1876,10 +1927,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../any-artwork.album.html#cap-album-a3-1" title="artwork album-a3-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a3-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id46">
+<figure class="align-default" id="id46">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_20201021_160430.jpg"><img alt="../../_images/IMG_20201021_160430.jpg" src="../../_images/IMG_20201021_160430.jpg" /></a>
-<p class="caption"><span class="caption-text">戴帽子的老人像</span><a class="headerlink" href="#id46" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">戴帽子的老人像</span><a class="headerlink" href="#id46" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>在家休养期间，在蔓纯老师画室画的，单光源下的戴帽子的老人像，右 3/4 侧面。</p>
 <p>没学到家，只是单纯地在模仿光。</p>
 <div class="topic">
@@ -1895,9 +1948,9 @@
     )
 );</script> 回复你。</p>
 <section data-isso-id="/notes/zxsys/modeling" data-title="形体分解训练" id="isso-thread"></section></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 <div class="section">
    
@@ -1905,9 +1958,11 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="outdoor-sketching.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1923,25 +1978,29 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-24.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

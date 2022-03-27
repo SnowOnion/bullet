@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>找语言 &#8212; 银色子弹</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
-    <script src="../../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/notes/zxsys/way-to-artist/find-language.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
@@ -112,7 +111,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -121,14 +134,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -143,7 +152,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
@@ -867,70 +876,102 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
         
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    课程
@@ -1197,12 +1238,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>找语言</h1>
@@ -1211,7 +1251,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1485,10 +1525,11 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="id1">
-<h1>找语言<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                 <section id="id1">
+<h1>找语言<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">startat</dt>
 <dd class="field-odd"><p>2021-07-30</p>
@@ -1497,10 +1538,10 @@
 <dd class="field-even"><p>Work In Progress</p>
 </dd>
 </dl>
-<div class="section" id="id2">
-<h2>课程<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id3">
-<h3>第一讲 综述<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<section id="id2">
+<h2>课程<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<section id="id3">
+<h3>第一讲 综述<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>2021-07-30</p>
@@ -1540,9 +1581,9 @@
 </dl>
 </dd>
 </dl>
-</div>
-<div class="section" id="id4">
-<h3>第二讲 中国传统色彩观<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id4">
+<h3>第二讲 中国传统色彩观<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
 <dl>
 <dt>研究传统色彩观念的基本意义</dt><dd><ul class="simple">
 <li><p>传统色彩和当代的色彩应用处于割裂的状态</p></li>
@@ -1591,13 +1632,13 @@
 <li><p>陈彦青《观念之色》</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="id5">
-<h3>第三讲 西方传统色彩观<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id5">
+<h3>第三讲 西方传统色彩观<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
 <p>为宗教服务的色彩观。</p>
-</div>
-<div class="section" id="id6">
-<h3>第四讲 色彩的视觉规律<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id6">
+<h3>第四讲 色彩的视觉规律<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>七大色彩关系</dt><dd><ul class="simple">
 <li><p>色相对比</p></li>
@@ -1611,8 +1652,8 @@
 </dd>
 </dl>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨阿尔伯斯</span></code> <code class="xref any any-book docutils literal notranslate"><span class="pre">《色彩并置之后的视觉反应》</span></code></p>
-<div class="section" id="id7">
-<h4>对抗与转化<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
+<section id="id7">
+<h4>对抗与转化<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h4>
 <p>一个朴素规律：</p>
 <blockquote>
 <div><p>画面中至少有两种的对比，才具有色彩感。</p>
@@ -1627,14 +1668,14 @@
 <dt>浮世絵 富士山</dt><dd><p>红绿 色相</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id8">
-<h4>色调<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id8">
+<h4>色调<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h4>
 <p>一幅画中画面色彩的总体倾向。</p>
 <p>纳比派在印象派的基础上追求光的闪烁感 ——  光是运动的。</p>
-</div>
-<div class="section" id="id9">
-<h4>配色原理<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id9">
+<h4>配色原理<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h4>
 <ul class="simple">
 <li><p>单纯的协调</p></li>
 <li><p>表达时间</p></li>
@@ -1642,10 +1683,10 @@
 <li><p>表达空间</p></li>
 <li><p>表达主题</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id10">
-<h3>第五讲 色彩与电影<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id10">
+<h3>第五讲 色彩与电影<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h3>
 <p>色彩电影语言的一部分……不同文化背景的人对色彩的理解也是不同的。</p>
 <dl>
 <dt>红色</dt><dd><p>温暖，刚烈而外向，刺激性强。容易引起人的注意，也容易使人兴奋，激动，紧张，冲动。红色容易造成视觉疲劳。</p>
@@ -1677,39 +1718,39 @@
 <p>电影情感发生变化的时候，镜头中的色彩也随之改变。</p>
 <p>《少年派的奇幻漂流》</p>
 <p>瑞典电影大师 塔可夫斯基</p>
-</div>
-<div class="section" id="id11">
-<h3>第六讲 雕刻时光<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id11">
+<h3>第六讲 雕刻时光<a class="headerlink" href="#id11" title="永久链接至标题">#</a></h3>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨康海涛</span></code> 如何运用光呈现画面。</p>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨肖芳凯</span></code> 园林风景</p>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨王岱山</span></code></p>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨柯勒惠支</span></code>  <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨拉图尔</span></code> <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨伦勃朗</span></code></p>
-</div>
-<div class="section" id="id12">
-<h3>第七讲 造型的隐秘知识<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id12">
+<h3>第七讲 造型的隐秘知识<a class="headerlink" href="#id12" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-08-27</p>
 </dd>
 </dl>
-<div class="section" id="id13">
-<h4>物质的造型<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h4>
+<section id="id13">
+<h4>物质的造型<a class="headerlink" href="#id13" title="永久链接至标题">#</a></h4>
 <p>法国学院派，<a class="reference internal" href="../../books/drawing-course-of-charles-bargue-and-jean-leon-gerome.html#book-9787558601170" title="book 巴尔格素描教程"><code class="xref any any-book docutils literal notranslate"><span class="pre">《查尔斯巴尔格素描教程》</span></code></a></p>
-</div>
-<div class="section" id="id14">
-<h4>形体的型<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id14">
+<h4>形体的型<a class="headerlink" href="#id14" title="永久链接至标题">#</a></h4>
 <p>精神是多维度的，型也是多维度的。</p>
-</div>
-<div class="section" id="id15">
-<h4>形象的型<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id15">
+<h4>形象的型<a class="headerlink" href="#id15" title="永久链接至标题">#</a></h4>
 <p>感受力是一种艺术潜能，大多数人每天都接触着相似的生活场景，有着类似的生活体验，有些人却能从这些琐碎的生活中汲取灵感。</p>
-</div>
-<div class="section" id="id16">
-<h4>画面的型<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id16">
+<h4>画面的型<a class="headerlink" href="#id16" title="永久链接至标题">#</a></h4>
 <p>绘画的本质首先在于形式感，脱离了形式的绘画体现出来不过是自然。</p>
-</div>
-<div class="section" id="id17">
-<h4>势<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id17">
+<h4>势<a class="headerlink" href="#id17" title="永久链接至标题">#</a></h4>
 <ol class="arabic simple">
 <li><p>圆（具有体积的，笼统的型）</p></li>
 <li><p>形体的型（有特征有体积）</p></li>
@@ -1717,18 +1758,18 @@
 <li><p>经典的型（有历史积淀的型）</p></li>
 <li><p>画面的型</p></li>
 </ol>
-</div>
-<div class="section" id="id18">
-<h4>型的训练方法<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id18">
+<h4>型的训练方法<a class="headerlink" href="#id18" title="永久链接至标题">#</a></h4>
 <ul class="simple">
 <li><p>质疑：比例，比较方法的盲区</p></li>
 <li><p>建设：<a class="reference internal" href="../glossary.html#term-01f8bc6" title="term 原点思维"><code class="xref any any-term docutils literal notranslate"><span class="pre">#️⃣原点思维</span></code></a>，重新构建视觉信息源</p></li>
 </ul>
 <p>曲线法：用一根线把对象画像，体验型的本质（匹配）</p>
-</div>
-</div>
-<div class="section" id="id19">
-<h3>第八讲  构图研究<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id19">
+<h3>第八讲  构图研究<a class="headerlink" href="#id19" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>大师作品构图研究</dt><dd><ul class="simple">
 <li><p>黑白灰分析</p></li>
@@ -1738,28 +1779,28 @@
 </ul>
 </dd>
 </dl>
-<div class="section" id="id20">
-<h4>黑白灰分析<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h4>
+<section id="id20">
+<h4>黑白灰分析<a class="headerlink" href="#id20" title="永久链接至标题">#</a></h4>
 <p>选取喜欢的艺术家的经典作品，抛开具象因素，分析~</p>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨毕加索</span></code> 《格尔尼卡》
 <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨委拉斯贵支</span></code></p>
-</div>
-<div class="section" id="id21">
-<h4>势的分析<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id21">
+<h4>势的分析<a class="headerlink" href="#id21" title="永久链接至标题">#</a></h4>
 <ul class="simple">
 <li><p>型的倾向的联系形成画面的走势和动势</p></li>
 <li><p>画面的「势」……</p></li>
 <li><p>运动分为「聚」与「散」</p></li>
 </ul>
-</div>
-<div class="section" id="id22">
-<h4>线描分析<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id22">
+<h4>线描分析<a class="headerlink" href="#id22" title="永久链接至标题">#</a></h4>
 <p>联系 形体的型 和 画面的型。</p>
 <p>基准线</p>
-</div>
-</div>
-<div class="section" id="id23">
-<h3>第九讲  构图要素<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id23">
+<h3>第九讲  构图要素<a class="headerlink" href="#id23" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>面积比（常规：3/7 2/8）</p>
 <ul>
@@ -1781,9 +1822,9 @@
 <li><p>主次</p></li>
 <li><p>视线（视角）的高低</p></li>
 </ul>
-</div>
-<div class="section" id="id24">
-<h3>第十讲  构图模型<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id24">
+<h3>第十讲  构图模型<a class="headerlink" href="#id24" title="永久链接至标题">#</a></h3>
 <p>黄金分割</p>
 <p>《设计几何学》</p>
 <dl class="simple">
@@ -1798,9 +1839,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="id25">
-<h3>艺术家案例 段正渠<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id25">
+<h3>艺术家案例 段正渠<a class="headerlink" href="#id25" title="永久链接至标题">#</a></h3>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨段正渠</span></code></p>
 <p>笔触与画面结构：分割 韵律 节奏</p>
 <p>笔触与主题：历史的沧桑 久远 广袤</p>
@@ -1808,15 +1849,15 @@
 <p>笔触与工具 长锋 短锋</p>
 <p>人物造型来源：传统人物造型</p>
 <p><a class="reference external" href="https://zh.wikipedia.org/wiki/双林寺 (平遥)">📖双林寺 (平遥)</a> 彩塑造像</p>
-</div>
-<div class="section" id="id26">
-<h3>艺术家案例 贾霭力<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id26">
+<h3>艺术家案例 贾霭力<a class="headerlink" href="#id26" title="永久链接至标题">#</a></h3>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨贾霭力</span></code></p>
 <p>大尺幅</p>
 <p>人与环境之间的关系</p>
-</div>
-<div class="section" id="id27">
-<h3>艺术家案例 蔡锦，高更<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id27">
+<h3>艺术家案例 蔡锦，高更<a class="headerlink" href="#id27" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-10-22</p>
@@ -1826,13 +1867,13 @@
 <li><p><a class="reference internal" href="../../artstory/artistory.html#artist-23" title="artist 蔡锦"><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨蔡锦</span></code></a></p></li>
 <li><p><a class="reference internal" href="../../artstory/artistory.html#artist-24" title="artist 高更"><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨保罗·高更</span></code></a></p></li>
 </ul>
-</div>
-<div class="section" id="id28">
-<h3>艺术家案例 科尔维尔<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id28">
+<h3>艺术家案例 科尔维尔<a class="headerlink" href="#id28" title="永久链接至标题">#</a></h3>
 <p><a class="reference internal" href="../../artstory/artistory.html#artist-25" title="artist 科尔维尔"><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨科尔维尔</span></code></a></p>
-</div>
-<div class="section" id="id29">
-<h3>艺术家案例 构图案例分析 怀斯<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id29">
+<h3>艺术家案例 构图案例分析 怀斯<a class="headerlink" href="#id29" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-11-05</p>
@@ -1844,41 +1885,41 @@
 <li><p>基于数学的构图</p></li>
 <li><p>放大细节的神秘感</p></li>
 </ul>
-</div>
-<div class="section" id="id30">
-<h3>艺术家案例 构图案例分析 苏新平<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id30">
+<h3>艺术家案例 构图案例分析 苏新平<a class="headerlink" href="#id30" title="永久链接至标题">#</a></h3>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨苏新平</span></code></p>
 <p>中央美术学院副院长，内蒙人。</p>
 <p>语言的演变与主题。</p>
 <p>版画：受限制的油画</p>
-</div>
-<div class="section" id="id31">
-<h3>艺术家案例 构图案例分析 夏俊娜<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id31">
+<h3>艺术家案例 构图案例分析 夏俊娜<a class="headerlink" href="#id31" title="永久链接至标题">#</a></h3>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨夏俊娜</span></code></p>
 <p>受 <a class="reference internal" href="../../artstory/artistory.html#artist-19" title="artist 巴尔蒂斯"><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨巴尔蒂斯</span></code></a> <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨博纳尔</span></code> 影响很大。</p>
 <p>老师是 <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨申玲</span></code>。</p>
 <p>主要结构：锐利的三角形</p>
 <p>画面服从精神，而非服从空间。</p>
 <p>根据自己的主题制造事物。</p>
-</div>
-<div class="section" id="id32">
-<h3>艺术家案例 构图案例分析 大卫霍克尼<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id32">
+<h3>艺术家案例 构图案例分析 大卫霍克尼<a class="headerlink" href="#id32" title="永久链接至标题">#</a></h3>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨大卫霍克尼</span></code></p>
 <p>约翰莫尔奖得主。</p>
 <p>成名作 大水花</p>
 <p>水波的提炼。</p>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨马远</span></code></p>
 <p>电脑绘画。</p>
-</div>
-<div class="section" id="id33">
-<h3>形式语言的训练方法<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id33">
+<h3>形式语言的训练方法<a class="headerlink" href="#id33" title="永久链接至标题">#</a></h3>
 <p>形式来源于观念，审美驱动技术发展。</p>
 <p>刘丰的讲座。</p>
 <p>创新的一个路径：艺术创新 -&gt; 科技创新 -&gt; 商业创新 -&gt; 反馈大众。</p>
 <p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨王光乐</span></code></p>
-</div>
-<div class="section" id="id34">
-<h3>艺术语言之修辞<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id34">
+<h3>艺术语言之修辞<a class="headerlink" href="#id34" title="永久链接至标题">#</a></h3>
 <p>弗雷德《艺术与文化》</p>
 <p>修辞：</p>
 <ul class="simple">
@@ -1892,9 +1933,9 @@
 <p>Simulacrum 幻象</p>
 <p>仿像</p>
 <p>福柯 对 <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨马格利特</span></code> 的分析</p>
-</div>
-<div class="section" id="id35">
-<h3>图像语言案例分析 尼奥劳赫<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id35">
+<h3>图像语言案例分析 尼奥劳赫<a class="headerlink" href="#id35" title="永久链接至标题">#</a></h3>
 <p>图像学</p>
 <dl class="simple">
 <dt>欧文 潘诺夫斯基</dt><dd><p>艺术的形式与内容不可分离</p>
@@ -1903,9 +1944,9 @@
 <p>拼贴 剧场化</p>
 <p>老师：<code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨伊门多夫</span></code></p>
 <p>柏林墙</p>
-</div>
-<div class="section" id="id36">
-<h3>图像语言案例分析 基弗<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id36">
+<h3>图像语言案例分析 基弗<a class="headerlink" href="#id36" title="永久链接至标题">#</a></h3>
 <p>常见元素：废墟、残骸、飞机、军舰、女孩的裙子</p>
 <ul class="simple">
 <li><p>德雷斯顿轰炸</p></li>
@@ -1919,13 +1960,13 @@
 <li><p>严肃性</p></li>
 <li><p>细节</p></li>
 </ul>
-</div>
-<div class="section" id="id37">
-<h3>图像语言案例分析 杜马斯<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id37">
+<h3>图像语言案例分析 杜马斯<a class="headerlink" href="#id37" title="永久链接至标题">#</a></h3>
 <p><a class="reference internal" href="../../artstory/artistory.html#artist-11" title="artist 杜马斯"><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨玛琳·杜马斯</span></code></a></p>
-</div>
-<div class="section" id="id38">
-<h3>图像语言案例分析 理性的结晶<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id38">
+<h3>图像语言案例分析 理性的结晶<a class="headerlink" href="#id38" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨张晓刚</span></code> 大家庭</p></li>
 <li><p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨达明赫斯特</span></code> 钻石骷髅</p></li>
@@ -1933,11 +1974,11 @@
 <li><p><a class="reference internal" href="../../artstory/artistory.html#artist-5" title="artist 陈箴"><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨陈箴</span></code></a></p></li>
 <li><p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨马克奎恩</span></code> 血头像</p></li>
 </ul>
-</div>
-<div class="section" id="id39">
-<h3>材料语言<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id40">
-<h4>油画<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id39">
+<h3>材料语言<a class="headerlink" href="#id39" title="永久链接至标题">#</a></h3>
+<section id="id40">
+<h4>油画<a class="headerlink" href="#id40" title="永久链接至标题">#</a></h4>
 <p>晓飞老师的推荐的材料：</p>
 <dl class="simple">
 <dt>品牌</dt><dd><ul class="simple">
@@ -1962,9 +2003,9 @@
 </dl>
 <p>坦培拉：时间
 油画：绵远</p>
-</div>
-<div class="section" id="bingxi">
-<span id="id41"></span><h4>丙烯<a class="headerlink" href="#bingxi" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="bingxi">
+<span id="id41"></span><h4>丙烯<a class="headerlink" href="#bingxi" title="永久链接至标题">#</a></h4>
 <p>丙烯：激烈</p>
 <p>快干，适合零碎的时间画</p>
 <dl class="simple">
@@ -2010,9 +2051,9 @@
 <p>底子：丙烯、酸醇底料 丙烯塑型膏</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id42">
-<h4>色粉<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id42">
+<h4>色粉<a class="headerlink" href="#id42" title="永久链接至标题">#</a></h4>
 <ul class="simple">
 <li><p>色粉棒：韩国盟友大师级 申内利尔（顶级）</p>
 <ul>
@@ -2031,9 +2072,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="id43">
-<h4>平面雕塑<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id43">
+<h4>平面雕塑<a class="headerlink" href="#id43" title="永久链接至标题">#</a></h4>
 <p>精神性、文化性、物质性</p>
 <p>雕塑的绘画性，材料感 <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨罗丹</span></code></p>
 <ul class="simple">
@@ -2042,31 +2083,31 @@
 <li><p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨李禹焕</span></code> 物性</p></li>
 <li><p><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨隋建国</span></code> 时间的形状</p></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="section" id="id44">
-<h2>作业<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="id44">
+<h2>作业<a class="headerlink" href="#id44" title="永久链接至标题">#</a></h2>
 <p>以 <code class="code docutils literal notranslate"><span class="pre">xfczk3</span></code> 为 ID。</p>
 <ol class="arabic simple">
 <li><p>找至少十位与自己主题和语言相近的艺术家，进行系统的学习和模仿，进行构图分析，色彩分析，图像分析</p></li>
 <li><p>从 <a class="reference internal" href="find-yourself.html"><span class="doc">找自己</span></a> 和 <a class="reference internal" href="find-topic.html"><span class="doc">找主题</span></a> 作业中至少找出 20 张作品，以此为起点，展开材料尝试与实验：例如用油画、水彩、坦培拉分别画一遍</p></li>
 </ol>
-<div class="section" id="id45">
-<h3>艺术家作品分析<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="id46">
-<h3>丙烯材料实验<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<section id="id45">
+<h3>艺术家作品分析<a class="headerlink" href="#id45" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id46">
+<h3>丙烯材料实验<a class="headerlink" href="#id46" title="永久链接至标题">#</a></h3>
 <p>以 <code class="code docutils literal notranslate"><span class="pre">xfczk3-ac-%d</span></code> 为 ID。</p>
-<div class="section" id="id47">
-<h4>材料购买<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h4>
+<section id="id47">
+<h4>材料购买<a class="headerlink" href="#id47" title="永久链接至标题">#</a></h4>
 <div class="admonition-todo admonition" id="id48">
 <p class="admonition-title">待处理</p>
 <p>材料清单</p>
 </div>
-</div>
-<div class="section" id="id49">
-<h4>熟悉材料<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id49">
+<h4>熟悉材料<a class="headerlink" href="#id49" title="永久链接至标题">#</a></h4>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -2074,7 +2115,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-xfczk3-ac-000">
-<span class="sig-name descname"><span class="pre">xfczk3-ac-000</span></span><a class="headerlink" href="#artwork-xfczk3-ac-000" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">xfczk3-ac-000</span></span><a class="headerlink" href="#artwork-xfczk3-ac-000" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">xfczk3-ac-000</p>
@@ -2104,7 +2145,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-xfczk3-ac-001">
-<span class="sig-name descname"><span class="pre">xfczk3-ac-001</span></span><a class="headerlink" href="#artwork-xfczk3-ac-001" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">xfczk3-ac-001</span></span><a class="headerlink" href="#artwork-xfczk3-ac-001" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">xfczk3-ac-001</p>
@@ -2140,7 +2181,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-xfczk3-ac-002">
-<span class="sig-name descname"><span class="pre">xfczk3-ac-002</span></span><a class="headerlink" href="#artwork-xfczk3-ac-002" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">xfczk3-ac-002</span></span><a class="headerlink" href="#artwork-xfczk3-ac-002" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">xfczk3-ac-002</p>
@@ -2155,9 +2196,9 @@
 <dd class="field-even"><p class="sd-card-text"><a class="reference internal" href="../../../any-artwork.medium.html#cap-丙烯" title="artwork 丙烯"><code class="xref any any-artwork.medium docutils literal notranslate"><span class="pre">丙烯</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-xfczk3/IMG_20220208_101657__01.jpg"><img alt="../../../_images/IMG_20220208_101657__01.jpg" src="../../../_images/IMG_20220208_101657__01.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">用丙烯画小场景，按之前的习惯先从光影入手。有覆盖性的材料还是应该先画固有色再画光影，也好在因为有覆盖性，画坏了怎么也能改回去。作为第一张正儿八经的丙烯，也算合格吧。</p>
 <p class="sd-card-text">除了小场景强调的光影的规律和秩序，另一个要注意是笔法，笔法是表达形体的手段：一个面最好一笔完成，并且要沿着形体的走势。虽然老师说 <a class="reference internal" href="../indoor-sketching.html#event-5416638" title="event 室内场景训练"><code class="xref any any-event docutils literal notranslate"><span class="pre">📅室内场景训练</span></code></a> 是油画的前置课程，不过笔法上炭粉和颜料差距还是很大（更可能是我用炭粉粉的方法和别人不一样？），应该多熟悉一下。</p>
 <p class="sd-card-text">这一张用颜料阔绰多了，有点心疼，但不用多一点根本画不上去。</p>
@@ -2168,24 +2209,24 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="d">
-<h3>2D 数字绘画实验<a class="headerlink" href="#d" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="d">
+<h3>2D 数字绘画实验<a class="headerlink" href="#d" title="永久链接至标题">#</a></h3>
 <div class="admonition-todo admonition" id="id52">
 <p class="admonition-title">待处理</p>
 <p>2D 数字绘画实验 Procreate</p>
 </div>
-</div>
-<div class="section" id="id53">
-<h3>3D 数字绘画实验<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id53">
+<h3>3D 数字绘画实验<a class="headerlink" href="#id53" title="永久链接至标题">#</a></h3>
 <div class="admonition-todo admonition" id="id54">
 <p class="admonition-title">待处理</p>
 <p>3D 数字绘画实验Pico + MultiBrush</p>
 </div>
-</div>
-<div class="section" id="id55">
-<h3>新材料的创作尝试<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id55">
+<h3>新材料的创作尝试<a class="headerlink" href="#id55" title="永久链接至标题">#</a></h3>
 <div class="topic">
 <p class="topic-title">评论</p>
 <p>如果你有任何意见，请在此评论。
@@ -2199,9 +2240,9 @@
     )
 );</script> 回复你。</p>
 <section data-isso-id="/notes/zxsys/way-to-artist/find-language" data-title="找语言" id="isso-thread"></section></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 <div class="section">
    
@@ -2209,9 +2250,11 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="find-topic.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2227,25 +2270,29 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-24.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

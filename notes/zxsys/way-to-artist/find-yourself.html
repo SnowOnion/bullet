@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>找自己 &#8212; 银色子弹</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
-    <script src="../../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/notes/zxsys/way-to-artist/find-yourself.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
@@ -112,7 +111,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -121,14 +134,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -143,7 +152,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
@@ -867,70 +876,102 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
         
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    作业
@@ -1276,12 +1317,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>找自己</h1>
@@ -1290,7 +1330,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1643,10 +1683,11 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="id1">
-<h1>找自己<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                 <section id="id1">
+<h1>找自己<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">startat</dt>
 <dd class="field-odd"><p>2021-01-01</p>
@@ -1658,11 +1699,11 @@
 <dd class="field-odd"><p>Finished</p>
 </dd>
 </dl>
-<div class="section" id="id2">
-<h2>作业<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id2">
+<h2>作业<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <p>以 <code class="code docutils literal notranslate"><span class="pre">xfczk</span></code> 为 ID。</p>
-<div class="any section" id="artwork-xfczk-000">
-<span id="id3"></span><h3>树脂石膏像<a class="headerlink" href="#artwork-xfczk-000" title="永久链接至标题">¶</a></h3>
+<section class="any" id="artwork-xfczk-000">
+<span id="id3"></span><h3>树脂石膏像<a class="headerlink" href="#artwork-xfczk-000" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-000</p>
@@ -1680,10 +1721,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id81">
+<figure class="align-default" id="id81">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0069.jpg"><img alt="../../../_images/IMG_0069.jpg" src="../../../_images/IMG_0069.jpg" /></a>
-<p class="caption"><span class="caption-text">树脂石膏像</span><a class="headerlink" href="#id81" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">树脂石膏像</span><a class="headerlink" href="#id81" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>用水彩画色层的尝试，结果上看没有很成功。</p>
 <p>一个原因是因为水彩的透明特性，需要由浅到深进行，以往画的铅笔、碳粉都是由深到浅的，
 并没有很好的适应。除开不适应，由浅到深就意味着「先亮部，后暗部」，只画了亮部
@@ -1697,9 +1740,9 @@
 这种法式水彩笔也不适合用来画精确的形。另，我对水份的控制依然没有什么经验，
 回头想的画，这种画的用水应该也比较单纯：平涂为主，边缘线（指不同色层之间的分界）
 可以偏硬。从亮到暗水量慢慢减少，既能增强覆盖力也能防止把下层的颜色晕开。</p>
-</div>
-<div class="any section" id="artwork-xfczk-001">
-<span id="id4"></span><h3>单色静物<a class="headerlink" href="#artwork-xfczk-001" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-001">
+<span id="id4"></span><h3>单色静物<a class="headerlink" href="#artwork-xfczk-001" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-001</p>
@@ -1717,10 +1760,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id82">
+<figure class="align-default" id="id82">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0070.jpg"><img alt="../../../_images/IMG_0070.jpg" src="../../../_images/IMG_0070.jpg" /></a>
-<p class="caption"><span class="caption-text">单色静物</span><a class="headerlink" href="#id82" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">单色静物</span><a class="headerlink" href="#id82" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>用水彩画色层的另一个小尝试。原画是在蔓纯老师画室的画的 <a class="reference internal" href="../indoor-sketching.html#artwork-lns-026" title="artwork lns-026"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《lns-026》</span></code></a>。
 画这张的过程四平八稳，但光感却比原来还差了。</p>
 <p>细看画，最有空间感的地方在罐口，影响光感的因素首先是暗部形状，其次是色度，
@@ -1737,9 +1782,9 @@
 可以随便画个正方体感受一下是否对了。</p>
 <p>改天实践一下。</p>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-002">
-<span id="id5"></span><h3>奥沙西泮的恩赐<a class="headerlink" href="#artwork-xfczk-002" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-002">
+<span id="id5"></span><h3>奥沙西泮的恩赐<a class="headerlink" href="#artwork-xfczk-002" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-002</p>
@@ -1757,10 +1802,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id83">
+<figure class="align-default" id="id83">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0071.jpg"><img alt="../../../_images/IMG_0071.jpg" src="../../../_images/IMG_0071.jpg" /></a>
-<p class="caption"><span class="caption-text">奥沙西泮的恩赐</span><a class="headerlink" href="#id83" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">奥沙西泮的恩赐</span><a class="headerlink" href="#id83" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <div class="line-block">
 <div class="line">我的记忆是污染过的，像浸满了脏水的破布</div>
 <div class="line">墙上长出眼球和残肢， 沿着视线缝进我的视网膜</div>
@@ -1769,9 +1816,9 @@
 <div class="line"><br /></div>
 <div class="line">——奥沙西泮三倍剂量下的精神状态报告</div>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-003">
-<span id="id6"></span><h3>厕所门口<a class="headerlink" href="#artwork-xfczk-003" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-003">
+<span id="id6"></span><h3>厕所门口<a class="headerlink" href="#artwork-xfczk-003" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-003</p>
@@ -1789,14 +1836,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id84">
+<figure class="align-default" id="id84">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0072.jpg"><img alt="../../../_images/IMG_0072.jpg" src="../../../_images/IMG_0072.jpg" /></a>
-<p class="caption"><span class="caption-text">厕所门口</span><a class="headerlink" href="#id84" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">厕所门口</span><a class="headerlink" href="#id84" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>她在卧室里睡觉。家里灯是安静的。我也想去睡觉，可是还没有画完。</p>
-</div>
-<div class="any section" id="artwork-xfczk-004">
-<span id="id7"></span><h3>树脂石膏像（二）<a class="headerlink" href="#artwork-xfczk-004" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-004">
+<span id="id7"></span><h3>树脂石膏像（二）<a class="headerlink" href="#artwork-xfczk-004" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-004</p>
@@ -1814,14 +1863,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id85">
+<figure class="align-default" id="id85">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0073.jpg"><img alt="../../../_images/IMG_0073.jpg" src="../../../_images/IMG_0073.jpg" /></a>
-<p class="caption"><span class="caption-text">树脂石膏像（二）</span><a class="headerlink" href="#id85" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">树脂石膏像（二）</span><a class="headerlink" href="#id85" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>还是画小石膏，不过这次用了色粉笔，效果依然不好。</p>
-</div>
-<div class="any section" id="artwork-xfczk-005">
-<span id="id8"></span><h3>银色飞行船<a class="headerlink" href="#artwork-xfczk-005" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-005">
+<span id="id8"></span><h3>银色飞行船<a class="headerlink" href="#artwork-xfczk-005" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-005</p>
@@ -1839,19 +1890,21 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id86">
+<figure class="align-default" id="id86">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0074.jpg"><img alt="../../../_images/IMG_0074.jpg" src="../../../_images/IMG_0074.jpg" /></a>
-<p class="caption"><span class="caption-text">银色飞行船</span><a class="headerlink" href="#id86" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">银色飞行船</span><a class="headerlink" href="#id86" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>我对云，尤其是积雨云的喜爱，可能超过了所有其他的自然景观。
 只有到海边才能听见涛声，只有到山顶才能俯瞰奇峰。
 可是只有云，是随处可见的，移动的磅礴景象。</p>
 <p>太阳快要下山的时候，积云的底座被烧成淡淡的红色，银色的飞行船安静地从云峰中穿出，
 划出淡淡的航迹云。船上一定有闪烁的仪表盘和熟睡的脸，有转动的齿轮和坚毅的眼神。</p>
 <p>这也是我在听 <a class="reference external" href="https://music.163.com/#/song?id=28018264">《銀色飛行船》</a> 时，脑海里浮现的画面。</p>
-</div>
-<div class="any section" id="artwork-xfczk-006">
-<span id="id10"></span><h3>大风<a class="headerlink" href="#artwork-xfczk-006" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-006">
+<span id="id10"></span><h3>大风<a class="headerlink" href="#artwork-xfczk-006" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-006</p>
@@ -1869,15 +1922,17 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id87">
+<figure class="align-default" id="id87">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0075.jpg"><img alt="../../../_images/IMG_0075.jpg" src="../../../_images/IMG_0075.jpg" /></a>
-<p class="caption"><span class="caption-text">大风</span><a class="headerlink" href="#id87" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">大风</span><a class="headerlink" href="#id87" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>小区的墙外能看见电厂的烟囱，最近都是大风的夜晚，蒸汽被压成了九十度。
 风更大的时候，烟囱上的航标灯发出的光，似乎也流动了起来。</p>
-</div>
-<div class="any section" id="i-should">
-<span id="artwork-xfczk-007"></span><h3>I Should<a class="headerlink" href="#i-should" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="i-should">
+<span id="artwork-xfczk-007"></span><h3>I Should<a class="headerlink" href="#i-should" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-007</p>
@@ -1895,10 +1950,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id88">
+<figure class="align-default" id="id88">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0076.jpg"><img alt="../../../_images/IMG_0076.jpg" src="../../../_images/IMG_0076.jpg" /></a>
-<p class="caption"><span class="caption-text">I Should</span><a class="headerlink" href="#id88" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">I Should</span><a class="headerlink" href="#id88" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>可能是因为药物，也可能是因为应激反应太严重。
 我引以为豪的共情能力，它消失了。我被剥夺了「为他人流泪」的能力。</p>
 <blockquote>
@@ -1909,9 +1966,9 @@
 </div></blockquote>
 <p>没有人怪罪我，只是我反复责问自己。在我应该哭的时候，只能假装蹙起眉头，
 轻叹一口气，心里却是像冬天冰结的河面。</p>
-</div>
-<div class="any section" id="artwork-xfczk-008">
-<span id="id11"></span><h3>蛇与象<a class="headerlink" href="#artwork-xfczk-008" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-008">
+<span id="id11"></span><h3>蛇与象<a class="headerlink" href="#artwork-xfczk-008" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-008</p>
@@ -1929,19 +1986,21 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id89">
+<figure class="align-default" id="id89">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0077.jpg"><img alt="../../../_images/IMG_0077.jpg" src="../../../_images/IMG_0077.jpg" /></a>
-<p class="caption"><span class="caption-text">蛇与象</span><a class="headerlink" href="#id89" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">蛇与象</span><a class="headerlink" href="#id89" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p><a class="reference internal" href="../../books/index.html#book-4fa0648" title="book 小王子"><code class="xref any any-book docutils literal notranslate"><span class="pre">《小王子》</span></code></a> 里讲了蛇吞大象的故事，我没有任何想法，只是想画出来。</p>
 <div class="topic">
 <p class="topic-title">2020-02-23 追记</p>
 <p>之后我去网上查了这个故事的寓意，我并非没有按照自己的期望长大。
 可我忽略了一些其他的事情，这很讽刺。</p>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-009">
-<span id="id12"></span><h3>愤怒的释放<a class="headerlink" href="#artwork-xfczk-009" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-009">
+<span id="id12"></span><h3>愤怒的释放<a class="headerlink" href="#artwork-xfczk-009" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-009</p>
@@ -1959,10 +2018,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id90">
+<figure class="align-default" id="id90">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0099.jpg"><img alt="../../../_images/IMG_0099.jpg" src="../../../_images/IMG_0099.jpg" /></a>
-<p class="caption"><span class="caption-text">愤怒的释放</span><a class="headerlink" href="#id90" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">愤怒的释放</span><a class="headerlink" href="#id90" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>本意上这张画是作为马克笔的试作。但到了画的时候我充满了愤怒。</p>
 <div class="line-block">
 <div class="line">我的愤怒从哪里來？我的敌人在哪里？</div>
@@ -1971,9 +2032,9 @@
 <div class="line">等她蜷在角落，等我用胜利的姿态和血淋淋的手</div>
 <div class="line">深情地一拥，把帷幕拉下</div>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-010">
-<span id="id13"></span><h3>下雪的 768<a class="headerlink" href="#artwork-xfczk-010" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-010">
+<span id="id13"></span><h3>下雪的 768<a class="headerlink" href="#artwork-xfczk-010" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-010</p>
@@ -1991,10 +2052,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id91">
+<figure class="align-default" id="id91">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0078.jpg"><img alt="../../../_images/IMG_0078.jpg" src="../../../_images/IMG_0078.jpg" /></a>
-<p class="caption"><span class="caption-text">下雪的 768</span><a class="headerlink" href="#id91" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">下雪的 768</span><a class="headerlink" href="#id91" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>这应该是第一张用碳粉画的完整夜景。</p>
 <p>2019 年 11 月 29 日，我还在 768 上班，那天应该是周五下班，和同事准备出门吃饭。
 天上扬着小雪，只有灯照到的地方才能看到它们簌簌地落下。</p>
@@ -2003,9 +2066,9 @@
 <p>现在的燕郊也下雪，脑子里是光和影子，看不懂的形体的和可爱的人儿。我好像可以自诩
 艺术家，但无法称之为人了。每天要吃一大把的药，醒来和不醒来没有区别。</p>
 <p>可爱的人儿将要离开。被她驱走的孤独像黑暗一样蔓延回来，而此刻的我还一无所知。</p>
-</div>
-<div class="any section" id="artwork-xfczk-011">
-<span id="id14"></span><h3>一种玫瑰标本及其制备工艺<a class="headerlink" href="#artwork-xfczk-011" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-011">
+<span id="id14"></span><h3>一种玫瑰标本及其制备工艺<a class="headerlink" href="#artwork-xfczk-011" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-011</p>
@@ -2023,19 +2086,21 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id92">
+<figure class="align-default" id="id92">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0100.jpg"><img alt="../../../_images/IMG_0100.jpg" src="../../../_images/IMG_0100.jpg" /></a>
-<p class="caption"><span class="caption-text">一种玫瑰标本及其制备工艺</span><a class="headerlink" href="#id92" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">一种玫瑰标本及其制备工艺</span><a class="headerlink" href="#id92" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>失恋了，因为我的错。</p>
 <p>失去的瞬间像是你沿着光滑的藤蔓摸索，一路走过去，和往常一样伸手却摸了个空。</p>
 <p>一段感情是什么样子的呢？我们说「一朵玫瑰是好看的」的时候，其实是说「玫瑰
 现在的样子是好看的」。完整的玫瑰是什么样子的？摸过的那段藤蔓是我走过的
 足迹的形状，完整的玫瑰是玫瑰从破土而出到零落成泥的形状。枝桠们在空间里扭动着向上，
 在时间里慢慢成熟，衰老，凋亡。在这时间与空间里玫瑰划过的痕迹，就是问题的答案吧。</p>
-</div>
-<div class="any section" id="artwork-xfczk-012">
-<span id="id15"></span><h3>白日<a class="headerlink" href="#artwork-xfczk-012" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-012">
+<span id="id15"></span><h3>白日<a class="headerlink" href="#artwork-xfczk-012" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-012</p>
@@ -2053,10 +2118,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id93">
+<figure class="align-default" id="id93">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0079.jpg"><img alt="../../../_images/IMG_0079.jpg" src="../../../_images/IMG_0079.jpg" /></a>
-<p class="caption"><span class="caption-text">白日</span><a class="headerlink" href="#id93" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">白日</span><a class="headerlink" href="#id93" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>我不知道我要画什么，我只觉得自己该画画了。画的时候正好在放 King Gnu 的《白日》，
 那就这样吧。</p>
 <blockquote>
@@ -2070,9 +2137,9 @@
 <div class="line">还有的，一只又一只地扭断其他的手，自诩理性的骑士。</div>
 </div>
 <p>我还是什么都不知道，只知道粗糙的卡纸很适合画色粉。</p>
-</div>
-<div class="any section" id="artwork-xfczk-013">
-<span id="id16"></span><h3>善的异见<a class="headerlink" href="#artwork-xfczk-013" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-013">
+<span id="id16"></span><h3>善的异见<a class="headerlink" href="#artwork-xfczk-013" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-013</p>
@@ -2090,10 +2157,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id94">
+<figure class="align-default" id="id94">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0101.jpg"><img alt="../../../_images/IMG_0101.jpg" src="../../../_images/IMG_0101.jpg" /></a>
-<p class="caption"><span class="caption-text">善的异见</span><a class="headerlink" href="#id94" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">善的异见</span><a class="headerlink" href="#id94" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <div class="line-block">
 <div class="line">D:「天气好冷，我们把不用的围巾送给拾荒的老婆婆吧。」</div>
 <div class="line">G:「洗干净放在垃圾桶旁边就好了。」</div>
@@ -2104,9 +2173,9 @@
 我应该选择哪种呢？我的善是错吗？我还有更多选择吗？边界在哪里？
 什么都不做就对了吗？我该如何驳倒她？驳倒她我的善就是绝对正确的了吗？</p>
 <p>于是我举起了手里的武器战斗，为了将我的善放在高地。</p>
-</div>
-<div class="any section" id="artwork-xfczk-014">
-<span id="id17"></span><h3>被神降罚的无神论者<a class="headerlink" href="#artwork-xfczk-014" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-014">
+<span id="id17"></span><h3>被神降罚的无神论者<a class="headerlink" href="#artwork-xfczk-014" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-014</p>
@@ -2124,10 +2193,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id95">
+<figure class="align-default" id="id95">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0102.jpg"><img alt="../../../_images/IMG_0102.jpg" src="../../../_images/IMG_0102.jpg" /></a>
-<p class="caption"><span class="caption-text">被神降罚的无神论者</span><a class="headerlink" href="#id95" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">被神降罚的无神论者</span><a class="headerlink" href="#id95" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>我发自心底觉得信奉神是一件偷懒的事情。
 无神论者踏出了神的领域，把自己暴露在无所依凭的物质世界里。
 本来决定论尚可作为慰藉，这样的慰藉有什么用呢？
@@ -2136,9 +2207,9 @@
 <p>当伤痛降临的时候，我看不到敌人，周围找不到任何可以怪罪的客体。
 这些伤痛到底又是从哪里来的啊？是我自己吗？是被我伤害的人吗？
 除了把它归咎那个不存在的神，我没有任何办法了。</p>
-</div>
-<div class="any section" id="artwork-xfczk-015">
-<span id="id18"></span><h3>我的敌人在哪里<a class="headerlink" href="#artwork-xfczk-015" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-015">
+<span id="id18"></span><h3>我的敌人在哪里<a class="headerlink" href="#artwork-xfczk-015" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-015</p>
@@ -2156,10 +2227,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id96">
+<figure class="align-default" id="id96">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0103.jpg"><img alt="../../../_images/IMG_0103.jpg" src="../../../_images/IMG_0103.jpg" /></a>
-<p class="caption"><span class="caption-text">我的敌人在哪里</span><a class="headerlink" href="#id96" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">我的敌人在哪里</span><a class="headerlink" href="#id96" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <div class="line-block">
 <div class="line">我一生都无法遇见我的敌人</div>
 <div class="line">正如我一生都不会真正地活着</div>
@@ -2173,9 +2246,9 @@
 <div class="line">– 《亡念のザムド》改</div>
 </div>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-016">
-<span id="id19"></span><h3>人群<a class="headerlink" href="#artwork-xfczk-016" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-016">
+<span id="id19"></span><h3>人群<a class="headerlink" href="#artwork-xfczk-016" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-016</p>
@@ -2193,14 +2266,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id97">
+<figure class="align-default" id="id97">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0080.jpg"><img alt="../../../_images/IMG_0080.jpg" src="../../../_images/IMG_0080.jpg" /></a>
-<p class="caption"><span class="caption-text">人群</span><a class="headerlink" href="#id97" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">人群</span><a class="headerlink" href="#id97" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>全向十字路口拥挤的人群。</p>
-</div>
-<div class="any section" id="artwork-xfczk-017">
-<span id="id20"></span><h3>闲敲棋子落灯花<a class="headerlink" href="#artwork-xfczk-017" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-017">
+<span id="id20"></span><h3>闲敲棋子落灯花<a class="headerlink" href="#artwork-xfczk-017" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-017</p>
@@ -2218,14 +2293,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id98">
+<figure class="align-default" id="id98">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0116.jpg"><img alt="../../../_images/IMG_0116.jpg" src="../../../_images/IMG_0116.jpg" /></a>
-<p class="caption"><span class="caption-text">闲敲棋子落灯花</span><a class="headerlink" href="#id98" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">闲敲棋子落灯花</span><a class="headerlink" href="#id98" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>N/A</p>
-</div>
-<div class="any section" id="artwork-xfczk-018">
-<span id="id21"></span><h3>度洛西汀戒断反应<a class="headerlink" href="#artwork-xfczk-018" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-018">
+<span id="id21"></span><h3>度洛西汀戒断反应<a class="headerlink" href="#artwork-xfczk-018" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-018</p>
@@ -2243,10 +2320,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id99">
+<figure class="align-default" id="id99">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0081.jpg"><img alt="../../../_images/IMG_0081.jpg" src="../../../_images/IMG_0081.jpg" /></a>
-<p class="caption"><span class="caption-text">度洛西汀戒断反应</span><a class="headerlink" href="#id99" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">度洛西汀戒断反应</span><a class="headerlink" href="#id99" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>前些日子河北封城，没办法去北京复诊，一度以为网购发达没有什么买不到，
 等药盒见底了才发现快递也很难进城，于是有幸体验了一下度洛西汀的戒断反应：</p>
 <blockquote>
@@ -2256,9 +2335,9 @@
 <div class="line">每一颗星星都好像闪烁着冰冷的光，只有我知道它们在燃烧</div>
 </div>
 </div></blockquote>
-</div>
-<div class="any section" id="artwork-xfczk-019">
-<span id="id22"></span><h3>历代帝王庙<a class="headerlink" href="#artwork-xfczk-019" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-019">
+<span id="id22"></span><h3>历代帝王庙<a class="headerlink" href="#artwork-xfczk-019" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-019</p>
@@ -2276,15 +2355,17 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id100">
+<figure class="align-default" id="id100">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0082.jpg"><img alt="../../../_images/IMG_0082.jpg" src="../../../_images/IMG_0082.jpg" /></a>
-<p class="caption"><span class="caption-text">历代帝王庙</span><a class="headerlink" href="#id100" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">历代帝王庙</span><a class="headerlink" href="#id100" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>在历代帝王庙的写生，忘记带颜料了所以只能用颜料盘里的余色。</p>
 <p>阴天的天光可以认为是垂直向下的光源；树冠是由大小不一的有色卡纸裹起来的。</p>
-</div>
-<div class="any section" id="artwork-xfczk-020">
-<span id="id23"></span><h3>陆先生的咨询室<a class="headerlink" href="#artwork-xfczk-020" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-020">
+<span id="id23"></span><h3>陆先生的咨询室<a class="headerlink" href="#artwork-xfczk-020" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-020</p>
@@ -2302,10 +2383,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id101">
+<figure class="align-default" id="id101">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0083.jpg"><img alt="../../../_images/IMG_0083.jpg" src="../../../_images/IMG_0083.jpg" /></a>
-<p class="caption"><span class="caption-text">陆先生的咨询室</span><a class="headerlink" href="#id101" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">陆先生的咨询室</span><a class="headerlink" href="#id101" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>陆先生的咨询室很冷，疫情严重，他没有让我摘下口罩。我们隔着两层无纺布说话。</p>
 <p>他的言语也是冷的，没有表情，偶尔说出一两个完整的句子，偶尔停顿一下在本子上记录。
 我的话不是，它们从温热的嘴巴流淌出来，再慢慢地被空气冷却，我以为陆会做些什么。</p>
@@ -2313,9 +2396,9 @@
 我以为他会倒一些东西给我。</p>
 <p>没有，我们好像组不成连通器，我还是不停地说，直到嘴巴干涸，换了眼睛来做温热的地方。</p>
 <p>回去吧。</p>
-</div>
-<div class="any section" id="artwork-xfczk-021">
-<span id="id24"></span><h3>赶在落叶木发芽之前<a class="headerlink" href="#artwork-xfczk-021" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-021">
+<span id="id24"></span><h3>赶在落叶木发芽之前<a class="headerlink" href="#artwork-xfczk-021" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-021</p>
@@ -2333,10 +2416,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id102">
+<figure class="align-default" id="id102">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0104.jpg"><img alt="../../../_images/IMG_0104.jpg" src="../../../_images/IMG_0104.jpg" /></a>
-<p class="caption"><span class="caption-text">赶在落叶木发芽之前</span><a class="headerlink" href="#id102" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">赶在落叶木发芽之前</span><a class="headerlink" href="#id102" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>一直很想写生卧室窗前那棵树，冬天的时候树冠是光秃秃的，往不同方向伸展的的枝干
 在天光的照射下呈现出迷人的光影，如今已经是早春，再不画就来不及了。</p>
 <ul class="simple">
@@ -2349,9 +2434,9 @@
 <p>回到画面上来，要画出这个椭球体而非勾画树冠的轮廓，枝干的方向体现为
 不同亮暗面的大小不同，时刻注意正在画的树枝处于那个方向。
 对于过细的末梢可以不画亮暗面，注意调整椭球体受光面背光面不同深浅的末梢的比例即可。</p>
-</div>
-<div class="any section" id="artwork-xfczk-022">
-<span id="id25"></span><h3>大约致死量以下<a class="headerlink" href="#artwork-xfczk-022" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-022">
+<span id="id25"></span><h3>大约致死量以下<a class="headerlink" href="#artwork-xfczk-022" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-022</p>
@@ -2369,16 +2454,18 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id103">
+<figure class="align-default" id="id103">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0105.jpg"><img alt="../../../_images/IMG_0105.jpg" src="../../../_images/IMG_0105.jpg" /></a>
-<p class="caption"><span class="caption-text">大约致死量以下</span><a class="headerlink" href="#id103" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">大约致死量以下</span><a class="headerlink" href="#id103" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>近来影响心境的事情和以前比并不见少，但我的反应已经平淡很多了。可能要感谢碳酸锂，
 也可能要感谢苦难。</p>
 <p>如果把以前的痛苦量比做坠崖，现在的量大概是蹦极，可能绳子不太牢固的那种。</p>
-</div>
-<div class="any section" id="artwork-xfczk-023">
-<span id="id26"></span><h3>对视<a class="headerlink" href="#artwork-xfczk-023" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-023">
+<span id="id26"></span><h3>对视<a class="headerlink" href="#artwork-xfczk-023" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-023</p>
@@ -2396,14 +2483,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id104">
+<figure class="align-default" id="id104">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0084.jpg"><img alt="../../../_images/IMG_0084.jpg" src="../../../_images/IMG_0084.jpg" /></a>
-<p class="caption"><span class="caption-text">对视</span><a class="headerlink" href="#id104" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">对视</span><a class="headerlink" href="#id104" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>我的目光没有地方可以安放，只好看着自己。</p>
-</div>
-<div class="any section" id="artwork-xfczk-024">
-<span id="id27"></span><h3>爱<a class="headerlink" href="#artwork-xfczk-024" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-024">
+<span id="id27"></span><h3>爱<a class="headerlink" href="#artwork-xfczk-024" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-024</p>
@@ -2421,14 +2510,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id105">
+<figure class="align-default" id="id105">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0085.jpg"><img alt="../../../_images/IMG_0085.jpg" src="../../../_images/IMG_0085.jpg" /></a>
-<p class="caption"><span class="caption-text">爱</span><a class="headerlink" href="#id105" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">爱</span><a class="headerlink" href="#id105" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p><a class="reference internal" href="#artwork-xfczk-026" title="artwork xfczk-026"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">爱</span></code></a> 是什么呢？</p>
-</div>
-<div class="any section" id="artwork-xfczk-025">
-<span id="id28"></span><h3>铺橄榄绿布的铁柜<a class="headerlink" href="#artwork-xfczk-025" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-025">
+<span id="id28"></span><h3>铺橄榄绿布的铁柜<a class="headerlink" href="#artwork-xfczk-025" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-025</p>
@@ -2446,15 +2537,17 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id106">
+<figure class="align-default" id="id106">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0106.jpg"><img alt="../../../_images/IMG_0106.jpg" src="../../../_images/IMG_0106.jpg" /></a>
-<p class="caption"><span class="caption-text">铺橄榄绿布的铁柜</span><a class="headerlink" href="#id106" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">铺橄榄绿布的铁柜</span><a class="headerlink" href="#id106" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>很久没画色粉，是失败的尝试，灰色的卡纸限制了我能用的色域，软的纸面也让
 颜色的调节变得困难。</p>
-</div>
-<div class="any section" id="artwork-xfczk-026">
-<span id="id29"></span><h3>恨<a class="headerlink" href="#artwork-xfczk-026" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-026">
+<span id="id29"></span><h3>恨<a class="headerlink" href="#artwork-xfczk-026" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-026</p>
@@ -2472,14 +2565,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id107">
+<figure class="align-default" id="id107">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0086.jpg"><img alt="../../../_images/IMG_0086.jpg" src="../../../_images/IMG_0086.jpg" /></a>
-<p class="caption"><span class="caption-text">恨</span><a class="headerlink" href="#id107" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">恨</span><a class="headerlink" href="#id107" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p><a class="reference internal" href="#artwork-xfczk-024" title="artwork xfczk-024"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">爱</span></code></a> 是什么呢？</p>
-</div>
-<div class="any section" id="artwork-xfczk-027">
-<span id="id30"></span><h3>时间<a class="headerlink" href="#artwork-xfczk-027" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-027">
+<span id="id30"></span><h3>时间<a class="headerlink" href="#artwork-xfczk-027" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-027</p>
@@ -2497,14 +2592,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id108">
+<figure class="align-default" id="id108">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0087.jpg"><img alt="../../../_images/IMG_0087.jpg" src="../../../_images/IMG_0087.jpg" /></a>
-<p class="caption"><span class="caption-text">时间</span><a class="headerlink" href="#id108" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">时间</span><a class="headerlink" href="#id108" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>如果有人能观测时间的话，在它看来我们都是拖着长长尾巴的「生物」吧。</p>
-</div>
-<div class="any section" id="artwork-xfczk-028">
-<span id="id31"></span><h3>阵痛<a class="headerlink" href="#artwork-xfczk-028" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-028">
+<span id="id31"></span><h3>阵痛<a class="headerlink" href="#artwork-xfczk-028" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-028</p>
@@ -2522,14 +2619,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id109">
+<figure class="align-default" id="id109">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0088.jpg"><img alt="../../../_images/IMG_0088.jpg" src="../../../_images/IMG_0088.jpg" /></a>
-<p class="caption"><span class="caption-text">阵痛</span><a class="headerlink" href="#id109" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">阵痛</span><a class="headerlink" href="#id109" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>从这里移动到未来还需要克服一些疼痛。</p>
-</div>
-<div class="any section" id="artwork-xfczk-029">
-<span id="id32"></span><h3>情绪委托<a class="headerlink" href="#artwork-xfczk-029" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-029">
+<span id="id32"></span><h3>情绪委托<a class="headerlink" href="#artwork-xfczk-029" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-029</p>
@@ -2547,15 +2646,17 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id110">
+<figure class="align-default" id="id110">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0089.jpg"><img alt="../../../_images/IMG_0089.jpg" src="../../../_images/IMG_0089.jpg" /></a>
-<p class="caption"><span class="caption-text">情绪委托</span><a class="headerlink" href="#id110" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">情绪委托</span><a class="headerlink" href="#id110" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>我搞不清楚什么时候应该开心，什么时候应该难过。
 可不可以都交给你？</p>
-</div>
-<div class="any section" id="artwork-xfczk-030">
-<span id="id33"></span><h3>怀疑论者<a class="headerlink" href="#artwork-xfczk-030" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-030">
+<span id="id33"></span><h3>怀疑论者<a class="headerlink" href="#artwork-xfczk-030" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-030</p>
@@ -2573,14 +2674,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id111">
+<figure class="align-default" id="id111">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0090.jpg"><img alt="../../../_images/IMG_0090.jpg" src="../../../_images/IMG_0090.jpg" /></a>
-<p class="caption"><span class="caption-text">怀疑论者</span><a class="headerlink" href="#id111" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">怀疑论者</span><a class="headerlink" href="#id111" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>怀疑论者有一万双手，真理就有一万扇门。</p>
-</div>
-<div class="any section" id="artwork-xfczk-031">
-<span id="id34"></span><h3>融化<a class="headerlink" href="#artwork-xfczk-031" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-031">
+<span id="id34"></span><h3>融化<a class="headerlink" href="#artwork-xfczk-031" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-031</p>
@@ -2598,10 +2701,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id112">
+<figure class="align-default" id="id112">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0091.jpg"><img alt="../../../_images/IMG_0091.jpg" src="../../../_images/IMG_0091.jpg" /></a>
-<p class="caption"><span class="caption-text">融化</span><a class="headerlink" href="#id112" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">融化</span><a class="headerlink" href="#id112" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <div class="line-block">
 <div class="line">肚子被撑得鼓起来，像青蛙一样咕咕叫</div>
 <div class="line">全身的肌肉失去力气，只够撕开零食的包装袋</div>
@@ -2610,9 +2715,9 @@
 <div class="line">我的四肢开始融化，从末端一点点和这个美丽的世界混合起来</div>
 <div class="line">我得去上课啊，我昂起我高傲的头颅，摇晃的时候有东西流出来</div>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-032">
-<span id="id35"></span><h3>玫瑰与士兵<a class="headerlink" href="#artwork-xfczk-032" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-032">
+<span id="id35"></span><h3>玫瑰与士兵<a class="headerlink" href="#artwork-xfczk-032" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-032</p>
@@ -2630,13 +2735,15 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id113">
+<figure class="align-default" id="id113">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0092.jpg"><img alt="../../../_images/IMG_0092.jpg" src="../../../_images/IMG_0092.jpg" /></a>
-<p class="caption"><span class="caption-text">玫瑰与士兵</span><a class="headerlink" href="#id113" title="永久链接至图片">¶</a></p>
-</div>
-</div>
-<div class="any section" id="artwork-xfczk-033">
-<span id="id36"></span><h3>圣人在高台上布道<a class="headerlink" href="#artwork-xfczk-033" title="永久链接至标题">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">玫瑰与士兵</span><a class="headerlink" href="#id113" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section class="any" id="artwork-xfczk-033">
+<span id="id36"></span><h3>圣人在高台上布道<a class="headerlink" href="#artwork-xfczk-033" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-033</p>
@@ -2654,14 +2761,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id114">
+<figure class="align-default" id="id114">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0093.jpg"><img alt="../../../_images/IMG_0093.jpg" src="../../../_images/IMG_0093.jpg" /></a>
-<p class="caption"><span class="caption-text">圣人在高台上布道</span><a class="headerlink" href="#id114" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">圣人在高台上布道</span><a class="headerlink" href="#id114" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>若前提为假，则命题恒真。</p>
-</div>
-<div class="any section" id="artwork-xfczk-034">
-<span id="id37"></span><h3>傲慢<a class="headerlink" href="#artwork-xfczk-034" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-034">
+<span id="id37"></span><h3>傲慢<a class="headerlink" href="#artwork-xfczk-034" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-034</p>
@@ -2679,10 +2788,12 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id115">
+<figure class="align-default" id="id115">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0107.jpg"><img alt="../../../_images/IMG_0107.jpg" src="../../../_images/IMG_0107.jpg" /></a>
-<p class="caption"><span class="caption-text">傲慢</span><a class="headerlink" href="#id115" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">傲慢</span><a class="headerlink" href="#id115" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>B 站上有人上传了一段机械手弹吉他的视频，弹幕有三成是这样的：</p>
 <blockquote>
 <div><div class="line-block">
@@ -2699,9 +2810,9 @@
 <p>我有不同吗？看到这样的视频点进来，我猜弹幕里肯定有人说风凉话。我打开弹幕，
 扫一眼，啊确实有，心里获得了一点满足，我真清醒。</p>
 <p>为什么啊，为什么人类总是这么傲慢呢？</p>
-</div>
-<div class="any section" id="artwork-xfczk-035">
-<span id="id38"></span><h3>暴食<a class="headerlink" href="#artwork-xfczk-035" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-035">
+<span id="id38"></span><h3>暴食<a class="headerlink" href="#artwork-xfczk-035" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-035</p>
@@ -2719,17 +2830,19 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id116">
+<figure class="align-default" id="id116">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0108.jpg"><img alt="../../../_images/IMG_0108.jpg" src="../../../_images/IMG_0108.jpg" /></a>
-<p class="caption"><span class="caption-text">暴食</span><a class="headerlink" href="#id116" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">暴食</span><a class="headerlink" href="#id116" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><a class="reference internal" href="#artwork-xfczk-031" title="artwork xfczk-031"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《融化》</span></code></a></p>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-036">
-<span id="id39"></span><h3>单人交际<a class="headerlink" href="#artwork-xfczk-036" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-036">
+<span id="id39"></span><h3>单人交际<a class="headerlink" href="#artwork-xfczk-036" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-036</p>
@@ -2747,14 +2860,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id117">
+<figure class="align-default" id="id117">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0109.jpg"><img alt="../../../_images/IMG_0109.jpg" src="../../../_images/IMG_0109.jpg" /></a>
-<p class="caption"><span class="caption-text">单人交际</span><a class="headerlink" href="#id117" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">单人交际</span><a class="headerlink" href="#id117" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>我想继续进行以前的思想训练，和你在的时候差不多。</p>
-</div>
-<div class="any section" id="artwork-xfczk-037">
-<span id="id40"></span><h3>快乐地做游戏<a class="headerlink" href="#artwork-xfczk-037" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-037">
+<span id="id40"></span><h3>快乐地做游戏<a class="headerlink" href="#artwork-xfczk-037" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-037</p>
@@ -2772,14 +2887,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id118">
+<figure class="align-default" id="id118">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0110.jpg"><img alt="../../../_images/IMG_0110.jpg" src="../../../_images/IMG_0110.jpg" /></a>
-<p class="caption"><span class="caption-text">快乐地做游戏</span><a class="headerlink" href="#id118" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">快乐地做游戏</span><a class="headerlink" href="#id118" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p><code class="code docutils literal notranslate"><span class="pre">:-)</span></code></p>
-</div>
-<div class="any section" id="artwork-xfczk-038">
-<span id="id41"></span><h3>个人展览<a class="headerlink" href="#artwork-xfczk-038" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-038">
+<span id="id41"></span><h3>个人展览<a class="headerlink" href="#artwork-xfczk-038" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-038</p>
@@ -2797,16 +2914,18 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id119">
+<figure class="align-default" id="id119">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0111.jpg"><img alt="../../../_images/IMG_0111.jpg" src="../../../_images/IMG_0111.jpg" /></a>
-<p class="caption"><span class="caption-text">个人展览</span><a class="headerlink" href="#id119" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">个人展览</span><a class="headerlink" href="#id119" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>受昨日美术馆邀请，我将举行我的第一次个展。
 布展和开幕在同一天，除了致辞，我的主要工作是跨入为我准备的水族箱。</p>
 <p>展览正式开始，谢谢大家！</p>
-</div>
-<div class="any section" id="artwork-xfczk-039">
-<span id="id42"></span><h3>拥抱申请<a class="headerlink" href="#artwork-xfczk-039" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-039">
+<span id="id42"></span><h3>拥抱申请<a class="headerlink" href="#artwork-xfczk-039" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-039</p>
@@ -2824,16 +2943,18 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id120">
+<figure class="align-default" id="id120">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0094.jpg"><img alt="../../../_images/IMG_0094.jpg" src="../../../_images/IMG_0094.jpg" /></a>
-<p class="caption"><span class="caption-text">拥抱申请</span><a class="headerlink" href="#id120" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">拥抱申请</span><a class="headerlink" href="#id120" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p><span class="sphinxnotes-strike">我想要抱抱</span>。</p>
 <p>不可以，太不严肃了，这不是成熟的艺术家应当有的行为！
 题目改为「拥抱申请」。</p>
-</div>
-<div class="any section" id="artwork-xfczk-040">
-<span id="id43"></span><h3>关于我的沉没成本的回顾展<a class="headerlink" href="#artwork-xfczk-040" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-040">
+<span id="id43"></span><h3>关于我的沉没成本的回顾展<a class="headerlink" href="#artwork-xfczk-040" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-040</p>
@@ -2851,14 +2972,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id121">
+<figure class="align-default" id="id121">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0095.jpg"><img alt="../../../_images/IMG_0095.jpg" src="../../../_images/IMG_0095.jpg" /></a>
-<p class="caption"><span class="caption-text">关于我的沉没成本的回顾展</span><a class="headerlink" href="#id121" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">关于我的沉没成本的回顾展</span><a class="headerlink" href="#id121" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>感谢大家的支持，我的最后一次展览也顺利举行了。</p>
-</div>
-<div class="any section" id="artwork-xfczk-041">
-<span id="id44"></span><h3>开眼看世界（一）<a class="headerlink" href="#artwork-xfczk-041" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-041">
+<span id="id44"></span><h3>开眼看世界（一）<a class="headerlink" href="#artwork-xfczk-041" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-041</p>
@@ -2876,13 +2999,15 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id122">
+<figure class="align-default" id="id122">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0096.jpg"><img alt="../../../_images/IMG_0096.jpg" src="../../../_images/IMG_0096.jpg" /></a>
-<p class="caption"><span class="caption-text">开眼看世界（一）</span><a class="headerlink" href="#id122" title="永久链接至图片">¶</a></p>
-</div>
-</div>
-<div class="any section" id="artwork-xfczk-042">
-<span id="id45"></span><h3>开眼看世界（二）<a class="headerlink" href="#artwork-xfczk-042" title="永久链接至标题">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">开眼看世界（一）</span><a class="headerlink" href="#id122" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section class="any" id="artwork-xfczk-042">
+<span id="id45"></span><h3>开眼看世界（二）<a class="headerlink" href="#artwork-xfczk-042" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-042</p>
@@ -2900,17 +3025,19 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id123">
+<figure class="align-default" id="id123">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0097.jpg"><img alt="../../../_images/IMG_0097.jpg" src="../../../_images/IMG_0097.jpg" /></a>
-<p class="caption"><span class="caption-text">开眼看世界（二）</span><a class="headerlink" href="#id123" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">开眼看世界（二）</span><a class="headerlink" href="#id123" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><a class="reference internal" href="#artwork-xfczk-031" title="artwork xfczk-031"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《融化》</span></code></a> , <a class="reference internal" href="#artwork-xfczk-041" title="artwork xfczk-041"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《开眼看世界（一）》</span></code></a></p>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-043">
-<span id="id46"></span><h3><a class="reference external" href="https://zh.wikipedia.org/wiki/路易十六">📖路易十六</a>在准备灭火<a class="headerlink" href="#artwork-xfczk-043" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-043">
+<span id="id46"></span><h3><a class="reference external" href="https://zh.wikipedia.org/wiki/路易十六">📖路易十六</a>在准备灭火<a class="headerlink" href="#artwork-xfczk-043" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-043</p>
@@ -2928,14 +3055,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id124">
+<figure class="align-default" id="id124">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0112.jpg"><img alt="../../../_images/IMG_0112.jpg" src="../../../_images/IMG_0112.jpg" /></a>
-<p class="caption"><span class="caption-text">📖路易十六在准备灭火</span><a class="headerlink" href="#id124" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">📖路易十六在准备灭火</span><a class="headerlink" href="#id124" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>和路易十六没有关系，他只是一个被砍头的可怜人而已。</p>
-</div>
-<div class="any section" id="artwork-xfczk-044">
-<span id="id47"></span><h3>前进<a class="headerlink" href="#artwork-xfczk-044" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-044">
+<span id="id47"></span><h3>前进<a class="headerlink" href="#artwork-xfczk-044" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-044</p>
@@ -2953,13 +3082,15 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id125">
+<figure class="align-default" id="id125">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0114.jpg"><img alt="../../../_images/IMG_0114.jpg" src="../../../_images/IMG_0114.jpg" /></a>
-<p class="caption"><span class="caption-text">前进</span><a class="headerlink" href="#id125" title="永久链接至图片">¶</a></p>
-</div>
-</div>
-<div class="any section" id="artwork-xfczk-045">
-<span id="id48"></span><h3>拒绝拥抱<a class="headerlink" href="#artwork-xfczk-045" title="永久链接至标题">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">前进</span><a class="headerlink" href="#id125" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section class="any" id="artwork-xfczk-045">
+<span id="id48"></span><h3>拒绝拥抱<a class="headerlink" href="#artwork-xfczk-045" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-045</p>
@@ -2977,19 +3108,21 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id126">
+<figure class="align-default" id="id126">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0115.jpg"><img alt="../../../_images/IMG_0115.jpg" src="../../../_images/IMG_0115.jpg" /></a>
-<p class="caption"><span class="caption-text">拒绝拥抱</span><a class="headerlink" href="#id126" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">拒绝拥抱</span><a class="headerlink" href="#id126" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>她打了电话来，我作为优秀的的倾听者接线。</p>
 <p>画得很俗气，但没有办法。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><a class="reference internal" href="#artwork-xfczk-039" title="artwork xfczk-039"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《拥抱申请》</span></code></a></p>
 </div>
-</div>
-<div class="any section" id="artwork-xfczk-046">
-<span id="id49"></span><h3>黑猫<a class="headerlink" href="#artwork-xfczk-046" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-046">
+<span id="id49"></span><h3>黑猫<a class="headerlink" href="#artwork-xfczk-046" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-046</p>
@@ -3007,14 +3140,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id127">
+<figure class="align-default" id="id127">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_0098.jpg"><img alt="../../../_images/IMG_0098.jpg" src="../../../_images/IMG_0098.jpg" /></a>
-<p class="caption"><span class="caption-text">黑猫</span><a class="headerlink" href="#id127" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">黑猫</span><a class="headerlink" href="#id127" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>只是想简单把自己切开。</p>
-</div>
-<div class="any section" id="artwork-xfczk-047">
-<span id="id50"></span><h3>鱼力士<a class="headerlink" href="#artwork-xfczk-047" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-047">
+<span id="id50"></span><h3>鱼力士<a class="headerlink" href="#artwork-xfczk-047" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-047</p>
@@ -3032,15 +3167,17 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id128">
+<figure class="align-default" id="id128">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_20210408_230947__01.jpg"><img alt="../../../_images/IMG_20210408_230947__01.jpg" src="../../../_images/IMG_20210408_230947__01.jpg" /></a>
-<p class="caption"><span class="caption-text">鱼力士</span><a class="headerlink" href="#id128" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">鱼力士</span><a class="headerlink" href="#id128" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>我只是想画一个鱼缸，正如我之前已经画过了很多的鱼缸：
 <a class="reference internal" href="#artwork-xfczk-037" title="artwork xfczk-037"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《快乐地做游戏》</span></code></a> 、 <a class="reference internal" href="#artwork-xfczk-038" title="artwork xfczk-038"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《个人展览》</span></code></a> 、 <a class="reference internal" href="#artwork-xfczk-039" title="artwork xfczk-039"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《拥抱申请》</span></code></a></p>
-</div>
-<div class="any section" id="artwork-xfczk-048">
-<span id="id51"></span><h3>焦渴<a class="headerlink" href="#artwork-xfczk-048" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-048">
+<span id="id51"></span><h3>焦渴<a class="headerlink" href="#artwork-xfczk-048" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-048</p>
@@ -3058,13 +3195,15 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id129">
+<figure class="align-default" id="id129">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_20210408_231027__01.jpg"><img alt="../../../_images/IMG_20210408_231027__01.jpg" src="../../../_images/IMG_20210408_231027__01.jpg" /></a>
-<p class="caption"><span class="caption-text">焦渴</span><a class="headerlink" href="#id129" title="永久链接至图片">¶</a></p>
-</div>
-</div>
-<div class="any section" id="artwork-xfczk-049">
-<span id="id52"></span><h3>铅灰色的田野<a class="headerlink" href="#artwork-xfczk-049" title="永久链接至标题">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">焦渴</span><a class="headerlink" href="#id129" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section class="any" id="artwork-xfczk-049">
+<span id="id52"></span><h3>铅灰色的田野<a class="headerlink" href="#artwork-xfczk-049" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-049</p>
@@ -3082,14 +3221,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id130">
+<figure class="align-default" id="id130">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_20210408_231154__01.jpg"><img alt="../../../_images/IMG_20210408_231154__01.jpg" src="../../../_images/IMG_20210408_231154__01.jpg" /></a>
-<p class="caption"><span class="caption-text">铅灰色的田野</span><a class="headerlink" href="#id130" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">铅灰色的田野</span><a class="headerlink" href="#id130" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>这正是我要离开的地方。</p>
-</div>
-<div class="any section" id="artwork-xfczk-050">
-<span id="id53"></span><h3>安全距离<a class="headerlink" href="#artwork-xfczk-050" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-050">
+<span id="id53"></span><h3>安全距离<a class="headerlink" href="#artwork-xfczk-050" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-050</p>
@@ -3107,14 +3248,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id131">
+<figure class="align-default" id="id131">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_20210408_231214__01.jpg"><img alt="../../../_images/IMG_20210408_231214__01.jpg" src="../../../_images/IMG_20210408_231214__01.jpg" /></a>
-<p class="caption"><span class="caption-text">安全距离</span><a class="headerlink" href="#id131" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">安全距离</span><a class="headerlink" href="#id131" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>在这里我可以安全地给出意见。我是说，你会比较安全。</p>
-</div>
-<div class="any section" id="artwork-xfczk-051">
-<span id="id54"></span><h3>海辺の花屋<a class="headerlink" href="#artwork-xfczk-051" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-051">
+<span id="id54"></span><h3>海辺の花屋<a class="headerlink" href="#artwork-xfczk-051" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-051</p>
@@ -3132,14 +3275,16 @@
 <dd class="field-odd"><p><a class="reference internal" href="../../../any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-32k-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id132">
+<figure class="align-default" id="id132">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/IMG_20210408_231237__01__01.jpg"><img alt="../../../_images/IMG_20210408_231237__01__01.jpg" src="../../../_images/IMG_20210408_231237__01__01.jpg" /></a>
-<p class="caption"><span class="caption-text">海辺の花屋</span><a class="headerlink" href="#id132" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">海辺の花屋</span><a class="headerlink" href="#id132" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>画里这个建筑显然不可能是花店，只是我刚好在听 <a class="reference external" href="https://kanawakareno.bandcamp.com/album/-">这张专辑</a> 而已。</p>
-</div>
-<div class="any section" id="artwork-xfczk-052">
-<span id="id56"></span><h3>登高<a class="headerlink" href="#artwork-xfczk-052" title="永久链接至标题">¶</a></h3>
+</section>
+<section class="any" id="artwork-xfczk-052">
+<span id="id56"></span><h3>登高<a class="headerlink" href="#artwork-xfczk-052" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>xfczk-052</p>
@@ -3158,27 +3303,29 @@
 <p class="admonition-title">待处理</p>
 <p>图片未上传</p>
 </div>
-</div>
-</div>
-<div class="section" id="id58">
-<h2>点评<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id59">
-<h3>演示文稿<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
-<div class="figure align-default" id="id133">
+</section>
+</section>
+<section id="id58">
+<h2>点评<a class="headerlink" href="#id58" title="永久链接至标题">#</a></h2>
+<section id="id59">
+<h3>演示文稿<a class="headerlink" href="#id59" title="永久链接至标题">#</a></h3>
+<figure class="align-default" id="id133">
 <img alt="../../../_images/2021-04-03_16:10:55.png" src="../../../_images/2021-04-03_16:10:55.png" />
-<p class="caption"><span class="caption-text">花了大时间的演示文稿（链接见下）</span><a class="headerlink" href="#id133" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">花了大时间的演示文稿（链接见下）</span><a class="headerlink" href="#id133" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <dl class="simple">
 <dt><a class="reference internal" href="#artwork-xfczk-000" title="artwork xfczk-000"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《树脂石膏像》</span></code></a> - <a class="reference internal" href="#artwork-xfczk-046" title="artwork xfczk-046"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《黑猫》</span></code></a></dt><dd><p><a class="reference download internal" download="" href="../../../_downloads/6ed170befd67b062e06dc0796eaf54b2/submit1.pptx"><code class="xref download docutils literal notranslate"><span class="pre">/_downloads/submit1.pptx</span></code></a></p>
 </dd>
 <dt><a class="reference internal" href="#artwork-xfczk-047" title="artwork xfczk-047"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《鱼力士》</span></code></a> - <a class="reference internal" href="#artwork-xfczk-051" title="artwork xfczk-051"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《海辺の花屋》</span></code></a></dt><dd><p><a class="reference download internal" download="" href="../../../_downloads/ac30a592852db63b1f8504eae9821a69/submit1-patch.pptx"><code class="xref download docutils literal notranslate"><span class="pre">/_downloads/submit1-patch.pptx</span></code></a></p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id60">
-<h3>按动机分类<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id61">
-<h4>技术练习<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id60">
+<h3>按动机分类<a class="headerlink" href="#id60" title="永久链接至标题">#</a></h3>
+<section id="id61">
+<h4>技术练习<a class="headerlink" href="#id61" title="永久链接至标题">#</a></h4>
 <p>研究光、造型、氛围等。</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="#artwork-xfczk-000" title="artwork xfczk-000"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《树脂石膏像》</span></code></a></p></li>
@@ -3192,18 +3339,18 @@
 <li><p><a class="reference internal" href="#artwork-xfczk-021" title="artwork xfczk-021"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《赶在落叶木发芽之前》</span></code></a></p></li>
 <li><p><a class="reference internal" href="#artwork-xfczk-025" title="artwork xfczk-025"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《铺橄榄绿布的铁柜》</span></code></a></p></li>
 </ol>
-</div>
-<div class="section" id="id62">
-<h4>喜爱的事物<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id62">
+<h4>喜爱的事物<a class="headerlink" href="#id62" title="永久链接至标题">#</a></h4>
 <p>基本上是自然风光。</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="#artwork-xfczk-005" title="artwork xfczk-005"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《银色飞行船》</span></code></a></p></li>
 <li><p><a class="reference internal" href="#artwork-xfczk-006" title="artwork xfczk-006"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《大风》</span></code></a></p></li>
 <li><p><a class="reference internal" href="#artwork-xfczk-017" title="artwork xfczk-017"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《闲敲棋子落灯花》</span></code></a></p></li>
 </ol>
-</div>
-<div class="section" id="id63">
-<h4>文艺作品衍生<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id63">
+<h4>文艺作品衍生<a class="headerlink" href="#id63" title="永久链接至标题">#</a></h4>
 <p>受已有文艺作品影响。</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="#artwork-xfczk-005" title="artwork xfczk-005"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《银色飞行船》</span></code></a> - 同名歌曲</p></li>
@@ -3213,9 +3360,9 @@
 <li><p><a class="reference internal" href="#artwork-xfczk-038" title="artwork xfczk-038"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《个人展览》</span></code></a> -《钢之炼金术师》</p></li>
 <li><p><a class="reference internal" href="#artwork-xfczk-051" title="artwork xfczk-051"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《海辺の花屋》</span></code></a> - 同名歌曲</p></li>
 </ol>
-</div>
-<div class="section" id="id64">
-<span id="id65"></span><h4>表达感受<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id64">
+<span id="id65"></span><h4>表达感受<a class="headerlink" href="#id64" title="永久链接至标题">#</a></h4>
 <p>药物副作用、过量反应、身处深处情绪漩涡时的不适感等。</p>
 <p>通常画面里没有问号 – 意即，我不抛出问题，这只是一个体验项目，请感受看看。</p>
 <ol class="arabic simple">
@@ -3230,9 +3377,9 @@
 <li><p><a class="reference internal" href="#artwork-xfczk-035" title="artwork xfczk-035"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《暴食》</span></code></a></p></li>
 <li><p><a class="reference internal" href="#artwork-xfczk-048" title="artwork xfczk-048"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《焦渴》</span></code></a></p></li>
 </ol>
-</div>
-<div class="section" id="id66">
-<h4>表达思想<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id66">
+<h4>表达思想<a class="headerlink" href="#id66" title="永久链接至标题">#</a></h4>
 <p>和 <a class="reference internal" href="#id64"><span class="std std-ref">表达感受</span></a> 同样地掺入了情绪，但有思想的介入就有不同。
 往往描述了 <a class="reference internal" href="#id67"><span class="std std-ref">矛盾</span></a> 、 <a class="reference internal" href="#id69"><span class="std std-ref">困境</span></a> ，毕竟没有冲突就不需要表达。</p>
 <p>基于一些假设会做 <a class="reference internal" href="#id71"><span class="std std-ref">思想实验</span></a> ，情绪太过脱缰会变得 <a class="reference internal" href="#id74"><span class="std std-ref">荒诞</span></a> 。
@@ -3271,25 +3418,25 @@
 <li><p><a class="reference internal" href="#artwork-xfczk-051" title="artwork xfczk-051"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《海辺の花屋》</span></code></a></p></li>
 <li><p><a class="reference internal" href="#artwork-xfczk-052" title="artwork xfczk-052"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《登高》</span></code></a></p></li>
 </ol>
-<div class="section" id="id67">
-<span id="id68"></span><h5>矛盾<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h5>
+<section id="id67">
+<span id="id68"></span><h5>矛盾<a class="headerlink" href="#id67" title="永久链接至标题">#</a></h5>
 <p>矛盾可能只是一些异常的不痛不快的小裂缝，我主观地去加剧冲突，把问题摆上台面。</p>
-</div>
-<div class="section" id="id69">
-<span id="id70"></span><h5>困境<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h5>
+</section>
+<section id="id69">
+<span id="id70"></span><h5>困境<a class="headerlink" href="#id69" title="永久链接至标题">#</a></h5>
 <p>通常描述一种个人化的，看起来甚至有点可笑的困境 – 只是看起来可笑，实际上我很窘迫。</p>
-</div>
-<div class="section" id="id71">
-<span id="id72"></span><h5>思想实验<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h5>
+</section>
+<section id="id71">
+<span id="id72"></span><h5>思想实验<a class="headerlink" href="#id71" title="永久链接至标题">#</a></h5>
 <blockquote>
 <div><p>想象力改变一切 <a class="footnote-reference brackets" href="#id78" id="id73">1</a></p>
 </div></blockquote>
 <p>用想象力造一个没有摩擦力的思想空间，搜罗一些新学到的名字，一些有意思的假设，
 将它在这个空间里单一化、加强、或者扭曲。最后一步是放入人类，别人的
 <a class="reference external" href="https://zh.wikipedia.org/wiki/思想实验">📖思想实验</a> 也许会放更多东西，但我最近都只放人。</p>
-</div>
-<div class="section" id="id74">
-<span id="id75"></span><h5>荒诞<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h5>
+</section>
+<section id="id74">
+<span id="id75"></span><h5>荒诞<a class="headerlink" href="#id74" title="永久链接至标题">#</a></h5>
 <p>我没料想到荒诞会和存在主义有所联系：</p>
 <blockquote>
 <div><p>一个事物的基本意义的存在必须要一个更高的意体来解释。
@@ -3323,11 +3470,11 @@
 <dd><p><a class="reference external" href="https://zh.wikipedia.org/wiki/来自新世界">📖来自新世界</a></p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="section" id="id80">
-<h3>关键词<a class="headerlink" href="#id80" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="id80">
+<h3>关键词<a class="headerlink" href="#id80" title="永久链接至标题">#</a></h3>
 <p>这么大白话写出来果然还是有点中二：</p>
 <ul class="simple">
 <li><p>痛苦、绝望、愤怒、狂躁、自怨自艾、悔、恨</p></li>
@@ -3350,9 +3497,9 @@
     )
 );</script> 回复你。</p>
 <section data-isso-id="/notes/zxsys/way-to-artist/find-yourself" data-title="找自己" id="isso-thread"></section></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 <div class="section">
    
@@ -3360,9 +3507,11 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="prepare.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -3378,25 +3527,29 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-24.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
