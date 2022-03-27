@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>知识点 Check List &#8212; 银色子弹</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/notes/2021-interview/checklist.html" />
@@ -113,7 +112,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -122,14 +135,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -144,7 +153,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
@@ -868,70 +877,102 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
         
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
    计算机网络
@@ -1389,12 +1430,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>知识点 Check List</h1>
@@ -1403,7 +1443,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1868,14 +1908,15 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="check-list">
-<h1>知识点 Check List<a class="headerlink" href="#check-list" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id1">
-<h2>计算机网络<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<div class="section" id="tcp-x">
-<h3>TCP 三次握手 ✔️<a class="headerlink" href="#tcp-x" title="永久链接至标题">¶</a></h3>
+                 <section id="check-list">
+<h1>知识点 Check List<a class="headerlink" href="#check-list" title="永久链接至标题">#</a></h1>
+<section id="id1">
+<h2>计算机网络<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h2>
+<section id="tcp-x">
+<h3>TCP 三次握手 ✔️<a class="headerlink" href="#tcp-x" title="永久链接至标题">#</a></h3>
 <p>由 client 执行 <em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/3/connect">connect(3)</a></em> 触发。</p>
 <a class="reference external image-reference" href="https://hit-alibaba.github.io/interview/basic/network/TCP.html"><img alt="../../_images/tcp-connection-made-three-way-handshake.png" src="../../_images/tcp-connection-made-three-way-handshake.png" /></a>
 <p>作用：</p>
@@ -1887,9 +1928,9 @@
 <dt>半连接队列</dt><dd><p>服务端第一次受到 SYN 包（<code class="code docutils literal notranslate"><span class="pre">SYN_RCVD</span></code>）的队列</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id2">
-<h3>TCP 四次挥手 ✔️<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id2">
+<h3>TCP 四次挥手 ✔️<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h3>
 <p>由任意一方执行 <em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/3/close">close(3)</a></em> 触发。</p>
 <a class="reference external image-reference" href="https://hit-alibaba.github.io/interview/basic/network/TCP.html"><img alt="../../_images/tcp-connection-closed-four-way-handshake.png" src="../../_images/tcp-connection-closed-four-way-handshake.png" /></a>
 <dl>
@@ -1906,18 +1947,18 @@
 <dt>Server 大量 <code class="code docutils literal notranslate"><span class="pre">CLOSE_WAIT</span></code></dt><dd><p>Client 端主动关连接，Server 没有发第二个 FIN</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="tcp-udp-x">
-<h3>TCP UDP 区别 ✔️<a class="headerlink" href="#tcp-udp-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="tcp-udp-x">
+<h3>TCP UDP 区别 ✔️<a class="headerlink" href="#tcp-udp-x" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>TCP</dt><dd><p>全双工，面向连接，可靠，一对一通信</p>
 </dd>
 <dt>UDP</dt><dd><p>无连接，不可靠，可多播、广播</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="select-epoll-x">
-<h3>select，epoll ✔️<a class="headerlink" href="#select-epoll-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="select-epoll-x">
+<h3>select，epoll ✔️<a class="headerlink" href="#select-epoll-x" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt><a class="reference external" href="https://zh.wikipedia.org/wiki/Select_(Unix)">📖Select_(Unix)</a></dt><dd><ul class="simple">
 <li><p>是个单独的系统调用</p></li>
@@ -1933,11 +1974,11 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="web">
-<h3>Web<a class="headerlink" href="#web" title="永久链接至标题">¶</a></h3>
-<div class="section" id="https-x">
-<h4>HTTPS 原理 ✔️<a class="headerlink" href="#https-x" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="web">
+<h3>Web<a class="headerlink" href="#web" title="永久链接至标题">#</a></h3>
+<section id="https-x">
+<h4>HTTPS 原理 ✔️<a class="headerlink" href="#https-x" title="永久链接至标题">#</a></h4>
 <dl>
 <dt>对称加密</dt><dd><dl class="field-list simple">
 <dt class="field-odd">Pros</dt>
@@ -1969,15 +2010,17 @@
 </ol>
 </li>
 </ol>
-<div class="figure align-default" id="id47">
+<figure class="align-default" id="id47">
 <a class="reference external image-reference" href="https://segmentfault.com/a/1190000021494676"><img alt="../../_images/2641864607-5e11d65c74244_fix732.webp" src="../../_images/2641864607-5e11d65c74244_fix732.webp" /></a>
-<p class="caption"><span class="caption-text">HTTPS 加密、解密、验证及数据传输过程</span><a class="headerlink" href="#id47" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">HTTPS 加密、解密、验证及数据传输过程</span><a class="headerlink" href="#id47" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 </dd>
 </dl>
-</div>
-<div class="section" id="session-cookie-x">
-<h4>Session 和 Cookie ✔️<a class="headerlink" href="#session-cookie-x" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="session-cookie-x">
+<h4>Session 和 Cookie ✔️<a class="headerlink" href="#session-cookie-x" title="永久链接至标题">#</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://zhuanlan.zhihu.com/p/27669892">https://zhuanlan.zhihu.com/p/27669892</a></p>
@@ -1986,17 +2029,17 @@
 <p>对无状态的 HTTP 协议的补充。</p>
 <p><a class="reference external" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a> 用来向客户端设置 Cookie，假如域名不能涵盖原始服务器的域名，那么应该被用户代理拒绝</p>
 <p>Session 一般用 Cookie 存。</p>
-</div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>分布式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<div class="section" id="map-reduce-x">
-<h3>Map-Reduce 概述 ✔️<a class="headerlink" href="#map-reduce-x" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="id3">
+<h2>分布式<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<section id="map-reduce-x">
+<h3>Map-Reduce 概述 ✔️<a class="headerlink" href="#map-reduce-x" title="永久链接至标题">#</a></h3>
 <p>映射（可并行） -&gt; 归纳</p>
-</div>
-<div class="section" id="id-x">
-<h3>分布式 ID 生成 ✔️<a class="headerlink" href="#id-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id-x">
+<h3>分布式 ID 生成 ✔️<a class="headerlink" href="#id-x" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://zhuanlan.zhihu.com/p/107939861">https://zhuanlan.zhihu.com/p/107939861</a></p>
@@ -2088,15 +2131,15 @@
 </dl>
 </dd>
 </dl>
-</div>
-<div class="section" id="id4">
-<h3>选主<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="id5">
-<h3>脑裂<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="cap-x">
-<h3>CAP ✔️<a class="headerlink" href="#cap-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id4">
+<h3>选主<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id5">
+<h3>脑裂<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
+</section>
+<section id="cap-x">
+<h3>CAP ✔️<a class="headerlink" href="#cap-x" title="永久链接至标题">#</a></h3>
 <blockquote>
 <div><p>对于一个分布式计算系统来说，不可能同时满足以下三点：</p>
 <ul class="simple">
@@ -2107,9 +2150,9 @@
 <p class="attribution">—— <a class="reference external" href="https://zh.wikipedia.org/wiki/CAP定理">📖CAP定理</a></p>
 </div></blockquote>
 <p>P（分区容错性）是说这个系统要允许分区？</p>
-</div>
-<div class="section" id="x">
-<h3>分布式锁 ✔️<a class="headerlink" href="#x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="x">
+<h3>分布式锁 ✔️<a class="headerlink" href="#x" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>场景</dt><dd><p>分布式事务</p>
 <ul class="simple">
@@ -2137,9 +2180,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="id6">
-<h3>分布式定时器 ✔️<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id6">
+<h3>分布式定时器 ✔️<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>实现</dt><dd><ul class="simple">
 <li><p>公平的分布式锁实现：etcd</p></li>
@@ -2147,9 +2190,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="id7">
-<h3>一致性级别 ✔️<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id7">
+<h3>一致性级别 ✔️<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://zhuanlan.zhihu.com/p/86999794">https://zhuanlan.zhihu.com/p/86999794</a></p>
@@ -2167,15 +2210,15 @@
 <p>读操作未必能够及时得到此前其他进程对同一数据的写更新，但是每个进程读到的该数据不同值的顺序却是一致的。</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id8">
-<h3>两阶段提交<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="topn">
-<h3>海量数据 TopN<a class="headerlink" href="#topn" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="paxos">
-<h3>Paxos<a class="headerlink" href="#paxos" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id8">
+<h3>两阶段提交<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h3>
+</section>
+<section id="topn">
+<h3>海量数据 TopN<a class="headerlink" href="#topn" title="永久链接至标题">#</a></h3>
+</section>
+<section id="paxos">
+<h3>Paxos<a class="headerlink" href="#paxos" title="永久链接至标题">#</a></h3>
 <blockquote>
 <div><p>一种基于消息传递且具有高度容错特性的共识（consensus）算法。</p>
 <p class="attribution">——  <a class="reference external" href="https://zh.wikipedia.org/wiki/Paxos算法">📖Paxos算法</a></p>
@@ -2188,9 +2231,9 @@
 </dd>
 </dl>
 <p>好复杂…… 看看就行吧，不强求懂了。</p>
-</div>
-<div class="section" id="raft-x">
-<h3>Raft ✔️<a class="headerlink" href="#raft-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="raft-x">
+<h3>Raft ✔️<a class="headerlink" href="#raft-x" title="永久链接至标题">#</a></h3>
 <blockquote>
 <div><p>Raft能为在计算机集群之间部署有限状态机提供一种通用方法，并确保集群内的任意节点在某种状态转换上保持一致。</p>
 <p>…</p>
@@ -2206,15 +2249,15 @@
 </dd>
 </dl>
 <p>看 Wiki 即可，好懂多了。</p>
-</div>
-<div class="section" id="id9">
-<h3>外部排序<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
-</div>
-</div>
-<div class="section" id="id10">
-<h2>关系型数据库<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id11">
-<h3>数据库范式 ✔️<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id9">
+<h3>外部排序<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h3>
+</section>
+</section>
+<section id="id10">
+<h2>关系型数据库<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h2>
+<section id="id11">
+<h3>数据库范式 ✔️<a class="headerlink" href="#id11" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>1NF</dt><dd><p>原子性，属性都不可再分</p>
 </dd>
@@ -2225,9 +2268,9 @@
 <dt>BCNF</dt><dd><p>任何属性（包括非主属性和主属性）都不能被非主属性所决定。</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="acid-x">
-<h3>ACID ✔️<a class="headerlink" href="#acid-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="acid-x">
+<h3>ACID ✔️<a class="headerlink" href="#acid-x" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">A</dt>
 <dd class="field-odd"><p>Atomicity 原子性 锁</p>
@@ -2242,9 +2285,9 @@
 <dd class="field-even"><p>Durability 持久性 数据库的 redo log</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id12">
-<h3>事务隔离级别<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id12">
+<h3>事务隔离级别<a class="headerlink" href="#id12" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://tech.meituan.com/2014/08/20/innodb-lock.html">https://tech.meituan.com/2014/08/20/innodb-lock.html</a></p>
@@ -2266,9 +2309,9 @@
 </dl>
 <p>表级别锁和行级别锁</p>
 <p>幻读？</p>
-</div>
-<div class="section" id="id13">
-<h3>索引 ✔️<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id13">
+<h3>索引 ✔️<a class="headerlink" href="#id13" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>作用</dt><dd><ul class="simple">
 <li><p>提高查询效率</p></li>
@@ -2293,12 +2336,12 @@
 </dd>
 </dl>
 <p>局部性原理</p>
-</div>
-<div class="section" id="id14">
-<h3>分表与分片<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="id15">
-<h3>并发控制 ✔️<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id14">
+<h3>分表与分片<a class="headerlink" href="#id14" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id15">
+<h3>并发控制 ✔️<a class="headerlink" href="#id15" title="永久链接至标题">#</a></h3>
 <p>数据库中的并发控制的任务是确保在多个事务同时访问数据库中同一数据时不破坏事务的隔离性和统一性以及数据库的统一性。</p>
 <dl>
 <dt>乐观锁</dt><dd><p>假设不冲突，冲突则回滚：</p>
@@ -2346,22 +2389,22 @@
 </div></blockquote>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="id16">
-<h2>架构<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id17">
-<h3>微服务概述<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="id18">
-<h3>服务降级<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="id19">
-<h3>服务重试<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id16">
+<h2>架构<a class="headerlink" href="#id16" title="永久链接至标题">#</a></h2>
+<section id="id17">
+<h3>微服务概述<a class="headerlink" href="#id17" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id18">
+<h3>服务降级<a class="headerlink" href="#id18" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id19">
+<h3>服务重试<a class="headerlink" href="#id19" title="永久链接至标题">#</a></h3>
 <p>幂等性</p>
-</div>
-<div class="section" id="id20">
-<h3>限流器 ✔️<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id20">
+<h3>限流器 ✔️<a class="headerlink" href="#id20" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.infoq.cn/article/qg2tx8fyw5vt-f3hh673">https://www.infoq.cn/article/qg2tx8fyw5vt-f3hh673</a></p>
@@ -2377,9 +2420,9 @@
 <p class="admonition-title">参见</p>
 <p>流量整形</p>
 </div>
-</div>
-<div class="section" id="id21">
-<h3>负载均衡 ✔️<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id21">
+<h3>负载均衡 ✔️<a class="headerlink" href="#id21" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>方向</dt><dd><ul class="simple">
 <li><p>客户端侧</p></li>
@@ -2406,34 +2449,34 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="id22">
-<h3>一致性哈希 ✔️<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id22">
+<h3>一致性哈希 ✔️<a class="headerlink" href="#id22" title="永久链接至标题">#</a></h3>
 <p>解决了简单哈希算法在分布式哈希表（Distributed Hash Table，DHT）中存在的动态伸缩等问题 。在移除或者添加一个服务器时，能够尽可能小地改变已存在的服务请求与处理请求服务器之间的映射关系</p>
 <p>环状哈希</p>
 <p>虚拟节点</p>
 <p>查找距离这个对象的 hash 值最近的节点的 hash（在排好序的哈希数组里二分），即是这个对象所属的节点</p>
-</div>
-<div class="section" id="id23">
-<h3>灰度测试<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id23">
+<h3>灰度测试<a class="headerlink" href="#id23" title="永久链接至标题">#</a></h3>
 <p>A/B Test</p>
 <p>实现</p>
-</div>
-<div class="section" id="id24">
-<h3>并发和吞吐<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id24">
+<h3>并发和吞吐<a class="headerlink" href="#id24" title="永久链接至标题">#</a></h3>
 <p>协程 异步 读写分离</p>
-</div>
-<div class="section" id="id25">
-<h3>故障转移<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
-</div>
-</div>
-<div class="section" id="id26">
-<h2>中间件<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
-<div class="section" id="redis">
-<h3>Redis 等缓存<a class="headerlink" href="#redis" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="kafka">
-<h3>Kafka<a class="headerlink" href="#kafka" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id25">
+<h3>故障转移<a class="headerlink" href="#id25" title="永久链接至标题">#</a></h3>
+</section>
+</section>
+<section id="id26">
+<h2>中间件<a class="headerlink" href="#id26" title="永久链接至标题">#</a></h2>
+<section id="redis">
+<h3>Redis 等缓存<a class="headerlink" href="#redis" title="永久链接至标题">#</a></h3>
+</section>
+<section id="kafka">
+<h3>Kafka<a class="headerlink" href="#kafka" title="永久链接至标题">#</a></h3>
 <p>基于 topic 的订阅模式。</p>
 <dl class="simple">
 <dt>投递语义</dt><dd><dl class="field-list simple">
@@ -2449,24 +2492,24 @@
 </dl>
 </dd>
 </dl>
-</div>
-<div class="section" id="etcd-zk">
-<h3>etcd zk 等集群协同<a class="headerlink" href="#etcd-zk" title="永久链接至标题">¶</a></h3>
-</div>
-</div>
-<div class="section" id="id27">
-<h2>操作系统<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id28">
-<h3>进程、线程和协程 ✔️<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="etcd-zk">
+<h3>etcd zk 等集群协同<a class="headerlink" href="#etcd-zk" title="永久链接至标题">#</a></h3>
+</section>
+</section>
+<section id="id27">
+<h2>操作系统<a class="headerlink" href="#id27" title="永久链接至标题">#</a></h2>
+<section id="id28">
+<h3>进程、线程和协程 ✔️<a class="headerlink" href="#id28" title="永久链接至标题">#</a></h3>
 <p>进程有独立地址空间，线程无</p>
 <p>协程：纯粹的用户态实现</p>
-</div>
-<div class="section" id="fork-exec-x">
-<h3>fork &amp; exec ✔️<a class="headerlink" href="#fork-exec-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="fork-exec-x">
+<h3>fork &amp; exec ✔️<a class="headerlink" href="#fork-exec-x" title="永久链接至标题">#</a></h3>
 <p>没啥好说。</p>
-</div>
-<div class="section" id="id29">
-<h3>进程间通信方式概述 ✔️<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id29">
+<h3>进程间通信方式概述 ✔️<a class="headerlink" href="#id29" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>文件</p></li>
 <li><p>信号</p></li>
@@ -2478,30 +2521,30 @@
 <li><p>Shared Memory</p></li>
 <li><p>Mapped File</p></li>
 </ul>
-</div>
-<div class="section" id="dma-x">
-<h3>DMA ✔️<a class="headerlink" href="#dma-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="dma-x">
+<h3>DMA ✔️<a class="headerlink" href="#dma-x" title="永久链接至标题">#</a></h3>
 <p>Direct Memory Access，允许某些电脑内部的硬件子系统（电脑外设），可以独立地直接读写系统内存，而不需 CPU 介入处理 。</p>
 <p>每一个DMA通道有一个16位地址寄存器和一个16位计数寄存器。要初始化资料传输时，设备驱动程序一起设置DMA通道的地址和计数寄存器，以及资料传输的方向，读取或写入。然后指示DMA硬件开始这个传输动作。当传输结束的时候，设备就会以中断的方式通知中央处理器。</p>
-</div>
-<div class="section" id="huge-page-x">
-<h3>Huge Page ✔️<a class="headerlink" href="#huge-page-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="huge-page-x">
+<h3>Huge Page ✔️<a class="headerlink" href="#huge-page-x" title="永久链接至标题">#</a></h3>
 <p>4K -&gt; ??</p>
 <ul class="simple">
 <li><p>TLB 需求减少 cache missing 减少</p></li>
 <li><p>减少了页面数量，页表也少了一级，使得缺页中断的数量大大减少，缺页中断的处理效率也有了提高</p></li>
 </ul>
 <p>透明巨型页。</p>
-</div>
-<div class="section" id="id30">
-<h3>死锁 ✔️<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id30">
+<h3>死锁 ✔️<a class="headerlink" href="#id30" title="永久链接至标题">#</a></h3>
 <p>讲一下操作系统死锁是如何发生的，以及如何解决死锁</p>
-</div>
-</div>
-<div class="section" id="golang">
-<h2>Golang<a class="headerlink" href="#golang" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id31">
-<h3>调度问题 ✔️<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="golang">
+<h2>Golang<a class="headerlink" href="#golang" title="永久链接至标题">#</a></h2>
+<section id="id31">
+<h3>调度问题 ✔️<a class="headerlink" href="#id31" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.douban.com/note/300631999/">https://www.douban.com/note/300631999/</a></p>
@@ -2543,16 +2586,16 @@
 </div></blockquote>
 </dd>
 </dl>
-</div>
-<div class="section" id="id32">
-<h3>垃圾回收<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id32">
+<h3>垃圾回收<a class="headerlink" href="#id32" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="http://legendtkl.com/2017/04/28/golang-gc/">http://legendtkl.com/2017/04/28/golang-gc/</a></p>
 </dd>
 </dl>
-<div class="section" id="gc-x">
-<h4>经典 GC 算法 ✔️<a class="headerlink" href="#gc-x" title="永久链接至标题">¶</a></h4>
+<section id="gc-x">
+<h4>经典 GC 算法 ✔️<a class="headerlink" href="#gc-x" title="永久链接至标题">#</a></h4>
 <dl>
 <dt>经典的 GC 算法</dt><dd><ul class="simple">
 <li><p>引用计数（reference counting）</p></li>
@@ -2638,9 +2681,9 @@
 </dl>
 </dd>
 </dl>
-</div>
-<div class="section" id="go-x">
-<h4>Go 的垃圾回收 ✔️<a class="headerlink" href="#go-x" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="go-x">
+<h4>Go 的垃圾回收 ✔️<a class="headerlink" href="#go-x" title="永久链接至标题">#</a></h4>
 <dl>
 <dt>何时触发 GC 检测</dt><dd><dl class="field-list simple">
 <dt class="field-odd">被动触发</dt>
@@ -2677,10 +2720,10 @@
 </dl>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="id33">
-<h3>内存管理<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id33">
+<h3>内存管理<a class="headerlink" href="#id33" title="永久链接至标题">#</a></h3>
 <p>逃逸分析: <code class="code docutils literal notranslate"><span class="pre">go</span> <span class="pre">run</span></code> with <code class="code docutils literal notranslate"><span class="pre">-gcflags</span> <span class="pre">'-m</span> <span class="pre">-l'</span></code></p>
 <dl class="simple">
 <dt>如何得知变量是分配在栈（stack）上还是堆（heap）上？</dt><dd><p>不需要关心，由 go 内部决定</p>
@@ -2698,17 +2741,17 @@
 </dl>
 </dd>
 </dl>
-</div>
-<div class="section" id="channel-x">
-<h3>Channel ✔️<a class="headerlink" href="#channel-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="channel-x">
+<h3>Channel ✔️<a class="headerlink" href="#channel-x" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://golang.design/under-the-hood/zh-cn/part2runtime/ch09lang/chan/">https://golang.design/under-the-hood/zh-cn/part2runtime/ch09lang/chan/</a></p>
 </dd>
 </dl>
-</div>
-<div class="section" id="sync-mutex-x">
-<h3><code class="code docutils literal notranslate"><span class="pre">sync.Mutex</span></code> ✔️<a class="headerlink" href="#sync-mutex-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="sync-mutex-x">
+<h3><code class="code docutils literal notranslate"><span class="pre">sync.Mutex</span></code> ✔️<a class="headerlink" href="#sync-mutex-x" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2734,9 +2777,9 @@
 </dd>
 </dl>
 <p>还是蛮复杂的，记个差不多就行。</p>
-</div>
-<div class="section" id="sync-rwmutex-x">
-<h3><code class="code docutils literal notranslate"><span class="pre">sync.RWMutex</span></code> ✔️<a class="headerlink" href="#sync-rwmutex-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="sync-rwmutex-x">
+<h3><code class="code docutils literal notranslate"><span class="pre">sync.RWMutex</span></code> ✔️<a class="headerlink" href="#sync-rwmutex-x" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2812,9 +2855,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sync-map-x">
-<h3><code class="code docutils literal notranslate"><span class="pre">sync.Map</span></code> ✔️<a class="headerlink" href="#sync-map-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="sync-map-x">
+<h3><code class="code docutils literal notranslate"><span class="pre">sync.Map</span></code> ✔️<a class="headerlink" href="#sync-map-x" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2827,9 +2870,9 @@
 <dt>检测 “concurrent map read and map write”</dt><dd><p>用 <a class="reference external" href="https://github.com/golang/go/blob/master/src/runtime/map.go#L102">hashWriting</a> bit 表示当前是否在进行写操作</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="defer">
-<h3>Defer<a class="headerlink" href="#defer" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="defer">
+<h3>Defer<a class="headerlink" href="#defer" title="永久链接至标题">#</a></h3>
 <p>小坑点：参数是提前求值的</p>
 <p><code class="code docutils literal notranslate"><span class="pre">struct</span> <span class="pre">runtime._defer</span></code> 组成了一条 defer link list。</p>
 <dl class="field-list simple">
@@ -2843,20 +2886,20 @@
 <dd class="field-odd"><p>Open coded</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id34">
-<h3><code class="code docutils literal notranslate"><span class="pre">&amp;^</span></code> 操作符 ✔️<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id34">
+<h3><code class="code docutils literal notranslate"><span class="pre">&amp;^</span></code> 操作符 ✔️<a class="headerlink" href="#id34" title="永久链接至标题">#</a></h3>
 <p>日常是很少用上，标准库代码里见得多。</p>
 <p>Bit clear，<code class="code docutils literal notranslate"><span class="pre">a</span> <span class="pre">&amp;^</span> <span class="pre">b</span> <span class="pre">==</span> <span class="pre">a</span> <span class="pre">&amp;</span> <span class="pre">^b</span></code>。</p>
-</div>
-<div class="section" id="interface">
-<h3><code class="code docutils literal notranslate"><span class="pre">interface{}</span></code><a class="headerlink" href="#interface" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="id35">
-<h3>内存泄漏<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="id36">
-<h3>死锁检测 ✔️<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="interface">
+<h3><code class="code docutils literal notranslate"><span class="pre">interface{}</span></code><a class="headerlink" href="#interface" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id35">
+<h3>内存泄漏<a class="headerlink" href="#id35" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id36">
+<h3>死锁检测 ✔️<a class="headerlink" href="#id36" title="永久链接至标题">#</a></h3>
 <blockquote>
 <div><p>当两个以上的运算单元，双方都在等待对方停止运行，以获取系统资源，但是没有一方提前退出时，就称为死锁</p>
 <p class="attribution">——  <a class="reference external" href="https://zh.wikipedia.org/wiki/死锁">📖死锁</a></p>
@@ -2896,13 +2939,13 @@
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="id37">
-<h3>数据竞争<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
-</div>
-</div>
-<div class="section" id="sync-cond-x">
-<h2><code class="code docutils literal notranslate"><span class="pre">sync.Cond</span></code> 的虚假唤醒 ✔️<a class="headerlink" href="#sync-cond-x" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id37">
+<h3>数据竞争<a class="headerlink" href="#id37" title="永久链接至标题">#</a></h3>
+</section>
+</section>
+<section id="sync-cond-x">
+<h2><code class="code docutils literal notranslate"><span class="pre">sync.Cond</span></code> 的虚假唤醒 ✔️<a class="headerlink" href="#sync-cond-x" title="永久链接至标题">#</a></h2>
 <p>因为 condition 的判断是用户代码，在 <code class="code docutils literal notranslate"><span class="pre">Wait()</span></code> 返回之后，因此只能要求用户用忙等的方式等到 condition 满足的时刻：</p>
 <blockquote>
 <div><p>Because c.L is not locked when Wait first resumes, the caller typically cannot assume that the condition is true when Wait returns. Instead, the caller should Wait in a loop:</p>
@@ -2915,14 +2958,14 @@
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="id38">
-<h2>云原生<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
-<div class="section" id="k8s">
-<h3>k8s<a class="headerlink" href="#k8s" title="永久链接至标题">¶</a></h3>
-</div>
-<div class="section" id="docker-x">
-<h3>Docker ✔️<a class="headerlink" href="#docker-x" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id38">
+<h2>云原生<a class="headerlink" href="#id38" title="永久链接至标题">#</a></h2>
+<section id="k8s">
+<h3>k8s<a class="headerlink" href="#k8s" title="永久链接至标题">#</a></h3>
+</section>
+<section id="docker-x">
+<h3>Docker ✔️<a class="headerlink" href="#docker-x" title="永久链接至标题">#</a></h3>
 <dl>
 <dt>共享内核</dt><dd><p>Docker image 里不包含内核，程序共享宿主机内核</p>
 </dd>
@@ -2985,20 +3028,20 @@
 </dl>
 </dd>
 </dl>
-<div class="section" id="id39">
-<h4>隔离<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h4>
+<section id="id39">
+<h4>隔离<a class="headerlink" href="#id39" title="永久链接至标题">#</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">网络</dt>
 <dd class="field-odd"><p>namespace</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="section" id="id40">
-<h2>虚拟化<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h2>
-<div class="section" id="kvm-x">
-<h3>KVM ✔️<a class="headerlink" href="#kvm-x" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="id40">
+<h2>虚拟化<a class="headerlink" href="#id40" title="永久链接至标题">#</a></h2>
+<section id="kvm-x">
+<h3>KVM ✔️<a class="headerlink" href="#kvm-x" title="永久链接至标题">#</a></h3>
 <p>Kernel-based Virtual Machine</p>
 <p>在 Linux 中，通过设备 <code class="code docutils literal notranslate"><span class="pre">/dev/kvm</span></code> + <code class="code docutils literal notranslate"><span class="pre">ioctl</span></code> 进行通信。</p>
 <dl>
@@ -3041,36 +3084,36 @@ EPT的控制权在 Hypervisor 掌握，因此不需要 VMexit，只有当CPU工�
 </ol>
 </dd>
 </dl>
-</div>
-<div class="section" id="libvirt">
-<h3>libvirt<a class="headerlink" href="#libvirt" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="libvirt">
+<h3>libvirt<a class="headerlink" href="#libvirt" title="永久链接至标题">#</a></h3>
 <p>是一套用于管理硬件虚拟化的开源API、守护进程与管理工具</p>
-</div>
-</div>
-<div class="section" id="id42">
-<h2>流处理<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h2>
-<div class="section" id="flink-checkpoint">
-<h3>Flink CheckPoint<a class="headerlink" href="#flink-checkpoint" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id42">
+<h2>流处理<a class="headerlink" href="#id42" title="永久链接至标题">#</a></h2>
+<section id="flink-checkpoint">
+<h3>Flink CheckPoint<a class="headerlink" href="#flink-checkpoint" title="永久链接至标题">#</a></h3>
 <p>Operator State
 Keyed State</p>
-</div>
-<div class="section" id="pler-vs-flink">
-<h3>PLER vs Flink<a class="headerlink" href="#pler-vs-flink" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="pler-vs-flink">
+<h3>PLER vs Flink<a class="headerlink" href="#pler-vs-flink" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>CheckPoint</p></li>
 <li><p>UDF</p></li>
 <li><p>Watermark</p></li>
 </ul>
-</div>
-<div class="section" id="id43">
-<h3>逻辑计划优化<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id43">
+<h3>逻辑计划优化<a class="headerlink" href="#id43" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>常量折叠</p></li>
 <li><p>列裁剪</p></li>
 </ul>
-</div>
-<div class="section" id="id44">
-<h3>乱序元素<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id44">
+<h3>乱序元素<a class="headerlink" href="#id44" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">URL</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.cnblogs.com/rossiXYZ/p/12286407.html">https://www.cnblogs.com/rossiXYZ/p/12286407.html</a></p>
@@ -3085,10 +3128,10 @@ Keyed State</p>
 <dd class="field-even"><p>指定窗口已经彻底关闭后，就会把所有过期延迟数据放到侧输出流，让用户决定如何处理</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="id45">
-<h2>算法<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id45">
+<h2>算法<a class="headerlink" href="#id45" title="永久链接至标题">#</a></h2>
 <dl class="simple">
 <dt>树</dt><dd><ul class="simple">
 <li><p>树的遍历 ✔️</p></li>
@@ -3123,8 +3166,8 @@ Keyed State</p>
     )
 );</script> 回复你。</p>
 <section data-isso-id="/notes/2021-interview/checklist" data-title="知识点 Check List" id="isso-thread"></section></div>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
    
@@ -3132,9 +3175,11 @@ Keyed State</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -3150,25 +3195,29 @@ Keyed State</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-22.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

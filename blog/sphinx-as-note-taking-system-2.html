@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>我如何用 Sphinx 建立笔记系统（二）系统架构 &#8212; 银色子弹</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../_static/translations.js"></script>
     <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/blog/sphinx-as-note-taking-system-2.html" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -110,7 +109,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -119,14 +132,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -141,7 +150,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>  
 <h2>
    <i class="fa fa-calendar"></i>
@@ -420,7 +429,17 @@
   </li>
    
 </ul>
-
+</div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -428,57 +447,84 @@
 
 
           
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-            <!-- Source interaction buttons -->
+    <div class="header-article row sticky-top noprint">
+        
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
         
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git">
    Git
@@ -511,12 +557,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>我如何用 Sphinx 建立笔记系统（二）系统架构</h1>
@@ -525,7 +570,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -565,16 +610,17 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="sphinx">
-<h1>我如何用 Sphinx 建立笔记系统（二）系统架构<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h1>
+                 <section id="sphinx">
+<h1>我如何用 Sphinx 建立笔记系统（二）系统架构<a class="headerlink" href="#sphinx" title="永久链接至标题">#</a></h1>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>这是 <a class="reference internal" href="category/%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8-sphinx-%E5%BB%BA%E7%AB%8B%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F.html" title="我如何用 Sphinx 建立笔记系统"><em>我如何用 Sphinx 建立笔记系统</em></a> 系列的第 二 篇，你可以通过订阅 <a class="reference external" href="https://silverrainz.me/blog/atom.xml" title="银色子弹 Feed"><span class="xref std std-ref">RSS</span></a> 来获取后续更新。</p>
 </div>
 <p>截至目前，我的笔记系统看起来是这样子的（使用 <a class="reference external" href="https://pypi.org/project/sphinxcontrib-plantuml">📦sphinxcontrib-plantuml</a> 生成）：</p>
-<div class="figure align-default" id="id7">
+<figure class="align-default" id="id7">
 <p class="plantuml">
 <img src="../_images/plantuml-a7ab3be02da5a60f7082d0d6714b35983352b061.png" alt="folder &quot;Git 仓库&quot;  as repo {
    file &quot;Sphinx 配置&quot;
@@ -605,10 +651,12 @@ node editor as &quot;Neo(vim)&quot;
 shell -u-&gt; snippet.cli: 浏览，编辑
 editor -u-&gt; snippet.cli: 浏览，编辑"/>
 </p>
-<p class="caption"><span class="caption-text">笔记系统架构</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
-</div>
-<div class="section" id="git">
-<h2>Git<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h2>
+<figcaption>
+<p><span class="caption-text">笔记系统架构</span><a class="headerlink" href="#id7" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+<section id="git">
+<h2>Git<a class="headerlink" href="#git" title="永久链接至标题">#</a></h2>
 <p>我用 Git 仓库来管理整个 Sphinx 项目的版本，用 GitLFS 管理图片资源（后来因为 gitee 不支持又去掉了），仓库沿用之前建立的 <a class="reference external" href="https://github.com/SilverRainZ/bullet">⛺SilverRainZ/bullet</a>。</p>
 <p>一般来说 Sphinx 文档都会托管到 <a class="reference external" href="https://readthedocs.io">ReadTheDocs</a>，但出于部署和访问的方便，我基于 GitHub Action 写了 <a class="reference external" href="https://github.com/sphinxnotes/pages">⛺sphinxnotes/pages</a>，用来自动部署到 GitHub Pages，并使用 <a class="reference external" href="https://github.com/spyoungtech/mirror-action">⛺spyoungtech/mirror-action</a> 和 <a class="reference external" href="https://github.com/yanglbme/gitee-pages-action">⛺yanglbme/gitee-pages-action</a> 建立了国内的 Gitee 镜像。</p>
 <div class="admonition tip">
@@ -618,18 +666,20 @@ editor -u-&gt; snippet.cli: 浏览，编辑"/>
 </pre></div>
 </div>
 <p>在 GitHub 上可以看到 reStructuredText 被正确统计了：</p>
-<div class="figure align-default" id="id8">
+<figure class="align-default" id="id8">
 <img alt="../_images/rst-language-stat.png" src="../_images/rst-language-stat.png" />
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://github.com/SilverRainZ/bullet">⛺SilverRainZ/bullet</a> 的 Languages 统计</span><a class="headerlink" href="#id8" title="永久链接至图片">¶</a></p>
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://github.com/SilverRainZ/bullet">⛺SilverRainZ/bullet</a> 的 Languages 统计</span><a class="headerlink" href="#id8" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 </div>
-</div>
-</div>
-<div class="section" id="neo-vim">
-<h2>Neo(Vim)<a class="headerlink" href="#neo-vim" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="neo-vim">
+<h2>Neo(Vim)<a class="headerlink" href="#neo-vim" title="永久链接至标题">#</a></h2>
 <p>我用 Neovim 搭配各种插件编写 reST 文档，关于如何在舒服地用 (Neo)Vim 写 reST，我会再写一篇文章展开。</p>
-</div>
-<div class="section" id="vim">
-<h2>从终端和 Vim 快速访问<a class="headerlink" href="#vim" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="vim">
+<h2>从终端和 Vim 快速访问<a class="headerlink" href="#vim" title="永久链接至标题">#</a></h2>
 <p>浏览器、Vim 和终端模拟器是我最常待的 Workspaces，前者当然可以方便的访问 Sphinx 生成的 HTML 文档，为了满足从后两者操作文档的需求，我写了 <a class="reference external" href="https://pypi.org/project/sphinxnotes-snippet">📦sphinxnotes-snippet</a> ，包含一个 Sphinx 的扩展和一个命令行工具，你可以在刚才的架构图上看到它的角色。</p>
 <dl>
 <dt>Snippet 扩展</dt><dd><p>会在构建文档的时候：</p>
@@ -697,9 +747,9 @@ editor -u-&gt; snippet.cli: 浏览，编辑"/>
 </div>
 <p>此外，编辑笔记的时候也不需要进到 git 仓库里一层一层找文件了，一步直达。</p>
 <p>关于 Snippet 的使用，我也会再写一篇文章展开，配合其他工具有非常多的玩法。</p>
-</div>
-<div class="section" id="id2">
-<span id="id3"></span><h2>描述、引用和索引<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id2">
+<span id="id3"></span><h2>描述、引用和索引<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <p>一个对象的描述，通常可以抽象为 Key-Value list，特别地，对象的名字和介绍是两个特殊的 Key。reST 中的 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#directives">Directives</a> 就能够用来写这样的描述：假设我们有一个名为 <code class="code docutils literal notranslate"><span class="pre">book</span></code> 的 directive，尝试用它来描述一本书:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">book</span><span class="p">::</span> 德米安
    <span class="nc">:ISBN:</span> 9787509365786
@@ -723,7 +773,7 @@ editor -u-&gt; snippet.cli: 浏览，编辑"/>
 <p>会在文档中产生如下内容：</p>
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-test-1">
-<span class="sig-name descname"><span class="pre">Bell</span> <span class="pre">Rock</span> <span class="pre">Lighthouse</span></span><a class="headerlink" href="#artwork-test-1" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">Bell</span> <span class="pre">Rock</span> <span class="pre">Lighthouse</span></span><a class="headerlink" href="#artwork-test-1" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p>test-1</p>
@@ -738,10 +788,12 @@ editor -u-&gt; snippet.cli: 浏览，编辑"/>
 <dd class="field-even"><p><a class="reference internal" href="../any-artwork.medium.html#cap-水彩" title="artwork 水彩"><code class="xref any any-artwork.medium docutils literal notranslate"><span class="pre">水彩</span></code></a> <a class="reference internal" href="../any-artwork.medium.html#cap-铅笔" title="artwork 铅笔"><code class="xref any any-artwork.medium docutils literal notranslate"><span class="pre">铅笔</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default" id="id9">
+<figure class="align-default" id="id9">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg"><img alt="../_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" src="../_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" /></a>
-<p class="caption"><span class="caption-text">Bell Rock Lighthouse</span><a class="headerlink" href="#id9" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Bell Rock Lighthouse</span><a class="headerlink" href="#id9" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>随便找的一张 <a class="reference external" href="https://zh.wikipedia.org/wiki/透纳">📖透纳</a> 的画。</p>
 </dd></dl>
 
@@ -780,24 +832,26 @@ editor -u-&gt; snippet.cli: 浏览，编辑"/>
 </tbody>
 </table>
 <p>我现在用这个扩展来管理我的 <a class="reference internal" href="../any-book.html"><span class="std std-ref">读书笔记</span></a>、<a class="reference internal" href="../any-artwork.html"><span class="std std-ref">习作</span></a>、<a class="reference internal" href="../any-artist.html"><span class="std std-ref">艺术家记录</span></a>、<a class="reference internal" href="../any-friend.html"><span class="std std-ref">友情链接</span></a>。关于它如何工作，它还能怎么玩，也会有单独的文章来说明。</p>
-</div>
-<div class="section" id="id4">
-<h2>博客<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id4">
+<h2>博客<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h2>
 <p>博客是最难办的一件事情，单纯靠安排笔记的排版确实可以让它看起来像一个博客，但关键的目录、标签、归档、评论功能统统都没有。好在这件事情已经有人做了，并且非常符合 Sphinx 的哲学。</p>
 <p><a class="reference external" href="https://github.com/sunpy">👥sunpy</a> 社区写了一个叫 <a class="reference external" href="https://pypi.org/project/ablog">📦ablog</a> 的扩展，用来在 Sphinx 里建立博客，保持兼容最新版的 Sphinx 为目标，开发也非常活跃。你可以看看 ABlog 在我的笔记系统上的效果：<a class="reference internal" href="../blog.html" title="Posts"><em>Posts</em></a></p>
 <p>ABlog 支持 Disqus 评论，如果你想用 Self-hosted 的 <a class="reference external" href="https://posativ.org/isso/">Isso</a> 的话，可以试试我写的 <a class="reference external" href="https://pypi.org/project/sphinxnotes-isso">📦sphinxnotes-isso</a>，文章底部可以看到 Isso 的评论框。</p>
 <p>值得一提的是，Sphinx 生成的 HTML 文档里的侧边栏不是全局的，可以让不同的页面采用不同的侧边栏，因此 ABlog 引入的博客侧边栏不会影响现有的其他的文档：</p>
-<div class="figure align-default" id="id10">
+<figure class="align-default" id="id10">
 <img alt="../_images/sphinx-sidebar-with-without-ablog.png" src="../_images/sphinx-sidebar-with-without-ablog.png" />
-<p class="caption"><span class="caption-text">左：默认 sidebar，右：博客 sidebar</span><a class="headerlink" href="#id10" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">左：默认 sidebar，右：博客 sidebar</span><a class="headerlink" href="#id10" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>比较遗憾的是，之前使用的 sphinx_rtd_theme 并不听 Sphinx 的 sidebar 配置 只能换成了默认的 Alabaster theme</p>
 </div>
-</div>
-<div class="section" id="id5">
-<h2>其他扩展<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id5">
+<h2>其他扩展<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>这里仅列出我正在使用的扩展及其效果，想了解它们的具体配置，请看 <a class="reference external" href="https://github.com/SilverRainZ/bullet/blob/master/conf.py">conf.py</a> ，也许我会写一篇文章里来它们的使用技巧。</p>
@@ -950,8 +1004,8 @@ reST</div>
     )
 );</script> 回复你。</p>
 <section data-isso-id="/blog/sphinx-as-note-taking-system-2" data-title="我如何用 Sphinx 建立笔记系统（二）系统架构" id="isso-thread"></section></div>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     
@@ -981,29 +1035,35 @@ reST</div>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-22.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

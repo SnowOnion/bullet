@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>用户态进程的简单实现及调度(一) &#8212; 银色子弹</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../_static/translations.js"></script>
     <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/blog/process-scheduler-1.html" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -110,7 +109,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -119,14 +132,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -141,7 +150,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>  
 <h2>
    <i class="fa fa-calendar"></i>
@@ -413,7 +422,17 @@
   </li>
    
 </ul>
-
+</div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -421,57 +440,84 @@
 
 
           
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-            <!-- Source interaction buttons -->
+    <div class="header-article row sticky-top noprint">
+        
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
         
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    特权级转换
@@ -543,12 +589,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>用户态进程的简单实现及调度(一)</h1>
@@ -557,7 +602,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -636,10 +681,11 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="id1">
-<h1>用户态进程的简单实现及调度(一)<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                 <section id="id1">
+<h1>用户态进程的简单实现及调度(一)<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <div class="admonition hint">
 <p class="admonition-title">提示</p>
 <p>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 <a class="reference external" href="https://github.com/SilverRainZ/bullet">⛺SilverRainZ/bullet</a> 反馈</p>
@@ -661,8 +707,8 @@
 <div><p>注意: OS67 并不打算支持多核 CPU, 这极大地降低了实现进程的难度,
 不需要考虑由于多核导致的进程间的竞争和同步, 因此 xv6 中关于锁的代码都可以忽略.</p>
 </div></blockquote>
-<div class="section" id="id2">
-<h2>特权级转换<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id2">
+<h2>特权级转换<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <p>几个关于特权级的概念:</p>
 <ul class="simple">
 <li><p>intel 8086 的特权级分为 0 1 2 3 四级, 这里只使用 0 和 3</p></li>
@@ -670,9 +716,9 @@
 <li><p>CPL: Current Privilege 当前特权级, 储存在 cs 寄存器的低二位</p></li>
 <li><p>RPL: Request Privilege 请求特权级, 请求访问的段的描述符的特权级</p></li>
 </ul>
-</div>
-<div class="section" id="gdt">
-<h2>GDT<a class="headerlink" href="#gdt" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="gdt">
+<h2>GDT<a class="headerlink" href="#gdt" title="永久链接至标题">#</a></h2>
 <p>这里使用的用户态的特权级为 3, 因此用户态的程序, 其所在的数据段代码段的 DPL,
 段寄存器低 2 位的 RPL 都得是 3, 因此设置的 全局段描述符表(GDT) 如下:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// OS67/kern/gdt.c</span>
@@ -693,9 +739,9 @@
 </div></blockquote>
 <p>当 GDT 初始化后, 第一二个描述符被使用, 内核跑在特权级为 0 的段上.
 那如何让代码从特权级为 0 的段(内核态)转移到特权级为 3 的段(用户态)呢? 用中断.</p>
-</div>
-<div class="section" id="idt">
-<h2>IDT<a class="headerlink" href="#idt" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="idt">
+<h2>IDT<a class="headerlink" href="#idt" title="永久链接至标题">#</a></h2>
 <p>为了让用户空间的程序顺利进入内核态, 需要对 中断描述符表(IDT) 做一些设置.</p>
 <p>(以下内容摘自 xv6 中文文档, 有小改动)</p>
 <p>我们假设一个用户态程序执行<code class="code docutils literal notranslate"><span class="pre">int</span> <span class="pre">n</span></code>指令触发中断, 则 CPU 会取得中断号 n, 进行如下步骤:
@@ -730,9 +776,9 @@
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">idt_install</span><span class="p">(</span><span class="n">ISR_SYSCALL</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="n">_syscall</span><span class="p">,</span><span class="w"> </span><span class="n">SEL_KCODE</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">GATE_TRAP</span><span class="p">,</span><span class="w"> </span><span class="n">IDT_PR</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">IDT_DPL_USER</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="tss">
-<h2>TSS<a class="headerlink" href="#tss" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="tss">
+<h2>TSS<a class="headerlink" href="#tss" title="永久链接至标题">#</a></h2>
 <p>在特权级转换的时候, 需要从任务状态段取出<code class="code docutils literal notranslate"><span class="pre">ss0</span></code>和<code class="code docutils literal notranslate"><span class="pre">esp0</span></code>, 因此在转换之前需要设置 TSS.</p>
 <p>CPU 会从寄存器<code class="code docutils literal notranslate"><span class="pre">tr</span></code>获得 TSS 的选择子, 然后从 GDT 表里面找出对应的描述符,
 由描述符就可以获得 TSS 的基址了.</p>
@@ -755,11 +801,11 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>两个上下文<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id4">
-<h3>中断上下文<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id3">
+<h2>两个上下文<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<section id="id4">
+<h3>中断上下文<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
 <p>从上面关于中断过程的解释可以看到, 从用户态执行中断转入内核态是可能的,
 重点在与设置一个 DPL = 3 的 IDT 和一个 TSS 段.</p>
 <p>那如何从内核态返回用户态呢? iret 指令会按 int 压栈的顺序逆序将寄存器们出栈,
@@ -809,9 +855,9 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由<cod
 <p>每个入口都会压入自己的中断号, 然后统一跳转到<code class="code docutils literal notranslate"><span class="pre">_isr_stub</span></code>, 压入上下文的剩余部分,
 再调到由 C 编写的<code class="code docutils literal notranslate"><span class="pre">isr_stub</span></code>, 由此再根据入口压入中断号调用真正的 ISR.
 关于这些 ISR 的详情…太长了表示扯不下去了… :(</p>
-</div>
-<div class="section" id="id5">
-<h3>进程上下文<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id5">
+<h3>进程上下文<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
 <p>中断上下文已经让程序能够程序成功进入内核并从内核中返回,
 接下来通过切换进程上下文来实现进程的切换.</p>
 <p>进程上下文看起来比中断上下文简单许多, 不过更富技巧性.</p>
@@ -856,10 +902,10 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由<cod
 <p>可以看到这个函数可以切换当前的执行流到另一个执行流, 进程的切换就是这样实现的,
 当然要切换的不止这个, 页表也要切换, 代表当前执行进程的 <code class="code docutils literal notranslate"><span class="pre">proc</span></code> 变量也要更新.
 页表的切换由 <code class="code docutils literal notranslate"><span class="pre">uvm_switch</span></code> 执行, <code class="code docutils literal notranslate"><span class="pre">proc</span></code> 的更新则在 <code class="code docutils literal notranslate"><span class="pre">scheduler</span></code> 执行.</p>
-</div>
-</div>
-<div class="section" id="id6">
-<h2>虚拟内存映射<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id6">
+<h2>虚拟内存映射<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h2>
 <p>由于之前的思路问题, 因此 OS67 的内存管理方式不得不和 xv6 不太一样.</p>
 <p>OS67 的内存分配实现在 <code class="code docutils literal notranslate"><span class="pre">OS67/mm/pmm.c</span></code>, 使用一个简单的栈来存放未分配的内存页,
 <code class="code docutils literal notranslate"><span class="pre">malloc</span></code> 就是 <code class="code docutils literal notranslate"><span class="pre">pop</span></code> 而 <code class="code docutils literal notranslate"><span class="pre">mfree</span></code> 就是 <code class="code docutils literal notranslate"><span class="pre">push</span></code>. 这么做简单明了,
@@ -872,11 +918,11 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由<cod
 另外 <code class="code docutils literal notranslate"><span class="pre">malloc</span></code> 出来的是物理地址, 可以直接对其读写而不必做转换.
 缺点则是程序必须经过重定位(链接时使用参数 <code class="code docutils literal notranslate"><span class="pre">-Ttext</span> <span class="pre">0xc0000000</span></code>)才能运行在高地址,
 也许有更多的缺点还没发现.</p>
-</div>
-<div class="section" id="id7">
-<h2>第一个进程<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id8">
-<h3>构造<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id7">
+<h2>第一个进程<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h2>
+<section id="id8">
+<h3>构造<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h3>
 <p>结构体 proc 用来储存一个进程的信息, 内核中有一个数组<code class="code docutils literal notranslate"><span class="pre">struct</span> <span class="pre">ptable[NPROC]</span></code>来管理所有的进程.
 结构体<code class="code docutils literal notranslate"><span class="pre">proc</span></code>定义如下:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">proc</span><span class="p">{</span><span class="w"></span>
@@ -927,9 +973,9 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由<cod
 为 eflags 寄存器加上 IF 标志(允许中断), 设置用户栈, 最后把<code class="code docutils literal notranslate"><span class="pre">eip</span></code>设定为<code class="code docutils literal notranslate"><span class="pre">USER_BASE</span></code>.</p>
 <p>最后把进程的状态<code class="code docutils literal notranslate"><span class="pre">proc-&gt;state</span></code>设置为可运行 <code class="code docutils literal notranslate"><span class="pre">P_RUNABLE</span></code>.</p>
 <p>以上是比较关键的步骤, 现在可以准备运行第一个进程了.</p>
-</div>
-<div class="section" id="id9">
-<h3>运行<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id9">
+<h3>运行<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h3>
 <p>执行了<code class="code docutils literal notranslate"><span class="pre">proc_init</span></code>之后, <code class="code docutils literal notranslate"><span class="pre">scheduler</span></code>紧接其后,
 它在<code class="code docutils literal notranslate"><span class="pre">ptable</span></code>中寻找第一个<code class="code docutils literal notranslate"><span class="pre">state</span></code>为<code class="code docutils literal notranslate"><span class="pre">P_RUNABLE</span></code>的进程,
 调用<code class="code docutils literal notranslate"><span class="pre">uvm_switch</span></code>切换到该进程的页表并设置好 TSS.</p>
@@ -938,17 +984,17 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由<cod
 <code class="code docutils literal notranslate"><span class="pre">context_switch</span></code>会弹出<code class="code docutils literal notranslate"><span class="pre">proc-&gt;context</span></code>中设定好的寄存器,
 新进程返回到<code class="code docutils literal notranslate"><span class="pre">fork_ret</span></code>之后返回到<code class="code docutils literal notranslate"><span class="pre">_isr_stub_ret</span></code>中, 又把<code class="code docutils literal notranslate"><span class="pre">proc-&gt;fm</span></code>弹出.
 于是第一个进程就成功运行在 0xc0000000 的用户空间上了.</p>
-</div>
-</div>
-<div class="section" id="id10">
-<h2>调度<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id10">
+<h2>调度<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h2>
 <p>这里使用非常简单的轮转法, 每次触发时钟中断都会执行<code class="code docutils literal notranslate"><span class="pre">sched</span></code>,
 <code class="code docutils literal notranslate"><span class="pre">sched</span></code>把当前进程状态由<code class="code docutils literal notranslate"><span class="pre">P_RUNNING</span></code>变更为<code class="code docutils literal notranslate"><span class="pre">P_RUNABLE</span></code>. 接着执行<code class="code docutils literal notranslate"><span class="pre">context_switch</span></code>.
 这样 CPU 执行流就回到了刚才<code class="code docutils literal notranslate"><span class="pre">scheduler</span></code>中的循环,
 <code class="code docutils literal notranslate"><span class="pre">scheduler</span></code>继续寻找一个<code class="code docutils literal notranslate"><span class="pre">P_RUNABLE</span></code>的进程并切换到它.</p>
-</div>
-<div class="section" id="e-n-d">
-<h2>E.N.D.<a class="headerlink" href="#e-n-d" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="e-n-d">
+<h2>E.N.D.<a class="headerlink" href="#e-n-d" title="永久链接至标题">#</a></h2>
 <p>至此, 用户级进程已经成功实现并且被调度. 但是没有有效的接口来启动更多的进程.
 我们需要实现一些系统调用比如<code class="code docutils literal notranslate"><span class="pre">fork</span></code>和<code class="code docutils literal notranslate"><span class="pre">exec</span></code>来做这些事情.
 :( 但是我已经写不下去了… 如果可以话下次再写吧.</p>
@@ -966,8 +1012,8 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由<cod
     )
 );</script> 回复你。</p>
 <section data-isso-id="/blog/process-scheduler-1" data-title="用户态进程的简单实现及调度(一)" id="isso-thread"></section></div>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
     
@@ -997,29 +1043,35 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由<cod
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-22.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

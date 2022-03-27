@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>快速形体分解 &#8212; 银色子弹</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/notes/zxsys/fast-modeling.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
@@ -112,7 +111,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -121,14 +134,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -143,7 +152,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
@@ -867,70 +876,102 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
         
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    要求
@@ -994,12 +1035,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>快速形体分解</h1>
@@ -1008,7 +1048,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1079,10 +1119,11 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="any section" id="event-cd07617">
-<span id="id1"></span><h1>快速形体分解<a class="headerlink" href="#event-cd07617" title="永久链接至标题">¶</a></h1>
+                 <section class="any" id="event-cd07617">
+<span id="id1"></span><h1>快速形体分解<a class="headerlink" href="#event-cd07617" title="永久链接至标题">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">日期</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#event-cd07617" title="event 2020-5 2020-06"><code class="xref any any-event.date docutils literal notranslate"><span class="pre">2020-5</span> <span class="pre">2020-06</span></code></a></p>
@@ -1092,8 +1133,8 @@
 </dd>
 </dl>
 <p>本训练是自主训练，是 <a class="reference internal" href="modeling.html"><span class="doc">形体分解训练</span></a> 的后续。</p>
-<div class="section" id="id2">
-<h2>要求<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id2">
+<h2>要求<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <ul class="simple">
 <li><p>使用炭精粉画小画幅（&lt;= 4K）肖像，照片、模特都要练</p></li>
 <li><p>速度加快，一张最多画一天</p></li>
@@ -1101,9 +1142,9 @@
 <li><p>注重形体，注重一般意义上的「形准」（动态、特征到位）</p></li>
 <li><p>不需要画细致</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h2>目的<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id3">
+<h2>目的<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
 <p>重复 <a class="reference internal" href="modeling.html"><span class="doc">形体分解训练</span></a> 中的绘画步骤，使其更稳定、科学</p>
 <dl class="simple">
 <dt>额外的好处：</dt><dd><ul class="simple">
@@ -1114,13 +1155,13 @@
 </dd>
 </dl>
 <p>总之我想自信地画，我需要一个开拓一个舒适区。</p>
-</div>
-<div class="section" id="id4">
-<h2>笔记<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id5">
-<h3>问题<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id6">
-<h4>画模特没问题，画照片的时候我不会起型了<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+</section>
+<section id="id4">
+<h2>笔记<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h2>
+<section id="id5">
+<h3>问题<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
+<section id="id6">
+<h4>画模特没问题，画照片的时候我不会起型了<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h4>
 <dl>
 <dt>为什么？</dt><dd><ol class="arabic simple">
 <li><p>画室里的人像照片是棚拍，光散，亮部变化多，暗面占比少，人物体积感弱</p></li>
@@ -1139,10 +1180,10 @@
 </ol>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="id7">
-<h3>自我检查<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id7">
+<h3>自我检查<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>高度压缩的面不看形状，看对应与对称</p></li>
 <li><p>缺空间的地方往往缺形体，而非「这条线位置不太对」，是意识问题而非功夫问题</p></li>
@@ -1154,9 +1195,9 @@
 <li><p>形体的判断是综合的，依赖视觉经验的，当发现自己「看不出形体」时，应注意自己的观察是否局限了</p></li>
 <li><p>大形体的交汇处往往有作为过渡的小形体，大概率是椭圆体</p></li>
 </ul>
-</div>
-<div class="section" id="id8">
-<h3>人脸的内部构造<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id8">
+<h3>人脸的内部构造<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h3>
 <blockquote>
 <div><p><em>利用</em> 内部构造的知识来强化对象的体积感、特征，而非忠实地还原一个陌生人，一张普通的照片
 —— <a class="reference internal" href="../../about/me.html#friend-SilverRainZ" title="friend SilverRainZ"><code class="xref any any-friend docutils literal notranslate"><span class="pre">👤SilverRainZ</span></code></a></p>
@@ -1169,11 +1210,11 @@
 <li><p>不能看见：必然会通过皮肤产生某种暗示</p></li>
 </ul>
 </div>
-<div class="section" id="id9">
-<h4>术语<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
+<section id="id9">
+<h4>术语<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h4>
 <dl class="any">
 <dt class="sig sig-object any" id="term-786147d">
-<span class="sig-name descname"><span class="pre">鬓角</span></span><a class="headerlink" href="#term-786147d" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">鬓角</span></span><a class="headerlink" href="#term-786147d" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1184,7 +1225,7 @@
 
 <dl class="any">
 <dt class="sig sig-object any" id="term-7f6a5ce">
-<span class="sig-name descname"><span class="pre">发际线</span></span><a class="headerlink" href="#term-7f6a5ce" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">发际线</span></span><a class="headerlink" href="#term-7f6a5ce" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1195,7 +1236,7 @@
 
 <dl class="any">
 <dt class="sig sig-object any" id="term-738f887">
-<span class="sig-name descname"><span class="pre">虎牙</span></span><a class="headerlink" href="#term-738f887" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">虎牙</span></span><a class="headerlink" href="#term-738f887" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1206,7 +1247,7 @@
 
 <dl class="any">
 <dt class="sig sig-object any" id="term-72b0c8a">
-<span class="sig-name descname"><span class="pre">眉弓</span></span><a class="headerlink" href="#term-72b0c8a" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">眉弓</span></span><a class="headerlink" href="#term-72b0c8a" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1218,7 +1259,7 @@
 
 <dl class="any">
 <dt class="sig sig-object any" id="term-aa55334">
-<span class="sig-name descname"><span class="pre">颧骨</span></span><a class="headerlink" href="#term-aa55334" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">颧骨</span></span><a class="headerlink" href="#term-aa55334" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1229,7 +1270,7 @@
 
 <dl class="any">
 <dt class="sig sig-object any" id="term-a8e21a7">
-<span class="sig-name descname"><span class="pre">鼻根</span></span><a class="headerlink" href="#term-a8e21a7" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">鼻根</span></span><a class="headerlink" href="#term-a8e21a7" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1240,7 +1281,7 @@
 
 <dl class="any">
 <dt class="sig sig-object any" id="term-8f6780c">
-<span class="sig-name descname"><span class="pre">鼻子底盘</span></span><a class="headerlink" href="#term-8f6780c" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">鼻子底盘</span></span><a class="headerlink" href="#term-8f6780c" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1251,7 +1292,7 @@
 
 <dl class="any">
 <dt class="sig sig-object any" id="term-3d335da">
-<span class="sig-name descname"><span class="pre">口轮匝肌</span></span><a class="headerlink" href="#term-3d335da" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">口轮匝肌</span></span><a class="headerlink" href="#term-3d335da" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1262,7 +1303,7 @@
 
 <dl class="any">
 <dt class="sig sig-object any" id="term-5441b37">
-<span class="sig-name descname"><span class="pre">颧骨到虎牙的连线</span></span><a class="headerlink" href="#term-5441b37" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">颧骨到虎牙的连线</span></span><a class="headerlink" href="#term-5441b37" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">领域</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../any-term.field.html#cap-绘画" title="term 绘画"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">绘画</span></code></a></p>
@@ -1271,10 +1312,10 @@
 <p>是区分人脸正侧面的一条含糊的线</p>
 </dd></dl>
 
-</div>
-</div>
-<div class="section" id="id10">
-<h3>油画笔+炭精粉的材料技法<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="id10">
+<h3>油画笔+炭精粉的材料技法<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h3>
 <dl>
 <dt>避免伤纸</dt><dd><p>这是最重要的事情，纸面的纤维被破坏了之后几乎没法继续修改，且会有斑驳的颜色</p>
 <p>工具上：不再推荐一只榭德堂 6386 走天下，而是：用羊毫笔起稿（<a class="reference internal" href="#artwork-fm-007" title="artwork fm-007"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《fm-007》</span></code></a>），用狼毫笔完成其他大部分工作，需要硬朗边缘的深色部分用 6386</p>
@@ -1285,9 +1326,9 @@
 <dt>加入线性元素</dt><dd><p>碳粉材料偏虚，在重点刻画（画眼）处可考虑用炭笔以线的形式画具体的形，增强画面的力量</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id11">
-<h3>不止于习作<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id11">
+<h3>不止于习作<a class="headerlink" href="#id11" title="永久链接至标题">#</a></h3>
 <dl>
 <dt>艺术来自陌生感</dt><dd><p>我越来越不满足无聊的，正儿八经的画面，在画面中加入有意思的元素</p>
 </dd>
@@ -1295,10 +1336,10 @@
 <p>同理，「概括」亦非洪水猛兽，一切看你的绘画目的。</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="id12">
-<h2>习作<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id12">
+<h2>习作<a class="headerlink" href="#id12" title="永久链接至标题">#</a></h2>
 <p>以 <code class="code docutils literal notranslate"><span class="pre">fm-%d%d%d</span></code> (Fast Modeling) 为 ID，不需要特别给习作命名。</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
@@ -1307,7 +1348,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-000">
-<span class="sig-name descname"><span class="pre">fm-000</span></span><a class="headerlink" href="#artwork-fm-000" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-000</span></span><a class="headerlink" href="#artwork-fm-000" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-000</p>
@@ -1325,9 +1366,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210427_170518.jpg"><img alt="../../_images/IMG_20210427_170518.jpg" src="../../_images/IMG_20210427_170518.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">第一次画模特，是个要退休的老大爷，形各种不准，但因为当时比较自信 +
 阳光比较好，画出了有意思的氛围。</p>
 </dd></dl>
@@ -1340,7 +1381,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-001">
-<span class="sig-name descname"><span class="pre">fm-001</span></span><a class="headerlink" href="#artwork-fm-001" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-001</span></span><a class="headerlink" href="#artwork-fm-001" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-001</p>
@@ -1358,9 +1399,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210523_175148__01.jpg"><img alt="../../_images/IMG_20210523_175148__01.jpg" src="../../_images/IMG_20210523_175148__01.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">模特没了，画照片，是一个少数民族老太太，有意模仿天宇的画法，
 同样有不错的氛围。</p>
 <p class="sd-card-text">意识到自己无法挑战复杂度：不想画眼球和衣服</p>
@@ -1374,7 +1415,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-002">
-<span class="sig-name descname"><span class="pre">fm-002</span></span><a class="headerlink" href="#artwork-fm-002" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-002</span></span><a class="headerlink" href="#artwork-fm-002" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-002</p>
@@ -1392,9 +1433,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210510_174355.jpg"><img alt="../../_images/IMG_20210510_174355.jpg" src="../../_images/IMG_20210510_174355.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">意识到自己：</p>
 <ul class="simple">
 <li><p class="sd-card-text">不会画正脸 —— 正脸的体积感光感都弱</p></li>
@@ -1410,7 +1451,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-003">
-<span class="sig-name descname"><span class="pre">fm-003</span></span><a class="headerlink" href="#artwork-fm-003" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-003</span></span><a class="headerlink" href="#artwork-fm-003" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-003</p>
@@ -1428,9 +1469,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210512_205836.jpg"><img alt="../../_images/IMG_20210512_205836.jpg" src="../../_images/IMG_20210512_205836.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">和 <a class="reference internal" href="#artwork-fm-001" title="artwork fm-001"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《fm-001》</span></code></a> 是同一个老太太，失败的尝试，感觉自己只会画鼻子。</p>
 </dd></dl>
 
@@ -1442,7 +1483,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-004">
-<span class="sig-name descname"><span class="pre">fm-004</span></span><a class="headerlink" href="#artwork-fm-004" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-004</span></span><a class="headerlink" href="#artwork-fm-004" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-004</p>
@@ -1460,9 +1501,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210518_122030.jpg"><img alt="../../_images/IMG_20210518_122030.jpg" src="../../_images/IMG_20210518_122030.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">挑战大正脸的另一张。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
@@ -1478,7 +1519,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-005">
-<span class="sig-name descname"><span class="pre">fm-005</span></span><a class="headerlink" href="#artwork-fm-005" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-005</span></span><a class="headerlink" href="#artwork-fm-005" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-005</p>
@@ -1496,9 +1537,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210531_180824__01.jpg"><img alt="../../_images/IMG_20210531_180824__01.jpg" src="../../_images/IMG_20210531_180824__01.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">继续挑战大正脸，开始用一些笔法（头发上的面）。</p>
 <p class="sd-card-text">尽力在画形体了，但颜色控制不佳，不得已使劲加深。</p>
 </dd></dl>
@@ -1511,7 +1552,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-006">
-<span class="sig-name descname"><span class="pre">fm-006</span></span><a class="headerlink" href="#artwork-fm-006" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-006</span></span><a class="headerlink" href="#artwork-fm-006" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-006</p>
@@ -1529,9 +1570,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210531_180900__01.jpg"><img alt="../../_images/IMG_20210531_180900__01.jpg" src="../../_images/IMG_20210531_180900__01.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">画不安分的老大爷，老乱动所以重点只能放在半身的完整性和氛围上。</p>
 <p class="sd-card-text">眉弓和嘴的形体有点意思。</p>
 </dd></dl>
@@ -1544,7 +1585,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-007">
-<span class="sig-name descname"><span class="pre">fm-007</span></span><a class="headerlink" href="#artwork-fm-007" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-007</span></span><a class="headerlink" href="#artwork-fm-007" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-007</p>
@@ -1562,9 +1603,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210531_180918__01.jpg"><img alt="../../_images/IMG_20210531_180918__01.jpg" src="../../_images/IMG_20210531_180918__01.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">即使老大爷不安分也要画形体……</p>
 <p class="sd-card-text">这张是把精力完全放在形体上的尝试，一边参考 <code class="xref any any-book docutils literal notranslate"><span class="pre">《伯里曼》</span></code> 一边看模特。</p>
 <ul class="simple">
@@ -1585,7 +1626,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-008">
-<span class="sig-name descname"><span class="pre">fm-008</span></span><a class="headerlink" href="#artwork-fm-008" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-008</span></span><a class="headerlink" href="#artwork-fm-008" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-008</p>
@@ -1603,9 +1644,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210531_180935__01.jpg"><img alt="../../_images/IMG_20210531_180935__01.jpg" src="../../_images/IMG_20210531_180935__01.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">老大爷 +3</p>
 <p class="sd-card-text">只剩一个周五的下午，只能画到这种程度，心里确实也是不太想画这个大爷了。</p>
 <p class="sd-card-text">可以看到这张的眉弓就正确了许多。</p>
@@ -1619,7 +1660,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-009">
-<span class="sig-name descname"><span class="pre">fm-009</span></span><a class="headerlink" href="#artwork-fm-009" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-009</span></span><a class="headerlink" href="#artwork-fm-009" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-009</p>
@@ -1637,9 +1678,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210609_172807__01__01.jpg"><img alt="../../_images/IMG_20210609_172807__01__01.jpg" src="../../_images/IMG_20210609_172807__01__01.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">趁周末的时候，尝试一下画石膏，验证一些想法：</p>
 <dl>
 <dt>目前的观察方式是对的吗，在石膏上是不是确实更容易观察？</dt><dd><p class="sd-card-text">是的，是的</p>
@@ -1666,7 +1707,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-010">
-<span class="sig-name descname"><span class="pre">fm-010</span></span><a class="headerlink" href="#artwork-fm-010" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-010</span></span><a class="headerlink" href="#artwork-fm-010" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-010</p>
@@ -1684,9 +1725,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210531_172106.jpg"><img alt="../../_images/IMG_20210531_172106.jpg" src="../../_images/IMG_20210531_172106.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">新的模特是个阿姨，比较敬业。</p>
 <p class="sd-card-text">阿姨偏胖，用横构图并且把整个人拉满画面显得不那么无聊。</p>
 <p class="sd-card-text">通过 <a class="reference internal" href="#artwork-fm-009" title="artwork fm-009"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《fm-009》</span></code></a> 求证到的东西在这一张也非常奏效。中间的感觉非常好，甚至超过了最终的画面效果，故保留几张步骤图：</p>
@@ -1703,7 +1744,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-011">
-<span class="sig-name descname"><span class="pre">fm-011</span></span><a class="headerlink" href="#artwork-fm-011" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-011</span></span><a class="headerlink" href="#artwork-fm-011" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-011</p>
@@ -1721,9 +1762,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210601_171046.jpg"><img alt="../../_images/IMG_20210601_171046.jpg" src="../../_images/IMG_20210601_171046.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">画躯体的一个尝试。</p>
 </dd></dl>
 
@@ -1735,7 +1776,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-012">
-<span class="sig-name descname"><span class="pre">fm-012</span></span><a class="headerlink" href="#artwork-fm-012" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-012</span></span><a class="headerlink" href="#artwork-fm-012" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-012</p>
@@ -1753,9 +1794,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210602_165645.jpg"><img alt="../../_images/IMG_20210602_165645.jpg" src="../../_images/IMG_20210602_165645.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">研究脸侧面的形体，经晓飞老师提醒，在亮部研究的画表现起来会容易许多。</p>
 </dd></dl>
 
@@ -1767,7 +1808,7 @@
 <div class="sd-card-body docutils">
 <dl class="any">
 <dt class="sig sig-object any" id="artwork-fm-013">
-<span class="sig-name descname"><span class="pre">fm-013</span></span><a class="headerlink" href="#artwork-fm-013" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fm-013</span></span><a class="headerlink" href="#artwork-fm-013" title="永久链接至目标">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">编号</dt>
 <dd class="field-odd"><p class="sd-card-text">fm-013</p>
@@ -1785,9 +1826,9 @@
 <dd class="field-odd"><p class="sd-card-text"><a class="reference internal" href="../../any-artwork.album.html#cap-album-a2-1" title="artwork album-a2-1"><code class="xref any any-artwork.album docutils literal notranslate"><span class="pre">album-a2-1</span></code></a></p>
 </dd>
 </dl>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/artwork-fm/IMG_20210616_172121.jpg"><img alt="../../_images/IMG_20210616_172121.jpg" src="../../_images/IMG_20210616_172121.jpg" /></a>
-</div>
+</figure>
 <p class="sd-card-text">没什么心思的应付之作。</p>
 </dd></dl>
 
@@ -1809,8 +1850,8 @@
     )
 );</script> 回复你。</p>
 <section data-isso-id="/notes/zxsys/fast-modeling" data-title="快速形体分解" id="isso-thread"></section></div>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
    
@@ -1818,9 +1859,11 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="modeling.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1836,25 +1879,29 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-22.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

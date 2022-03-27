@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>向大师学绘画 &#8212; 银色子弹</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/notes/zxsys/learn-from-master.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
@@ -112,7 +111,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -121,14 +134,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -143,7 +152,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
@@ -867,70 +876,102 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
         
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    2020-11-13 色彩艺术 第一讲
@@ -1024,12 +1065,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>向大师学绘画</h1>
@@ -1038,7 +1078,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1139,10 +1179,11 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="id1">
-<h1>向大师学绘画<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                 <section id="id1">
+<h1>向大师学绘画<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>????-??-??</p>
@@ -1151,8 +1192,8 @@
 <dd class="field-even"><p>Work In Progress</p>
 </dd>
 </dl>
-<div class="section" id="id2">
-<h2>2020-11-13 色彩艺术 第一讲<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id2">
+<h2>2020-11-13 色彩艺术 第一讲<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <p>色彩感知学</p>
 <p>玛蒂斯的绘画日记</p>
 <p>:artist:伊登` 的色环 色球体 认识颜色的纯度</p>
@@ -1164,9 +1205,9 @@
 色彩空间效果 色块并置研究 阿尔伯斯 《色彩构成》
 色彩印象理论 对自然仔细观察和清楚的思考
 色彩表现理论 色彩心里</p>
-</div>
-<div class="section" id="id3">
-<h2>法国现实主义<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id3">
+<h2>法国现实主义<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-5-21</p>
@@ -1177,8 +1218,8 @@
 真诚 如是地表现画家所处的时代的风格思想和面貌</p>
 <p>库尔贝 尚弗勒里</p>
 <p>巴比松画派 米勒 柯罗 卢梭 查克 迪亚兹 特罗雍 杜普蕾 多比尼</p>
-<div class="section" id="id4">
-<h3>米勒<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<section id="id4">
+<h3>米勒<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
 <p>农户家庭</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
@@ -1192,10 +1233,10 @@
 </dl>
 <p>大量的逆光</p>
 <p>色粉：便捷的材料以放大感知</p>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>第九十八讲 印象派 德加 色粉画篇<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id5">
+<h2>第九十八讲 印象派 德加 色粉画篇<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
 <dl class="field-list">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-06-04</p>
@@ -1218,30 +1259,30 @@
 <p class="topic-title">色粉的用纸</p>
 <p>有纹理的纸为佳，如果有更高的写实要求，甚至可以用砂纸</p>
 </div>
-</div>
-<div class="section" id="id6">
-<h2>第九十九讲 印象派 德加 造型篇<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id6">
+<h2>第九十九讲 印象派 德加 造型篇<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h2>
 <p>在德加的时代，照相机已经被发明，据考证，德加和 <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨安格尔</span></code> 在当时都已经拥有了自己的暗室。</p>
 <p>照片对人类视觉的影响——以此类推：电影，数字图像处理造成的影响</p>
-</div>
-<div class="section" id="id7">
-<h2>第一百零二讲 印象派 莫奈 色彩篇<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id7">
+<h2>第一百零二讲 印象派 莫奈 色彩篇<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-07-02</p>
 </dd>
 </dl>
-<div class="section" id="id8">
-<h3>作为秩序的光色<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<section id="id8">
+<h3>作为秩序的光色<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h3>
 <blockquote>
 <div><p>当你出去画画的时候，要设法忘掉眼前的物体题：一棵树，一片田野……只是想：这是一小块蓝色、这是一长条粉色、这是一条黄色，然后准确画下你观察到的颜色和形状， <em>直到它达到你最初的印象为止</em></p>
 <p class="attribution">——  <a class="reference internal" href="../artstory/artistory.html#artist-14" title="artist 莫奈"><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨克洛德·莫奈</span></code></a></p>
 </div></blockquote>
 <p>把讨论的范围从色彩扩展开来：抓住事物的一个秩序（a.k.a 从特定的一个角度观察物象），然后目的单纯地把这个秩序在纸上还原。秩序可以是：色彩、光、空间、</p>
 <p>从历史的角度上看，改变观察的角度并不容易。我们可以认为光色在当代艺术里已经不是重点，但不能否认印象派对光色的重视是重大的进步。</p>
-</div>
-<div class="section" id="id9">
-<h3>限制性作画<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id9">
+<h3>限制性作画<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h3>
 <ul class="simple">
 <li><p>纯粹的印象派时期：为了追求光色限制了（作画）时间，关注时间的变化（阳光的变化）对色彩关系影响</p></li>
 <li><p>…</p></li>
@@ -1249,10 +1290,10 @@
 <li><p>…</p></li>
 <li><p>自由的挥洒：开始关注物象形成的韵律</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id10">
-<h2>第一百零三讲 印象派 梵高 素描篇<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id10">
+<h2>第一百零三讲 印象派 梵高 素描篇<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-07-09</p>
@@ -1269,9 +1310,9 @@
 <dt>第二阶段 语言为本</dt><dd><p>开始注重画面的韵律</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id11">
-<h2>第一百零四讲 印象派 梵高 色彩篇<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id11">
+<h2>第一百零四讲 印象派 梵高 色彩篇<a class="headerlink" href="#id11" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-07-16</p>
@@ -1292,9 +1333,9 @@
 <p>紫色的褪色</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id12">
-<h2>第一百零四讲 戈雅<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id12">
+<h2>第一百零四讲 戈雅<a class="headerlink" href="#id12" title="永久链接至标题">#</a></h2>
 <p><a class="reference internal" href="../artstory/artistory.html#artist-22" title="artist 戈雅"><code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨弗朗西斯科·何塞·德·戈雅-卢西恩特斯</span></code></a></p>
 <p>黑暗与光彩</p>
 <p>用光参考了 <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨伦勃朗</span></code>。</p>
@@ -1307,41 +1348,41 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="id13">
-<h2>第一百零七讲 李晓飞工作室 学习方法与案例 光与空间篇<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id13">
+<h2>第一百零七讲 李晓飞工作室 学习方法与案例 光与空间篇<a class="headerlink" href="#id13" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-07-31</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id14">
-<h2>第一百零七讲 李晓飞工作室 学习方法与案例 形体与结构篇<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id14">
+<h2>第一百零七讲 李晓飞工作室 学习方法与案例 形体与结构篇<a class="headerlink" href="#id14" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-08-20</p>
 </dd>
 </dl>
 <p>学习 <code class="xref any any-artist docutils literal notranslate"><span class="pre">🧑‍🎨鲁本斯</span></code>。</p>
-</div>
-<div class="section" id="id15">
-<h2>色彩研究<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id15">
+<h2>色彩研究<a class="headerlink" href="#id15" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-09-03</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id16">
-<h2>李晓飞工作室 学习方法与案例 技法篇<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id16">
+<h2>李晓飞工作室 学习方法与案例 技法篇<a class="headerlink" href="#id16" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2021-09-11</p>
 </dd>
 </dl>
-<div class="section" id="id17">
-<h3>色粉<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<section id="id17">
+<h3>色粉<a class="headerlink" href="#id17" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>纸</dt><dd><ul class="simple">
 <li><p>羊皮纸</p></li>
@@ -1350,9 +1391,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="id18">
-<h3>油画<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id18">
+<h3>油画<a class="headerlink" href="#id18" title="永久链接至标题">#</a></h3>
 <dl class="simple">
 <dt>技法</dt><dd><p>巴洛克技法
 伊维尔技法
@@ -1372,9 +1413,9 @@
     )
 );</script> 回复你。</p>
 <section data-isso-id="/notes/zxsys/learn-from-master" data-title="向大师学绘画" id="isso-thread"></section></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 <div class="section">
    
@@ -1382,9 +1423,11 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="way-to-artist/exhibition.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1400,25 +1443,29 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-22.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

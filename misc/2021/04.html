@@ -4,7 +4,8 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -31,8 +32,9 @@
   
     <title>四月 &#8212; 银色子弹</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -42,30 +44,27 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4fea3ae4a0a4ba949df0a89bbae557cc2ce861ae" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
     <link rel="canonical" href="https://silverrainz.me/misc/2021/04.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
@@ -112,7 +111,21 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -121,14 +134,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -143,7 +152,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
@@ -867,70 +876,102 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">切换导航</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/SilverRainZ/bullet"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="源库"><i
-                    class="fab fa-github"></i>资料库</button></a>
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
         
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
         
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
-        title="全屏模式"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 内容
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#notes-zxsys-way-to-artist-find-yourself">
    给第一批
@@ -978,12 +1019,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>四月</h1>
@@ -992,7 +1032,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> 内容 </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1047,16 +1087,19 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
-                 <div class="section" id="id1">
-<h1>四月<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="notes-zxsys-way-to-artist-find-yourself">
-<h2>给第一批 <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-yourself.html"><span class="doc">找自己</span></a> 作业拍照<a class="headerlink" href="#notes-zxsys-way-to-artist-find-yourself" title="永久链接至标题">¶</a></h2>
-<div class="figure align-right" id="id11" style="width: 30%">
+                 <section id="id1">
+<h1>四月<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
+<section id="notes-zxsys-way-to-artist-find-yourself">
+<h2>给第一批 <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-yourself.html"><span class="doc">找自己</span></a> 作业拍照<a class="headerlink" href="#notes-zxsys-way-to-artist-find-yourself" title="永久链接至标题">#</a></h2>
+<figure class="align-right" id="id11" style="width: 30%">
 <img alt="../../_images/IMG_0117.jpg" src="../../_images/IMG_0117.jpg" />
-<p class="caption"><span class="caption-text">第一批作业合影</span><a class="headerlink" href="#id11" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">第一批作业合影</span><a class="headerlink" href="#id11" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>一加的相机颜色太过鲜艳，于是用 iPad 拍。
 房东送来一闲置的玻璃茶几，把 iPad 平放在茶几，画放在下边的置物架，
 可以保证拍摄角度的水平，相机也不易在平面上滑动，每次只要把画放在固定的位置上就好。</p>
@@ -1088,39 +1131,41 @@
 <dd><p><a class="reference external" href="https://stackoverflow.com/a/7262050/4799273">https://stackoverflow.com/a/7262050/4799273</a></p>
 </dd>
 </dl>
-</div>
-<div class="section" id="css-visibility-hidden-display-none">
-<h2>CSS 中 <code class="code docutils literal notranslate"><span class="pre">visibility:hidden</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">display:none</span></code><a class="headerlink" href="#css-visibility-hidden-display-none" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="css-visibility-hidden-display-none">
+<h2>CSS 中 <code class="code docutils literal notranslate"><span class="pre">visibility:hidden</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">display:none</span></code><a class="headerlink" href="#css-visibility-hidden-display-none" title="永久链接至标题">#</a></h2>
 <p>都是隐藏元素，前者保留空间，后者不保留。</p>
-</div>
-<div class="section" id="xxx">
-<h2>代码注释中的 “XXX” 是什么意思<a class="headerlink" href="#xxx" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="xxx">
+<h2>代码注释中的 “XXX” 是什么意思<a class="headerlink" href="#xxx" title="永久链接至标题">#</a></h2>
 <p>就是引起注意的意思，可以说比较含糊地包括了 TODO, FIXME, NOTE, HACK <a class="footnote-reference brackets" href="#id7" id="id6">3</a></p>
 <dl class="footnote brackets">
 <dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
 <dd><p><a class="reference external" href="https://stackoverflow.com/a/1452945/4799273">https://stackoverflow.com/a/1452945/4799273</a></p>
 </dd>
 </dl>
-</div>
-<div class="section" id="linux-pid">
-<h2>Linux 根据 PID 获取进程名<a class="headerlink" href="#linux-pid" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="linux-pid">
+<h2>Linux 根据 PID 获取进程名<a class="headerlink" href="#linux-pid" title="永久链接至标题">#</a></h2>
 <p>很简单但没想到:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /proc/PID/cmdline
 </pre></div>
 </div>
-</div>
-<div class="section" id="id8">
-<h2>于是高乃依正准备上天<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id8">
+<h2>于是高乃依正准备上天<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>2020-04-25</p>
 </dd>
 </dl>
 <p><a class="reference external" href="https://zh.wikipedia.org/wiki/高乃依">📖高乃依</a> 逃跑了所以明天不用去画室 :)</p>
-<div class="figure align-default" id="id12">
+<figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="../../_images/于是高乃依正准备上天.gif"><img alt="../../_images/于是高乃依正准备上天.gif" src="../../_images/于是高乃依正准备上天.gif" style="width: 30%;" /></a>
-<p class="caption"><span class="caption-text">竹蜻蜓是点外卖送的……</span><a class="headerlink" href="#id12" title="永久链接至图片">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">竹蜻蜓是点外卖送的……</span><a class="headerlink" href="#id12" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <p>照片 -&gt; GIF:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>convert -rotate <span class="m">90</span> -resize <span class="m">20</span>% -delay <span class="m">15</span> -loop <span class="m">0</span>  <span class="k">$(</span>ls *.jpg<span class="p">|</span> grep <span class="m">0425</span><span class="k">)</span> 于是高乃依正准备上天.gif
 </pre></div>
@@ -1129,9 +1174,9 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ffmpeg -r <span class="m">5</span> -stream_loop <span class="m">3</span> -i 于是高乃依正准备上天.gif -movflags faststart -pix_fmt yuv420p -vf <span class="s2">&quot;scale=trunc(iw/2)*2:trunc(ih/2)*2&quot;</span> 于是高乃依正准备上天.mp4
 </pre></div>
 </div>
-</div>
-<div class="section" id="plan-9">
-<h2>Plan 9<a class="headerlink" href="#plan-9" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="plan-9">
+<h2>Plan 9<a class="headerlink" href="#plan-9" title="永久链接至标题">#</a></h2>
 <p>两个核心概念：</p>
 <blockquote>
 <div><p>[t]he foundations of the system are built on two ideas:
@@ -1156,8 +1201,8 @@ a per-process name space and a simple message-oriented file system protocol.
     )
 );</script> 回复你。</p>
 <section data-isso-id="/misc/2021/04" data-title="四月" id="isso-thread"></section></div>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
    
@@ -1165,9 +1210,11 @@ a per-process name space and a simple message-oriented file system protocol.
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="05.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1183,25 +1230,29 @@ a per-process name space and a simple message-oriented file system protocol.
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-03-27.<br/>
+</p>
+        </footer>
+    </div>
     
-      通过 Shengyu Zhang<br/>
-    
-        &copy; 版权 2020-2022, Shengyu Zhang.<br/>
-      上次更新时间： 2022-03-22.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
