@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="date, 2021-09-21,. 课程: 音阶: 找出几个适合自己音域（唱得舒服）的调。自我感觉是在 A2 到 D4 这样子。..tab-set: 小红帽:..tab-set: 大小三和弦: Alice 把 刻进我的灵魂里了。 小三还是不准。, 大二度小二度: 大二已经耳熟能详，把一个音微妙地不唱准就是小二度 😂 。, 旋律听辨 I: 第一天听比较沮丧，什么都没听出来。但有两个简单结论：..." />
+<meta property="og:description" content="date, 2021-09-21,. 课程: 音阶: 找出几个适合自己音域（唱得舒服）的调。自我感觉是在 A2 到 D4 这样子。 A 调, B 调, C 调, D 调, 小红帽: C 调, D 调, A 调, 大小三和弦: Alice 把 刻进我的灵魂里了。 小三还是不准。, 大二度小二度: 大二已经耳熟能详，把一个音微妙地不唱准就是小二度 😂 。, 旋律听辨 I: 第一天听比较沮丧，什么..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -1133,73 +1133,342 @@ title="Source repository"
 <section id="id4">
 <h3>音阶<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
 <p>找出几个适合自己音域（唱得舒服）的调。自我感觉是在 A2 <img class="lilypond-score" src="../../.././_lilypond/704c46838530293682a2c321bc7ea0de0027eca8/music.preview.png" alt="{a}" style="height:2.5em;", align="absbottom"/> 到 D4 <img class="lilypond-score" src="../../.././_lilypond/d8d7560ff1b0f1421a3742beb9f0c44c798cc820/music.preview.png" alt="{d''}" style="height:2.5em;", align="absbottom"/> 这样子。</p>
-<p>..tab-set:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">tab</span><span class="o">-</span><span class="n">item</span><span class="p">::</span> <span class="n">A</span> <span class="n">调</span>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="62ef6b24-6ed9-4e98-8c76-418867193361" name="43efece7-768e-4142-aa7a-6a9a84a5ac5a" type="radio">
+</input><label class="sd-tab-label" for="62ef6b24-6ed9-4e98-8c76-418867193361">
+A 调</label><div class="sd-tab-content docutils">
+<div class="lilypond">
+<p><img class="lilypond-score" src="../../.././_lilypond/a1d0b07a63586f8dd5cbc6ab5d4815723c443bda/music.png" alt="\version &quot;2.20.0&quot;
 
-   <span class="o">..</span> <span class="n">lilyinclude</span><span class="p">::</span> <span class="o">./</span><span class="n">scale</span><span class="o">.</span><span class="n">ly</span>
-      <span class="p">:</span><span class="n">noheader</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">nofooter</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">noedge</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">audio</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">transpose</span><span class="p">:</span> <span class="n">c</span> <span class="n">a</span><span class="p">,</span>
+symbols =  {
+  \time 4/4
+  \tempo 4 = 70
 
-<span class="o">..</span> <span class="n">tab</span><span class="o">-</span><span class="n">item</span><span class="p">::</span> <span class="n">B</span> <span class="n">调</span>
+  c4 c c c
+ 
+  c4 d e f
+  g4 a b c'
 
-   <span class="o">..</span> <span class="n">lilyinclude</span><span class="p">::</span> <span class="o">./</span><span class="n">scale</span><span class="o">.</span><span class="n">ly</span>
-      <span class="p">:</span><span class="n">noheader</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">nofooter</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">noedge</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">audio</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">transpose</span><span class="p">:</span> <span class="n">c</span> <span class="n">b</span><span class="p">,</span>
+  c'4 b a g
+  f4 e d c
 
-<span class="o">..</span> <span class="n">tab</span><span class="o">-</span><span class="n">item</span><span class="p">::</span> <span class="n">C</span> <span class="n">调</span>
+  c4 c c c
 
-   <span class="o">..</span> <span class="n">lilyinclude</span><span class="p">::</span> <span class="o">./</span><span class="n">scale</span><span class="o">.</span><span class="n">ly</span>
-      <span class="p">:</span><span class="n">noheader</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">nofooter</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">noedge</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">audio</span><span class="p">:</span>
+  c4 d c2
+  c4 e c2
+  c4 f c2
+  c4 g c2
+  c4 a c2
+  c4 b c2
+  c4 c' c2
+}
 
-<span class="o">..</span> <span class="n">tab</span><span class="o">-</span><span class="n">item</span><span class="p">::</span> <span class="n">D</span> <span class="n">调</span>
+\score {
+  &lt;&lt;
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbols
+    }
+  &gt;&gt;
 
-   <span class="o">..</span> <span class="n">lilyinclude</span><span class="p">::</span> <span class="o">./</span><span class="n">scale</span><span class="o">.</span><span class="n">ly</span>
-      <span class="p">:</span><span class="n">noheader</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">nofooter</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">noedge</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">audio</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">transpose</span><span class="p">:</span> <span class="n">c</span> <span class="n">d</span>
-</pre></div>
+  \midi { }
+  \layout { }
+}" style="width:100%;"/>
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/a1d0b07a63586f8dd5cbc6ab5d4815723c443bda/music.mp3" >
+</audio></p></div></div>
+<input id="376b9cfb-6027-469b-9869-28a38a36e711" name="43efece7-768e-4142-aa7a-6a9a84a5ac5a" type="radio">
+</input><label class="sd-tab-label" for="376b9cfb-6027-469b-9869-28a38a36e711">
+B 调</label><div class="sd-tab-content docutils">
+<div class="lilypond">
+<p><img class="lilypond-score" src="../../.././_lilypond/267b21111212ccb4b3ac49bddacd480b808a40ac/music.png" alt="\version &quot;2.20.0&quot;
+
+symbols =  {
+  \time 4/4
+  \tempo 4 = 70
+
+  c4 c c c
+ 
+  c4 d e f
+  g4 a b c'
+
+  c'4 b a g
+  f4 e d c
+
+  c4 c c c
+
+  c4 d c2
+  c4 e c2
+  c4 f c2
+  c4 g c2
+  c4 a c2
+  c4 b c2
+  c4 c' c2
+}
+
+\score {
+  &lt;&lt;
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbols
+    }
+  &gt;&gt;
+
+  \midi { }
+  \layout { }
+}" style="width:100%;"/>
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/267b21111212ccb4b3ac49bddacd480b808a40ac/music.mp3" >
+</audio></p></div></div>
+<input id="36ec42df-4ade-4215-8773-70355cf990fb" name="43efece7-768e-4142-aa7a-6a9a84a5ac5a" type="radio">
+</input><label class="sd-tab-label" for="36ec42df-4ade-4215-8773-70355cf990fb">
+C 调</label><div class="sd-tab-content docutils">
+<div class="lilypond">
+<p><img class="lilypond-score" src="../../.././_lilypond/9cd52ca4f4b6776e536639d03ba8cc0cecc2b7d7/music.png" alt="\version &quot;2.20.0&quot;
+
+symbols =  {
+  \time 4/4
+  \tempo 4 = 70
+
+  c4 c c c
+ 
+  c4 d e f
+  g4 a b c'
+
+  c'4 b a g
+  f4 e d c
+
+  c4 c c c
+
+  c4 d c2
+  c4 e c2
+  c4 f c2
+  c4 g c2
+  c4 a c2
+  c4 b c2
+  c4 c' c2
+}
+
+\score {
+  &lt;&lt;
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbols
+    }
+  &gt;&gt;
+
+  \midi { }
+  \layout { }
+}" style="width:100%;"/>
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/9cd52ca4f4b6776e536639d03ba8cc0cecc2b7d7/music.mp3" >
+</audio></p></div></div>
+<input id="21fcb5a3-f841-4689-8cb6-f711d2e8eda0" name="43efece7-768e-4142-aa7a-6a9a84a5ac5a" type="radio">
+</input><label class="sd-tab-label" for="21fcb5a3-f841-4689-8cb6-f711d2e8eda0">
+D 调</label><div class="sd-tab-content docutils">
+<div class="lilypond">
+<p><img class="lilypond-score" src="../../.././_lilypond/9a758706b024258555e9d94cbdabf856d1e9904e/music.png" alt="\version &quot;2.20.0&quot;
+
+symbols =  {
+  \time 4/4
+  \tempo 4 = 70
+
+  c4 c c c
+ 
+  c4 d e f
+  g4 a b c'
+
+  c'4 b a g
+  f4 e d c
+
+  c4 c c c
+
+  c4 d c2
+  c4 e c2
+  c4 f c2
+  c4 g c2
+  c4 a c2
+  c4 b c2
+  c4 c' c2
+}
+
+\score {
+  &lt;&lt;
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbols
+    }
+  &gt;&gt;
+
+  \midi { }
+  \layout { }
+}" style="width:100%;"/>
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/9a758706b024258555e9d94cbdabf856d1e9904e/music.mp3" >
+</audio></p></div></div>
 </div>
 </section>
 <section id="id5">
 <h3>小红帽<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
-<p>..tab-set:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">tab</span><span class="o">-</span><span class="n">item</span><span class="p">::</span> <span class="n">C</span> <span class="n">调</span>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="c1b3a0bf-3808-43b3-bd8f-7433603dfb7c" name="93f59493-0f5a-4d19-941b-b51d7aa37ce0" type="radio">
+</input><label class="sd-tab-label" for="c1b3a0bf-3808-43b3-bd8f-7433603dfb7c">
+C 调</label><div class="sd-tab-content docutils">
+<div class="lilypond">
+<p><img class="lilypond-score" src="../../.././_lilypond/300197c1c7e034993f25a5ab73a58358fd9f35dc/music.png" alt="\version &quot;2.20.0&quot;
 
-   <span class="o">..</span> <span class="n">lilyinclude</span><span class="p">::</span> <span class="o">./</span><span class="n">little</span><span class="o">-</span><span class="n">red</span><span class="o">-</span><span class="n">riding</span><span class="o">-</span><span class="n">hood</span><span class="o">.</span><span class="n">ly</span>
-      <span class="p">:</span><span class="n">noheader</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">nofooter</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">noedge</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">audio</span><span class="p">:</span>
+symbols =  {
+  \time 2/4
+  \tempo 4 = 70
 
-<span class="o">..</span> <span class="n">tab</span><span class="o">-</span><span class="n">item</span><span class="p">::</span> <span class="n">D</span> <span class="n">调</span>
+  c8 d e f
+  g4 e8 c
+  c'4 a8 f
+  g8 g e4
 
-   <span class="o">..</span> <span class="n">lilyinclude</span><span class="p">::</span> <span class="o">./</span><span class="n">little</span><span class="o">-</span><span class="n">red</span><span class="o">-</span><span class="n">riding</span><span class="o">-</span><span class="n">hood</span><span class="o">.</span><span class="n">ly</span>
-      <span class="p">:</span><span class="n">noheader</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">nofooter</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">noedge</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">audio</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">transpose</span><span class="p">:</span> <span class="n">c</span> <span class="n">d</span>
+  c8 d e f
+  g8 e d c
+  d4 e
+  d4 g
 
-<span class="o">..</span> <span class="n">tab</span><span class="o">-</span><span class="n">item</span><span class="p">::</span> <span class="n">A</span> <span class="n">调</span>
+  c8 d e f
+  g4 e8 c
+  c'4 a8 f
+  g4 e
 
-   <span class="o">..</span> <span class="n">lilyinclude</span><span class="p">::</span> <span class="o">./</span><span class="n">little</span><span class="o">-</span><span class="n">red</span><span class="o">-</span><span class="n">riding</span><span class="o">-</span><span class="n">hood</span><span class="o">.</span><span class="n">ly</span>
-      <span class="p">:</span><span class="n">noheader</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">nofooter</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">noedge</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">audio</span><span class="p">:</span>
-      <span class="p">:</span><span class="n">transpose</span><span class="p">:</span> <span class="n">c</span> <span class="n">a</span>
-</pre></div>
+  c8 d e f
+  g8 e d c
+  d4 e
+  c4 c
+
+  c'4 a8 f
+  g8 g c4
+  c'4 a8 f
+  g4 e4
+
+  c8 d e f
+  g8 e d c
+  d4 e
+  c4 c
+}
+
+\score {
+  &lt;&lt;
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbols
+    }
+  &gt;&gt;
+
+  \midi { }
+  \layout { }
+}" style="width:100%;"/>
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/300197c1c7e034993f25a5ab73a58358fd9f35dc/music.mp3" >
+</audio></p></div></div>
+<input id="fce71d81-d78b-4d54-bd53-d840aecb7811" name="93f59493-0f5a-4d19-941b-b51d7aa37ce0" type="radio">
+</input><label class="sd-tab-label" for="fce71d81-d78b-4d54-bd53-d840aecb7811">
+D 调</label><div class="sd-tab-content docutils">
+<div class="lilypond">
+<p><img class="lilypond-score" src="../../.././_lilypond/80eb488a6b6a336de27c01bb64ecf3e718e46829/music.png" alt="\version &quot;2.20.0&quot;
+
+symbols =  {
+  \time 2/4
+  \tempo 4 = 70
+
+  c8 d e f
+  g4 e8 c
+  c'4 a8 f
+  g8 g e4
+
+  c8 d e f
+  g8 e d c
+  d4 e
+  d4 g
+
+  c8 d e f
+  g4 e8 c
+  c'4 a8 f
+  g4 e
+
+  c8 d e f
+  g8 e d c
+  d4 e
+  c4 c
+
+  c'4 a8 f
+  g8 g c4
+  c'4 a8 f
+  g4 e4
+
+  c8 d e f
+  g8 e d c
+  d4 e
+  c4 c
+}
+
+\score {
+  &lt;&lt;
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbols
+    }
+  &gt;&gt;
+
+  \midi { }
+  \layout { }
+}" style="width:100%;"/>
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/80eb488a6b6a336de27c01bb64ecf3e718e46829/music.mp3" >
+</audio></p></div></div>
+<input id="1c631839-48bd-405c-bb96-d8ba29b8acad" name="93f59493-0f5a-4d19-941b-b51d7aa37ce0" type="radio">
+</input><label class="sd-tab-label" for="1c631839-48bd-405c-bb96-d8ba29b8acad">
+A 调</label><div class="sd-tab-content docutils">
+<div class="lilypond">
+<p><img class="lilypond-score" src="../../.././_lilypond/a14d80ae927f537efb33adb23682e51825826bb7/music.png" alt="\version &quot;2.20.0&quot;
+
+symbols =  {
+  \time 2/4
+  \tempo 4 = 70
+
+  c8 d e f
+  g4 e8 c
+  c'4 a8 f
+  g8 g e4
+
+  c8 d e f
+  g8 e d c
+  d4 e
+  d4 g
+
+  c8 d e f
+  g4 e8 c
+  c'4 a8 f
+  g4 e
+
+  c8 d e f
+  g8 e d c
+  d4 e
+  c4 c
+
+  c'4 a8 f
+  g8 g c4
+  c'4 a8 f
+  g4 e4
+
+  c8 d e f
+  g8 e d c
+  d4 e
+  c4 c
+}
+
+\score {
+  &lt;&lt;
+    \new Staff \with {midiInstrument = &quot;acoustic guitar (nylon)&quot;} {
+      \clef &quot;G_8&quot;
+      \symbols
+    }
+  &gt;&gt;
+
+  \midi { }
+  \layout { }
+}" style="width:100%;"/>
+<audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/a14d80ae927f537efb33adb23682e51825826bb7/music.mp3" >
+</audio></p></div></div>
 </div>
 </section>
 <section id="id6">
@@ -1531,7 +1800,7 @@ symbols = {
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-03-31.<br/>
+    Last updated on 2022-04-04.<br/>
 </p>
         </footer>
     </div>
