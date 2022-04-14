@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-04-10T16:51:21.628958+00:00</updated>
+  <updated>2022-04-14T13:03:32.016707+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/zh_CN/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -5140,7 +5140,7 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。但遗�
 然后爱上，最后也伤害她。事情的收尾是不体面的，我从来不是一个完美受害者，
 甚至我才是真正的加害者，我只是因为过分软弱，被宽容，被同情罢了。我什么都不能再做了，
 再动弹一下都会让事情更坏。事件的余波到现在还在发挥着影响，但未来总是会落定吧。
-时间会推着我往前走。只是我大不相同了。就如同画 &lt;a class="reference internal" href="notes/zxsys/way-to-artist/find-yourself.html#artwork-xfczk-010" title="artwork xfczk-010"&gt;&lt;code class="xref any any-artwork docutils literal notranslate"&gt;&lt;span class="pre"&gt;《xfczk-010》&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 时我所想的:&lt;/p&gt;
+时间会推着我往前走。只是我大不相同了。就如同画 &lt;a class="reference internal" href="notes/zxsys/way-to-artist/find-yourself.html#artwork-xfczk-010" title="artwork xfczk-010"&gt;&lt;code class="xref any any-artwork docutils literal notranslate"&gt;&lt;span class="pre"&gt;《下雪的&lt;/span&gt; &lt;span class="pre"&gt;768》&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 时我所想的:&lt;/p&gt;
 &lt;figure class="align-default" id="id2"&gt;
 &lt;img alt="_images/IMG_20210204_145427__01__01.jpg" src="_images/IMG_20210204_145427__01__01.jpg" style="width: 60%;" /&gt;
 &lt;figcaption&gt;
@@ -5563,7 +5563,7 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;所有水彩画&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:artwork.medium:`水彩`&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;&lt;a class="reference internal" href="any-artwork.medium.html#cap-水彩" title="artwork 水彩"&gt;&lt;code class="xref any any-artwork.medium docutils literal notranslate"&gt;&lt;span class="pre"&gt;《Bell&lt;/span&gt; &lt;span class="pre"&gt;Rock&lt;/span&gt; &lt;span class="pre"&gt;Lighthouse》&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;a class="reference internal" href="any-artwork.medium.html#cap-水彩" title="artwork 水彩"&gt;&lt;code class="xref any any-artwork.medium docutils literal notranslate"&gt;&lt;span class="pre"&gt;水彩&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;所有媒介&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:ref:`any-artwork.medium`&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
@@ -5790,7 +5790,7 @@ reST&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;这张画居然没有丢失。这次画展，这张最好！&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;我心里暗生喜悦：原来陈老师也最喜欢这一张，我眼光不错。后来写此文的时候一查，其实这张是陈老师在 15 岁的时候临摹 &lt;code class="xref any any-artist docutils literal notranslate"&gt;&lt;span class="pre"&gt;🧑‍🎨阿列克谢&lt;/span&gt;&lt;/code&gt; 的习作，对比一下：&lt;/p&gt;
+&lt;p&gt;我心里暗生喜悦：原来陈老师也最喜欢这一张，我眼光不错。后来写此文的时候一查，其实这张是陈老师在 15 岁的时候临摹 &lt;code class="xref any any-artist docutils literal notranslate"&gt;&lt;span class="pre"&gt;阿列克谢&lt;/span&gt;&lt;/code&gt; 的习作，对比一下：&lt;/p&gt;
 &lt;figure class="align-default" id="id17"&gt;
 &lt;img alt="_images/Alexei-Harlamoff-Italian-Girls.jpg" src="_images/Alexei-Harlamoff-Italian-Girls.jpg" /&gt;
 &lt;figcaption&gt;
