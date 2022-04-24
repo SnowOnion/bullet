@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-04-22T13:36:58.933851+00:00</updated>
+  <updated>2022-04-24T09:26:43.102294+00:00</updated>
   <link href="https://silverrainz.me/"/>
-  <link href="https://silverrainz.me/zh_CN/blog/atom.xml" rel="self"/>
+  <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
   <subtitle>Yes silver bullet here.</subtitle>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/idf-reverse-writeup.html</id>
+    <id>https://silverrainz.me/blog/idf-reverse-writeup.html</id>
     <title>IDF 实验室逆向题部分题解</title>
     <updated>2015-01-02T00:00:00+00:00</updated>
     <author>
@@ -284,9 +284,11 @@ byte_415768 db 73h
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;flag:&lt;/span&gt; &lt;span class="pre"&gt;wctf{Pe_cRackme1c1024}&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -297,16 +299,17 @@ byte_415768 db 73h
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/idf-reverse-writeup" data-title="IDF 实验室逆向题部分题解" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/idf-reverse-writeup.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/idf-reverse-writeup.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈1</summary>
     <category term="Reverse" label="Reverse"/>
     <published>2015-01-02T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/haskell-beginning.html</id>
+    <id>https://silverrainz.me/blog/haskell-beginning.html</id>
     <title>Hello Haskell</title>
     <updated>2015-01-30T00:00:00+00:00</updated>
     <author>
@@ -371,9 +374,11 @@ byte_415768 db 73h
 &lt;/div&gt;
 &lt;p&gt;对于我这种初学者来说，最有诱惑力也最后成就感的自然就是三行快排了。。。
 诶，去掉声明就是三行了。当然还会有更加厉害的实现，不过，先这样好了。&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -384,17 +389,18 @@ byte_415768 db 73h
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/haskell-beginning" data-title="Hello Haskell" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/haskell-beginning.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/haskell-beginning.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Haskell" label="Haskell"/>
     <category term="函数式编程" label="函数式编程"/>
     <published>2015-01-30T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/syntax-highlight-in-haskell.html</id>
+    <id>https://silverrainz.me/blog/syntax-highlight-in-haskell.html</id>
     <title>Syntax Highligh.hs</title>
     <updated>2015-02-16T00:00:00+00:00</updated>
     <author>
@@ -561,9 +567,11 @@ byte_415768 db 73h
 &lt;p&gt;最后的结果如下：&lt;/p&gt;
 &lt;img alt="_images/2021-02-12_14:56:46.png" src="_images/2021-02-12_14:56:46.png" /&gt;
 &lt;p&gt;可以看到最后一个字符串是着色错误的。&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -574,18 +582,19 @@ byte_415768 db 73h
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/syntax-highlight-in-haskell" data-title="Syntax Highligh.hs" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/syntax-highlight-in-haskell.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/syntax-highlight-in-haskell.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Haskell" label="Haskell"/>
     <category term="函数式编程" label="函数式编程"/>
     <published>2015-02-16T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/windows-chinese-username.html</id>
+    <id>https://silverrainz.me/blog/windows-chinese-username.html</id>
     <title>把 Windows 中文用户名改为英文</title>
     <updated>2015-03-08T00:00:00+00:00</updated>
     <author>
@@ -630,9 +639,11 @@ byte_415768 db 73h
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Done.&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -643,15 +654,16 @@ byte_415768 db 73h
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/windows-chinese-username" data-title="把 Windows 中文用户名改为英文" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/windows-chinese-username.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/windows-chinese-username.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Windows" label="Windows"/>
     <published>2015-03-08T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/matrix-arithmetic-in-haskell.html</id>
+    <id>https://silverrainz.me/blog/matrix-arithmetic-in-haskell.html</id>
     <title>用 Haskell 实现的矩阵运算</title>
     <updated>2015-03-17T00:00:00+00:00</updated>
     <author>
@@ -735,9 +747,11 @@ byte_415768 db 73h
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;Matrix&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="kt"&gt;:&lt;/span&gt;&lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;Matrix&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -748,16 +762,17 @@ byte_415768 db 73h
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/matrix-arithmetic-in-haskell" data-title="用 Haskell 实现的矩阵运算" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/matrix-arithmetic-in-haskell.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/matrix-arithmetic-in-haskell.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Haskell" label="Haskell"/>
     <category term="函数式编程" label="函数式编程"/>
     <published>2015-03-17T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/some-minds-about-linux.html</id>
+    <id>https://silverrainz.me/blog/some-minds-about-linux.html</id>
     <title>不求甚解者用不好 Linux</title>
     <updated>2015-03-27T00:00:00+00:00</updated>
     <author>
@@ -820,9 +835,11 @@ winetricks就会提示 wineserver not found, 不能启动, 安装了完整的win
 &lt;p&gt;感觉我的问题, 白提了呢.&lt;/p&gt;
 &lt;p&gt;睡觉吧, 或许明天起来后, 突然就知道应该这么做了.&lt;/p&gt;
 &lt;p&gt;顺道一说, 今晚水了一道AliCTF的Reverse题…估计也就这一道了.&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -833,15 +850,16 @@ winetricks就会提示 wineserver not found, 不能启动, 安装了完整的win
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/some-minds-about-linux" data-title="不求甚解者用不好 Linux" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/some-minds-about-linux.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/some-minds-about-linux.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="瞎扯" label="瞎扯"/>
     <published>2015-03-27T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/do-notation-and-bind-of-haskell.html</id>
+    <id>https://silverrainz.me/blog/do-notation-and-bind-of-haskell.html</id>
     <title>do 记法和 &gt;&gt;= 的等效表达</title>
     <updated>2015-04-09T00:00:00+00:00</updated>
     <author>
@@ -940,9 +958,11 @@ winetricks就会提示 wineserver not found, 不能启动, 安装了完整的win
 得到最终值和最终状态。当然这里的值和状态都可以继续传递下去，形成一条链。&lt;/p&gt;
 &lt;p&gt;（我觉得State Monad有个反人类的地方就是，本来按顺序沿着&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;gt;&amp;gt;=&lt;/span&gt;&lt;/code&gt;处理状态，
 偏偏初始状态是放在最右的)&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -953,16 +973,17 @@ winetricks就会提示 wineserver not found, 不能启动, 安装了完整的win
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/do-notation-and-bind-of-haskell" data-title="do 记法和 &amp;gt;&amp;gt;= 的等效表达" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/do-notation-and-bind-of-haskell.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/do-notation-and-bind-of-haskell.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Haskell" label="Haskell"/>
     <category term="函数式编程" label="函数式编程"/>
     <published>2015-04-09T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/record-of-a-boring-hack.html</id>
+    <id>https://silverrainz.me/blog/record-of-a-boring-hack.html</id>
     <title>记一次毫无技术含量的 Hack</title>
     <updated>2015-05-12T00:00:00+00:00</updated>
     <author>
@@ -1002,9 +1023,11 @@ winetricks就会提示 wineserver not found, 不能启动, 安装了完整的win
 另外的很重要的一点是, 硬盘保护系统也是这个密码, 这样一来, 还原卡就失效了.
 想往电脑里放什么就能放什么.&lt;/p&gt;
 &lt;p&gt;嗯, 大致如此.&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -1015,15 +1038,16 @@ winetricks就会提示 wineserver not found, 不能启动, 安装了完整的win
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/record-of-a-boring-hack" data-title="记一次毫无技术含量的 Hack" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/record-of-a-boring-hack.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/record-of-a-boring-hack.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Reverse" label="Reverse"/>
     <published>2015-05-12T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/threee-way-of-anti-debug.html</id>
+    <id>https://silverrainz.me/blog/threee-way-of-anti-debug.html</id>
     <title>几种简单的反调试方法</title>
     <updated>2015-05-19T00:00:00+00:00</updated>
     <author>
@@ -1453,9 +1477,11 @@ UnhandledExceptionFilter可是步骤6才执行的?
 &lt;li&gt;&lt;p&gt;HideOD 插件的 HideNtDebugBit选项, 以及 OutDebugStringA 选项或
 Hide Debugger插件的OutputDebugString exploit选项&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -1466,17 +1492,18 @@ Hide Debugger插件的OutputDebugString exploit选项&lt;/p&gt;&lt;/li&gt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/threee-way-of-anti-debug" data-title="几种简单的反调试方法" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/threee-way-of-anti-debug.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/threee-way-of-anti-debug.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Reverse" label="Reverse"/>
     <published>2015-05-19T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/first-attempt-of-python.html</id>
+    <id>https://silverrainz.me/blog/first-attempt-of-python.html</id>
     <title>Python 初试</title>
     <updated>2015-06-15T00:00:00+00:00</updated>
     <author>
@@ -1587,9 +1614,11 @@ sync.py 这个脚本是一个带参数运行的小工具, 需要输出 help 信�
 &lt;p&gt;不过拜 Python 良好的跨平台能力, 我不需要为处理 Windows 和 Linux 下不同的文件操作各写一份代码,
 只需要对路径做些处理就行了.&lt;/p&gt;
 &lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;感觉好像什么都没写啊(摔…&lt;/span&gt;&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -1600,16 +1629,17 @@ sync.py 这个脚本是一个带参数运行的小工具, 需要输出 help 信�
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/first-attempt-of-python" data-title="Python 初试" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/first-attempt-of-python.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/first-attempt-of-python.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Python" label="Python"/>
     <published>2015-06-15T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/install-vim-plugins.html</id>
+    <id>https://silverrainz.me/blog/install-vim-plugins.html</id>
     <title>Vim 插件折腾记录</title>
     <updated>2015-07-02T00:00:00+00:00</updated>
     <author>
@@ -1758,9 +1788,11 @@ $ ~ ./install.sh
 &lt;p&gt;安装完成.&lt;/p&gt;
 &lt;p&gt;截图一张:&lt;/p&gt;
 &lt;img alt="_images/vim-plugin-screenshot.png" src="_images/vim-plugin-screenshot.png" /&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -1771,16 +1803,17 @@ $ ~ ./install.sh
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/install-vim-plugins" data-title="Vim 插件折腾记录" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/install-vim-plugins.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/install-vim-plugins.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Vim" label="Vim"/>
     <published>2015-07-02T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/configure-of-archlinux.html</id>
+    <id>https://silverrainz.me/blog/configure-of-archlinux.html</id>
     <title>Arch Linux 折腾小记</title>
     <updated>2015-07-20T00:00:00+00:00</updated>
     <author>
@@ -1894,6 +1927,11 @@ Using English fallback for role “sup”.&lt;/p&gt;
 &lt;p&gt;默认的 gtk 界面在 XMonad 下相当地丑, 可以安装&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;lxappearance&lt;/span&gt;&lt;/code&gt;来调整 GTK 的主题.&lt;/p&gt;
 &lt;p&gt;对于 Qt 程序, dolphin 有很好看的外观, 但是同为 kde-applications 的
 konsole 的界面却依然很丑…&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/configure-of-archlinux.rst&lt;/span&gt;, line 141)&lt;/p&gt;
+&lt;p&gt;No directive entry for “topic” in module “docutils.parsers.rst.languages.zh_cn”.
+Using English fallback for directive “topic”.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="topic"&gt;
 &lt;p class="topic-title"&gt;Update&lt;/p&gt;
 &lt;p&gt;2015-7-24: 经过 IRC 里 &lt;a class="reference internal" href="about/friends.html#friend-farseerfc" title="friend farseerfc"&gt;&lt;code class="xref any any-friend docutils literal notranslate"&gt;&lt;span class="pre"&gt;👤farseerfc&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 前辈和 &lt;a class="reference internal" href="about/friends.html#friend-quininer" title="friend quininer"&gt;&lt;code class="xref any any-friend docutils literal notranslate"&gt;&lt;span class="pre"&gt;👤quininer&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 的 &lt;span class="sphinxnotes-strike"&gt;调教&lt;/span&gt; ,
@@ -1916,9 +1954,11 @@ konsole 的界面却依然很丑…&lt;/p&gt;
 &lt;h2&gt;配置文件&lt;/h2&gt;
 &lt;p&gt;上面有提到的全部配置文件参见:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/SilverRainZ/dotfiles"&gt;SilverRainZ/dotfiles - Github&lt;/a&gt;&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -1929,16 +1969,17 @@ konsole 的界面却依然很丑…&lt;/p&gt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/configure-of-archlinux" data-title="Arch Linux 折腾小记" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/configure-of-archlinux.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/configure-of-archlinux.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Linux" label="Linux"/>
     <published>2015-07-20T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/overthewire-bandit.html</id>
+    <id>https://silverrainz.me/blog/overthewire-bandit.html</id>
     <title>OverTheWire Bandit</title>
     <updated>2015-07-26T00:00:00+00:00</updated>
     <author>
@@ -2166,9 +2207,11 @@ more ~/text.txt
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -2179,18 +2222,19 @@ more ~/text.txt
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/overthewire-bandit" data-title="OverTheWire Bandit" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/overthewire-bandit.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/overthewire-bandit.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="CTF" label="CTF"/>
     <published>2015-07-26T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/minix-v1-file-system.html</id>
+    <id>https://silverrainz.me/blog/minix-v1-file-system.html</id>
     <title>Minix v1 文件系统的实现</title>
     <updated>2015-08-07T00:00:00+00:00</updated>
     <author>
@@ -2532,9 +2576,11 @@ i 节点位图占据 &lt;code class="code docutils literal notranslate"&gt;&lt;s
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://pdos.csail.mit.edu/6.828/2011/xv6.html"&gt;MIT 6.828 xv6&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/ranxian/xv6-chinese"&gt;xv6 中文文档&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -2545,16 +2591,17 @@ i 节点位图占据 &lt;code class="code docutils literal notranslate"&gt;&lt;s
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/minix-v1-file-system" data-title="Minix v1 文件系统的实现" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/minix-v1-file-system.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/minix-v1-file-system.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈Inode structure</summary>
     <category term="OS" label="OS"/>
     <published>2015-08-07T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/flag.html</id>
+    <id>https://silverrainz.me/blog/flag.html</id>
     <title>立 Flag</title>
     <updated>2015-09-09T00:00:00+00:00</updated>
     <author>
@@ -2568,9 +2615,11 @@ i 节点位图占据 &lt;code class="code docutils literal notranslate"&gt;&lt;s
 &lt;/div&gt;
 &lt;p&gt;现在不开始的话, 以后也不会开始了.&lt;/p&gt;
 &lt;img alt="http://imglf2.nosdn.127.net/img/bEd0djMvNWs3R0x3OVJSSHNCYnZvczBnVWtBVGdpNTZ3YUpFbnRuWEdCOHd2Y1JObEdiTW5RPT0.jpg" src="http://imglf2.nosdn.127.net/img/bEd0djMvNWs3R0x3OVJSSHNCYnZvczBnVWtBVGdpNTZ3YUpFbnRuWEdCOHd2Y1JObEdiTW5RPT0.jpg" /&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -2581,14 +2630,15 @@ i 节点位图占据 &lt;code class="code docutils literal notranslate"&gt;&lt;s
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/flag" data-title="立 Flag" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/flag.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/flag.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <published>2015-09-09T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/process-scheduler-1.html</id>
+    <id>https://silverrainz.me/blog/process-scheduler-1.html</id>
     <title>用户态进程的简单实现及调度(一)</title>
     <updated>2015-09-14T00:00:00+00:00</updated>
     <author>
@@ -2909,9 +2959,11 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由&lt;
 我们需要实现一些系统调用比如&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;fork&lt;/span&gt;&lt;/code&gt;和&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;exec&lt;/span&gt;&lt;/code&gt;来做这些事情.
 :( 但是我已经写不下去了… 如果可以话下次再写吧.&lt;/p&gt;
 &lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;不一定有下次&lt;/span&gt;&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -2922,16 +2974,17 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由&lt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/process-scheduler-1" data-title="用户态进程的简单实现及调度(一)" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/process-scheduler-1.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/process-scheduler-1.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="OS" label="OS"/>
     <published>2015-09-14T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/2015-huashangctf-re300.html</id>
+    <id>https://silverrainz.me/blog/2015-huashangctf-re300.html</id>
     <title>2015 华山杯 CTF Reverse 300</title>
     <updated>2015-11-02T00:00:00+00:00</updated>
     <author>
@@ -3158,9 +3211,11 @@ Using English fallback for directive “note”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;因此得到 key： &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;625153518183737244411411143431234244&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;附上分析时使用的 &lt;a class="reference external" href="http://jianguoyun.com/p/DaHaiScQtNrvBRjo2w4"&gt;idb 数据库&lt;/a&gt;&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -3171,16 +3226,17 @@ Using English fallback for directive “note”.&lt;/p&gt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/2015-huashangctf-re300" data-title="2015 华山杯 CTF Reverse 300" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/2015-huashangctf-re300.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/2015-huashangctf-re300.html" rel="alternate"/>
     <summary>No directive entry for “hint” in module “docutils.parsers.rst.languages.zh_cn”.
 Using English fallback for directive “hint”.</summary>
     <category term="CTF" label="CTF"/>
     <published>2015-11-02T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/gen-graph-from-c-code.html</id>
+    <id>https://silverrainz.me/blog/gen-graph-from-c-code.html</id>
     <title>从 C 源码生成 函数/模块 调用图</title>
     <updated>2015-12-25T00:00:00+00:00</updated>
     <author>
@@ -3347,9 +3403,11 @@ dot &lt;span class="nv"&gt;$dotfile&lt;/span&gt; -Tpng -o &lt;span class="si"&gt
 &lt;p&gt;最后我们得到了一张还算不错的， OS67 的模块调用关系图：&lt;/p&gt;
 &lt;img alt="" src="_images/os67-mod-include-graph-good.png" /&gt;
 &lt;p&gt;好困睡觉。&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -3360,16 +3418,17 @@ dot &lt;span class="nv"&gt;$dotfile&lt;/span&gt; -Tpng -o &lt;span class="si"&gt
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/gen-graph-from-c-code" data-title="从 C 源码生成 函数/模块 调用图" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/gen-graph-from-c-code.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/gen-graph-from-c-code.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="C" label="C"/>
     <published>2015-12-25T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/overthewire-leviathan.html</id>
+    <id>https://silverrainz.me/blog/overthewire-leviathan.html</id>
     <title>OverTheWire Leviathan</title>
     <updated>2016-01-01T00:00:00+00:00</updated>
     <author>
@@ -3488,9 +3547,11 @@ system&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/bin/
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;元旦快乐，希望新的一年不要那么痛苦了。&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -3501,15 +3562,16 @@ system&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/bin/
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/overthewire-leviathan" data-title="OverTheWire Leviathan" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/overthewire-leviathan.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/overthewire-leviathan.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="CTF" label="CTF"/>
     <published>2016-01-01T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/get-teeworlds-server-information.html</id>
+    <id>https://silverrainz.me/blog/get-teeworlds-server-information.html</id>
     <title>获取 teeworlds 服务器信息</title>
     <updated>2016-02-12T00:00:00+00:00</updated>
     <author>
@@ -3574,9 +3636,11 @@ system&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/bin/
 或许以后有人会需要吧。&lt;/p&gt;
 &lt;p&gt;上面的代码被我整合进了 &lt;a class="reference external" href="https://github.com/SilverRainZ/teebot"&gt;SilverRainZ/teebot&lt;/a&gt; 里，
 如果你在 #archlinux-cn 频道的话，输入 &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;.tee&lt;/span&gt;&lt;/code&gt; 就能知道现在社区的游戏服务器里有几个人啦。&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -3587,15 +3651,16 @@ system&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/bin/
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/get-teeworlds-server-information" data-title="获取 teeworlds 服务器信息" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/get-teeworlds-server-information.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/get-teeworlds-server-information.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Teeworlds" label="Teeworlds"/>
     <published>2016-02-12T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/thinkpad-l450.html</id>
+    <id>https://silverrainz.me/blog/thinkpad-l450.html</id>
     <title>入手 ThinkPad L450</title>
     <updated>2016-03-11T00:00:00+00:00</updated>
     <author>
@@ -3773,9 +3838,11 @@ cat - &lt;span class="p"&gt;|&lt;/span&gt; dzen2 &lt;span class="nv"&gt;$arg&lt;
 &lt;/ul&gt;
 &lt;p&gt;最后再贴一张图：&lt;/p&gt;
 &lt;img alt="" src="_images/thinkpad-l450-screenshot.png" /&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -3786,16 +3853,17 @@ cat - &lt;span class="p"&gt;|&lt;/span&gt; dzen2 &lt;span class="nv"&gt;$arg&lt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/thinkpad-l450" data-title="入手 ThinkPad L450" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/thinkpad-l450.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/thinkpad-l450.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="设备" label="设备"/>
     <category term="ArchLinux" label="Arch Linux"/>
     <published>2016-03-11T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/gsoc-2016.html</id>
+    <id>https://silverrainz.me/blog/gsoc-2016.html</id>
     <title>GSoC 2016</title>
     <updated>2016-04-23T00:00:00+00:00</updated>
     <author>
@@ -3809,9 +3877,11 @@ cat - &lt;span class="p"&gt;|&lt;/span&gt; dzen2 &lt;span class="nv"&gt;$arg&lt;
 &lt;/div&gt;
 &lt;p&gt;;-) 难以置信。&lt;/p&gt;
 &lt;img alt="" src="_images/gsoc-2016-mail.png" /&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -3822,15 +3892,16 @@ cat - &lt;span class="p"&gt;|&lt;/span&gt; dzen2 &lt;span class="nv"&gt;$arg&lt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/gsoc-2016" data-title="GSoC 2016" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/gsoc-2016.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/gsoc-2016.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="GSoC" label="GSoC"/>
     <published>2016-04-23T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/practical-makefile-for-packaging.html</id>
+    <id>https://silverrainz.me/blog/practical-makefile-for-packaging.html</id>
     <title>编写便于打包的 Makefile</title>
     <updated>2016-06-25T00:00:00+00:00</updated>
     <author>
@@ -4112,9 +4183,11 @@ package&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="http://nuclear.mutantstargoat.com/articles/make"&gt;Practical Makefiles, by example&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -4125,10 +4198,11 @@ package&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/practical-makefile-for-packaging" data-title="编写便于打包的 Makefile" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/practical-makefile-for-packaging.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/practical-makefile-for-packaging.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Linux" label="Linux"/>
     <category term="C" label="C"/>
@@ -4136,7 +4210,7 @@ package&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt
     <published>2016-06-25T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/gsoc-2016-sum-up.html</id>
+    <id>https://silverrainz.me/blog/gsoc-2016-sum-up.html</id>
     <title>GSoC 2016 小记 - 误打误撞三个月</title>
     <updated>2016-09-29T00:00:00+00:00</updated>
     <author>
@@ -4346,9 +4420,11 @@ changelog，把整理好的两个 patch 发给他们，并写了一封总结邮�
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/SilverRainZ/gsoc-2016"&gt;Patch 和脚本&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/SilverRainZ/hurd"&gt;我的 Hurd fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -4359,16 +4435,17 @@ changelog，把整理好的两个 patch 发给他们，并写了一封总结邮�
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/gsoc-2016-sum-up" data-title="GSoC 2016 小记 - 误打误撞三个月" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/gsoc-2016-sum-up.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/gsoc-2016-sum-up.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈GSoC 2013 Project</summary>
     <category term="GSoC" label="GSoC"/>
     <published>2016-09-29T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/use-sphinx-and-rst-to-manage-your-notes.html</id>
+    <id>https://silverrainz.me/blog/use-sphinx-and-rst-to-manage-your-notes.html</id>
     <title>用 Sphinx + reStructuredText 构建笔记系统</title>
     <updated>2017-03-29T00:00:00+00:00</updated>
     <author>
@@ -4613,9 +4690,11 @@ Description.
 &lt;p&gt;因此可以将笔记本身托管在 Github 上，每次更新时会通过 webhook 自动更新
 Read The Docs 上的文档。&lt;/p&gt;
 &lt;p&gt;P.S. Read The Docs 的主站看起来很简陋…… 给我一种要完蛋了的感觉。&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -4626,10 +4705,11 @@ Read The Docs 上的文档。&lt;/p&gt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/use-sphinx-and-rst-to-manage-your-notes" data-title="用 Sphinx + reStructuredText 构建笔记系统" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/use-sphinx-and-rst-to-manage-your-notes.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/use-sphinx-and-rst-to-manage-your-notes.html" rel="alternate"/>
     <summary>No directive entry for “attention” in module “docutils.parsers.rst.languages.zh_cn”.
 Using English fallback for directive “attention”.</summary>
     <category term="Sphinx" label="Sphinx"/>
@@ -4638,7 +4718,7 @@ Using English fallback for directive “attention”.</summary>
     <published>2017-03-29T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/switch-from-duoshuo-to-isso.html</id>
+    <id>https://silverrainz.me/blog/switch-from-duoshuo-to-isso.html</id>
     <title>从多说迁移到 Isso</title>
     <updated>2017-06-10T00:00:00+00:00</updated>
     <author>
@@ -4968,9 +5048,11 @@ $ python2 duoshuo-migrator.py -i duoshuo.json -o wp.xml
 有任何反馈&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;以后遇到了再补……&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -4981,17 +5063,18 @@ $ python2 duoshuo-migrator.py -i duoshuo.json -o wp.xml
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/switch-from-duoshuo-to-isso" data-title="从多说迁移到 Isso" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/switch-from-duoshuo-to-isso.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/switch-from-duoshuo-to-isso.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Isso" label="Isso"/>
     <category term="多说" label="多说"/>
     <published>2017-06-10T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/srain-and-me.html</id>
+    <id>https://silverrainz.me/blog/srain-and-me.html</id>
     <title>Srain 1.0 发布了</title>
     <updated>2020-02-29T00:00:00+00:00</updated>
     <author>
@@ -5032,9 +5115,11 @@ Srain 未来会继续开发下去，跟着 IRC 一起慢慢消失在历史里。
 尽管在（只能称之为火花的）宣传热度过去后，来自社区的贡献会慢慢变少，
 但我相信是会有人受益于这个软件的吧，一切都会顺利进行的吧，I pray。&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -5045,9 +5130,10 @@ Srain 未来会继续开发下去，跟着 IRC 一起慢慢消失在历史里。
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/srain-and-me" data-title="Srain 1.0 发布了" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/srain-and-me.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/srain-and-me.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Srain" label="Srain"/>
     <category term="IRC" label="IRC"/>
@@ -5055,7 +5141,7 @@ Srain 未来会继续开发下去，跟着 IRC 一起慢慢消失在历史里。
     <published>2020-02-29T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/migrate-to-sphinx.html</id>
+    <id>https://silverrainz.me/blog/migrate-to-sphinx.html</id>
     <title>博客迁移到 Sphinx</title>
     <updated>2020-12-26T00:00:00+00:00</updated>
     <author>
@@ -5090,9 +5176,11 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。但遗�
 &lt;p&gt;文章没有用，本着不做 breaking change 的原则，还是迁移过去了，所以有了这篇没有人看的通知。&lt;/p&gt;
 &lt;p&gt;最重要的，新的博客地址是 &lt;a class="reference external" href="https://silverrainz.me/blog/"&gt;https://silverrainz.me/blog/&lt;/a&gt; , tech.silverrainz.me 之后会 redirect
 到新地址。&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -5103,9 +5191,10 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。但遗�
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/migrate-to-sphinx" data-title="博客迁移到 Sphinx" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/migrate-to-sphinx.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/migrate-to-sphinx.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺SilverRainZ/bullet 反馈</summary>
     <category term="Python" label="Python"/>
     <category term="Sphinx" label="Sphinx"/>
@@ -5113,7 +5202,7 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。但遗�
     <published>2020-12-26T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/new-boy.html</id>
+    <id>https://silverrainz.me/blog/new-boy.html</id>
     <title>嘿，我去 2010</title>
     <updated>2021-03-21T00:00:00+00:00</updated>
     <author>
@@ -5153,9 +5242,11 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。但遗�
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;再见啦，我的 2010，再见啦，那个一点都不胖的人。&lt;/p&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -5166,16 +5257,17 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。但遗�
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/new-boy" data-title="嘿，我去 2010" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/new-boy.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/new-boy.html" rel="alternate"/>
     <summary>6 月我从长亭科技离职，去燕郊 @李晓飞 老师处学画，
 课题是基础素描。</summary>
     <category term="生活" label="生活"/>
     <published>2021-03-21T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/sphinx-as-note-taking-system-1.html</id>
+    <id>https://silverrainz.me/blog/sphinx-as-note-taking-system-1.html</id>
     <title>我如何用 Sphinx 建立笔记系统（一）选择 Sphinx 的理由</title>
     <updated>2021-05-24T00:00:00+00:00</updated>
     <author>
@@ -5314,9 +5406,11 @@ Using English fallback for directive “replace”.&lt;/p&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.sphinx-doc.org"&gt;https://www.sphinx-doc.org&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -5327,10 +5421,11 @@ Using English fallback for directive “replace”.&lt;/p&gt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/sphinx-as-note-taking-system-1" data-title="我如何用 Sphinx 建立笔记系统（一）选择 Sphinx 的理由" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/sphinx-as-note-taking-system-1.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/sphinx-as-note-taking-system-1.html" rel="alternate"/>
     <summary>这是 category-我如何用-sphinx-建立笔记系统 系列的第 一 篇，你可以通过订阅 RSS 来获取后续更新。rst-badge</summary>
     <category term="Sphinx" label="Sphinx"/>
     <category term="reStructuredText" label="reStructuredText"/>
@@ -5338,7 +5433,7 @@ Using English fallback for directive “replace”.&lt;/p&gt;
     <published>2021-05-24T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/sphinx-as-note-taking-system-2.html</id>
+    <id>https://silverrainz.me/blog/sphinx-as-note-taking-system-2.html</id>
     <title>我如何用 Sphinx 建立笔记系统（二）系统架构</title>
     <updated>2021-05-25T00:00:00+00:00</updated>
     <author>
@@ -5731,9 +5826,11 @@ reST&lt;/div&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference internal" href="man/git.html"&gt;&lt;span class="doc"&gt;Git&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -5744,10 +5841,11 @@ reST&lt;/div&gt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/sphinx-as-note-taking-system-2" data-title="我如何用 Sphinx 建立笔记系统（二）系统架构" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/sphinx-as-note-taking-system-2.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/sphinx-as-note-taking-system-2.html" rel="alternate"/>
     <summary>这是 category-我如何用-sphinx-建立笔记系统 系列的第 二 篇，你可以通过订阅 RSS 来获取后续更新。</summary>
     <category term="Sphinx" label="Sphinx"/>
     <category term="reStructuredText" label="reStructuredText"/>
@@ -5755,7 +5853,7 @@ reST&lt;/div&gt;
     <published>2021-05-25T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/xzzh-after-40-yrs.html</id>
+    <id>https://silverrainz.me/blog/xzzh-after-40-yrs.html</id>
     <title>四十年后再看西藏组画</title>
     <updated>2021-07-03T00:00:00+00:00</updated>
     <author>
@@ -5958,9 +6056,11 @@ Using English fallback for role “sub”.&lt;/p&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://zh.wikipedia.org/wiki/毛主席去安源"&gt;📖毛主席去安源&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -5971,10 +6071,11 @@ Using English fallback for role “sub”.&lt;/p&gt;
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/xzzh-after-40-yrs" data-title="四十年后再看西藏组画" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/xzzh-after-40-yrs.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/xzzh-after-40-yrs.html" rel="alternate"/>
     <summary>2021-06-30</summary>
     <category term="展览" label="展览"/>
     <category term="绘画" label="绘画"/>
@@ -5982,7 +6083,7 @@ Using English fallback for role “sub”.&lt;/p&gt;
     <published>2021-07-03T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://silverrainz.me/zh_CN/blog/funtional-programming-in-go-generics.html</id>
+    <id>https://silverrainz.me/blog/funtional-programming-in-go-generics.html</id>
     <title>函数式编程在 Go 泛型下的实用性探索</title>
     <updated>2021-10-27T00:00:00+00:00</updated>
     <author>
@@ -6493,9 +6594,11 @@ func IsSigned[T Int](n T) {
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.uncarved.com/articles/not-currying/"&gt;Partial Function Application is not Currying&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;评论&lt;/p&gt;
-&lt;p&gt;如果你有任何意见，请在此评论。
+&lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
+&lt;div class="sd-card-body docutils"&gt;
+&lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
+评论&lt;/div&gt;
+&lt;p class="sd-card-text"&gt;如果你有任何意见，请在此评论。
 如果你留下了电子邮箱，我可能会通过 &lt;script type="text/javascript"&gt;document.write(
     "&lt;n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\"&gt;pbzzragf\100fvyireenvam\056zr&lt;\057n&gt;".replace(/[a-zA-Z]/g,
         function(c){
@@ -6506,10 +6609,11 @@ func IsSigned[T Int](n T) {
     )
 );&lt;/script&gt; 回复你。&lt;/p&gt;
 &lt;section data-isso-id="/blog/funtional-programming-in-go-generics" data-title="函数式编程在 Go 泛型下的实用性探索" id="isso-thread"&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://silverrainz.me/zh_CN/blog/funtional-programming-in-go-generics.html" rel="alternate"/>
+    <link href="https://silverrainz.me/blog/funtional-programming-in-go-generics.html" rel="alternate"/>
     <summary>函数式编程（Functional Programming / FP）作为一种编程范式，具有无状态、无副作用、并发友好、抽象程度高等优点。目前流行的编程语言（C++、Python、Rust）都或多或少地引入了函数式特性，但在同作为流行语言的 Golang 中却少有讨论。</summary>
     <category term="Golang" label="Golang"/>
     <category term="函数式编程" label="函数式编程"/>
