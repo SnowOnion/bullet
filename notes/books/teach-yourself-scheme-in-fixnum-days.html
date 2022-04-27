@@ -1495,20 +1495,20 @@ Tutorial.zh-CN</a></p></li>
 <ul class="simple">
 <li><p>guile 的自动补全</p></li>
 </ul>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; pcaman -S readline</span>
-<span class="c1">; ~/.guile</span>
-<span class="p">(</span><span class="nf">use-modules</span> <span class="p">(</span><span class="nf">ice-9</span> <span class="nv">readline</span><span class="p">))</span>
-<span class="p">(</span><span class="nf">activate-readline</span><span class="p">)</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; pcaman -S readline</span><span class="w"></span>
+<span class="c1">; ~/.guile</span><span class="w"></span>
+<span class="p">(</span><span class="k">use-modules</span><span class="w"> </span><span class="p">(</span><span class="nf">ice-9</span><span class="w"> </span><span class="nv">readline</span><span class="p">))</span><span class="w"></span>
+<span class="p">(</span><span class="nf">activate-readline</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>chicken (csi) 的自动补全</p></li>
 </ul>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; chicken-install readline</span>
-<span class="c1">; ~/.csirc</span>
-<span class="p">(</span><span class="nf">use</span> <span class="nv">readline</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">current-input-port </span><span class="p">(</span><span class="nf">make-readline-port</span><span class="p">))</span>
-<span class="p">(</span><span class="nf">install-history-file</span> <span class="no">#f</span> <span class="s">&quot;/.csi.history&quot;</span><span class="p">)</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; chicken-install readline</span><span class="w"></span>
+<span class="c1">; ~/.csirc</span><span class="w"></span>
+<span class="p">(</span><span class="nf">use</span><span class="w"> </span><span class="nv">readline</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">current-input-port</span><span class="w"> </span><span class="p">(</span><span class="nf">make-readline-port</span><span class="p">))</span><span class="w"></span>
+<span class="p">(</span><span class="nf">install-history-file</span><span class="w"> </span><span class="no">#f</span><span class="w"> </span><span class="s">&quot;/.csi.history&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1518,10 +1518,10 @@ Tutorial.zh-CN</a></p></li>
 <section id="quote">
 <h3>quote<a class="headerlink" href="#quote" title="永久链接至标题">#</a></h3>
 <p><code class="code docutils literal notranslate"><span class="pre">quote</span></code> 用来阻止符号（symbol）被求值，<code class="code docutils literal notranslate"><span class="pre">'</span></code> 是其缩略形式:</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span>         <span class="k">=&gt; </span><span class="mi">3</span>
-<span class="p">(</span><span class="k">quote </span><span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span> <span class="k">=&gt; </span><span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span>
-<span class="o">&#39;</span><span class="p">(</span><span class="nv">+</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span>        <span class="k">=&gt; </span><span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span>
-<span class="o">&#39;</span><span class="p">()</span>             <span class="k">=&gt; </span><span class="p">()</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">         </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="p">(</span><span class="k">quote</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="o">&#39;</span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">        </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="o">&#39;</span><span class="p">()</span><span class="w">             </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
 </pre></div>
 </div>
 <section id="id4">
@@ -1541,24 +1541,24 @@ car， 第二个元素被称为 cdr.</p>
 <li><p><code class="code docutils literal notranslate"><span class="pre">(cons</span> <span class="pre">element</span> <span class="pre">list)</span></code> 是 list，element 可以是任意类型</p></li>
 </ul>
 <p>可以使用 <code class="code docutils literal notranslate"><span class="pre">(null?</span> <span class="pre">list)</span></code> 来判断表是否空（<code class="code docutils literal notranslate"><span class="pre">'()</span></code>）</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span>                      <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="o">.</span> <span class="mi">2</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">2</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">3</span> <span class="o">&#39;</span><span class="p">())))</span>  <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">2</span> <span class="mi">5</span><span class="p">))</span>             <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="o">.</span> <span class="mi">5</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">cons </span><span class="sc">#\a</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">3</span> <span class="s">&quot;hello&quot;</span><span class="p">))</span>     <span class="k">=&gt; </span><span class="p">(</span><span class="sc">#\a</span> <span class="mi">3</span> <span class="o">.</span> <span class="s">&quot;hello&quot;</span><span class="p">)</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">                      </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">&#39;</span><span class="p">())))</span><span class="w">  </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="w">             </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="sc">#\a</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">))</span><span class="w">     </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="sc">#\a</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <section id="car-cdr-list">
 <h4>car &amp; cdr &amp; list<a class="headerlink" href="#car-cdr-list" title="永久链接至标题">#</a></h4>
 <p>函数 <code class="code docutils literal notranslate"><span class="pre">car</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">cdr</span></code> 分别取回一个 pair 的 car 部分和 cdr 部分，
 <code class="code docutils literal notranslate"><span class="pre">list</span></code> 用于构造一个表</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; pair</span>
-<span class="p">(</span><span class="nb">car </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="o">.</span> <span class="mi">2</span><span class="p">))</span>                          <span class="k">=&gt; </span><span class="mi">1</span>
-<span class="p">(</span><span class="nb">cdr </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="o">.</span> <span class="mi">2</span><span class="p">))</span>                          <span class="k">=&gt; </span><span class="mi">2</span>
-<span class="c1">; list</span>
-<span class="p">(</span><span class="nb">cdr </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="o">.</span> <span class="p">(</span><span class="mi">2</span> <span class="o">.</span> <span class="p">())))</span>                   <span class="k">=&gt; </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">cdr </span><span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">2</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">3</span> <span class="o">&#39;</span><span class="p">()))))</span>    <span class="k">=&gt; </span><span class="p">(</span><span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">list </span><span class="mi">1</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">)</span>                            <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">list </span><span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="mi">3</span><span class="p">))</span>            <span class="k">=&gt; </span><span class="p">((</span><span class="mi">1</span> <span class="o">.</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span> <span class="o">.</span> <span class="mi">3</span><span class="p">))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; pair</span><span class="w"></span>
+<span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w">                          </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w">                          </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="c1">; list</span><span class="w"></span>
+<span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">())))</span><span class="w">                   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">&#39;</span><span class="p">()))))</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w">                            </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span><span class="w">            </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">((</span><span class="mi">1</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1573,11 +1573,11 @@ car， 第二个元素被称为 cdr.</p>
 <li><p>characters</p></li>
 </ul>
 <p>以下是 The Little Schemer 中对 atom 的定义：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; All that not a pair or null is an atom.</span>
-<span class="c1">; define in The Little Schemer</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">atom?</span>
-  <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span>
-    <span class="p">(</span><span class="k">and </span><span class="p">(</span><span class="nb">not </span><span class="p">(</span><span class="nb">pair? </span><span class="nv">x</span><span class="p">))</span> <span class="p">(</span><span class="nb">not </span><span class="p">(</span><span class="nb">null? </span><span class="nv">x</span><span class="p">)))))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; All that not a pair or null is an atom.</span><span class="w"></span>
+<span class="c1">; define in The Little Schemer</span><span class="w"></span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">atom?</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="k">and</span><span class="w"> </span><span class="p">(</span><span class="nb">not</span><span class="w"> </span><span class="p">(</span><span class="nb">pair?</span><span class="w"> </span><span class="nv">x</span><span class="p">))</span><span class="w"> </span><span class="p">(</span><span class="nb">not</span><span class="w"> </span><span class="p">(</span><span class="nb">null?</span><span class="w"> </span><span class="nv">x</span><span class="p">)))))</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1588,9 +1588,9 @@ car， 第二个元素被称为 cdr.</p>
 <h4>lambda<a class="headerlink" href="#lambda" title="永久链接至标题">#</a></h4>
 <p><code class="code docutils literal notranslate"><span class="pre">lambda</span></code>，接受两个参数，返回一个
 procedure，参数一是参数表，参数二是函数体：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda </span><span class="p">()</span> <span class="p">(</span><span class="nb">display </span><span class="s">&quot;archlinuxcn&quot;</span><span class="p">))</span>     <span class="k">=&gt; </span><span class="o">#</span><span class="nv">&lt;procedure</span> <span class="p">(</span><span class="nf">?</span><span class="p">)</span><span class="nv">&gt;</span>
-<span class="p">((</span><span class="k">lambda </span><span class="p">()</span> <span class="p">(</span><span class="nb">display </span><span class="s">&quot;archlinuxcn&quot;</span><span class="p">)))</span>   <span class="k">=&gt; </span><span class="nv">archlinuxcn</span>
-<span class="p">((</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span>            <span class="k">=&gt; </span><span class="mi">3</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">(</span><span class="nb">display</span><span class="w"> </span><span class="s">&quot;archlinuxcn&quot;</span><span class="p">))</span><span class="w">     </span><span class="k">=&gt;</span><span class="w"> </span><span class="o">#</span><span class="nv">&lt;procedure</span><span class="w"> </span><span class="p">(</span><span class="nf">?</span><span class="p">)</span><span class="nb">&gt;</span><span class="w"></span>
+<span class="p">((</span><span class="k">lambda</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">(</span><span class="nb">display</span><span class="w"> </span><span class="s">&quot;archlinuxcn&quot;</span><span class="p">)))</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="nv">archlinuxcn</span><span class="w"></span>
+<span class="p">((</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="nf">x</span><span class="w"> </span><span class="nv">y</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">y</span><span class="p">))</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">            </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1599,19 +1599,19 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <p><code class="code docutils literal notranslate"><span class="pre">define</span></code>
 声明并绑定一个全局变量，参数一为变量名，参数二为被绑定的对象，
 借此可以复用 <code class="code docutils literal notranslate"><span class="pre">lambda</span></code> 所生成的 procedure。</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="nv">add</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
-<span class="nv">add</span>         <span class="k">=&gt; </span><span class="o">#</span><span class="nv">&lt;procedure</span> <span class="p">(</span><span class="nf">add</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)</span><span class="nv">&gt;</span>
-<span class="p">(</span><span class="nf">add</span> <span class="mi">1</span> <span class="mi">3</span><span class="p">)</span>   <span class="k">=&gt; </span><span class="mi">4</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">str</span> <span class="s">&quot;arch&quot;</span><span class="p">)</span>
-<span class="nv">str</span>         <span class="k">=&gt; </span><span class="s">&quot;arch&quot;</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">add</span><span class="w"> </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="nf">x</span><span class="w"> </span><span class="nv">y</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">y</span><span class="p">)))</span><span class="w"></span>
+<span class="nv">add</span><span class="w">         </span><span class="k">=&gt;</span><span class="w"> </span><span class="o">#</span><span class="nv">&lt;procedure</span><span class="w"> </span><span class="p">(</span><span class="nf">add</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">y</span><span class="p">)</span><span class="nb">&gt;</span><span class="w"></span>
+<span class="p">(</span><span class="nf">add</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">str</span><span class="w"> </span><span class="s">&quot;arch&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="nv">str</span><span class="w">         </span><span class="k">=&gt;</span><span class="w"> </span><span class="s">&quot;arch&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="id5">
 <h4>不使用 lambda<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h4>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">add3</span> <span class="nv">a</span> <span class="nv">b</span> <span class="nv">c</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">a</span> <span class="nv">b</span> <span class="nv">c</span><span class="p">))</span>
-<span class="nv">add3</span>            <span class="k">=&gt; </span><span class="o">#</span><span class="nv">&lt;procedure</span> <span class="p">(</span><span class="nf">add3</span> <span class="nv">a</span> <span class="nv">b</span> <span class="nv">c</span><span class="p">)</span><span class="nv">&gt;</span>
-<span class="p">(</span><span class="nf">add3</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>    <span class="k">=&gt; </span><span class="mi">6</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">add3</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="nv">c</span><span class="p">))</span><span class="w"></span>
+<span class="nv">add3</span><span class="w">            </span><span class="k">=&gt;</span><span class="w"> </span><span class="o">#</span><span class="nv">&lt;procedure</span><span class="w"> </span><span class="p">(</span><span class="nf">add3</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="nb">&gt;</span><span class="w"></span>
+<span class="p">(</span><span class="nf">add3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">6</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1624,7 +1624,7 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <code class="code docutils literal notranslate"><span class="pre">then_value</span></code> 求值， 反之则对 <code class="code docutils literal notranslate"><span class="pre">else_value</span></code> 求值，<code class="code docutils literal notranslate"><span class="pre">else_value</span></code>
 部分可以省略，求得的值会传出括号外。 对于 <code class="code docutils literal notranslate"><span class="pre">predicate</span></code>，任意值（包括
 <code class="code docutils literal notranslate"><span class="pre">#t</span></code>）被认为 ture，<code class="code docutils literal notranslate"><span class="pre">#f</span></code> 则是 false。</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">abs </span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">&lt; </span><span class="nv">x</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">x</span><span class="p">)</span>  <span class="nv">x</span><span class="p">))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nb">abs</span><span class="w"> </span><span class="nv">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">&lt;</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nv">x</span><span class="p">)</span><span class="w">  </span><span class="nv">x</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1641,12 +1641,12 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <section id="cond">
 <h4>cond<a class="headerlink" href="#cond" title="永久链接至标题">#</a></h4>
 <p>类似 case：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">cond</span>
-  <span class="p">(</span><span class="nf">predicate_1</span> <span class="nv">clauses_1</span><span class="p">)</span>
-  <span class="p">(</span><span class="nf">predicate_2</span> <span class="nv">clauses_2</span><span class="p">)</span>
-    <span class="o">...</span>
-  <span class="p">(</span><span class="nf">predicate_n</span> <span class="nv">clauses_n</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">else </span>       <span class="nv">clauses_else</span><span class="p">))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">cond</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="nf">predicate_1</span><span class="w"> </span><span class="nv">clauses_1</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="nf">predicate_2</span><span class="w"> </span><span class="nv">clauses_2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">...</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="nf">predicate_n</span><span class="w"> </span><span class="nv">clauses_n</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">else</span><span class="w">        </span><span class="nv">clauses_else</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 <p>遇到成立的 <code class="code docutils literal notranslate"><span class="pre">predicate</span></code> 则执行对应的子句后返回，全部不成立则执行
@@ -1669,42 +1669,42 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <h3>let<a class="headerlink" href="#let" title="永久链接至标题">#</a></h3>
 <p><code class="code docutils literal notranslate"><span class="pre">(let</span> <span class="pre">bind</span> <span class="pre">body)</span></code> 为 <code class="code docutils literal notranslate"><span class="pre">body</span></code> 语句绑定局部变量，变量在 <code class="code docutils literal notranslate"><span class="pre">bind</span></code>
 中初始化， <code class="code docutils literal notranslate"><span class="pre">bind</span></code> 中的变量不可互相引用：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">i</span> <span class="mi">1</span><span class="p">))</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">i</span> <span class="mi">2</span><span class="p">))</span>   <span class="k">=&gt; </span><span class="mi">3</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">i</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="code docutils literal notranslate"><span class="pre">let</span></code> 是 <code class="code docutils literal notranslate"><span class="pre">lambda</span></code> 的语法糖：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">p</span> <span class="nv">v</span><span class="p">))</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">p</span> <span class="mi">1</span><span class="p">))</span>       <span class="k">=&gt; </span><span class="mi">2</span>
-<span class="c1">; equal to</span>
-<span class="p">((</span><span class="k">lambda </span><span class="p">(</span><span class="nf">p</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">p</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">v</span><span class="p">)</span>    <span class="k">=&gt; </span><span class="mi">2</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">p</span><span class="w"> </span><span class="nv">v</span><span class="p">))</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">p</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w">       </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="c1">; equal to</span><span class="w"></span>
+<span class="p">((</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="nf">p</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">p</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="nv">v</span><span class="p">)</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
 </pre></div>
 </div>
 <section id="id7">
 <h4>let*<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h4>
 <p>使用 <code class="code docutils literal notranslate"><span class="pre">let*</span></code> 可以引用定义在同个绑定中的变量（<code class="code docutils literal notranslate"><span class="pre">let*</span></code> 事实上是嵌套的
 <code class="code docutils literal notranslate"><span class="pre">let</span></code> 的语法糖）：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">let* </span><span class="p">((</span><span class="nf">i</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nf">j</span> <span class="p">(</span><span class="nb">- </span><span class="nv">i</span><span class="p">)))</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">i</span> <span class="nv">j</span><span class="p">))</span>    <span class="k">=&gt; </span><span class="mi">0</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">let*</span><span class="w"> </span><span class="p">((</span><span class="nf">i</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nf">j</span><span class="w"> </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nv">i</span><span class="p">)))</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">j</span><span class="p">))</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="named-let">
 <h4>named let<a class="headerlink" href="#named-let" title="永久链接至标题">#</a></h4>
 <p>可以为一个 <code class="code docutils literal notranslate"><span class="pre">let</span></code> 命名来实现循环：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fact-let</span> <span class="nv">n</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">let </span><span class="nv">loop</span><span class="p">((</span><span class="nf">n1</span> <span class="nv">n</span><span class="p">)</span> <span class="p">(</span><span class="nf">p</span> <span class="nv">n</span><span class="p">))</span>
-    <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">n1</span> <span class="mi">1</span><span class="p">)</span> <span class="nv">p</span>
-    <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">m</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n1</span> <span class="mi">1</span><span class="p">)))</span>
-        <span class="p">(</span><span class="nf">loop</span> <span class="p">(</span><span class="nf">sub1</span> <span class="nv">n1</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">p</span> <span class="p">(</span><span class="nf">sub1</span> <span class="nv">n1</span><span class="p">)))))))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">fact-let</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="nv">loop</span><span class="p">((</span><span class="nf">n1</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nf">p</span><span class="w"> </span><span class="nv">n</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="nv">n1</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="nv">p</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">m</span><span class="w"> </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nv">n1</span><span class="w"> </span><span class="mi">1</span><span class="p">)))</span><span class="w"></span>
+<span class="w">        </span><span class="p">(</span><span class="nf">loop</span><span class="w"> </span><span class="p">(</span><span class="nf">sub1</span><span class="w"> </span><span class="nv">n1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">*</span><span class="w"> </span><span class="nv">p</span><span class="w"> </span><span class="p">(</span><span class="nf">sub1</span><span class="w"> </span><span class="nv">n1</span><span class="p">)))))))</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="letrec">
 <h4>letrec<a class="headerlink" href="#letrec" title="永久链接至标题">#</a></h4>
 <p>允许 <code class="code docutils literal notranslate"><span class="pre">bind</span></code> 中的变量递归地调用自己：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">sum-letrec</span> <span class="nv">xs</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">letrec </span><span class="p">((</span><span class="nf">sum1</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">xs1</span><span class="p">)</span>
-                  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">null? </span><span class="nv">xs1</span><span class="p">)</span> <span class="mi">0</span>
-                    <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">car </span><span class="nv">xs1</span><span class="p">)</span> <span class="p">(</span><span class="nf">sum</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">xs1</span><span class="p">)))))))</span>
-    <span class="p">(</span><span class="nf">sum1</span> <span class="nv">xs</span><span class="p">)))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">sum-letrec</span><span class="w"> </span><span class="nv">xs</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">letrec</span><span class="w"> </span><span class="p">((</span><span class="nf">sum1</span><span class="w"> </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="nf">xs1</span><span class="p">)</span><span class="w"></span>
+<span class="w">                  </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">null?</span><span class="w"> </span><span class="nv">xs1</span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">                    </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="nv">xs1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nf">sum</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">xs1</span><span class="p">)))))))</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="nf">sum1</span><span class="w"> </span><span class="nv">xs</span><span class="p">)))</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1715,8 +1715,8 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <code class="code docutils literal notranslate"><span class="pre">predicate</span></code> 为真， 则函数跳出 <code class="code docutils literal notranslate"><span class="pre">do</span></code> 语句，值 <code class="code docutils literal notranslate"><span class="pre">value</span></code> 被传递出来，
 否则循环继续。 <code class="code docutils literal notranslate"><span class="pre">bind</span></code> 的形式是 <code class="code docutils literal notranslate"><span class="pre">((p</span> <span class="pre">i</span> <span class="pre">j)</span> <span class="pre">...</span> <span class="pre">)</span></code> 变量 <code class="code docutils literal notranslate"><span class="pre">p</span></code>
 被初始化为 <code class="code docutils literal notranslate"><span class="pre">i</span></code>， 在循环后被更新为 <code class="code docutils literal notranslate"><span class="pre">j</span></code></p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fact-do</span> <span class="nv">n</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">do </span><span class="p">((</span><span class="nf">n1</span> <span class="nv">n</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n1</span> <span class="mi">1</span><span class="p">))</span> <span class="p">(</span><span class="nf">p</span> <span class="nv">n</span> <span class="p">(</span><span class="nb">* </span><span class="nv">p</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n1</span> <span class="mi">1</span><span class="p">))))</span> <span class="p">((</span><span class="nb">= </span><span class="nv">n1</span> <span class="mi">1</span><span class="p">)</span> <span class="nv">p</span><span class="p">)))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">fact-do</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">do</span><span class="w"> </span><span class="p">((</span><span class="nf">n1</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nv">n1</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="p">(</span><span class="nf">p</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="p">(</span><span class="nb">*</span><span class="w"> </span><span class="nv">p</span><span class="w"> </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nv">n1</span><span class="w"> </span><span class="mi">1</span><span class="p">))))</span><span class="w"> </span><span class="p">((</span><span class="nb">=</span><span class="w"> </span><span class="nv">n1</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="nv">p</span><span class="p">)))</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1728,13 +1728,13 @@ procedure，参数一是参数表，参数二是函数体：</p>
 </div>
 <section id="id9">
 <h4>尾递归<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h4>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fact-tail</span> <span class="nv">n</span><span class="p">)</span>
-  <span class="p">(</span><span class="nf">fact-rec</span> <span class="nv">n</span> <span class="nv">n</span><span class="p">))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">fact-tail</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="nf">fact-rec</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="nv">n</span><span class="p">))</span><span class="w"></span>
 
-<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fact-rec</span> <span class="nv">n</span> <span class="nv">p</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)</span> <span class="nv">p</span>
-    <span class="p">(</span><span class="nf">fact-rec</span> <span class="p">(</span><span class="nf">sub1</span> <span class="nv">n</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">p</span> <span class="p">(</span><span class="nf">sub1</span> <span class="nv">n</span><span class="p">)))))</span>
-<span class="c1">; 使用 named let 或者 letrec 的话可以不用两个函数</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">fact-rec</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="nv">p</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="nv">p</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="nf">fact-rec</span><span class="w"> </span><span class="p">(</span><span class="nf">sub1</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">*</span><span class="w"> </span><span class="nv">p</span><span class="w"> </span><span class="p">(</span><span class="nf">sub1</span><span class="w"> </span><span class="nv">n</span><span class="p">)))))</span><span class="w"></span>
+<span class="c1">; 使用 named let 或者 letrec 的话可以不用两个函数</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1745,26 +1745,26 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <h4>map<a class="headerlink" href="#map" title="永久链接至标题">#</a></h4>
 <p><code class="code docutils literal notranslate"><span class="pre">(map</span> <span class="pre">procedure</span> <span class="pre">list1</span> <span class="pre">list2</span> <span class="pre">...)</span></code> <code class="code docutils literal notranslate"><span class="pre">map</span></code> 把 <code class="code docutils literal notranslate"><span class="pre">procedure</span></code>
 应用到列表上， 返回新的列表，表的个数由 <code class="code docutils literal notranslate"><span class="pre">procedure</span></code> 决定</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">map </span><span class="nv">sub1</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span> <span class="k">=&gt; </span><span class="p">(</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="nv">sub1</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span><span class="w"> </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="for-each">
 <h4>for-each<a class="headerlink" href="#for-each" title="永久链接至标题">#</a></h4>
 <p>格式与 <code class="code docutils literal notranslate"><span class="pre">map</span></code> 相同，不返回具体的值，用于副作用：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="nv">sum</span> <span class="mi">0</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">for-each </span><span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="p">(</span><span class="k">set! </span><span class="nv">sum</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">sum</span> <span class="nv">x</span><span class="p">)))</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">))</span>
-<span class="k">=&gt; </span><span class="mi">10</span>
-<span class="p">(</span><span class="nb">map </span><span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="p">(</span><span class="k">set! </span><span class="nv">sum</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">sum</span> <span class="nv">x</span><span class="p">)))</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">))</span>
-<span class="k">=&gt; </span><span class="p">(</span><span class="o">#</span><span class="nv">&lt;unspecified&gt;</span> <span class="o">#</span><span class="nv">&lt;unspecified&gt;</span> <span class="o">#</span><span class="nv">&lt;unspecified&gt;</span> <span class="o">#</span><span class="nv">&lt;unspecified&gt;</span><span class="p">)</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">sum</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">for-each</span><span class="w"> </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="k">set!</span><span class="w"> </span><span class="nv">sum</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">sum</span><span class="w"> </span><span class="nv">x</span><span class="p">)))</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span><span class="w"></span>
+<span class="k">=&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="k">set!</span><span class="w"> </span><span class="nv">sum</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="nv">sum</span><span class="w"> </span><span class="nv">x</span><span class="p">)))</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span><span class="w"></span>
+<span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">#</span><span class="nv">&lt;unspecified&gt;</span><span class="w"> </span><span class="o">#</span><span class="nv">&lt;unspecified&gt;</span><span class="w"> </span><span class="o">#</span><span class="nv">&lt;unspecified&gt;</span><span class="w"> </span><span class="o">#</span><span class="nv">&lt;unspecified&gt;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="fold">
 <h4>fold<a class="headerlink" href="#fold" title="永久链接至标题">#</a></h4>
 <p>有左折叠（<code class="code docutils literal notranslate"><span class="pre">foldl</span></code>）和右折叠（<code class="code docutils literal notranslate"><span class="pre">foldr</span></code>）:</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">foldl</span> <span class="nv">+</span> <span class="mi">0</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>    <span class="k">=&gt; </span><span class="mi">6</span>
-<span class="p">(</span><span class="nf">foldr</span> <span class="nv">+</span> <span class="mi">0</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>    <span class="k">=&gt; </span><span class="mi">6</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">foldl</span><span class="w"> </span><span class="nb">+</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">6</span><span class="w"></span>
+<span class="p">(</span><span class="nf">foldr</span><span class="w"> </span><span class="nb">+</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">6</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1772,7 +1772,7 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <h4>apply<a class="headerlink" href="#apply" title="永久链接至标题">#</a></h4>
 <p>将一个表展开作为过程的参数，接受任意多的参数，
 第一个和最后一个参数分别应该是一个过程和一个列表（还不知道有什么用）：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">apply </span><span class="nv">+</span> <span class="mi">1</span> <span class="mi">2</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 <section id="io">
@@ -1788,14 +1788,14 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <code class="code docutils literal notranslate"><span class="pre">(read-char</span> <span class="pre">port)</span></code> 从端口读取一个字符，读取到 EOF 的时候返回一个
 <code class="code docutils literal notranslate"><span class="pre">eof-object</span></code>， 可用 <code class="code docutils literal notranslate"><span class="pre">eof-object?</span></code> 检查，使用
 <code class="code docutils literal notranslate"><span class="pre">(close-input-port</span> <span class="pre">port)</span></code> 关闭端口</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">kitten</span> <span class="nv">fname</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">fp</span> <span class="p">(</span><span class="nb">open-input-file </span><span class="nv">fname</span><span class="p">)))</span>
-    <span class="p">(</span><span class="k">let </span><span class="nv">loop</span> <span class="p">((</span><span class="nf">chr</span> <span class="p">(</span><span class="nb">read-char </span><span class="nv">fp</span><span class="p">)))</span>
-      <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">eof-object? </span><span class="nv">chr</span><span class="p">)</span>
-        <span class="p">(</span><span class="nb">close-input-port </span><span class="nv">fp</span><span class="p">)</span>
-        <span class="p">(</span><span class="nf">begin</span>
-          <span class="p">(</span><span class="nb">display </span><span class="nv">chr</span><span class="p">)</span>
-        <span class="p">(</span><span class="nf">loop</span> <span class="p">(</span><span class="nb">read-char </span><span class="nv">fp</span><span class="p">)))))))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">kitten</span><span class="w"> </span><span class="nv">fname</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">fp</span><span class="w"> </span><span class="p">(</span><span class="nb">open-input-file</span><span class="w"> </span><span class="nv">fname</span><span class="p">)))</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="nv">loop</span><span class="w"> </span><span class="p">((</span><span class="nf">chr</span><span class="w"> </span><span class="p">(</span><span class="nb">read-char</span><span class="w"> </span><span class="nv">fp</span><span class="p">)))</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">eof-object?</span><span class="w"> </span><span class="nv">chr</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">(</span><span class="nb">close-input-port</span><span class="w"> </span><span class="nv">fp</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">(</span><span class="k">begin</span><span class="w"></span>
+<span class="w">          </span><span class="p">(</span><span class="nb">display</span><span class="w"> </span><span class="nv">chr</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">(</span><span class="nf">loop</span><span class="w"> </span><span class="p">(</span><span class="nb">read-char</span><span class="w"> </span><span class="nv">fp</span><span class="p">)))))))</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="code docutils literal notranslate"><span class="pre">(call-with-input-file</span> <span class="pre">file-name</span> <span class="pre">procedure)</span></code> ： 函数将打开
@@ -1808,13 +1808,13 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <section id="read">
 <h4>read<a class="headerlink" href="#read" title="永久链接至标题">#</a></h4>
 <p><code class="code docutils literal notranslate"><span class="pre">(read</span> <span class="pre">port)</span></code> 从端口中读入一个 S-Expression（!）：</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">read-s</span> <span class="nv">fname</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">with-input-from-file </span><span class="nv">fname</span>
-    <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
-      <span class="p">(</span><span class="nf">begin</span>
-        <span class="p">(</span><span class="nb">display </span><span class="p">(</span><span class="nf">read</span><span class="p">))</span>
-        <span class="p">(</span><span class="nf">newline</span><span class="p">)))))</span>
-<span class="p">(</span><span class="nf">read-s</span> <span class="s">&quot;1.scm&quot;</span><span class="p">)</span>    <span class="k">=&gt; </span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">myabs</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">&lt; </span><span class="nv">x</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">x</span><span class="p">)</span> <span class="nv">x</span><span class="p">))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">read-s</span><span class="w"> </span><span class="nv">fname</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="nb">with-input-from-file</span><span class="w"> </span><span class="nv">fname</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="p">(</span><span class="nb">display</span><span class="w"> </span><span class="p">(</span><span class="nb">read</span><span class="p">))</span><span class="w"></span>
+<span class="w">        </span><span class="p">(</span><span class="nb">newline</span><span class="p">)))))</span><span class="w"></span>
+<span class="p">(</span><span class="nf">read-s</span><span class="w"> </span><span class="s">&quot;1.scm&quot;</span><span class="p">)</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">myabs</span><span class="w"> </span><span class="nv">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">&lt;</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nv">x</span><span class="p">)</span><span class="w"> </span><span class="nv">x</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1833,13 +1833,13 @@ procedure，参数一是参数表，参数二是函数体：</p>
 <h4>output func<a class="headerlink" href="#output-func" title="永久链接至标题">#</a></h4>
 <p>以下函数的 <code class="code docutils literal notranslate"><span class="pre">port</span></code> 都是可选参数，省略则输出到 stdout</p>
 <p><code class="code docutils literal notranslate"><span class="pre">(wirte</span> <span class="pre">obj</span> <span class="pre">port)</span></code> 将 <code class="code docutils literal notranslate"><span class="pre">obj</span></code> 输出至 <code class="code docutils literal notranslate"><span class="pre">port</span></code>，</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">write </span><span class="sc">#\c</span><span class="p">)</span>         <span class="k">=&gt; </span><span class="sc">#\c</span>
-<span class="p">(</span><span class="nb">write </span><span class="s">&quot;string&quot;</span><span class="p">)</span>    <span class="k">=&gt; </span><span class="s">&quot;string&quot;</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">write</span><span class="w"> </span><span class="sc">#\c</span><span class="p">)</span><span class="w">         </span><span class="k">=&gt;</span><span class="w"> </span><span class="sc">#\c</span><span class="w"></span>
+<span class="p">(</span><span class="nb">write</span><span class="w"> </span><span class="s">&quot;string&quot;</span><span class="p">)</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="s">&quot;string&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="code docutils literal notranslate"><span class="pre">(display</span> <span class="pre">obj</span> <span class="pre">port)</span></code> 将 <code class="code docutils literal notranslate"><span class="pre">obj</span></code> 输出至 <code class="code docutils literal notranslate"><span class="pre">port</span></code>，</p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">display </span><span class="sc">#\c</span><span class="p">)</span>         <span class="k">=&gt; </span><span class="nv">c</span>
-<span class="p">(</span><span class="nb">display </span><span class="s">&quot;string&quot;</span><span class="p">)</span>    <span class="k">=&gt; </span><span class="nv">string</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">display</span><span class="w"> </span><span class="sc">#\c</span><span class="p">)</span><span class="w">         </span><span class="k">=&gt;</span><span class="w"> </span><span class="nv">c</span><span class="w"></span>
+<span class="p">(</span><span class="nb">display</span><span class="w"> </span><span class="s">&quot;string&quot;</span><span class="p">)</span><span class="w">    </span><span class="k">=&gt;</span><span class="w"> </span><span class="nb">string</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="code docutils literal notranslate"><span class="pre">(wirte-char</span> <span class="pre">char</span> <span class="pre">port)</span></code> 往 <code class="code docutils literal notranslate"><span class="pre">port</span></code> 写入一个字符</p>
@@ -1877,42 +1877,42 @@ procedure，参数一是参数表，参数二是函数体：</p>
 </figcaption>
 </figure>
 <p><a class="reference external" href="http://www.shido.info/lisp/scheme_asg_e.html">图片出处</a></p>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">make-queue</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">cons </span><span class="o">&#39;</span><span class="p">()</span> <span class="o">&#39;</span><span class="p">()))</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">make-queue</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="o">&#39;</span><span class="p">()</span><span class="w"> </span><span class="o">&#39;</span><span class="p">()))</span><span class="w"></span>
 
-<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">enqueue!</span> <span class="nv">queue</span> <span class="nv">obj</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">lobj</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">obj</span> <span class="o">&#39;</span><span class="p">())))</span>
-    <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">null? </span><span class="p">(</span><span class="nb">car </span><span class="nv">queue</span><span class="p">))</span>
-    <span class="p">(</span><span class="nf">begin</span>
-        <span class="c1">; lobj :: (1 . ()) :: (1)</span>
-        <span class="c1">; queue :: (() . ()) :: (())</span>
-      <span class="p">(</span><span class="nb">set-car! </span><span class="nv">queue</span> <span class="nv">lobj</span><span class="p">)</span>
-        <span class="c1">; queue :: ((1 . ()) . ()) :: ((1))</span>
-      <span class="p">(</span><span class="nb">set-cdr! </span><span class="nv">queue</span> <span class="nv">lobj</span><span class="p">))</span>
-        <span class="c1">; queue ::  ((1 . ()) . (1 . ())) :: ((1) 1)</span>
-        <span class="c1">; 此时队列的 car 和 cdr 部分都 *引用* 同一个对象 lobj</span>
-    <span class="p">(</span><span class="nf">begin</span>
-        <span class="c1">; lobj :: (2 . ()) :: (2)</span>
-        <span class="c1">; queue ::  ((1 . ()) . (1 . ())) :: ((1) 1)</span>
-      <span class="p">(</span><span class="nb">set-cdr! </span><span class="p">(</span><span class="nb">cdr </span><span class="nv">queue</span><span class="p">)</span> <span class="nv">lobj</span><span class="p">)</span>
-        <span class="c1">; queue ::  ((1 . (2 . ())) . (1 . (2 .()))) :: ((1 2) 1 2)</span>
-        <span class="c1">; 借助 cdr 的引用将 lobj 入队</span>
-      <span class="p">(</span><span class="nb">set-cdr! </span><span class="nv">queue</span> <span class="nv">lobj</span><span class="p">)))</span>
-        <span class="c1">; queue ::  ((1 . (2 . ())) . (2 .())) :: ((1 2) 2)</span>
-        <span class="c1">; 把 cdr 更新为当前的队尾 lobj</span>
-    <span class="p">(</span><span class="nb">car </span><span class="nv">queue</span><span class="p">)))</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">enqueue!</span><span class="w"> </span><span class="nv">queue</span><span class="w"> </span><span class="nv">obj</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">lobj</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="nv">obj</span><span class="w"> </span><span class="o">&#39;</span><span class="p">())))</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">null?</span><span class="w"> </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="nv">queue</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; lobj :: (1 . ()) :: (1)</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; queue :: (() . ()) :: (())</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="nb">set-car!</span><span class="w"> </span><span class="nv">queue</span><span class="w"> </span><span class="nv">lobj</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; queue :: ((1 . ()) . ()) :: ((1))</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="nb">set-cdr!</span><span class="w"> </span><span class="nv">queue</span><span class="w"> </span><span class="nv">lobj</span><span class="p">))</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; queue ::  ((1 . ()) . (1 . ())) :: ((1) 1)</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; 此时队列的 car 和 cdr 部分都 *引用* 同一个对象 lobj</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; lobj :: (2 . ()) :: (2)</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; queue ::  ((1 . ()) . (1 . ())) :: ((1) 1)</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="nb">set-cdr!</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="nv">queue</span><span class="p">)</span><span class="w"> </span><span class="nv">lobj</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; queue ::  ((1 . (2 . ())) . (1 . (2 .()))) :: ((1 2) 1 2)</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; 借助 cdr 的引用将 lobj 入队</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="nb">set-cdr!</span><span class="w"> </span><span class="nv">queue</span><span class="w"> </span><span class="nv">lobj</span><span class="p">)))</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; queue ::  ((1 . (2 . ())) . (2 .())) :: ((1 2) 2)</span><span class="w"></span>
+<span class="w">        </span><span class="c1">; 把 cdr 更新为当前的队尾 lobj</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="nv">queue</span><span class="p">)))</span><span class="w"></span>
 
-<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">dequeue!</span> <span class="nv">queue</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">obj</span> <span class="p">(</span><span class="nb">car </span><span class="p">(</span><span class="nb">car </span><span class="nv">queue</span><span class="p">))))</span>
-    <span class="p">(</span><span class="nb">set-car! </span><span class="nv">queue</span> <span class="p">(</span><span class="nb">cdr </span><span class="p">(</span><span class="nb">car </span><span class="nv">queue</span><span class="p">)))</span>
-    <span class="nv">obj</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">dequeue!</span><span class="w"> </span><span class="nv">queue</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">obj</span><span class="w"> </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="nv">queue</span><span class="p">))))</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="nb">set-car!</span><span class="w"> </span><span class="nv">queue</span><span class="w"> </span><span class="p">(</span><span class="nb">cdr</span><span class="w"> </span><span class="p">(</span><span class="nb">car</span><span class="w"> </span><span class="nv">queue</span><span class="p">)))</span><span class="w"></span>
+<span class="w">    </span><span class="nv">obj</span><span class="p">))</span><span class="w"></span>
 
-<span class="p">(</span><span class="k">define </span><span class="nv">q</span> <span class="p">(</span><span class="nf">make-queue</span><span class="p">))</span>
-<span class="p">(</span><span class="nf">enqueue!</span> <span class="nv">q</span> <span class="ss">&#39;a</span><span class="p">)</span>     <span class="k">=&gt; </span><span class="p">(</span><span class="nf">a</span><span class="p">)</span>
-<span class="p">(</span><span class="nf">enqueue!</span> <span class="nv">q</span> <span class="ss">&#39;b</span><span class="p">)</span>     <span class="k">=&gt; </span><span class="p">(</span><span class="nf">a</span> <span class="nv">b</span><span class="p">)</span>
-<span class="p">(</span><span class="nf">enqueue!</span> <span class="nv">q</span> <span class="ss">&#39;c</span><span class="p">)</span>     <span class="k">=&gt; </span><span class="p">(</span><span class="nf">a</span> <span class="nv">b</span> <span class="nv">c</span><span class="p">)</span>
-<span class="p">(</span><span class="nf">dequeue!</span> <span class="nv">q</span><span class="p">)</span>        <span class="k">=&gt; </span><span class="nv">a</span>
-<span class="nv">q</span>                   <span class="k">=&gt; </span><span class="p">((</span><span class="nf">b</span> <span class="nv">c</span><span class="p">)</span> <span class="nv">c</span><span class="p">)</span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">q</span><span class="w"> </span><span class="p">(</span><span class="nf">make-queue</span><span class="p">))</span><span class="w"></span>
+<span class="p">(</span><span class="nf">enqueue!</span><span class="w"> </span><span class="nv">q</span><span class="w"> </span><span class="ss">&#39;a</span><span class="p">)</span><span class="w">     </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">a</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nf">enqueue!</span><span class="w"> </span><span class="nv">q</span><span class="w"> </span><span class="ss">&#39;b</span><span class="p">)</span><span class="w">     </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">a</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nf">enqueue!</span><span class="w"> </span><span class="nv">q</span><span class="w"> </span><span class="ss">&#39;c</span><span class="p">)</span><span class="w">     </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">a</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nf">dequeue!</span><span class="w"> </span><span class="nv">q</span><span class="p">)</span><span class="w">        </span><span class="k">=&gt;</span><span class="w"> </span><span class="nv">a</span><span class="w"></span>
+<span class="nv">q</span><span class="w">                   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">((</span><span class="nf">b</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -1923,25 +1923,25 @@ procedure，参数一是参数表，参数二是函数体：</p>
 更改的是这个变量名的指向， <code class="code docutils literal notranslate"><span class="pre">set-cdr!</span></code> 更改的是指向的对象内部的值
 :(</p>
 </div>
-<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; 普通类型</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">a</span> <span class="mi">1</span><span class="p">)</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">b</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="nv">a</span><span class="p">))</span>
-<span class="nv">a</span>   <span class="k">=&gt; </span><span class="mi">1</span>
-<span class="nv">b</span>   <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="o">.</span> <span class="mi">1</span><span class="p">)</span>
-<span class="p">(</span><span class="k">set! </span><span class="nv">a</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nv">a</span>   <span class="k">=&gt; </span><span class="mi">2</span>
-<span class="nv">b</span>   <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="o">.</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="c1">; 普通类型</span><span class="w"></span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">a</span><span class="p">))</span><span class="w"></span>
+<span class="nv">a</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nv">b</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="k">set!</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="nv">a</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="nv">b</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
 
-<span class="c1">; pair</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">a</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">2</span>  <span class="mi">3</span><span class="p">))</span>
-<span class="p">(</span><span class="k">define </span><span class="nv">b</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="nv">a</span><span class="p">))</span>
-<span class="nv">a</span>   <span class="k">=&gt; </span><span class="p">(</span><span class="mi">2</span> <span class="o">.</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nv">b</span>   <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="o">.</span> <span class="mi">3</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">set-cdr! </span><span class="nv">a</span> <span class="mi">4</span><span class="p">)</span>
-<span class="nv">a</span>   <span class="k">=&gt; </span><span class="p">(</span><span class="mi">2</span> <span class="o">.</span> <span class="mi">4</span><span class="p">)</span>
-<span class="nv">b</span>   <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="o">.</span> <span class="mi">4</span><span class="p">)</span>
-<span class="p">(</span><span class="k">set! </span><span class="nv">a</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">4</span> <span class="mi">5</span><span class="p">))</span>
-<span class="nv">b</span>   <span class="k">=&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="o">.</span> <span class="mi">4</span><span class="p">)</span>
+<span class="c1">; pair</span><span class="w"></span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="mi">3</span><span class="p">))</span><span class="w"></span>
+<span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">a</span><span class="p">))</span><span class="w"></span>
+<span class="nv">a</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="nv">b</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="nb">set-cdr!</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="nv">a</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="nv">b</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="p">(</span><span class="k">set!</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="p">(</span><span class="nb">cons</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="w"></span>
+<span class="nv">b</span><span class="w">   </span><span class="k">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -2005,7 +2005,7 @@ procedure，参数一是参数表，参数二是函数体：</p>
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-04-24.<br/>
+    Last updated on 2022-04-27.<br/>
 </p>
         </footer>
     </div>
