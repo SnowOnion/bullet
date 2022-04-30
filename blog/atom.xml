@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-04-29T15:21:07.841919+00:00</updated>
+  <updated>2022-04-30T10:10:22.520793+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -5391,6 +5391,11 @@ Using English fallback for directive “replace”.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html"&gt;Domain&lt;/a&gt; 机制为后续的 &lt;a class="reference internal" href="blog/sphinx-as-note-taking-system-2.html#id2"&gt;&lt;span class="std std-ref"&gt;描述、引用和索引&lt;/span&gt;&lt;/a&gt; 提供了基础&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;除此之外，单纯靠 Sphinx 无法达到的指标，我用扩展 + 其他组件搞定，请看下一篇文章：&lt;a class="reference internal" href="blog/sphinx-as-note-taking-system-2.html"&gt;&lt;span class="doc"&gt;我如何用 Sphinx 建立笔记系统（二）系统架构&lt;/span&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/sphinx-as-note-taking-system-1.rst&lt;/span&gt;, line 148)&lt;/p&gt;
+&lt;p&gt;No directive entry for “rubric” in module “docutils.parsers.rst.languages.zh_cn”.
+Using English fallback for directive “rubric”.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p class="rubric"&gt;脚注&lt;/p&gt;
 &lt;dl class="footnote brackets"&gt;
 &lt;dt class="label" id="id10"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
