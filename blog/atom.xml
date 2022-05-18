@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-05-11T18:04:10.921576+00:00</updated>
+  <updated>2022-05-18T06:12:03.712440+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -5318,7 +5318,7 @@ Using English fallback for directive “replace”.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;我希望 &lt;em&gt;笔记被良好分类且结构合理&lt;/em&gt; ，对目录（Table Of Content）、交叉引用（Cross Reference）有一定需求&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;我有一个 &lt;a class="reference internal" href="#" title="Posts"&gt;&lt;span class="xref std std-ref"&gt;博客&lt;/span&gt;&lt;/a&gt;，我认为它一种 &lt;span class="sphinxnotes-strike"&gt;生产级别的&lt;/span&gt; 笔记，应当作为系统的一部分&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;一些不成体系的 &lt;a class="reference internal" href="misc/2021/index.html"&gt;&lt;span class="doc"&gt;笔记片段&lt;/span&gt;&lt;/a&gt; 有碎片化的属性，我需要他们能被合理组织&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一些不成体系的 &lt;a class="reference internal" href="jour/2021/index.html"&gt;&lt;span class="doc"&gt;笔记片段&lt;/span&gt;&lt;/a&gt; 有碎片化的属性，我需要他们能被合理组织&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;我希望能 &lt;em&gt;结构化地描述笔记中的对象&lt;/em&gt; ，并对它们进行引用、索引和分类，听起来有些强迫症但并非空穴来风：&lt;/p&gt;

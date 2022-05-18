@@ -1,0 +1,1473 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+<meta property="og:title" content="一月" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://silverrainz.me/jour/2021/01.html" />
+  
+<meta property="og:site_name" content="银色子弹" />
+  
+<meta property="og:description" content="Migrating from GTK 3.x to GTK 4 1: 列举 Srain 需要变更的部分： Preparation in GTK 3.x: Do not use widget style properties Stop using GtkBox padding, fill and expand child properties, GtkBox child properties ..." />
+  
+<meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
+  
+<meta property="og:image:alt" content="银色子弹" />
+  
+    <title>一月 &#8212; 银色子弹</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/jour/2021/01.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="2020" href="../2020/index.html" />
+    <link rel="prev" title="二月" href="02.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">银色子弹</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  笔记
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/zxsys/index.html">
+   造型实验室
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/prelude.html">
+     暴露问题
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/light-and-shadow.html">
+     光影分解训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/indoor-sketching.html">
+     室内场景训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/outdoor-sketching.html">
+     室外夜景训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/modeling.html">
+     形体分解训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/fast-modeling.html">
+     快速形体分解
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../notes/zxsys/way-to-artist/index.html">
+     艺术创作方法
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/zxsys/way-to-artist/prepare.html">
+       课前准备
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-yourself.html">
+       找自己
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-topic.html">
+       找主题
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-language.html">
+       找语言
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/zxsys/way-to-artist/stealing.html">
+       偷师学艺
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/zxsys/way-to-artist/exhibition.html">
+       参展须知
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/learn-from-master.html">
+     向大师学绘画
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/string-modeling.html">
+     线造型训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/tips.html">
+     一些零碎知识
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/zxsys/glossary.html">
+     术语
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/artstory/index.html">
+   增量艺术史
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/artstory/artistory.html">
+     艺术家史
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/artstory/gallery.html">
+     画廊
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/artstory/gossip.html">
+     逸闻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/books/index.html">
+   读书笔记
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/code-complete-2.html">
+     代码大全 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/codex-hammer.html">
+     哈默手稿
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/cpp-primer-plus.html">
+     C++ Primer Plus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/drawing-course-of-charles-bargue-and-jean-leon-gerome.html">
+     查尔斯巴尔格素描教程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/drawing-lessons-from-the-great-masters.html">
+     向大师学绘画·素描基础
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/teach-yourself-scheme-in-fixnum-days.html">
+     Learning Scheme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/the-art-of-color.html">
+     色彩艺术
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/the-rust-programming-language.html">
+     The Rust Programming Language
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/the-story-of-art.html">
+     艺术的故事
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/books/a-modern-method-for-guitar-vol1/index.html">
+     伯克利现代吉他教程·卷一
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../notes/books/linux-kernel-development/index.html">
+     Linux Kernel Development
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/books/linux-kernel-development/chapter-1_2.html">
+       Chapter 1 and 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/books/linux-kernel-development/compile-and-run-kernel-in-qemu.html">
+       Compile and Run Kernel in Qemu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/books/linux-kernel-development/misc.html">
+       一些零碎的东西
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/music-theory/index.html">
+   乐理笔记
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/music-theory/cadge-system.html">
+     CAGED 系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/music-theory/interval-of-music.html">
+     音程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/music-theory/ionian/index.html">
+     大调训练计划
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/music-theory/solfeggio-lesson-of-daluobei/index.html">
+     大萝北的视唱课
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notes/6-lectures-on-sketch.html">
+   素描六讲
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/2021-interview/index.html">
+   2021 面试记录
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/2021-interview/checklist.html">
+     知识点 Check List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/2021-interview/leetcode.html">
+     Leetcode 刷题日记
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/2021-interview/dp.html">
+     动态规划
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/docutils/index.html">
+   Docutils 文档阅读
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/docutils/doctree.html">
+     The Docutils Document Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/docutils/docutils-hacker-guide.html">
+     Docutils Hacker’s Guide
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/go-internal/index.html">
+   Golang Internal
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go-internal/asm.html">
+     Go’s Assembler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go-internal/type-assertion.html">
+     Type Assertion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notes/leetcode/index.html">
+   Leetcode 刷题记录
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/wizard/index.html">
+   配置向导
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/wizard/pi.html">
+     家用树莓派 3B+ 配置
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../notes/writeups/index.html">
+   Capture the Flag
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/writeups/wargame-leviathan.html">
+     wargame-leviathan
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../notes/writeups/seedlabs/index.html">
+     Seed Lab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../notes/writeups/seedlabs/format-string-vulnerability-lab/index.html">
+       Format String Vulnerability Lab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/writeups/wargame-bandit/index.html">
+     wargme-bandit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/writeups/wargame-narnia/index.html">
+     wargame-narnia
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  博客
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../blog/index.html">
+   博客首页
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  手册
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/awk.html">
+   Awk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/gdb.html">
+   GDB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/go.html">
+   Go Tools
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/gpg.html">
+   GnuPG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/grep.html">
+   Grep
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/irc.html">
+   IRC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/krita.html">
+   Krita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/latex.html">
+   LaTeX
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/lily.html">
+   LilyPond
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/magick.html">
+   ImageMagick
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/make.html">
+   Makefile
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/pacman.html">
+   Pacman
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/py.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/rst.html">
+   reStructuredText
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/sh.html">
+   Shell Script
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/sphinx.html">
+   Sphinx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../man/vim.html">
+   Vim
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  随记
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2022/index.html">
+   2022
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2022/05.html">
+     五月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2022/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2022/03.html">
+     三月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2022/02.html">
+     二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2022/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   2021
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="12.html">
+     十二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11.html">
+     十一月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.html">
+     十月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09.html">
+     九月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08.html">
+     八月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05.html">
+     五月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03.html">
+     三月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02.html">
+     二月
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2020/index.html">
+   2020
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2020/12.html">
+     十二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2020/11.html">
+     十一月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2020/08.html">
+     八月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2020/07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2020/06.html">
+     六月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2017/index.html">
+   2017
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2017/06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2017/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2017/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  收集室
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../collections/github-halloween.html">
+   Github 万圣节彩蛋
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../collections/art-works/index.html">
+   Art Works
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../collections/scores/index.html">
+   乐谱夹
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  关于
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/me.html">
+   我
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/site.html">
+   本站
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/friends.html">
+   友人帐
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/resume.html">
+   简历
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#migrating-from-gtk-3-x-to-gtk-4">
+   Migrating from GTK 3.x to GTK 4
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparation-in-gtk-3-x">
+     Preparation in GTK 3.x
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changes-that-need-to-be-done-at-the-time-of-the-switch">
+     Changes that need to be done at the time of the switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adapt-to-gtkbuilder-api-changes">
+     Adapt to GtkBuilder API changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changes-to-consider-after-the-switch">
+     Changes to consider after the switch
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fzf-intro">
+   Fzf Intro
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#awesome-list-of-python-cn-version">
+   Awesome List of Python, CN version
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plumbum-shell-combinators-and-more">
+   Plumbum: Shell Combinators and More
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id24">
+   乐利和爱克林的乳制品包装垄断
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-typing-hint-import">
+   Python Typing Hint 引入大量 import 导致脚本启动慢
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>一月</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#migrating-from-gtk-3-x-to-gtk-4">
+   Migrating from GTK 3.x to GTK 4
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparation-in-gtk-3-x">
+     Preparation in GTK 3.x
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changes-that-need-to-be-done-at-the-time-of-the-switch">
+     Changes that need to be done at the time of the switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adapt-to-gtkbuilder-api-changes">
+     Adapt to GtkBuilder API changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changes-to-consider-after-the-switch">
+     Changes to consider after the switch
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fzf-intro">
+   Fzf Intro
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#awesome-list-of-python-cn-version">
+   Awesome List of Python, CN version
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plumbum-shell-combinators-and-more">
+   Plumbum: Shell Combinators and More
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id24">
+   乐利和爱克林的乳制品包装垄断
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-typing-hint-import">
+   Python Typing Hint 引入大量 import 导致脚本启动慢
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                 <section id="id1">
+<h1>一月<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
+<section id="migrating-from-gtk-3-x-to-gtk-4">
+<h2>Migrating from GTK 3.x to GTK 4 <a class="footnote-reference brackets" href="#id5" id="id2">1</a><a class="headerlink" href="#migrating-from-gtk-3-x-to-gtk-4" title="永久链接至标题">#</a></h2>
+<p>列举 Srain 需要变更的部分：</p>
+<section id="preparation-in-gtk-3-x">
+<h3>Preparation in GTK 3.x<a class="headerlink" href="#preparation-in-gtk-3-x" title="永久链接至标题">#</a></h3>
+<p>Do not use widget style properties</p>
+<dl>
+<dt>Stop using GtkBox padding, fill and expand child properties</dt><dd><p>GtkBox child properties 被 GtkWidget 的 properties 替代</p>
+</dd>
+<dt>Stop using <code class="code docutils literal notranslate"><span class="pre">gdk_pixbuf_get_from_window()</span></code> and</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">gdk_cairo_set_source_surface()</span></code></p>
+</dd>
+<dt>Stop using GtkWidget event signals</dt><dd><p>相关的 signal 被 event controllers key 和 gestures 替代</p>
+<table class="table">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">key-release-event</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">GtkEventControllerKey</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">button-press-event</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">GtkGesture</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">button-release-event</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">GtkGesture</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Custom widgets in GTK 4 – Input</em> <a class="footnote-reference brackets" href="#id6" id="id3">2</a> 给出了 event controller 的简单用法。</p>
+</dd>
+<dt>Reduce the use of <code class="code docutils literal notranslate"><span class="pre">gtk_widget_destroy()</span></code></dt><dd><p>使用更安全的 <code class="code docutils literal notranslate"><span class="pre">gtk_container_remove()</span></code> 或 <code class="code docutils literal notranslate"><span class="pre">g_object_unref()</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="code docutils literal notranslate"><span class="pre">gtk_container_remove()</span></code> 不是已经废弃了吗？？？</p>
+</div>
+</dd>
+<dt>Reduce the use of generic container APIs</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">gtk_container_add()</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">gtk_container_remove()</span></code> 已被移除，
+使用容器自带的 add 和 remove 函数</p>
+</dd>
+</dl>
+</section>
+<section id="changes-that-need-to-be-done-at-the-time-of-the-switch">
+<h3>Changes that need to be done at the time of the switch<a class="headerlink" href="#changes-that-need-to-be-done-at-the-time-of-the-switch" title="永久链接至标题">#</a></h3>
+<dl class="simple">
+<dt>Subclassing</dt><dd><p>Many widgets can no longer be subclassed. In most cases,
+you should look deriving your widget directly from GtkWidget
+and use complex widgets as child widgets instead of deriving from them.</p>
+</dd>
+<dt>Life-cycle handling</dt><dd><p>The “destroy” signal can no longer be used to break reference cycles.</p>
+</dd>
+<dt>Stop using <code class="code docutils literal notranslate"><span class="pre">gtk_get_current_...</span></code> APIs</dt><dd><p>The function gtk_get_current_event() and its variants have been
+replaced by equivalent event controller APIs:
+<code class="code docutils literal notranslate"><span class="pre">gtk_event_controller_get_current_event()</span></code>, etc.</p>
+</dd>
+<dt>Convert your ui files</dt><dd><p>The <code class="file docutils literal notranslate"><span class="pre">gtk4-builder-tool</span></code> simplify command can perform many of the
+necessary changes automatically, when called with the <code class="code docutils literal notranslate"><span class="pre">–3to4</span></code> option.</p>
+</dd>
+</dl>
+</section>
+<section id="adapt-to-gtkbuilder-api-changes">
+<h3>Adapt to GtkBuilder API changes<a class="headerlink" href="#adapt-to-gtkbuilder-api-changes" title="永久链接至标题">#</a></h3>
+<p>太长不看</p>
+</section>
+<section id="changes-to-consider-after-the-switch">
+<h3>Changes to consider after the switch<a class="headerlink" href="#changes-to-consider-after-the-switch" title="永久链接至标题">#</a></h3>
+<p>只有一个吗…… Orz</p>
+<dl class="simple">
+<dt>Consider porting to the new list widgets</dt><dd><p>GTK 4 brings a new family of widgets for this purpose that uses list models
+instead of tree models, and widgets instead of cell renderers.
+See <em>List Widget Overview</em> <a class="footnote-reference brackets" href="#id7" id="id4">3</a></p>
+</dd>
+</dl>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://developer.gnome.org/gtk4/unstable/gtk-migrating-3-to-4.html">https://developer.gnome.org/gtk4/unstable/gtk-migrating-3-to-4.html</a></p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p><a class="reference external" href="https://blog.gtk.org/2020/04/29/custom-widgets-in-gtk-4-input/">https://blog.gtk.org/2020/04/29/custom-widgets-in-gtk-4-input/</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p><a class="reference external" href="https://developer.gnome.org/gtk4/unstable/ListContainers.html#ListWidget">https://developer.gnome.org/gtk4/unstable/ListContainers.html#ListWidget</a></p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="fzf-intro">
+<h2>Fzf Intro<a class="headerlink" href="#fzf-intro" title="永久链接至标题">#</a></h2>
+<p>Fzf <a class="footnote-reference brackets" href="#id9" id="id8">4</a> 是一个命令行下通用模糊查找工具。通常搭配其他工具使用。</p>
+<dl class="simple">
+<dt>UI key binding</dt><dd><ul class="simple">
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">j</kbd></kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">k</kbd></kbd> 上下移动</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">enter</kbd> 选中, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">c</kbd></kbd> 放弃</p></li>
+<li><p>多选模式(-m), 用 <kbd class="kbd docutils literal notranslate">tab</kbd> 和 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">shift</kbd>-<kbd class="kbd docutils literal notranslate">tab</kbd></kbd> 多选</p></li>
+<li><p>其他的键位基本是 Emacs 风格</p></li>
+<li><p>支持鼠标</p></li>
+</ul>
+</dd>
+</dl>
+<p>Search syntax</p>
+<blockquote>
+<div><table class="table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 37%" />
+<col style="width: 53%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Token</p></td>
+<td><p>Match type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p>sbtrkt</p></td>
+<td><p>fuzzy-match</p></td>
+<td><p>Items that match sbtrkt</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘wild</p></td>
+<td><p>exact-match (quoted)</p></td>
+<td><p>Items that include wild</p></td>
+</tr>
+<tr class="row-even"><td><p>^music</p></td>
+<td><p>prefix-exact-match</p></td>
+<td><p>Items that start with music</p></td>
+</tr>
+<tr class="row-odd"><td><p>.mp3$</p></td>
+<td><p>suffix-exact-match</p></td>
+<td><p>Items that end with .mp3</p></td>
+</tr>
+<tr class="row-even"><td><p>!fire</p></td>
+<td><p>inverse-exact-match</p></td>
+<td><p>Items that do not include fire</p></td>
+</tr>
+<tr class="row-odd"><td><p>!^music</p></td>
+<td><p>inverse-prefix-exact-match</p></td>
+<td><p>Items that do not start with music</p></td>
+</tr>
+<tr class="row-even"><td><p>!.mp3$</p></td>
+<td><p>inverse-suffix-exact-match</p></td>
+<td><p>Items that do not end with .mp3</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Shell key binding</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">**&lt;tab&gt;</kbd> 补全命令</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">t</kbd></kbd> 补全文件</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">r</kbd></kbd> 补全历史命令</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">alt</kbd>-<kbd class="kbd docutils literal notranslate">c</kbd></kbd> 补全目录</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>根据配置可能会有所改变</p>
+</div>
+</div></blockquote>
+<dl class="footnote brackets">
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a></p>
+</dd>
+</dl>
+</section>
+<section id="awesome-list-of-python-cn-version">
+<h2>Awesome List of Python, CN version <a class="footnote-reference brackets" href="#id16" id="id10">5</a><a class="headerlink" href="#awesome-list-of-python-cn-version" title="永久链接至标题">#</a></h2>
+<p>不喜欢 awesome list programer，但列表本身是有价值的。随便看看：</p>
+<dl class="simple">
+<dt>pyinstaller <a class="footnote-reference brackets" href="#id17" id="id11">6</a></dt><dd><p>将 Python 程序转换成独立的执行文件（跨平台）</p>
+</dd>
+<dt>pangu.py <a class="footnote-reference brackets" href="#id18" id="id12">7</a></dt><dd><p>在中日韩语字符和数字字母之间添加空格。</p>
+</dd>
+<dt>pypinyin <a class="footnote-reference brackets" href="#id19" id="id13">8</a></dt><dd><p>汉字拼音转换工具</p>
+</dd>
+<dt>pycco <a class="footnote-reference brackets" href="#id20" id="id14">9</a></dt><dd><p>文学编程（literate-programming）风格的文档生成器。</p>
+</dd>
+<dt>rich <a class="footnote-reference brackets" href="#id21" id="id15">10</a></dt><dd><p>一个在终端中支持富文本和格式美化的 Python 库，
+同时提供了 RichHandler 日志处理程序。</p>
+</dd>
+</dl>
+<dl class="footnote brackets">
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/jobbole/awesome-python-cn">https://github.com/jobbole/awesome-python-cn</a></p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id11">6</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/pyinstaller/pyinstaller">https://github.com/pyinstaller/pyinstaller</a></p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id12">7</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/vinta/pangu.py">https://github.com/vinta/pangu.py</a></p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id13">8</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/mozillazg/python-pinyin">https://github.com/mozillazg/python-pinyin</a></p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id14">9</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/pycco-docs/pycco">https://github.com/pycco-docs/pycco</a></p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id15">10</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/willmcgugan/rich">https://github.com/willmcgugan/rich</a></p>
+</dd>
+</dl>
+</section>
+<section id="plumbum-shell-combinators-and-more">
+<h2>Plumbum: Shell Combinators and More <a class="footnote-reference brackets" href="#id23" id="id22">11</a><a class="headerlink" href="#plumbum-shell-combinators-and-more" title="永久链接至标题">#</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2021-01-16</p>
+</dd>
+</dl>
+<p>肉眼可见的香：</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">plumbum.cmd</span> <span class="kn">import</span> <span class="n">ls</span><span class="p">,</span> <span class="n">grep</span><span class="p">,</span> <span class="n">wc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">chain</span> <span class="o">=</span> <span class="n">ls</span><span class="p">[</span><span class="s2">&quot;-a&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">grep</span><span class="p">[</span><span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;\.py&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">wc</span><span class="p">[</span><span class="s2">&quot;-l&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span>
+<span class="go">/bin/ls -a | /bin/grep -v &#39;\.py&#39; | /usr/bin/wc -l</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">chain</span><span class="p">()</span>
+<span class="go">&#39;27\n&#39;</span>
+</pre></div>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id22">11</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/tomerfiliba/plumbum">https://github.com/tomerfiliba/plumbum</a></p>
+</dd>
+</dl>
+</section>
+<section id="id24">
+<h2>乐利和爱克林的乳制品包装垄断<a class="headerlink" href="#id24" title="永久链接至标题">#</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2021-01-23</p>
+</dd>
+</dl>
+<p>TODO</p>
+</section>
+<section id="python-typing-hint-import">
+<h2>Python Typing Hint 引入大量 import 导致脚本启动慢<a class="headerlink" href="#python-typing-hint-import" title="永久链接至标题">#</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2021-01-29</p>
+</dd>
+</dl>
+<p>写 khufu 的 cli 时候发现脚本启动很慢。
+使用 <code class="code docutils literal notranslate"><span class="pre">python</span> <span class="pre">-X</span> <span class="pre">importtime</span> <span class="pre">...</span></code> 统计脚本启动时 import 所占时间:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span> <span class="n">many</span> <span class="n">line</span> <span class="n">emitted</span> <span class="o">...</span>
+<span class="kn">import</span> <span class="nn">time</span><span class="p">:</span>       <span class="mi">323</span> <span class="o">|</span>     <span class="mi">405157</span> <span class="o">|</span> <span class="n">sphinxnote</span><span class="o">.</span><span class="n">khufu</span>
+</pre></div>
+</div>
+<p>主要是因为 import 了 sphinx jinja 这类重量级的包导致的，而 import 的原因只是为了他
+写 typing annoaiton。</p>
+<p>尝试搜索了一下，看起来社区为了解决这个问题做了不少探索，不同版本有不同的解决方案：</p>
+<p>Python 3.5.2+ 可以使用 <code class="xref py py-const docutils literal notranslate"><span class="pre">typing.TYPE_CHECKING</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">expensive_mod</span>
+
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">arg</span><span class="p">:</span> <span class="s1">&#39;expensive_mod.SomeType&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">local_var</span><span class="p">:</span> <span class="n">expensive_mod</span><span class="o">.</span><span class="n">AnotherType</span> <span class="o">=</span> <span class="n">other_fun</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>The first type annotation must be enclosed in quotes, making it a “forward reference”</p>
+</div>
+<p>Python 3.7+ 不需要使用奇怪的 “forward reference”，只需要 <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">annotations</span></code>
+即可 <a class="footnote-reference brackets" href="#id27" id="id25">12</a> 。</p>
+<p>Python 3.10 后 <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">annotations</span></code> 会成为默认行为。</p>
+<p><code class="code docutils literal notranslate"><span class="pre">__import__('pkg_resources').declare_namespace(__name__)</span></code> <a class="footnote-reference brackets" href="#id28" id="id26">13</a> 耗了很长时间。</p>
+<p>最后:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span><span class="p">:</span>       <span class="mi">405</span> <span class="o">|</span>      <span class="mi">32024</span> <span class="o">|</span> <span class="n">sphinxnote</span><span class="o">.</span><span class="n">khufu</span>
+</pre></div>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id25">12</a></span></dt>
+<dd><p><span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0563/"><strong>PEP 0563</strong></a></p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id26">13</a></span></dt>
+<dd><p><a class="reference external" href="https://stackoverflow.com/questions/7785944/what-does-import-pkg-resources-declare-namespace-name-do">https://stackoverflow.com/questions/7785944/what-does-import-pkg-resources-declare-namespace-name-do</a></p>
+</dd>
+</dl>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+评论</div>
+<p class="sd-card-text">如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/jour/2021/01" data-title="一月" id="isso-thread"></section></div>
+</div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="02.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">二月</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../2020/index.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">2020</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-05-18.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
