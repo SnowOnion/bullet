@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="文件结构 1: 可能出现在顶层的表达式如下： Output definition,, 例如`paper`,\midi, and\layout ，重复的定义会被合并，若冲突后者优先,, Direct scheme expression, 类似#(set-default-paper-size &quot;a7&quot; 'landscape),,\header, 定义谱面的头部，包含标题、作曲家等信息,,\sco..." />
+<meta property="og:description" content="文件结构 1: 可能出现在顶层的表达式如下： Output definition,, 例如\paper,\midi, and\layout ，重复的定义会被合并，若冲突后者优先,, Direct scheme expression, 类似#(set-default-paper-size &quot;a7&quot; 'landscape),,\header, 定义谱面的头部，包含标题、作曲家等信息,,\scor..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -1059,17 +1059,22 @@ title="Source repository"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     指定输出文件名称
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#midi">
      MIDI
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id17">
+      <a class="reference internal nav-link" href="#id19">
        输出 MIDI 文件
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id18">
+      <a class="reference internal nav-link" href="#id20">
        指定乐器
       </a>
      </li>
@@ -1163,17 +1168,22 @@ title="Source repository"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     指定输出文件名称
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#midi">
      MIDI
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id17">
+      <a class="reference internal nav-link" href="#id19">
        输出 MIDI 文件
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id18">
+      <a class="reference internal nav-link" href="#id20">
        指定乐器
       </a>
      </li>
@@ -1197,10 +1207,10 @@ title="Source repository"
 <p>页面上的预览由 <a class="reference external" href="https://pypi.org/project/sphinxnotes-lilypond">📦sphinxnotes-lilypond</a> 生成</p>
 </div>
 <section id="id2">
-<h2>文件结构 <a class="footnote-reference brackets" href="#id21" id="id1">1</a><a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<h2>文件结构 <a class="footnote-reference brackets" href="#id23" id="id1">1</a><a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <p>可能出现在顶层的表达式如下：</p>
 <dl>
-<dt>Output definition,</dt><dd><p>例如`paper`, <code class="code docutils literal notranslate"><span class="pre">\midi</span></code>, and <code class="code docutils literal notranslate"><span class="pre">\layout</span></code>，重复的定义会被合并，若冲突后者优先</p>
+<dt>Output definition,</dt><dd><p>例如 <code class="code docutils literal notranslate"><span class="pre">\paper</span></code>, <code class="code docutils literal notranslate"><span class="pre">\midi</span></code>, and <code class="code docutils literal notranslate"><span class="pre">\layout</span></code>，重复的定义会被合并，若冲突后者优先</p>
 </dd>
 <dt>Direct scheme expression</dt><dd><p>类似 <code class="code docutils literal notranslate"><span class="pre">#(set-default-paper-size</span> <span class="pre">&quot;a7&quot;</span> <span class="pre">'landscape)</span></code></p>
 <div class="admonition note">
@@ -1210,7 +1220,7 @@ title="Source repository"
 </dd>
 <dt><code class="code docutils literal notranslate"><span class="pre">\header</span></code></dt><dd><p>定义谱面的头部，包含标题、作曲家等信息</p>
 </dd>
-<dt><code class="code docutils literal notranslate"><span class="pre">\score</span></code></dt><dd><p>包含单个 Music Expression <a class="footnote-reference brackets" href="#id22" id="id3">2</a> ，所有顶层的 <code class="code docutils literal notranslate"><span class="pre">\score</span></code>，会被隐式地包含在 <code class="code docutils literal notranslate"><span class="pre">\book</span></code> 里</p>
+<dt><code class="code docutils literal notranslate"><span class="pre">\score</span></code></dt><dd><p>包含单个 Music Expression <a class="reference internal" href="#music-expr" id="id3"><span>[music-expr]</span></a> ，所有顶层的 <code class="code docutils literal notranslate"><span class="pre">\score</span></code>，会被隐式地包含在 <code class="code docutils literal notranslate"><span class="pre">\book</span></code> 里</p>
 </dd>
 <dt><code class="code docutils literal notranslate"><span class="pre">\book</span></code></dt><dd><p>用来实现同一份 <code class="file docutils literal notranslate"><span class="pre">*.ly</span></code> 文件输出多份谱子</p>
 </dd>
@@ -1227,7 +1237,7 @@ title="Source repository"
 <section id="id4">
 <h2>记谱法<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h2>
 <section id="id6">
-<h3>单个音符升降半音 <a class="footnote-reference brackets" href="#id23" id="id5">3</a><a class="headerlink" href="#id6" title="永久链接至标题">#</a></h3>
+<h3>单个音符升降半音 <a class="footnote-reference brackets" href="#id24" id="id5">2</a><a class="headerlink" href="#id6" title="永久链接至标题">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">升</dt>
 <dd class="field-odd"><p>音名 + <code class="code docutils literal notranslate"><span class="pre">is</span></code>，如 <code class="code docutils literal notranslate"><span class="pre">:lily:`{</span> <span class="pre">cis'</span> <span class="pre">}`</span></code> -&gt; <img class="lilypond-score" src=".././_lilypond/7655900d565a99ded236c1c5d77b8a42b3f46d99/music.preview.png" alt="{ cis' }" style="height:2.5em;", align="absbottom"/></p>
@@ -1291,10 +1301,19 @@ title="Source repository"
 </section>
 <section id="id16">
 <h2>输出<a class="headerlink" href="#id16" title="永久链接至标题">#</a></h2>
+<section id="id17">
+<h3>指定输出文件名称<a class="headerlink" href="#id17" title="永久链接至标题">#</a></h3>
+<p>在 <code class="code docutils literal notranslate"><span class="pre">\score</span></code> block 显式地指定 <code class="code docutils literal notranslate"><span class="pre">\book</span></code>， 再指定 <code class="code docutils literal notranslate"><span class="pre">\bookOutputSuffix</span></code> 即可 <a class="footnote-reference brackets" href="#id25" id="id18">3</a></p>
+<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\book</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
+<span class=" -Whitespace">  </span><span class="nb nb-MusicFunction">\bookOutputSuffix</span><span class=" -Whitespace"> </span><span class="s">&quot;alice&quot;</span><span class=" -Whitespace"></span>
+<span class=" -Whitespace">  </span><span class="k">\score</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"> </span>…<span class=" -Whitespace"> </span><span class="p">}</span><span class=" -Whitespace"></span>
+</pre></div>
+</div>
+</section>
 <section id="midi">
 <h3>MIDI<a class="headerlink" href="#midi" title="永久链接至标题">#</a></h3>
-<section id="id17">
-<h4>输出 MIDI 文件<a class="headerlink" href="#id17" title="永久链接至标题">#</a></h4>
+<section id="id19">
+<h4>输出 MIDI 文件<a class="headerlink" href="#id19" title="永久链接至标题">#</a></h4>
 <div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\score</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
 <span class=" -Whitespace">   </span><span class="c1">% ...</span><span class=" -Whitespace"></span>
 <span class=" -Whitespace">  </span><span class="k">\midi</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"> </span><span class="p">}</span><span class=" -Whitespace"></span>
@@ -1302,9 +1321,9 @@ title="Source repository"
 </pre></div>
 </div>
 </section>
-<section id="id18">
-<h4>指定乐器<a class="headerlink" href="#id18" title="永久链接至标题">#</a></h4>
-<p>设置 Staff 的 <code class="code docutils literal notranslate"><span class="pre">midiInstrument</span></code> <a class="footnote-reference brackets" href="#id24" id="id19">4</a> 属性为乐器的名称 <a href="#id25"><span class="problematic" id="id26"><span id="id20"></span>[#]_</span></a></p>
+<section id="id20">
+<h4>指定乐器<a class="headerlink" href="#id20" title="永久链接至标题">#</a></h4>
+<p>设置 Staff 的 <code class="code docutils literal notranslate"><span class="pre">midiInstrument</span></code> <a class="footnote-reference brackets" href="#id26" id="id21">4</a> 属性为乐器的名称 <a class="footnote-reference brackets" href="#id27" id="id22">5</a></p>
 <div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\new</span><span class=" -Whitespace"> </span><span class="nb nb-Context">Staff</span><span class=" -Whitespace"> </span><span class="k">\with</span><span class=" -Whitespace"> </span><span class="p">{</span><span class="nb nb-ContextProperty">midiInstrument</span><span class=" -Whitespace"> </span><span class="p">=</span><span class=" -Whitespace"> </span><span class="s">&quot;acoustic guitar (nylon)&quot;</span><span class="p">}</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
 <span class=" -Whitespace">  </span><span class="c1">% ...</span><span class=" -Whitespace"></span>
 <span class="p">}</span><span class=" -Whitespace"></span>
@@ -1312,23 +1331,26 @@ title="Source repository"
 </div>
 <p class="rubric">脚注</p>
 <dl class="footnote brackets">
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p><a class="reference external" href="https://lilypond.org/doc/v2.20/Documentation/notation/file-structure">https://lilypond.org/doc/v2.20/Documentation/notation/file-structure</a></p>
 </dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
 <dd><p><a class="reference external" href="https://lilypond.org/doc/v2.20/Documentation/music-glossary/pitch-names">https://lilypond.org/doc/v2.20/Documentation/music-glossary/pitch-names</a></p>
 </dd>
 </dl>
 <dl class="citation">
-<dt class="label" id="music-expr"><span class="brackets"><a class="fn-backref" href="#id11">music-expr</a></span></dt>
+<dt class="label" id="music-expr"><span class="brackets">music-expr</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id11">2</a>)</span></dt>
 <dd><p><a class="reference external" href="https://lilypond.org/doc/v2.20/Documentation/learning/music-expressions-explained">https://lilypond.org/doc/v2.20/Documentation/learning/music-expressions-explained</a></p>
 </dd>
 </dl>
 <dl class="footnote brackets">
-<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id18">3</a></span></dt>
+<dd><p><a class="reference external" href="https://lilypond.org/doc/v2.22/Documentation/notation/output-file-names">https://lilypond.org/doc/v2.22/Documentation/notation/output-file-names</a></p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id21">4</a></span></dt>
 <dd><p><a class="reference external" href="https://lilypond.org/doc/v2.20/Documentation/notation/using-midi-instruments">https://lilypond.org/doc/v2.20/Documentation/notation/using-midi-instruments</a></p>
 </dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id19">4</a></span></dt>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id22">5</a></span></dt>
 <dd><p><a class="reference external" href="https://lilypond.org/doc/v2.20/Documentation/notation/midi-instruments">https://lilypond.org/doc/v2.20/Documentation/notation/midi-instruments</a></p>
 </dd>
 </dl>
@@ -1388,7 +1410,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-05-18.<br/>
+    Last updated on 2022-05-21.<br/>
 </p>
         </footer>
     </div>
