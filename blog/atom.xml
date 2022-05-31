@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-05-21T05:43:42.104531+00:00</updated>
+  <updated>2022-05-31T01:47:53.321493+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -6621,6 +6621,7 @@ func IsSigned[T Int](n T) {
     <link href="https://silverrainz.me/blog/funtional-programming-in-go-generics.html" rel="alternate"/>
     <summary>函数式编程（Functional Programming / FP）作为一种编程范式，具有无状态、无副作用、并发友好、抽象程度高等优点。目前流行的编程语言（C++、Python、Rust）都或多或少地引入了函数式特性，但在同作为流行语言的 Golang 中却少有讨论。</summary>
     <category term="Golang" label="Golang"/>
+    <category term="泛型" label="泛型"/>
     <category term="函数式编程" label="函数式编程"/>
     <published>2021-10-27T00:00:00+00:00</published>
   </entry>
