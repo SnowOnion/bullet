@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="个体 👤SilverRainZ 的日志使用 Sphinx+ABlog 管理。 标签| 归档| 草稿| 订阅, 最近更新: 函数式编程在 Go 泛型下的实用性探索| 27 October 函数式编程（Functional Programming / FP）作为一种编程范式，具有无状态、无副作用、并发友好、抽象程度高等优点。目前流行的编程语言（C++、Python、Rust）都或多或少地引入了函..." />
+<meta property="og:description" content="个体 👤SilverRainZ 的日志使用 Sphinx+ABlog 管理。 标签| 归档| 草稿| 订阅, 最近更新: 何时使用 Go 泛型| 03 June 这篇文章是 When To Use Generics 的中文翻译，作者是 Go Team 的 👤ianlancetaylor 。, 函数式编程在 Go 泛型下的实用性探索| 27 October 函数式编程（Functional P..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -160,6 +160,12 @@
 <ul>
    
   <li>
+    <a href="when-go-generics.html"
+      >03 June - 何时使用 Go 泛型</a
+    >
+  </li>
+  
+  <li>
     <a href="funtional-programming-in-go-generics.html"
       >27 October - 函数式编程在 Go 泛型下的实用性探索</a
     >
@@ -180,12 +186,6 @@
   <li>
     <a href="sphinx-as-note-taking-system-1.html"
       >24 May - 我如何用 Sphinx 建立笔记系统（一）选择 Sphinx 的理由</a
-    >
-  </li>
-  
-  <li>
-    <a href="new-boy.html"
-      >21 March - 嘿，我去 2010</a
     >
   </li>
   
@@ -245,7 +245,7 @@
     <a href="tag/gtk.html">GTK</a>
   </li>
     
-  <li class="ablog-cloud ablog-cloud-1">
+  <li class="ablog-cloud ablog-cloud-2">
     <a href="tag/golang.html">Golang</a>
   </li>
     
@@ -321,7 +321,7 @@
     <a href="tag/%E5%B1%95%E8%A7%88.html">展览</a>
   </li>
     
-  <li class="ablog-cloud ablog-cloud-1">
+  <li class="ablog-cloud ablog-cloud-2">
     <a href="tag/%E6%B3%9B%E5%9E%8B.html">泛型</a>
   </li>
     
@@ -340,7 +340,11 @@
   <li class="ablog-cloud ablog-cloud-1">
     <a href="tag/%E7%BB%98%E7%94%BB.html">绘画</a>
   </li>
-      
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%BF%BB%E8%AF%91.html">翻译</a>
+  </li>
+    
   <li class="ablog-cloud ablog-cloud-1">
     <a href="tag/%E8%AE%BE%E5%A4%87.html">设备</a>
   </li>
@@ -370,7 +374,11 @@
   <a href="archive.html">Archives</a>
 </h3>
 <ul>
-     
+   
+  <li>
+    <a href="2022.html">2022 (1)</a>
+  </li>
+    
   <li>
     <a href="2021.html">2021 (5)</a>
   </li>
@@ -537,6 +545,9 @@ title="Source repository"
 <strong><a class="reference internal" href="tag.html" title="Tags"><span class="xref std std-ref">标签</span></a> | <a class="reference internal" href="archive.html" title="Archives"><span class="xref std std-ref">归档</span></a> | <a class="reference internal" href="drafts.html" title="Drafts"><span class="xref std std-ref">草稿</span></a> | <a class="reference external" href="https://silverrainz.me/blog/atom.xml" title="银色子弹 Feed"><span class="xref std std-ref">订阅</span></a></strong></p><section id="id2">
 <h2>最近更新<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <ul class="postlist-style-none postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="when-go-generics.html">何时使用 Go 泛型</a> | 03 June</p>
+<p class="ablog-post-excerpt">这篇文章是 <a class="reference external" href="https://go.dev/blog/when-generics">When To Use Generics</a> 的中文翻译，作者是 Go Team 的 <a class="reference external" href="https://github.com/ianlancetaylor">👤ianlancetaylor</a>。</p>
+</li>
 <li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="funtional-programming-in-go-generics.html">函数式编程在 Go 泛型下的实用性探索</a> | 27 October</p>
 <p class="ablog-post-excerpt">函数式编程（Functional Programming / FP）作为一种编程范式，具有无状态、无副作用、并发友好、抽象程度高等优点。目前流行的编程语言（C++、Python、Rust）都或多或少地引入了函数式特性，但在同作为流行语言的 Golang 中却少有讨论。</p>
 </li>
@@ -709,7 +720,7 @@ Using English fallback for directive “hint”.</p>
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-06-02.<br/>
+    Last updated on 2022-06-03.<br/>
 </p>
         </footer>
     </div>
