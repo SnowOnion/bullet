@@ -573,8 +573,8 @@ title="Source repository"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#interface-type-parameter">
-     不要使用 interface 替代 type parameter
+    <a class="reference internal nav-link" href="#type-parameter-interface">
+     不要使用 type parameter 替代 interface
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -656,8 +656,8 @@ title="Source repository"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#interface-type-parameter">
-     不要使用 interface 替代 type parameter
+    <a class="reference internal nav-link" href="#type-parameter-interface">
+     不要使用 type parameter 替代 interface
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -737,10 +737,10 @@ title="Source repository"
 <p>类型参数可能有用的另一种情况是用于编写通用数据结构。 通用数据结构类似于 slice 或 map，但不是语言内置的，例如链表或二叉树。</p>
 <p>在之前，这样的数据结构通常会有两种实现方式：</p>
 <ol class="arabic simple">
-<li><p>硬编码，只持特定的元素类型；</p></li>
+<li><p>硬编码，只支持特定的元素类型；</p></li>
 <li><p>使用 <code class="code docutils literal notranslate"><span class="pre">interface{}</span></code></p></li>
 </ol>
-<p>用 type parameter 替换特定元素类型可以生成更通用的数据结构，可以在程序的其他部分或其他程序中使用。用类型参数替换 <code class="code docutils literal notranslate"><span class="pre">interface{}</span></code> 则可以让数据存储更加地高效，节省内存资源；它还可以允许代码避免类型断言（type assertion），并在编译时进行全面的类型检查。</p>
+<p>用 type parameter 替换特定元素类型可以生成更通用的数据结构，可以在程序的其他部分或其他程序中使用。用类型参数替换 <code class="code docutils literal notranslate"><span class="pre">interface{}</span></code> 则可以让数据更高效地存储数据，节省内存资源；它还可以允许代码避免类型断言（type assertion），并在编译时进行全面的类型检查。</p>
 <p>下面节选了用 type parameter 实现的二叉树作为例子:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Tree is a binary tree.</span><span class="w"></span>
 <span class="kd">type</span><span class="w"> </span><span class="nx">Tree</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -843,8 +843,8 @@ title="Source repository"
 <section id="id8">
 <h2>何时不使用 type parameter<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h2>
 <p>现在让我们来讨论一下问题的另一面：什么时候不应该使用类型参数。</p>
-<section id="interface-type-parameter">
-<h3>不要使用 interface 替代 type parameter<a class="headerlink" href="#interface-type-parameter" title="永久链接至标题">#</a></h3>
+<section id="type-parameter-interface">
+<h3>不要使用 type parameter 替代 interface<a class="headerlink" href="#type-parameter-interface" title="永久链接至标题">#</a></h3>
 <p>众所周知，Go 支持接口（interface）类型。interface 在一定程度上允许你在实现泛型编程。</p>
 <p>例如，广泛使用的 <code class="code docutils literal notranslate"><span class="pre">io.Reader</span></code> 接口提供了一种通用机制，用于从包含信息（例如文件）的对象或产生信息（例如随机数生成器）的对象中读取数据。如果你对某个类型的的所有操作就是对其值调用方法，请使用 interface，而不是 type parameter。直接使用 <code class="code docutils literal notranslate"><span class="pre">io.Reader</span></code> 的代码更加易于阅读、高效且有效。这里没有必要使用 type parameter 通过调用 <code class="code docutils literal notranslate"><span class="pre">Read</span></code> 方法从值中读取数据。</p>
 <p>举个例子，这里将使用 interface 的第一个函数签名更改为使用 type parameter 的第二个版本，看起来也许很诱人:</p>
@@ -932,7 +932,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-06-07.<br/>
+    Last updated on 2022-06-14.<br/>
 </p>
         </footer>
     </div>
