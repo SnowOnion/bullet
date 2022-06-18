@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-06-16T12:36:55.308646+00:00</updated>
+  <updated>2022-06-18T05:40:52.503439+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -5076,7 +5076,7 @@ $ python2 duoshuo-migrator.py -i duoshuo.json -o wp.xml
   <entry>
     <id>https://silverrainz.me/blog/srain-and-me.html</id>
     <title>Srain 1.0 发布了</title>
-    <updated>2020-02-29T00:00:00+00:00</updated>
+    <updated>2020-04-06T00:00:00+00:00</updated>
     <author>
       <name>Shengyu Zhang</name>
     </author>
@@ -5086,8 +5086,13 @@ $ python2 duoshuo-migrator.py -i duoshuo.json -o wp.xml
 &lt;p class="admonition-title"&gt;提示&lt;/p&gt;
 &lt;p&gt;这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 &lt;a class="reference external" href="https://github.com/SilverRainZ/bullet"&gt;⛺SilverRainZ/bullet&lt;/a&gt; 反馈&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="topic"&gt;
-&lt;p class="topic-title"&gt;前注&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/srain-and-me.rst&lt;/span&gt;, line 12)&lt;/p&gt;
+&lt;p&gt;No directive entry for “admonition” in module “docutils.parsers.rst.languages.zh_cn”.
+Using English fallback for directive “admonition”.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition- admonition"&gt;
+&lt;p class="admonition-title"&gt;前注&lt;/p&gt;
 &lt;p&gt;这篇短文之前在知乎和朋友圈都发过了，发到博客仅为存档，另也做了一些小的修正和改动。
 不知道这里何时能够不荒废。&lt;/p&gt;
 &lt;/div&gt;
@@ -5108,13 +5113,14 @@ Arch Linux CN 社区的 zwindl 和 VOID001 愿意和我共同维护这个项目�
 &lt;p&gt;下面这篇文章介绍了 Srain 1.0 所拥有的特性以及未来的开发计划，
 如果有其他发行版的 maintainer 愿意将 Srain 加入你们的软件源，欢迎联系我。
 Srain 未来会继续开发下去，跟着 IRC 一起慢慢消失在历史里。&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://srain.im/2020/02/29/introducing-srain.html"&gt;Modern IRC client written in GTK&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Update：从 02-29 发布后截至 2020-04-06，Srain 又进入了三个发行版的官方仓库，
+&lt;p&gt;&lt;a class="reference external" href="https://srain.silverrainz.me/blog/introducing-srain.html"&gt;Modern IRC client written in GTK&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="note update admonition"&gt;
+&lt;p class="admonition-title"&gt;Updated on 2020-04-06&lt;/p&gt;
+&lt;p&gt;从 02-29 发布后截至 2020-04-06，Srain 又进入了三个发行版的官方仓库，
 合并了 8 位社区贡献者的 PR，收到了数十个来自社区的反馈，发布了三个版本，
 尽管在（只能称之为火花的）宣传热度过去后，来自社区的贡献会慢慢变少，
 但我相信是会有人受益于这个软件的吧，一切都会顺利进行的吧，I pray。&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
 &lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
 &lt;div class="sd-card-body docutils"&gt;
 &lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
@@ -6641,11 +6647,6 @@ func IsSigned[T Int](n T) {
 &lt;section id="id2"&gt;
 &lt;h2&gt;介绍&lt;/h2&gt;
 &lt;p&gt;Go 1.18 新增了一个重大的语言特性：泛型。本文不会描述泛型是什么以及如何使用它们。本文的重点是：&lt;em&gt;什么时候应该在代码中使用泛型，什么时候不使用它们&lt;/em&gt;。&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/when-go-generics.rst&lt;/span&gt;, line 23)&lt;/p&gt;
-&lt;p&gt;No directive entry for “admonition” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “admonition”.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div class="admonition- admonition"&gt;
 &lt;p class="admonition-title"&gt;译者注&lt;/p&gt;
 &lt;p&gt;关于泛型的简要介绍，可以看看 &lt;span class="xref std std-doc"&gt;./funtional-programming-in-go-generics&lt;/span&gt;&lt;/p&gt;
