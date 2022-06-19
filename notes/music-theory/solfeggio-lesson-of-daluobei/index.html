@@ -49,6 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinxnotes-strike.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/ablog-custom.css" />
@@ -62,6 +63,8 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
@@ -557,7 +560,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../abraxas.html">
-   人造上帝 Abraxas
+   人造上帝
   </a>
  </li>
 </ul>
@@ -1159,8 +1162,8 @@ title="Source repository"
 <h3>音阶<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
 <p>找出几个适合自己音域（唱得舒服）的调。自我感觉是在 A2 <img class="lilypond-score" src="../../.././_lilypond/704c46838530293682a2c321bc7ea0de0027eca8/music.preview.png" alt="{a}" style="height:2.5em;", align="absbottom"/> 到 D4 <img class="lilypond-score" src="../../.././_lilypond/d8d7560ff1b0f1421a3742beb9f0c44c798cc820/music.preview.png" alt="{d''}" style="height:2.5em;", align="absbottom"/> 这样子。</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="9d97335e-6371-46e7-a23c-15bc8b6775c5" name="66b32a65-957e-4448-acc5-027128549b8a" type="radio">
-</input><label class="sd-tab-label" for="9d97335e-6371-46e7-a23c-15bc8b6775c5">
+<input checked="checked" id="4646e42c-8d05-44b6-8546-717e0cec3caf" name="3ed4ccb7-db66-4608-a9b2-869116b32873" type="radio">
+</input><label class="sd-tab-label" for="4646e42c-8d05-44b6-8546-717e0cec3caf">
 A 调</label><div class="sd-tab-content docutils">
 <div class="lilypond">
 <p><img class="lilypond-score" src="../../.././_lilypond/a1d0b07a63586f8dd5cbc6ab5d4815723c443bda/music.png" alt="\version &quot;2.20.0&quot;
@@ -1201,8 +1204,8 @@ symbols =  {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/a1d0b07a63586f8dd5cbc6ab5d4815723c443bda/music.mp3" >
 </audio></p></div></div>
-<input id="a4fbcfee-d3c7-43c0-9710-187e7b64258d" name="66b32a65-957e-4448-acc5-027128549b8a" type="radio">
-</input><label class="sd-tab-label" for="a4fbcfee-d3c7-43c0-9710-187e7b64258d">
+<input id="52322a1f-c9a1-46bf-8215-824923c6ff17" name="3ed4ccb7-db66-4608-a9b2-869116b32873" type="radio">
+</input><label class="sd-tab-label" for="52322a1f-c9a1-46bf-8215-824923c6ff17">
 B 调</label><div class="sd-tab-content docutils">
 <div class="lilypond">
 <p><img class="lilypond-score" src="../../.././_lilypond/267b21111212ccb4b3ac49bddacd480b808a40ac/music.png" alt="\version &quot;2.20.0&quot;
@@ -1243,8 +1246,8 @@ symbols =  {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/267b21111212ccb4b3ac49bddacd480b808a40ac/music.mp3" >
 </audio></p></div></div>
-<input id="ef3b1734-4dd0-4975-bb12-db49f3b8098c" name="66b32a65-957e-4448-acc5-027128549b8a" type="radio">
-</input><label class="sd-tab-label" for="ef3b1734-4dd0-4975-bb12-db49f3b8098c">
+<input id="a101ae65-99a8-4d29-8ee4-cd39d379ee40" name="3ed4ccb7-db66-4608-a9b2-869116b32873" type="radio">
+</input><label class="sd-tab-label" for="a101ae65-99a8-4d29-8ee4-cd39d379ee40">
 C 调</label><div class="sd-tab-content docutils">
 <div class="lilypond">
 <p><img class="lilypond-score" src="../../.././_lilypond/9cd52ca4f4b6776e536639d03ba8cc0cecc2b7d7/music.png" alt="\version &quot;2.20.0&quot;
@@ -1285,8 +1288,8 @@ symbols =  {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/9cd52ca4f4b6776e536639d03ba8cc0cecc2b7d7/music.mp3" >
 </audio></p></div></div>
-<input id="7727411f-b87b-45a6-9ae1-6948b1efa225" name="66b32a65-957e-4448-acc5-027128549b8a" type="radio">
-</input><label class="sd-tab-label" for="7727411f-b87b-45a6-9ae1-6948b1efa225">
+<input id="7ab47438-b933-4347-98a4-d4016c8b3464" name="3ed4ccb7-db66-4608-a9b2-869116b32873" type="radio">
+</input><label class="sd-tab-label" for="7ab47438-b933-4347-98a4-d4016c8b3464">
 D 调</label><div class="sd-tab-content docutils">
 <div class="lilypond">
 <p><img class="lilypond-score" src="../../.././_lilypond/9a758706b024258555e9d94cbdabf856d1e9904e/music.png" alt="\version &quot;2.20.0&quot;
@@ -1332,8 +1335,8 @@ symbols =  {
 <section id="id5">
 <h3>小红帽<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="7068691a-eb74-4928-a563-e3ab8ea1b080" name="ff642a54-c32e-464f-b68f-3b9692e46981" type="radio">
-</input><label class="sd-tab-label" for="7068691a-eb74-4928-a563-e3ab8ea1b080">
+<input checked="checked" id="f49d7b32-17f6-4cf2-879c-1a258535e4da" name="51dc93c9-232a-4db4-890d-3dd0c2b3f098" type="radio">
+</input><label class="sd-tab-label" for="f49d7b32-17f6-4cf2-879c-1a258535e4da">
 C 调</label><div class="sd-tab-content docutils">
 <div class="lilypond">
 <p><img class="lilypond-score" src="../../.././_lilypond/300197c1c7e034993f25a5ab73a58358fd9f35dc/music.png" alt="\version &quot;2.20.0&quot;
@@ -1386,8 +1389,8 @@ symbols =  {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/300197c1c7e034993f25a5ab73a58358fd9f35dc/music.mp3" >
 </audio></p></div></div>
-<input id="2accb3bc-0037-4e8b-b3cd-be3cec6057ca" name="ff642a54-c32e-464f-b68f-3b9692e46981" type="radio">
-</input><label class="sd-tab-label" for="2accb3bc-0037-4e8b-b3cd-be3cec6057ca">
+<input id="4748694f-c84b-4bfb-8ea8-4f68a4b47d6a" name="51dc93c9-232a-4db4-890d-3dd0c2b3f098" type="radio">
+</input><label class="sd-tab-label" for="4748694f-c84b-4bfb-8ea8-4f68a4b47d6a">
 D 调</label><div class="sd-tab-content docutils">
 <div class="lilypond">
 <p><img class="lilypond-score" src="../../.././_lilypond/80eb488a6b6a336de27c01bb64ecf3e718e46829/music.png" alt="\version &quot;2.20.0&quot;
@@ -1440,8 +1443,8 @@ symbols =  {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/80eb488a6b6a336de27c01bb64ecf3e718e46829/music.mp3" >
 </audio></p></div></div>
-<input id="8fd7cfe1-11e8-435f-8828-5ea6818357e6" name="ff642a54-c32e-464f-b68f-3b9692e46981" type="radio">
-</input><label class="sd-tab-label" for="8fd7cfe1-11e8-435f-8828-5ea6818357e6">
+<input id="55c55c85-7d84-45a1-9400-7e275c51d412" name="51dc93c9-232a-4db4-890d-3dd0c2b3f098" type="radio">
+</input><label class="sd-tab-label" for="55c55c85-7d84-45a1-9400-7e275c51d412">
 A 调</label><div class="sd-tab-content docutils">
 <div class="lilypond">
 <p><img class="lilypond-score" src="../../.././_lilypond/a14d80ae927f537efb33adb23682e51825826bb7/music.png" alt="\version &quot;2.20.0&quot;
@@ -1828,7 +1831,7 @@ symbols = {
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-06-18.<br/>
+    Last updated on 2022-06-19.<br/>
 </p>
         </footer>
     </div>
