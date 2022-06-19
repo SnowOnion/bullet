@@ -49,6 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinxnotes-strike.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/ablog-custom.css" />
@@ -62,6 +63,8 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
@@ -557,7 +560,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../abraxas.html">
-   人造上帝 Abraxas
+   人造上帝
   </a>
  </li>
 </ul>
@@ -1166,8 +1169,8 @@ title="Source repository"
 </dd>
 </dl>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="6ce0120a-91e4-4cf1-b393-97ecf8404024" name="354cccae-cacd-42fa-a74a-b2d9e3350d53" type="radio">
-</input><label class="sd-tab-label" for="6ce0120a-91e4-4cf1-b393-97ecf8404024">
+<input checked="checked" id="694b33db-5edf-4891-9466-60b2b42360da" name="849edd22-bbf4-4a6b-a29c-7f13b91529fa" type="radio">
+</input><label class="sd-tab-label" for="694b33db-5edf-4891-9466-60b2b42360da">
 C 调</label><div class="sd-tab-content docutils">
 <p>旋律：</p>
 <div class="lilypond">
@@ -1273,8 +1276,8 @@ symbols = {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/32ffe6f3c78c5e33573da448c90b572f6908d3e7/music.mp3" >
 </audio></p></div></div>
-<input id="3c2ae3f3-e542-40b5-ba45-960f4895d5ec" name="354cccae-cacd-42fa-a74a-b2d9e3350d53" type="radio">
-</input><label class="sd-tab-label" for="3c2ae3f3-e542-40b5-ba45-960f4895d5ec">
+<input id="ddeca78b-6c49-402c-8b60-c32e10d752af" name="849edd22-bbf4-4a6b-a29c-7f13b91529fa" type="radio">
+</input><label class="sd-tab-label" for="ddeca78b-6c49-402c-8b60-c32e10d752af">
 G 调</label><div class="sd-tab-content docutils">
 <p>旋律：</p>
 <div class="lilypond">
@@ -1380,8 +1383,8 @@ symbols = {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/a9a35af2ccecd4b6e40a2b6dc01c4eb7b8b0c68f/music.mp3" >
 </audio></p></div></div>
-<input id="8dd81a43-ccdb-4074-923f-5176bafb2185" name="354cccae-cacd-42fa-a74a-b2d9e3350d53" type="radio">
-</input><label class="sd-tab-label" for="8dd81a43-ccdb-4074-923f-5176bafb2185">
+<input id="f18ecddf-797e-4939-a2f8-c55b587aa82d" name="849edd22-bbf4-4a6b-a29c-7f13b91529fa" type="radio">
+</input><label class="sd-tab-label" for="f18ecddf-797e-4939-a2f8-c55b587aa82d">
 D 调</label><div class="sd-tab-content docutils">
 <p>旋律：</p>
 <div class="lilypond">
@@ -1487,8 +1490,8 @@ symbols = {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/d915b6155c147c502a0fc9794d3555943981a2e6/music.mp3" >
 </audio></p></div></div>
-<input id="04c5b3eb-ee39-4f42-aedf-42332543c4de" name="354cccae-cacd-42fa-a74a-b2d9e3350d53" type="radio">
-</input><label class="sd-tab-label" for="04c5b3eb-ee39-4f42-aedf-42332543c4de">
+<input id="c8cd44fb-d85c-423e-a40b-058ce83fb554" name="849edd22-bbf4-4a6b-a29c-7f13b91529fa" type="radio">
+</input><label class="sd-tab-label" for="c8cd44fb-d85c-423e-a40b-058ce83fb554">
 A 调（原调）</label><div class="sd-tab-content docutils">
 <p>旋律：</p>
 <div class="lilypond">
@@ -1594,8 +1597,8 @@ symbols = {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/0129c0d4f45076eae8af268897a595c4db3de4cf/music.mp3" >
 </audio></p></div></div>
-<input id="d9bd5788-5ad7-42fd-9fdf-771e6c672f95" name="354cccae-cacd-42fa-a74a-b2d9e3350d53" type="radio">
-</input><label class="sd-tab-label" for="d9bd5788-5ad7-42fd-9fdf-771e6c672f95">
+<input id="c0a787bf-34bf-4c16-949a-fb509fcbf542" name="849edd22-bbf4-4a6b-a29c-7f13b91529fa" type="radio">
+</input><label class="sd-tab-label" for="c0a787bf-34bf-4c16-949a-fb509fcbf542">
 bE 调</label><div class="sd-tab-content docutils">
 <p>旋律：</p>
 <div class="lilypond">
@@ -1701,8 +1704,8 @@ symbols = {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/aef410b2337a697b8b2e656f93336370d03f9efe/music.mp3" >
 </audio></p></div></div>
-<input id="794a669e-984c-45a1-b33b-a851ab6a5ff2" name="354cccae-cacd-42fa-a74a-b2d9e3350d53" type="radio">
-</input><label class="sd-tab-label" for="794a669e-984c-45a1-b33b-a851ab6a5ff2">
+<input id="03c2e27b-d3a6-4db2-a7ce-e0125c7f980a" name="849edd22-bbf4-4a6b-a29c-7f13b91529fa" type="radio">
+</input><label class="sd-tab-label" for="03c2e27b-d3a6-4db2-a7ce-e0125c7f980a">
 bB 调</label><div class="sd-tab-content docutils">
 <p>旋律：</p>
 <div class="lilypond">
@@ -1808,8 +1811,8 @@ symbols = {
 }" style="width:100%;"/>
 <audio controls class="lilypond-score" style="width:100%;" src="../../.././_lilypond/63db19d61981d324e719afa958264de5a6d354f3/music.mp3" >
 </audio></p></div></div>
-<input id="ef06b41a-6520-465c-a612-d5e629a48502" name="354cccae-cacd-42fa-a74a-b2d9e3350d53" type="radio">
-</input><label class="sd-tab-label" for="ef06b41a-6520-465c-a612-d5e629a48502">
+<input id="1cf393c5-6994-41a0-a302-67ea01d20462" name="849edd22-bbf4-4a6b-a29c-7f13b91529fa" type="radio">
+</input><label class="sd-tab-label" for="1cf393c5-6994-41a0-a302-67ea01d20462">
 F 调</label><div class="sd-tab-content docutils">
 <p>旋律：</p>
 <div class="lilypond">
@@ -2008,7 +2011,7 @@ symbols = {
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-06-18.<br/>
+    Last updated on 2022-06-19.<br/>
 </p>
         </footer>
     </div>
