@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-06-26T13:31:33.454917+00:00</updated>
+  <updated>2022-06-26T13:47:25.988590+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -6884,14 +6884,14 @@ func IsSigned[T Int](n T) {
     </author>
     <content type="html">&lt;section id="id1"&gt;
 
-&lt;p&gt;之前画的大量小创作基本都是在 32K 的小张水彩纸上画的，然后装在蔓纯老师送我的正好 32K 的小画册 &lt;a class="reference internal" href="any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"&gt;&lt;code class="xref any any-artwork.album docutils literal notranslate"&gt;&lt;span class="pre"&gt;album-32k-1&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 里。后来画了一点 &lt;a class="reference internal" href="any-artwork.html#cap-铅笔" title="artwork 铅笔"&gt;&lt;code class="xref any any-artwork docutils literal notranslate"&gt;&lt;span class="pre"&gt;素描&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 和 &lt;a class="reference internal" href="any-artwork.medium.html#cap-丙烯" title="artwork 丙烯"&gt;&lt;code class="xref any any-artwork.medium docutils literal notranslate"&gt;&lt;span class="pre"&gt;丙烯&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;，分别用了阿诗的素描纸（310×230 mm）与哈内姆勒（300×240mm），他们的的尺寸比 A4（297×210 mm）大一点点，又比 A3（420×297 mm）小很多难以收纳。&lt;/p&gt;
-&lt;p&gt;我开始在网上寻找合适的收纳册，发现只有办公用的 A2 A3 A4 系列最好找，连老师送我的这种 32 开本都不是那么常见，更不用说上面这种非标的尺寸了。&lt;/p&gt;
+&lt;p&gt;之前画的大量小创作基本都是在 32K 的小张水彩纸上画的，然后装在蔓纯老师送我的正好 32K 的小画册 &lt;a class="reference internal" href="any-artwork.album.html#cap-album-32k-1" title="artwork album-32k-1"&gt;&lt;code class="xref any any-artwork.album docutils literal notranslate"&gt;&lt;span class="pre"&gt;album-32k-1&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 里。后来画了一点 &lt;a class="reference internal" href="any-artwork.html#cap-铅笔" title="artwork 铅笔"&gt;&lt;code class="xref any any-artwork docutils literal notranslate"&gt;&lt;span class="pre"&gt;素描&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 和 &lt;a class="reference internal" href="any-artwork.medium.html#cap-丙烯" title="artwork 丙烯"&gt;&lt;code class="xref any any-artwork.medium docutils literal notranslate"&gt;&lt;span class="pre"&gt;丙烯&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;，分别用了阿诗的素描纸（310×230 mm）与哈内姆勒的水彩纸（300×240mm），他们的的尺寸比 A4（297×210 mm）大一点，又比 A3（420×297 mm）小不少，收纳起来很尴尬。&lt;/p&gt;
+&lt;p&gt;我开始在网上寻找合适的收纳册，发现只有办公用的 A2 A3 A4 系列最好找，连老师送我的这种 32 开本都不是那么常见，更不用说上面这种国内不流行的尺寸了。&lt;/p&gt;
 &lt;section id="id2"&gt;
 &lt;h2&gt;纸张尺寸标准&lt;/h2&gt;
 &lt;p&gt;从 &lt;a class="reference external" href="https://zh.wikipedia.org/wiki/纸张尺寸"&gt;📖纸张尺寸&lt;/a&gt; 入手，简单了解了一下现行的一些纸张尺寸的标准和习惯：&lt;/p&gt;
-&lt;section id="sqrt-2"&gt;
-&lt;h3&gt;&lt;span class="math notranslate nohighlight"&gt;\(\sqrt{2}\)&lt;/span&gt; 是巧妙的宽高比&lt;/h3&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://zh.wikipedia.org/wiki/ISO 216"&gt;📖ISO 216&lt;/a&gt; 规定了纸张的宽高比为 &lt;span class="math notranslate nohighlight"&gt;\(\sqrt{2}\)&lt;/span&gt;，&lt;em&gt;这种比例的纸对折后得到面积变为原来的一半，但宽高比不变&lt;/em&gt;。设纸张的高为 &lt;span class="math notranslate nohighlight"&gt;\(x\)&lt;/span&gt;，宽为 &lt;span class="math notranslate nohighlight"&gt;\(y\)&lt;/span&gt;，通过求解 &lt;span class="math notranslate nohighlight"&gt;\(x/y = y/(x/2)\)&lt;/span&gt; 可以获得 &lt;span class="math notranslate nohighlight"&gt;\(x:y = \sqrt{2}:1\)&lt;/span&gt;。&lt;/p&gt;
+&lt;section id="sqrt-2-1"&gt;
+&lt;h3&gt;&lt;span class="math notranslate nohighlight"&gt;\(\sqrt{2}:1\)&lt;/span&gt; 是巧妙的宽高比&lt;/h3&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://zh.wikipedia.org/wiki/ISO 216"&gt;📖ISO 216&lt;/a&gt; 规定了纸张的宽高比为 &lt;span class="math notranslate nohighlight"&gt;\(\sqrt{2}:1\)&lt;/span&gt;，&lt;em&gt;这种比例的纸对折后得到面积变为原来的一半，但宽高比不变&lt;/em&gt;。设纸张的宽为 &lt;span class="math notranslate nohighlight"&gt;\(x\)&lt;/span&gt;，高为 &lt;span class="math notranslate nohighlight"&gt;\(y\)&lt;/span&gt;，列出 &lt;span class="math notranslate nohighlight"&gt;\(x/y = y/(x/2)\)&lt;/span&gt; 可以很容易得到 &lt;span class="math notranslate nohighlight"&gt;\(x:y = \sqrt{2}:1\)&lt;/span&gt;。&lt;/p&gt;
 &lt;p&gt;ISO 216 的各系列纸张的不同规格，都由符合该比例的最大规格对裁得来。例如我们常说的 A4 纸就是 ISO 612 中 A 系列的一种规格。最大的 A0 的对裁得到 A1，再对裁是 A2，A3、A4 以此类推。&lt;/p&gt;
 &lt;figure class="align-default" id="id23"&gt;
 &lt;img alt="_images/791px-A_size_illustration2_with_letter_and_legal.svg.png" src="_images/791px-A_size_illustration2_with_letter_and_legal.svg.png" style="width: 60%;" /&gt;
@@ -6925,13 +6925,13 @@ func IsSigned[T Int](n T) {
 &lt;section id="d"&gt;
 &lt;h3&gt;国标 D 系列、正度纸、大度纸&lt;/h3&gt;
 &lt;p&gt;国标 &lt;a class="reference external" href="http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=20746CFEE63514B24DD64A415CB65377"&gt;GB/T 148-1997&lt;/a&gt; 增设了 D 系列的标准，称为「标准印张」。其不严格遵守 &lt;span class="math notranslate nohighlight"&gt;\(\sqrt{2}\)&lt;/span&gt; 的宽高比，仅仅是近似。D 系列规格短边的长度比更小一号规格的长边大 4mm ，而不是通过对裁得到。&lt;/p&gt;
-&lt;p&gt;D0 的尺寸为 764×1064mm，比 A0 稍小，因此国内又称 D 为正度纸，A 为大度纸 &lt;a class="footnote-reference brackets" href="#id17" id="id5"&gt;2&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;同规格的 D 系列纸比 A 系列稍小，因此国内又称 D 为正度纸，A 为大度纸 &lt;a class="footnote-reference brackets" href="#id17" id="id5"&gt;2&lt;/a&gt; 。&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="k"&gt;
 &lt;h3&gt;K 是一个模糊概念&lt;/h3&gt;
 &lt;p&gt;K，开，即 &lt;a class="reference external" href="https://zh.wikipedia.org/wiki/开本"&gt;📖开本&lt;/a&gt; 。这个概念看起来只在部分东亚国家使用 &lt;a class="footnote-reference brackets" href="#id18" id="id7"&gt;3&lt;/a&gt; ，你甚至可以看到有 &lt;a class="reference external" href="https://www.taobaotranslate.com/paper-size-guide-taobao/paper-sizes-guide.html"&gt;向外国人科普淘宝上 N 开纸多大&lt;/a&gt; 的教程。&lt;/p&gt;
-&lt;p&gt;对于不同的标准印刷纸张，一张（全张）称之为全开（1K），半张称对开（2K），四分之一张称四开（4K），八开（8K）以此类推。因此 &lt;em&gt;N 开纸的具体大小取决于全张大小。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;通常情况下的 K 的大小是相对于 D 系列纸，也就是正度纸而言&lt;/em&gt; ，例如国产的温州雪山素描纸，4K 的大小为 530×380 mm，接近于 D2 净尺寸 528×380 mm：&lt;/p&gt;
+&lt;p&gt;对于不同的标准印刷纸张，一张（全张）称之为全开（1K），半张称对开（2K），四分之一张称四开（4K），八开（8K）以此类推。 &lt;em&gt;N 开纸的具体大小取决于全张大小。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;通常情况下的 K 的大小是相对于 D 系列纸，也就是正度纸而言的&lt;/em&gt; ，例如国产的温州雪山素描纸，4K 的大小为 530×380 mm，接近于 D2 净尺寸 528×380 mm：&lt;/p&gt;
 &lt;figure class="align-default" id="id25"&gt;
 &lt;img alt="_images/2022-06-26_151801.png" src="_images/2022-06-26_151801.png" style="width: 60%;" /&gt;
 &lt;figcaption&gt;
@@ -6952,7 +6952,7 @@ func IsSigned[T Int](n T) {
 &lt;p&gt;&lt;span class="caption-text"&gt;&lt;a class="reference external" href="https://en.canson.com/1557r-180gm2"&gt;康颂官网上的 1557 规格表&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;也有相对于 A 系列的，也就是大度纸而言的说法，比如大四开就是指 A2 &lt;a class="footnote-reference brackets" href="#id19" id="id8"&gt;4&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;也有相对于 A 系列的，也就是大度纸而言的说法， &lt;em&gt;比如大四开就是指 A2&lt;/em&gt; &lt;a class="footnote-reference brackets" href="#id19" id="id8"&gt;4&lt;/a&gt; 。&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="id12"&gt;
 &lt;h3&gt;纸张尺寸查询&lt;/h3&gt;
@@ -6961,7 +6961,7 @@ func IsSigned[T Int](n T) {
 &lt;/section&gt;
 &lt;section id="id14"&gt;
 &lt;h2&gt;收纳非标准尺寸纸张&lt;/h2&gt;
-&lt;p&gt;其实就是各种大小的纸本画，蔓纯老师又给我支了一招。如上述，常见的收纳册都是 A 系列的标准尺寸，而且内页往往是薄膜，把小一圈的画放进去会溜来溜去，甚至有掉出来的可能。&lt;/p&gt;
+&lt;p&gt;我要收纳的其实就是各种大小的纸本画，蔓纯老师又给我支了一招。如前述，常见的收纳册都是 A 系列的标准尺寸，不太可能找到大小和画一样的收纳册。这些册子内页往往是薄膜材质，把小一圈的画放进去会溜来溜去，甚至有掉出来的可能。&lt;/p&gt;
 &lt;p&gt;举个例子，我买了这种 A4 收纳册（内页 297×210 mm）：&lt;/p&gt;
 &lt;figure class="align-default"&gt;
 &lt;img alt="_images/1869452119.jpg" src="_images/1869452119.jpg" style="width: 60%;" /&gt;
@@ -7011,7 +7011,7 @@ func IsSigned[T Int](n T) {
 &lt;/section&gt;
 </content>
     <link href="https://silverrainz.me/blog/paper-size.html" rel="alternate"/>
-    <summary>之前画的大量小创作基本都是在 32K 的小张水彩纸上画的，然后装在蔓纯老师送我的正好 32K 的小画册 album-32k-1 里。后来画了一点 素描 和 丙烯，分别用了阿诗的素描纸（310×230 mm）与哈内姆勒（300×240mm），他们的的尺寸比 A4（297×210 mm）大一点点，又比 A3（420×297 mm）小很多难以收纳。</summary>
+    <summary>之前画的大量小创作基本都是在 32K 的小张水彩纸上画的，然后装在蔓纯老师送我的正好 32K 的小画册 album-32k-1 里。后来画了一点 素描 和 丙烯，分别用了阿诗的素描纸（310×230 mm）与哈内姆勒的水彩纸（300×240mm），他们的的尺寸比 A4（297×210 mm）大一点，又比 A3（420×297 mm）小不少，收纳起来很尴尬。</summary>
     <category term="印刷画画" label="印刷 画画"/>
     <published>2022-06-26T00:00:00+00:00</published>
   </entry>
