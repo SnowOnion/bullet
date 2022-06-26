@@ -197,6 +197,12 @@
 <ul>
    
   <li>
+    <a href="paper-size.html"
+      >26 June - 纸张尺寸标准以及非标准纸张的收纳技巧</a
+    >
+  </li>
+  
+  <li>
     <a href="when-go-generics.html"
       >03 June - 何时使用 Go 泛型</a
     >
@@ -217,12 +223,6 @@
   <li>
     <a href="sphinx-as-note-taking-system-1.html"
       >24 May - 我如何用 Sphinx 建立笔记系统（一）选择 Sphinx 的理由</a
-    >
-  </li>
-  
-  <li>
-    <a href="new-boy.html"
-      >21 March - 嘿，我去 2010</a
     >
   </li>
   
@@ -347,6 +347,10 @@
   </li>
     
   <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%8D%B0%E5%88%B7-%E7%94%BB%E7%94%BB.html">印刷 画画</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
     <a href="tag/%E5%8F%98%E6%9B%B4.html">变更</a>
   </li>
     
@@ -413,7 +417,7 @@
 <ul>
    
   <li>
-    <a href="2022.html">2022 (1)</a>
+    <a href="2022.html">2022 (2)</a>
   </li>
     
   <li>
@@ -804,9 +808,9 @@ title="Source repository"
 </div>
 </li>
 <li><p>嵌入单个类型意义不大，我们可以用 <code class="code docutils literal notranslate"><span class="pre">|</span></code> 来描述类型的 union:</p>
-<div class="highlight-go notranslate"><div class="highlight"><pre><span></span>type Integer2 interface {
-    int ｜ int8 | int16 | int32 | int64
-}
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kd">type</span><span class="w"> </span><span class="nx">Integer2</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">int8</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">int16</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">int32</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">int64</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -1197,7 +1201,7 @@ func main() {
 <h3>无法辨认「基础类型」<a class="headerlink" href="#id35" title="永久链接至标题">#</a></h3>
 <p>我们在 <a class="reference internal" href="#id12">代码生成之困</a> 提到过，在类型约束中可以用 <code class="code docutils literal notranslate"><span class="pre">~T</span></code> 的语法约束所有 基础类型为 <code class="code docutils literal notranslate"><span class="pre">T</span></code> 的类型，这是 Go 在语法层面上首次暴露出「基础类型」的概念，在之前我们只能通过 <code class="code docutils literal notranslate"><span class="pre">reflect.(Value).Kind</span></code> 获取。而在 type assertion 和 type switch 里并没有对应的语法处理「基础类型」:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span>type Int interface {
-        ~int ｜ ~uint
+        ~int | ~uint
 }
 
 func IsSigned[T Int](n T) {
@@ -1333,7 +1337,7 @@ func IsSigned[T Int](n T) {
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-06-24.<br/>
+    Last updated on 2022-06-26.<br/>
 </p>
         </footer>
     </div>
