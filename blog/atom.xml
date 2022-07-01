@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-06-26T13:47:25.988590+00:00</updated>
+  <updated>2022-07-01T16:01:59.188900+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -5635,7 +5635,7 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;figure class="align-default" id="id9"&gt;
-&lt;a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg"&gt;&lt;img alt="_any/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" src="_any/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg"&gt;&lt;img alt="_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" src="_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" /&gt;&lt;/a&gt;
 &lt;figcaption&gt;
 &lt;p&gt;&lt;span class="caption-text"&gt;Bell Rock Lighthouse&lt;/span&gt;&lt;/p&gt;
 &lt;/figcaption&gt;
@@ -5930,11 +5930,6 @@ reST&lt;/div&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;在大量的小稿中，有不少带上了文字，用来补充未能用画面良好记录的信息：&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/xzzh-after-40-yrs.rst&lt;/span&gt;, line 60)&lt;/p&gt;
-&lt;p&gt;No directive entry for “image” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “image”.&lt;/p&gt;
-&lt;/div&gt;
 &lt;img alt="_images/IMG_20210627_145646.jpg" src="_images/IMG_20210627_145646.jpg" style="width: 30%;" /&gt;
 &lt;img alt="_images/IMG_20210627_144838.jpg" src="_images/IMG_20210627_144838.jpg" style="width: 30%;" /&gt;
 &lt;img alt="_images/IMG_20210627_144932.jpg" src="_images/IMG_20210627_144932.jpg" style="width: 30%;" /&gt;
@@ -6057,11 +6052,6 @@ Using English fallback for role “sub”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/xzzh-after-40-yrs.rst&lt;/span&gt;, line 158)&lt;/p&gt;
-&lt;p&gt;No directive entry for “rubric” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “rubric”.&lt;/p&gt;
-&lt;/div&gt;
 &lt;p class="rubric"&gt;脚注&lt;/p&gt;
 &lt;dl class="footnote brackets"&gt;
 &lt;dt class="label" id="id12"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
@@ -6157,11 +6147,6 @@ Using English fallback for directive “rubric”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/funtional-programming-in-go-generics.rst&lt;/span&gt;, line 65)&lt;/p&gt;
-&lt;p&gt;No directive entry for “hint” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “hint”.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div class="admonition hint"&gt;
 &lt;p class="admonition-title"&gt;提示&lt;/p&gt;
 &lt;p&gt;「基础类型」在提案中为 “underlying type”，目前尚无权威翻译，在本文中使用仅为方便描述。&lt;/p&gt;
@@ -6452,11 +6437,6 @@ Using English fallback for role “math”.&lt;/p&gt;
 &lt;section id="id26"&gt;
 &lt;h2&gt;局部应用&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://wikipedia.org/wiki/Partial_application"&gt;局部应用&lt;/a&gt; （Partial Application）是一种固定多参函数的部分参数，并返回一个可以接受剩余部分参数的函数的操作。&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/funtional-programming-in-go-generics.rst&lt;/span&gt;, line 377)&lt;/p&gt;
-&lt;p&gt;No directive entry for “note” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “note”.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div class="admonition note"&gt;
 &lt;p class="admonition-title"&gt;备注&lt;/p&gt;
 &lt;p&gt;局部应用不同于 &lt;a class="reference external" href="https://zh.wikipedia.org/wiki/柯里化"&gt;📖柯里化&lt;/a&gt; （Currying） &lt;a class="footnote-reference brackets" href="#id42" id="id27"&gt;4&lt;/a&gt; ，柯里化是一种用多个单参函数来表示多参函数的技术，在 Go 已经支持多参函数的情况下，本文暂时不讨论 Currying 的实现。&lt;/p&gt;
