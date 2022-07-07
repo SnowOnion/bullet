@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="切换到 Wayland: GTK 很早就实现了能用的 Wayland 后端，在之后 Firefox 实验性地支持 Wayland ， 就没有任何非运行在 X 下不可的软件了。 ⛺fcitx/fcitx5 在 Wayland 下更是达到了 开箱即用的水平，是时候抛弃 X 了。 XMonad → Sway, Arch 源里为数不多的 Wayland compositor，再也不想写看不懂的 Ha..." />
+<meta property="og:description" content="切换到 Wayland: GTK 很早就实现了能用的 Wayland 后端，在之后 Firefox 实验性地支持 Wayland ， 就没有任何非运行在 X 下不可的软件了。 ⛺ fcitx/fcitx5 在 Wayland 下更是达到了 开箱即用的水平，是时候抛弃 X 了。 XMonad → Sway, Arch 源里为数不多的 Wayland compositor，再也不想写看不懂的 H..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -471,8 +471,8 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../notes/go-internal/index.html">
-   Golang Internal
+  <a class="reference internal" href="../../notes/go/index.html">
+   Golang
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -481,12 +481,32 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/go-internal/asm.html">
+    <a class="reference internal" href="../../notes/go/pprof.html">
+     PProf
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go/coverage.html">
+     覆盖率
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go/escape-analysis.html">
+     逃逸分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go/dev.html">
+     Develop Go
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go/asm.html">
      Go’s Assembler
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/go-internal/type-assertion.html">
+    <a class="reference internal" href="../../notes/go/type-assertion.html">
      Type Assertion
     </a>
    </li>
@@ -595,11 +615,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../man/git.html">
    Git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../man/go.html">
-   Go Tools
   </a>
  </li>
  <li class="toctree-l1">
@@ -1173,7 +1188,7 @@ title="Source repository"
 <section id="wayland">
 <h2>切换到 Wayland<a class="headerlink" href="#wayland" title="永久链接至标题">#</a></h2>
 <p>GTK 很早就实现了能用的 Wayland 后端，在之后 Firefox 实验性地支持 Wayland ，
-就没有任何非运行在 X 下不可的软件了。<a class="reference external" href="https://github.com/fcitx/fcitx5">⛺fcitx/fcitx5</a> 在 Wayland 下更是达到了
+就没有任何非运行在 X 下不可的软件了。<a class="reference external" href="https://github.com/fcitx/fcitx5">⛺ fcitx/fcitx5</a> 在 Wayland 下更是达到了
 开箱即用的水平，是时候抛弃 X 了。</p>
 <dl class="simple">
 <dt>XMonad →  Sway</dt><dd><p>Arch 源里为数不多的 Wayland compositor，再也不想写看不懂的 Haskell 配置文件了，
@@ -1182,7 +1197,7 @@ Sway 能 hot reloading 很香，比 <code class="code docutils literal notransla
 <dt>dzen2 →  Waybar</dt><dd><p>Sway 自带的 Swaybar 不够好用，很多系统信息还有手动获取，
 而 Waybar 有很多方便的模块，改改配置就非常好看</p>
 </dd>
-<dt>xscreensaver →  Swaylock</dt><dd><p>Swaylock 应该和 i3lock 一样，曾经看 <a class="reference external" href="https://github.com/cbmixx">👤cbmixx</a> 用过，总之比 xscreensaver
+<dt>xscreensaver →  Swaylock</dt><dd><p>Swaylock 应该和 i3lock 一样，曾经看 <a class="reference external" href="https://github.com/cbmixx">👤 cbmixx</a> 用过，总之比 xscreensaver
 好太多</p>
 </dd>
 <dt>xfce-notifyd →  Mako</dt><dd><p>Mako 比 xfce-notifyd 好定制，默认又比 dunst 好看</p>
@@ -1316,7 +1331,7 @@ docker run <span class="se">\</span>
 <dd class="field-odd"><p>2021-03-31</p>
 </dd>
 </dl>
-<p>其实只是画 <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-yourself.html#artwork-xfczk-043" title="artwork xfczk-043"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《📖路易十六在准备灭火》</span></code></a> 的时候联想到的，权当学点没用的：</p>
+<p>其实只是画 <a class="reference internal" href="../../notes/zxsys/way-to-artist/find-yourself.html#artwork-xfczk-043" title="artwork xfczk-043"><code class="xref any any-artwork docutils literal notranslate"><span class="pre">《📖</span> <span class="pre">路易十六在准备灭火》</span></code></a> 的时候联想到的，权当学点没用的：</p>
 <p>路易十六是法国历史上唯一一个被处死的君王。</p>
 <blockquote>
 <div><p>路易十六是个好人，把他处死是件悲剧，但也是不可避免的。
@@ -1324,12 +1339,12 @@ docker run <span class="se">\</span>
 </div></blockquote>
 <p><span class="sphinxnotes-strike">全世界</span> 欧洲范围内，被处死的君王还有两人： <a class="footnote-reference brackets" href="#id14" id="id12">6</a></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://zh.wikipedia.org/wiki/查理一世 (英格兰)">📖查理一世 (英格兰)</a></p></li>
-<li><p><a class="reference external" href="https://zh.wikipedia.org/wiki/尼古拉二世 (俄罗斯)">📖尼古拉二世 (俄罗斯)</a></p></li>
+<li><p><a class="reference external" href="https://zh.wikipedia.org/wiki/查理一世 (英格兰)">📖 查理一世 (英格兰)</a></p></li>
+<li><p><a class="reference external" href="https://zh.wikipedia.org/wiki/尼古拉二世 (俄罗斯)">📖 尼古拉二世 (俄罗斯)</a></p></li>
 </ul>
 <dl class="footnote brackets">
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id11">5</a></span></dt>
-<dd><p><a class="reference external" href="https://zh.wikipedia.org/wiki/路易十六">📖路易十六</a></p>
+<dd><p><a class="reference external" href="https://zh.wikipedia.org/wiki/路易十六">📖 路易十六</a></p>
 </dd>
 <dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
 <dd><p><a class="reference external" href="https://www.sohu.com/a/276828349_100161166">https://www.sohu.com/a/276828349_100161166</a></p>

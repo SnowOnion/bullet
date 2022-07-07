@@ -73,7 +73,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="Golang Internal" href="../go-internal/index.html" />
+    <link rel="next" title="Golang" href="../go/index.html" />
     <link rel="prev" title="The Docutils Document Tree" href="doctree.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
@@ -471,8 +471,8 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../go-internal/index.html">
-   Golang Internal
+  <a class="reference internal" href="../go/index.html">
+   Golang
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -481,12 +481,32 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go-internal/asm.html">
+    <a class="reference internal" href="../go/pprof.html">
+     PProf
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go/coverage.html">
+     覆盖率
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go/escape-analysis.html">
+     逃逸分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go/dev.html">
+     Develop Go
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go/asm.html">
      Go’s Assembler
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go-internal/type-assertion.html">
+    <a class="reference internal" href="../go/type-assertion.html">
      Type Assertion
     </a>
    </li>
@@ -595,11 +615,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../man/git.html">
    Git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../man/go.html">
-   Go Tools
   </a>
  </li>
  <li class="toctree-l1">
@@ -1103,7 +1118,7 @@ parser ( <code class="file docutils literal notranslate"><span class="pre">docut
 <p>树上的文本譬如 “My”、”language is”、”.” 同样是节点，
 对应的实现为 <code class="code docutils literal notranslate"><span class="pre">docutils.nodes.Text</span></code></p>
 </div>
-<p>Transform 阶段利用 <a class="reference external" href="https://zh.wikipedia.org/wiki/访问者模式">📖访问者模式</a> 对语法树进行各种变换，
+<p>Transform 阶段利用 <a class="reference external" href="https://zh.wikipedia.org/wiki/访问者模式">📖 访问者模式</a> 对语法树进行各种变换，
 本例中 <code class="code docutils literal notranslate"><span class="pre">ExternalTargets</span></code> transform ( <code class="file docutils literal notranslate"><span class="pre">docutils/transforms/references.py</span></code> )
 会解析 <code class="code docutils literal notranslate"><span class="pre">reference</span></code> 节点，寻找 ID 为 “python” 的 target 节点，
 并设置 <code class="code docutils literal notranslate"><span class="pre">reference</span></code> 节点的 <code class="code docutils literal notranslate"><span class="pre">refuri</span></code> 属性。 使用 <code class="code docutils literal notranslate"><span class="pre">rst2pseudoxml</span></code> 可以看到
@@ -1156,10 +1171,10 @@ Transform 阶段后的节点树:</p>
             <p class="prev-next-title">The Docutils Document Tree</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../go-internal/index.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="../go/index.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">Golang Internal</p>
+        <p class="prev-next-title">Golang</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

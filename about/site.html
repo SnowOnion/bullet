@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="署名-相同方式共享: 本站内容均在 cc-badge 署名-相同方式共享（CC BY-SA）协议下发布，完整协议请见：/LICENSE 。 Sphinx + Sphinx Notes: 本站由 Sphinx sphinx-badge+ Sphinx Notes sphinx-notes-badge 强力驱动。 变更记录: 2022-02 换了个新主题 📦sphinx-book-theme ，..." />
+<meta property="og:description" content="署名-相同方式共享: 本站内容均在 cc-badge 署名-相同方式共享（CC BY-SA）协议下发布，完整协议请见：/LICENSE 。 Sphinx + Sphinx Notes: 本站由 Sphinx sphinx-badge+ Sphinx Notes sphinx-notes-badge 强力驱动。 变更记录: 2022-02 换了个新主题 📦 sphinx-book-theme ..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -471,8 +471,8 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../notes/go-internal/index.html">
-   Golang Internal
+  <a class="reference internal" href="../notes/go/index.html">
+   Golang
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -481,12 +481,32 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../notes/go-internal/asm.html">
+    <a class="reference internal" href="../notes/go/pprof.html">
+     PProf
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/go/coverage.html">
+     覆盖率
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/go/escape-analysis.html">
+     逃逸分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/go/dev.html">
+     Develop Go
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/go/asm.html">
      Go’s Assembler
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../notes/go-internal/type-assertion.html">
+    <a class="reference internal" href="../notes/go/type-assertion.html">
      Type Assertion
     </a>
    </li>
@@ -595,11 +615,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../man/git.html">
    Git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../man/go.html">
-   Go Tools
   </a>
  </li>
  <li class="toctree-l1">
@@ -1132,8 +1147,8 @@ title="Source repository"
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 2022-02</div>
-<p class="sd-card-text">换了个新主题 <a class="reference external" href="https://pypi.org/project/sphinx-book-theme">📦sphinx-book-theme</a>，侧边栏支持固定，兼容 ABlog，移动端体验好多了。
-主题自带 local-toc 支持，因此文档里的 <code class="code docutils literal notranslate"><span class="pre">..</span> <span class="pre">contents::</span></code> 指令没用了，写了个扩展 <a class="reference external" href="https://pypi.org/project/sphinxnotes-mock">📦sphinxnotes-mock</a> 来屏蔽它。</p>
+<p class="sd-card-text">换了个新主题 <a class="reference external" href="https://pypi.org/project/sphinx-book-theme">📦 sphinx-book-theme</a>，侧边栏支持固定，兼容 ABlog，移动端体验好多了。
+主题自带 local-toc 支持，因此文档里的 <code class="code docutils literal notranslate"><span class="pre">..</span> <span class="pre">contents::</span></code> 指令没用了，写了个扩展 <a class="reference external" href="https://pypi.org/project/sphinxnotes-mock">📦 sphinxnotes-mock</a> 来屏蔽它。</p>
 </div>
 </div>
 <div class="sd-card sd-sphinx-override sd-w-50 sd-mt-0 sd-mb-2 sd-ml-0 sd-mr-auto sd-shadow-sm docutils">
@@ -1141,8 +1156,8 @@ title="Source repository"
 <div class="sd-card-title sd-font-weight-bold docutils">
 2021-03</div>
 <ul class="simple">
-<li><p class="sd-card-text">扩展 <a class="reference external" href="https://pypi.org/project/sphinxnotes-isso">📦sphinxnotes-isso</a> 投入使用，用了阿哥的腾讯云机器，重新启用 Isso 评论</p></li>
-<li><p class="sd-card-text">扩展 <a class="reference external" href="https://pypi.org/project/sphinxnotes.snippet">📦sphinxnotes.snippet</a> 投入使用</p></li>
+<li><p class="sd-card-text">扩展 <a class="reference external" href="https://pypi.org/project/sphinxnotes-isso">📦 sphinxnotes-isso</a> 投入使用，用了阿哥的腾讯云机器，重新启用 Isso 评论</p></li>
+<li><p class="sd-card-text">扩展 <a class="reference external" href="https://pypi.org/project/sphinxnotes.snippet">📦 sphinxnotes.snippet</a> 投入使用</p></li>
 </ul>
 </div>
 </div>
@@ -1159,7 +1174,7 @@ title="Source repository"
 2020-12</div>
 <ul class="simple">
 <li><p class="sd-card-text">将博客迁移到 Sphinx + ABlog，详见 <a class="reference internal" href="../blog/migrate-to-sphinx.html"><span class="doc">博客迁移到 Sphinx</span></a></p></li>
-<li><p class="sd-card-text">扩展 <a class="reference external" href="https://pypi.org/project/sphinxnotes.any">📦sphinxnotes.any</a> 投入使用</p></li>
+<li><p class="sd-card-text">扩展 <a class="reference external" href="https://pypi.org/project/sphinxnotes.any">📦 sphinxnotes.any</a> 投入使用</p></li>
 </ul>
 </div>
 </div>
