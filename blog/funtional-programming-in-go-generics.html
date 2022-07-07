@@ -829,7 +829,7 @@ title="Source repository"
 </section>
 <section id="id11">
 <h2>高阶函数<a class="headerlink" href="#id11" title="永久链接至标题">#</a></h2>
-<p>在函数式编程语言中，<a class="reference external" href="https://zh.wikipedia.org/wiki/高阶函数">📖高阶函数</a> （Higher-order function）是一个重要的特性。高阶函数是至少满足下列一个条件的函数：</p>
+<p>在函数式编程语言中，<a class="reference external" href="https://zh.wikipedia.org/wiki/高阶函数">📖 高阶函数</a> （Higher-order function）是一个重要的特性。高阶函数是至少满足下列一个条件的函数：</p>
 <ul class="simple">
 <li><p>接受一个或多个函数作为输入</p></li>
 <li><p>输出一个函数</p></li>
@@ -1011,7 +1011,7 @@ func main() {
 </section>
 <section id="id24">
 <h2>惰性求值<a class="headerlink" href="#id24" title="永久链接至标题">#</a></h2>
-<p><a class="reference external" href="https://zh.wikipedia.org/wiki/惰性求值">📖惰性求值</a> （Lazy Evaluation）是另一个重要的函数式特性，一个不严谨的描述是：在定义运算时候，计算不会发生，直到我们需要这个值的时候才进行。其优点在于能使计算在空间复杂度上得到极大的优化。</p>
+<p><a class="reference external" href="https://zh.wikipedia.org/wiki/惰性求值">📖 惰性求值</a> （Lazy Evaluation）是另一个重要的函数式特性，一个不严谨的描述是：在定义运算时候，计算不会发生，直到我们需要这个值的时候才进行。其优点在于能使计算在空间复杂度上得到极大的优化。</p>
 <p>下面的代码展示了一个平平无奇的 Add 函数和它的 Lazy 版本，后者在给出加数的时候不会立刻计算，而是返回一个闭包:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span><span class="w"> </span><span class="nx">Add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"></span>
@@ -1101,7 +1101,7 @@ func main() {
 <section id="map">
 <h3>Map 的迭代器<a class="headerlink" href="#map" title="永久链接至标题">#</a></h3>
 <p>Golang 中的 Hashmap <code class="code docutils literal notranslate"><span class="pre">map[K]V</span></code> 和 Slice <code class="code docutils literal notranslate"><span class="pre">[]T</span></code> 一样是常用的数据结构，如果我们能将 map 转化为上述的 <code class="code docutils literal notranslate"><span class="pre">Iter[T]</span></code>，那么 map 就能直接使用已经实现的各种高阶函数。</p>
-<p><code class="code docutils literal notranslate"><span class="pre">map[K]V</span></code> 的迭代只能通过 <code class="code docutils literal notranslate"><span class="pre">for</span> <span class="pre">...</span> <span class="pre">range</span></code> 进行，我们无法通过常规的手段获得一个 iterator。反射当然可以做到，但 <code class="code docutils literal notranslate"><span class="pre">reflect.MapIter</span></code> 太重了。<a class="reference external" href="https://github.com/modern-go/reflect2">⛺modern-go/reflect2</a> 提供了一个 <a class="reference external" href="https://pkg.go.dev/github.com/modern-go/reflect2#UnsafeMapIterator">更快的实现</a> ，但已经超出了本文的讨论范围，此处不展开，有兴趣的朋友可以自行研究。</p>
+<p><code class="code docutils literal notranslate"><span class="pre">map[K]V</span></code> 的迭代只能通过 <code class="code docutils literal notranslate"><span class="pre">for</span> <span class="pre">...</span> <span class="pre">range</span></code> 进行，我们无法通过常规的手段获得一个 iterator。反射当然可以做到，但 <code class="code docutils literal notranslate"><span class="pre">reflect.MapIter</span></code> 太重了。<a class="reference external" href="https://github.com/modern-go/reflect2">⛺ modern-go/reflect2</a> 提供了一个 <a class="reference external" href="https://pkg.go.dev/github.com/modern-go/reflect2#UnsafeMapIterator">更快的实现</a> ，但已经超出了本文的讨论范围，此处不展开，有兴趣的朋友可以自行研究。</p>
 </section>
 </section>
 <section id="id26">
@@ -1109,7 +1109,7 @@ func main() {
 <p><a class="reference external" href="https://wikipedia.org/wiki/Partial_application">局部应用</a> （Partial Application）是一种固定多参函数的部分参数，并返回一个可以接受剩余部分参数的函数的操作。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>局部应用不同于 <a class="reference external" href="https://zh.wikipedia.org/wiki/柯里化">📖柯里化</a> （Currying） <a class="footnote-reference brackets" href="#id42" id="id27">4</a> ，柯里化是一种用多个单参函数来表示多参函数的技术，在 Go 已经支持多参函数的情况下，本文暂时不讨论 Currying 的实现。</p>
+<p>局部应用不同于 <a class="reference external" href="https://zh.wikipedia.org/wiki/柯里化">📖 柯里化</a> （Currying） <a class="footnote-reference brackets" href="#id42" id="id27">4</a> ，柯里化是一种用多个单参函数来表示多参函数的技术，在 Go 已经支持多参函数的情况下，本文暂时不讨论 Currying 的实现。</p>
 </div>
 <p>我们定义一个有返回值的接收单个参数的函数类型:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kd">type</span><span class="w"> </span><span class="nx">FuncWith1Args</span><span class="p">[</span><span class="nx">A</span><span class="p">,</span><span class="w"> </span><span class="nx">R</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">A</span><span class="p">)</span><span class="w"> </span><span class="nx">R</span><span class="w"></span>
