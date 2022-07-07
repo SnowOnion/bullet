@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-07-07T05:33:46.039944+00:00</updated>
+  <updated>2022-07-07T15:49:05.268728+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -5703,7 +5703,11 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;p&gt;这里仅列出我正在使用的扩展及其效果，想了解它们的具体配置，请看 &lt;a class="reference external" href="https://github.com/SilverRainZ/bullet/blob/master/conf.py"&gt;conf.py&lt;/a&gt; ，也许我会写一篇文章里来它们的使用技巧。&lt;/p&gt;
 &lt;/div&gt;
 &lt;dl&gt;
-&lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-lilypond"&gt;📦 sphinxnotes-lilypond&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;用来显示音符 &lt;img class="lilypond-score" src=".././_lilypond/fe054cc0f6577b37cbee4644af6855a6ff620a5c/music.preview.png" alt="\relative { c' }" style="height:2.5em;", align="absbottom"/&gt;  和 &lt;a class="reference internal" href="collections/scores/index.html"&gt;&lt;span class="doc"&gt;带试听音频的乐谱&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-lilypond"&gt;📦 sphinxnotes-lilypond&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;用来显示音符 &lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;\relative { c' }&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;No score generated, please check &amp;quot;*.music&amp;quot; files under &amp;quot;/tmp/sphinxnotes-lilypond2xsoj3hn&amp;quot;&lt;/p&gt;
+&lt;/div&gt;
+  和 &lt;a class="reference internal" href="collections/scores/index.html"&gt;&lt;span class="doc"&gt;带试听音频的乐谱&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-strike"&gt;📦 sphinxnotes-strike&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;提供了 &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;del&lt;/span&gt;&lt;/code&gt; role 用来显示 reST 不支持的删除线&lt;/p&gt;
 &lt;table class="table"&gt;
@@ -5754,9 +5758,9 @@ reST&lt;/div&gt;
 &lt;div class="sd-card-body docutils"&gt;
 &lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
 效果&lt;/div&gt;
-&lt;div class="graphviz"&gt;&lt;img src="_images/graphviz-b2b7db9f696a0fb7d43ba60c44e952704da3e867.png" alt="digraph dot {
+digraph dot {
 Alice -&amp;gt; Bob
-}" class="graphviz" /&gt;&lt;/div&gt;
+}
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -5834,7 +5838,7 @@ reST&lt;/div&gt;
 &lt;p class="rubric"&gt;脚注&lt;/p&gt;
 &lt;dl class="footnote brackets"&gt;
 &lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;&lt;a class="reference internal" href="man/git.html"&gt;&lt;span class="doc"&gt;Git&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;dd&gt;&lt;p&gt;&lt;span class="xref std std-doc"&gt;/man/git&lt;/span&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
