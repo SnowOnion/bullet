@@ -16,21 +16,21 @@
             
         </script>
     
-<meta property="og:title" content="Capture the Flag" />
+<meta property="og:title" content="Static Single-Assignment" />
   
 <meta property="og:type" content="website" />
   
-<meta property="og:url" content="https://silverrainz.me/notes/writeups/index.html" />
+<meta property="og:url" content="https://silverrainz.me/notes/go/ssa.html" />
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="没有黑客精神，但是还是想成为黑客。 wargame-leviathan, Seed Lab- Format String Vulnerability Lab., wargme-bandit, wargame-narnia. 评论 如果你有任何意见，请在此评论。 如果你留下了电子邮箱，我可能会通过 回复你。" />
+<meta property="og:description" content="Dump SSA funtion: 展示控制流程图: https://go-review.googlesource.com/c/go/+/142517/ golang.org/x/tools/go/ssa:*ssa.BasicBlock: https://pkg.go.dev/golang.org/x/tools/go/ssa#BasicBlock 代表控制流分析中的 📖 基本块 Domin..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
 <meta property="og:image:alt" content="银色子弹" />
   
-    <title>Capture the Flag &#8212; 银色子弹</title>
+    <title>Static Single-Assignment &#8212; 银色子弹</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -69,12 +69,12 @@
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
-    <link rel="canonical" href="https://silverrainz.me/notes/writeups/index.html" />
+    <link rel="canonical" href="https://silverrainz.me/notes/go/ssa.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="wargame-leviathan" href="wargame-leviathan.html" />
-    <link rel="prev" title="家用树莓派 3B+ 配置" href="../wizard/pi.html" /> 
+    <link rel="next" title="Leetcode 刷题记录" href="../leetcode/index.html" />
+    <link rel="prev" title="Abstract Syntax Tree" href="ast.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -572,53 +572,53 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../go/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Golang
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../go/pprof.html">
+    <a class="reference internal" href="pprof.html">
      PProf
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go/coverage.html">
+    <a class="reference internal" href="coverage.html">
      覆盖率
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go/dev.html">
+    <a class="reference internal" href="dev.html">
      Develop Go
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go/asm.html">
+    <a class="reference internal" href="asm.html">
      Go’s Assembler
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go/type-assertion.html">
+    <a class="reference internal" href="type-assertion.html">
      Type Assertion
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go/escape-analysis.html">
+    <a class="reference internal" href="escape-analysis.html">
      逃逸分析
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go/ast.html">
+    <a class="reference internal" href="ast.html">
      Abstract Syntax Tree
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../go/ssa.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Static Single-Assignment
     </a>
    </li>
@@ -651,23 +651,23 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../writeups/index.html">
    Capture the Flag
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
   <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="wargame-leviathan.html">
+    <a class="reference internal" href="../writeups/wargame-leviathan.html">
      wargame-leviathan
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="seedlabs/index.html">
+    <a class="reference internal" href="../writeups/seedlabs/index.html">
      Seed Lab
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
@@ -677,19 +677,19 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="seedlabs/format-string-vulnerability-lab/index.html">
+      <a class="reference internal" href="../writeups/seedlabs/format-string-vulnerability-lab/index.html">
        Format String Vulnerability Lab
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="wargame-bandit/index.html">
+    <a class="reference internal" href="../writeups/wargame-bandit/index.html">
      wargme-bandit
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="wargame-narnia/index.html">
+    <a class="reference internal" href="../writeups/wargame-narnia/index.html">
      wargame-narnia
     </a>
    </li>
@@ -1074,43 +1074,155 @@ title="Source repository"
   </span>
 
 </a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#golang-org-x-tools-go-ssa">
+   <code class="code docutils literal notranslate">
+    <span class="pre">
+     golang.org/x/tools/go/ssa
+    </span>
+   </code>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ssa-basicblock">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       *ssa.BasicBlock
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dominate">
+       Dominate
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Capture the Flag</h1>
+                <h1>Static Single-Assignment</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#golang-org-x-tools-go-ssa">
+   <code class="code docutils literal notranslate">
+    <span class="pre">
+     golang.org/x/tools/go/ssa
+    </span>
+   </code>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ssa-basicblock">
+     <code class="code docutils literal notranslate">
+      <span class="pre">
+       *ssa.BasicBlock
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dominate">
+       Dominate
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             <main id="main-content" role="main">
                 
               <div>
-                 <section id="capture-the-flag">
-<h1>Capture the Flag<a class="headerlink" href="#capture-the-flag" title="永久链接至标题">#</a></h1>
-<p>没有黑客精神，但是还是想成为黑客。</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wargame-leviathan.html">wargame-leviathan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="seedlabs/index.html">Seed Lab</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="seedlabs/format-string-vulnerability-lab/index.html">Format String Vulnerability Lab</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="wargame-bandit/index.html">wargme-bandit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wargame-narnia/index.html">wargame-narnia</a></li>
-</ul>
+                 <section id="static-single-assignment">
+<h1>Static Single-Assignment<a class="headerlink" href="#static-single-assignment" title="永久链接至标题">#</a></h1>
+<p>Dump SSA funtion:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">GOSSAFUNC=XXX GOSSACFG=lower..layout go build</span>
+</pre></div>
 </div>
+<p>展示控制流程图:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">GOSSAFUNC=XXX:*  go build</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://go-review.googlesource.com/c/go/+/142517/">https://go-review.googlesource.com/c/go/+/142517/</a></p>
+<section id="golang-org-x-tools-go-ssa">
+<h2><code class="code docutils literal notranslate"><span class="pre">golang.org/x/tools/go/ssa</span></code><a class="headerlink" href="#golang-org-x-tools-go-ssa" title="永久链接至标题">#</a></h2>
+<section id="ssa-basicblock">
+<h3><code class="code docutils literal notranslate"><span class="pre">*ssa.BasicBlock</span></code><a class="headerlink" href="#ssa-basicblock" title="永久链接至标题">#</a></h3>
+<p><a class="reference external" href="https://pkg.go.dev/golang.org/x/tools/go/ssa#BasicBlock">https://pkg.go.dev/golang.org/x/tools/go/ssa#BasicBlock</a></p>
+<p>代表控制流分析中的 <a class="reference external" href="https://zh.wikipedia.org/wiki/基本块">📖 基本块</a></p>
+<section class="any" id="dominate">
+<h4 id="term-0c26078">Dominate<a class="headerlink" href="#dominate" title="永久链接至标题">#</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">领域</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#term-0c26078" title="term CFG"><code class="xref any any-term.field docutils literal notranslate"><span class="pre">CFG</span></code></a></p>
+</dd>
+<dt class="field-even">维基</dt>
+<dd class="field-even"><p><a class="reference external" href="https://zh.wikipedia.org/wiki/控制流图#支配关系">📖 控制流图#支配关系</a></p>
+</dd>
+</dl>
+<p>若从进入程式块到达基本块 N 的所有路径，都会在到达基本块 N 之前先到达基本块 M，则基本块 M 支配（dominates）基本块 N。</p>
+<dl class="simple">
+<dt>支配者树（Dominator Tree）</dt><dd><p>以基本块为节点，支配关系为边形成的树。</p>
+</dd>
+</dl>
+<p><a class="reference external" href="https://wikipedia.org/wiki/Extended_basic_block">📖 Extended_basic_block</a></p>
+<p>支持以下方法：</p>
+<dl class="field-list simple">
+<dt class="field-odd"><code class="code docutils literal notranslate"><span class="pre">Dominates</span></code></dt>
+<dd class="field-odd"><p>查询另一个 block 是否被当前 block 支配</p>
+</dd>
+<dt class="field-even"><code class="code docutils literal notranslate"><span class="pre">Dominees</span></code></dt>
+<dd class="field-even"><p>返回当前 block 的直接支配的所有 blocks （dominator tree 上的对应节点的所有子节点）</p>
+</dd>
+<dt class="field-odd"><code class="code docutils literal notranslate"><span class="pre">Idom</span></code></dt>
+<dd class="field-odd"><p>返回支配当前 block 的 blocks （dominator tree 上的对应节点的父节点）</p>
+</dd>
+</dl>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
@@ -1125,8 +1237,11 @@ title="Source repository"
         }
     )
 );</script> 回复你。</p>
-<section data-isso-id="/notes/writeups/index" data-title="Capture the Flag" id="isso-thread"></section></div>
+<section data-isso-id="/notes/go/ssa" data-title="Static Single-Assignment" id="isso-thread"></section></div>
 </div>
+</section>
+</section>
+</section>
 </section>
 
 <div class="section">
@@ -1140,17 +1255,17 @@ title="Source repository"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../wizard/pi.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="ast.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">家用树莓派 3B+ 配置</p>
+            <p class="prev-next-title">Abstract Syntax Tree</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="wargame-leviathan.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="../leetcode/index.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">wargame-leviathan</p>
+        <p class="prev-next-title">Leetcode 刷题记录</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

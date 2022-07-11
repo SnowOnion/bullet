@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="Go Tools: PProf, 覆盖率, 逃逸分析. Go Internal: Develop Go- Compile Golang from Source., Go’s Assembler- Tools, Syntax- Symbols, Directives, Instructions, Interacting with Go, Runtime Coordination, Archit..." />
+<meta property="og:description" content="Go Tools: PProf, 覆盖率. Go Internal: Develop Go- Compile Golang from Source., Go’s Assembler- Tools, Syntax- Symbols, Directives, Instructions, Interacting with Go, Runtime Coordination, Architecture..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -450,6 +450,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../man/man.html">
+     Man
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../man/pacman.html">
      Pacman
     </a>
@@ -588,11 +593,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="escape-analysis.html">
-     逃逸分析
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="dev.html">
      Develop Go
     </a>
@@ -607,11 +607,31 @@
      Type Assertion
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="escape-analysis.html">
+     逃逸分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ast.html">
+     Abstract Syntax Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ssa.html">
+     Static Single-Assignment
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../leetcode/index.html">
    Leetcode 刷题记录
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../paint-with-reason/index.html">
+   完全用理性作画
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -1089,7 +1109,6 @@ title="Source repository"
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pprof.html">PProf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coverage.html">覆盖率</a></li>
-<li class="toctree-l1"><a class="reference internal" href="escape-analysis.html">逃逸分析</a></li>
 </ul>
 </div>
 </div>
@@ -1124,6 +1143,18 @@ title="Source repository"
 <li class="toctree-l1"><a class="reference internal" href="type-assertion.html">Type Assertion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="type-assertion.html#assert-to">Assert to 具体类型</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type-assertion.html#assert-to-interface">Assert to 带方法的 <code class="code docutils literal notranslate"><span class="pre">interface{}</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="escape-analysis.html">逃逸分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ast.html">Abstract Syntax Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssa.html">Static Single-Assignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ssa.html#golang-org-x-tools-go-ssa"><code class="code docutils literal notranslate"><span class="pre">golang.org/x/tools/go/ssa</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ssa.html#ssa-basicblock"><code class="code docutils literal notranslate"><span class="pre">*ssa.BasicBlock</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ssa.html#dominate">Dominate</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1186,7 +1217,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-07-07.<br/>
+    Last updated on 2022-07-11.<br/>
 </p>
         </footer>
     </div>

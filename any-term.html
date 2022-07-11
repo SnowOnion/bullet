@@ -403,6 +403,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/man.html">
+     Man
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="notes/man/pacman.html">
      Pacman
     </a>
@@ -541,11 +546,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="notes/go/escape-analysis.html">
-     逃逸分析
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="notes/go/dev.html">
      Develop Go
     </a>
@@ -558,6 +558,21 @@
    <li class="toctree-l2">
     <a class="reference internal" href="notes/go/type-assertion.html">
      Type Assertion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/escape-analysis.html">
+     逃逸分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/ast.html">
+     Abstract Syntax Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/ssa.html">
+     Static Single-Assignment
     </a>
    </li>
   </ul>
@@ -1042,6 +1057,8 @@ title="Source repository"
    <div class="modindex-jumpbox">
    <a href="#cap-BFE"><strong>BFE</strong></a> | 
    <a href="#cap-BFF"><strong>BFF</strong></a> | 
+   <a href="#cap-CFG"><strong>CFG</strong></a> | 
+   <a href="#cap-Dominate"><strong>Dominate</strong></a> | 
    <a href="#cap-Kappa Architecture"><strong>Kappa Architecture</strong></a> | 
    <a href="#cap-Kappa 架构"><strong>Kappa 架构</strong></a> | 
    <a href="#cap-Lambda Architecture"><strong>Lambda Architecture</strong></a> | 
@@ -1062,6 +1079,7 @@ title="Source repository"
    <a href="#cap-外在形态"><strong>外在形态</strong></a> | 
    <a href="#cap-奥菲莉亚"><strong>奥菲莉亚</strong></a> | 
    <a href="#cap-影线"><strong>影线</strong></a> | 
+   <a href="#cap-支配关系"><strong>支配关系</strong></a> | 
    <a href="#cap-眉弓"><strong>眉弓</strong></a> | 
    <a href="#cap-绘画"><strong>绘画</strong></a> | 
    <a href="#cap-虎牙"><strong>虎牙</strong></a> | 
@@ -1093,6 +1111,22 @@ title="Source repository"
        <td>
        <a href="jour/2021/07.html#term-30d4876"><code class="xref">BFF</code></a> <em>(30d4876)</em></td><td>
        <em>Backend for Frontend</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-CFG"><td></td><td>
+       <strong>CFG</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/go/ssa.html#term-0c26078"><code class="xref">Dominate</code></a> <em>(0c26078)</em></td><td>
+       <em>若从进入程式块到达基本块 N 的所有路径，都会在到达基本块 N 之前先到达基本块 M，则基本块 M …</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Dominate"><td></td><td>
+       <strong>Dominate</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/go/ssa.html#term-0c26078"><code class="xref">Dominate</code></a> <em>(0c26078)</em></td><td>
+       <em>若从进入程式块到达基本块 N 的所有路径，都会在到达基本块 N 之前先到达基本块 M，则基本块 M …</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-Kappa Architecture"><td></td><td>
        <strong>Kappa Architecture</strong></td><td></td></tr>
@@ -1260,6 +1294,14 @@ title="Source repository"
        <td>
        <a href="notes/books/drawing-course-of-charles-bargue-and-jean-leon-gerome.html#term-80810be"><code class="xref">影线</code></a> <em>(80810be)</em></td><td>
        <em></em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-支配关系"><td></td><td>
+       <strong>支配关系</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/go/ssa.html#term-0c26078"><code class="xref">Dominate</code></a> <em>(0c26078)</em></td><td>
+       <em>若从进入程式块到达基本块 N 的所有路径，都会在到达基本块 N 之前先到达基本块 M，则基本块 M …</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-眉弓"><td></td><td>
        <strong>眉弓</strong></td><td></td></tr>
