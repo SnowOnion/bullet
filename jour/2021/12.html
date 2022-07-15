@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="Go 试验性 feature - SetMaxHeap: 和环境变量 GOGC 相似，GOGC 指定触发 GC 的百分比阈值， SetMaxHeap 指定触发 GC 的固定值（比如说存活对象到达 15G 时触发一次 GC） SetMaxHeap 能配合物理内存来设定阈值，通过牺牲内存使用，从而降低 GC 频率，以降低时延。 参见 坐我隔壁桌的同事写的 ： Golang实验性功能SetMaxH..." />
+<meta property="og:description" content="Go 试验性 feature - SetMaxHeap: 和环境变量 GOGC 相似，GOGC 指定触发 GC 的百分比阈值， SetMaxHeap 指定触发 GC 的固定值（比如说存活对象到达 15G 时触发一次 GC） SetMaxHeap 能配合物理内存来设定阈值，通过牺牲内存使用，从而降低 GC 频率，以降低时延。 参见 坐我隔壁桌的 👤 WangLeonard 写的： Golang..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -450,6 +450,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/man/man.html">
+     Man
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../notes/man/pacman.html">
      Pacman
     </a>
@@ -588,11 +593,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notes/go/escape-analysis.html">
-     逃逸分析
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../notes/go/dev.html">
      Develop Go
     </a>
@@ -607,11 +607,31 @@
      Type Assertion
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go/escape-analysis.html">
+     逃逸分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go/ast.html">
+     Abstract Syntax Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/go/ssa.html">
+     Static Single-Assignment
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../notes/leetcode/index.html">
    Leetcode 刷题记录
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notes/paint-with-reason/index.html">
+   完全用理性作画
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -1150,7 +1170,7 @@ title="Source repository"
 <h2>Go 试验性 feature - SetMaxHeap<a class="headerlink" href="#go-feature-setmaxheap" title="永久链接至标题">#</a></h2>
 <p>和环境变量 <code class="code docutils literal notranslate"><span class="pre">GOGC</span></code> 相似，GOGC 指定触发 GC 的百分比阈值，<code class="code docutils literal notranslate"><span class="pre">SetMaxHeap</span></code> 指定触发 GC 的固定值（比如说存活对象到达 15G 时触发一次 GC）</p>
 <p><code class="code docutils literal notranslate"><span class="pre">SetMaxHeap</span></code> 能配合物理内存来设定阈值，通过牺牲内存使用，从而降低 GC 频率，以降低时延。</p>
-<p>参见 <span class="sphinxnotes-strike">坐我隔壁桌的同事写的</span>：<a class="reference external" href="https://www.jianshu.com/p/4069d1e3d716">Golang实验性功能SetMaxHeap 固定值GC</a></p>
+<p>参见 <span class="sphinxnotes-strike">坐我隔壁桌的</span> <a class="reference external" href="https://github.com/WangLeonard">👤 WangLeonard</a> 写的：<a class="reference external" href="https://www.jianshu.com/p/4069d1e3d716">Golang实验性功能SetMaxHeap 固定值GC</a></p>
 </section>
 <section id="go-build-panic">
 <h2>修了一个 go build panic 的问题<a class="headerlink" href="#go-build-panic" title="永久链接至标题">#</a></h2>
@@ -1254,7 +1274,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-07-07.<br/>
+    Last updated on 2022-07-15.<br/>
 </p>
         </footer>
     </div>

@@ -1106,6 +1106,11 @@ title="Source repository"
    Linux 5.18+ 因声卡驱动问题无法休眠
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nas">
+   中年人的第一台 NAS
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1133,6 +1138,11 @@ title="Source repository"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linux-5-18">
    Linux 5.18+ 因声卡驱动问题无法休眠
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nas">
+   中年人的第一台 NAS
   </a>
  </li>
 </ul>
@@ -1197,6 +1207,31 @@ title="Source repository"
 </pre></div>
 </div>
 <p>可以临时修复此问题。</p>
+</section>
+<section class="any" id="nas">
+<h2 id="jour-89f3aa9">中年人的第一台 NAS<a class="headerlink" href="#nas" title="永久链接至标题">#</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">日期</dt>
+<dd class="field-odd"><p>2022-07-08</p>
+</dd>
+</dl>
+<figure class="align-default" id="id7">
+<img alt="https://twitter.com/hywallove/status/1536054160994738176" src="../../_images/火狐截图_2022-07-12T16-26-32.235Z.png" />
+<figcaption>
+<p><span class="caption-text">万幸，我现在只油了三分之一。</span><a class="headerlink" href="#id7" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+<p>好同事 <a class="reference external" href="https://github.com/WangLeonard">👤 WangLeonard</a> 把他退役的一台群晖 <a class="reference external" href="https://zh.wikipedia.org/wiki/网络附接存储">NAS</a> 借我玩了两周，型号是 <a class="reference external" href="https://www.synology.com/zh-tw/products/DS218play">ds218+</a> ，双盘位，双核 2GHz，内存 6 GB。
+虽然我没有很强的存储需求，可这是一台性能还不错的 x86 Linux 主机诶！而且 <a class="reference external" href="https://www.synology.com/zh-tw/dsm/packages">群晖的套件</a> 用起来比 <a class="reference internal" href="../../notes/wizard/pi.html"><span class="doc">折腾树莓派</span></a> 轻松多了。
+遂以一个很优惠的价格淘了下来，感觉占人家便宜了 Q_Q。</p>
+<dl>
+<dt>装系统</dt><dd><p>将 NAS 插上网线连上路由器，接通电源，NAS 会自动通过 DHCP 获取 IP。</p>
+<p><a class="reference external" href="https://aur.archlinux.org/packages/synology-assistant">📦 synology-assistant</a> 提供了一个 GUI 程序用来探测局域网中群晖 NAS 的地址 ，方便我们连上管理界面。Wayland 用户如果遇到发现程序 crash 了（<code class="code docutils literal notranslate"><span class="pre">qt.qpa.plugin:</span> <span class="pre">Could</span> <span class="pre">not</span> <span class="pre">find</span> <span class="pre">the</span> <span class="pre">Qt</span> <span class="pre">platform</span> <span class="pre">plugin</span> <span class="pre">&quot;wayland&quot;</span> <span class="pre">in</span> <span class="pre">&quot;&quot;</span></code>）可以试试 <code class="code docutils literal notranslate"><span class="pre">unset</span> <span class="pre">QT_QPA_PLATFORM</span></code> 再执行程序。</p>
+</dd>
+<dt>组内网</dt><dd><p>用 <a class="reference external" href="https://tailscale.com/">tailscale</a> 一步到位，基于 user-space 的 WireGuard 实现，操作简单，节点之间能直连。
+单用户 20 台设备以下免费。</p>
+</dd>
+</dl>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
@@ -1251,7 +1286,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-07-11.<br/>
+    Last updated on 2022-07-15.<br/>
 </p>
         </footer>
     </div>
