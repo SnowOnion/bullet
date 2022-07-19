@@ -16,21 +16,21 @@
             
         </script>
     
-<meta property="og:title" content="Abstract Syntax Tree" />
+<meta property="og:title" content="Debian Packing" />
   
 <meta property="og:type" content="website" />
   
-<meta property="og:url" content="https://silverrainz.me/notes/go/ast.html" />
+<meta property="og:url" content="https://silverrainz.me/notes/man/deb.html" />
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="Online Go AST Viewer. 评论 如果你有任何意见，请在此评论。 如果你留下了电子邮箱，我可能会通过 回复你。" />
+<meta property="og:description" content="debian/rules 其实就是一个 Makefile 文件。 构建 deb 包 1 安装本地的deb 包: 更新 debian/changelog 2 dch 命令位于 devscripts 包中。 1, https://www.debian.org/doc/manuals/maint-guide/build.en.html 2, https://www.debian.org/doc/m..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
 <meta property="og:image:alt" content="银色子弹" />
   
-    <title>Abstract Syntax Tree &#8212; 银色子弹</title>
+    <title>Debian Packing &#8212; 银色子弹</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -69,12 +69,12 @@
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
     <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
-    <link rel="canonical" href="https://silverrainz.me/notes/go/ast.html" />
+    <link rel="canonical" href="https://silverrainz.me/notes/man/deb.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="Static Single-Assignment" href="ssa.html" />
-    <link rel="prev" title="逃逸分析" href="escape-analysis.html" /> 
+    <link rel="next" title="GDB" href="gdb.html" />
+    <link rel="prev" title="Awk" href="awk.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -384,108 +384,108 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../man/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    工具手册
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/awk.html">
+    <a class="reference internal" href="awk.html">
      Awk
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../man/deb.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Debian Packing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/gdb.html">
+    <a class="reference internal" href="gdb.html">
      GDB
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/git.html">
+    <a class="reference internal" href="git.html">
      Git
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/gpg.html">
+    <a class="reference internal" href="gpg.html">
      GnuPG
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/grep.html">
+    <a class="reference internal" href="grep.html">
      Grep
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/irc.html">
+    <a class="reference internal" href="irc.html">
      IRC
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/krita.html">
+    <a class="reference internal" href="krita.html">
      Krita
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/latex.html">
+    <a class="reference internal" href="latex.html">
      LaTeX
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/lily.html">
+    <a class="reference internal" href="lily.html">
      LilyPond
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/magick.html">
+    <a class="reference internal" href="magick.html">
      ImageMagick
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/make.html">
+    <a class="reference internal" href="make.html">
      Makefile
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/man.html">
+    <a class="reference internal" href="man.html">
      Man
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/pacman.html">
+    <a class="reference internal" href="pacman.html">
      Pacman
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/py.html">
+    <a class="reference internal" href="py.html">
      Python
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/rst.html">
+    <a class="reference internal" href="rst.html">
      reStructuredText
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/sh.html">
+    <a class="reference internal" href="sh.html">
      Shell Script
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/sphinx.html">
+    <a class="reference internal" href="sphinx.html">
      Sphinx
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../man/vim.html">
+    <a class="reference internal" href="vim.html">
      Vim
     </a>
    </li>
@@ -577,53 +577,53 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../go/index.html">
    Golang
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="pprof.html">
+    <a class="reference internal" href="../go/pprof.html">
      PProf
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="coverage.html">
+    <a class="reference internal" href="../go/coverage.html">
      覆盖率
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="dev.html">
+    <a class="reference internal" href="../go/dev.html">
      Develop Go
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="asm.html">
+    <a class="reference internal" href="../go/asm.html">
      Go’s Assembler
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="type-assertion.html">
+    <a class="reference internal" href="../go/type-assertion.html">
      Type Assertion
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="escape-analysis.html">
+    <a class="reference internal" href="../go/escape-analysis.html">
      逃逸分析
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go/ast.html">
      Abstract Syntax Tree
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ssa.html">
+    <a class="reference internal" href="../go/ssa.html">
      Static Single-Assignment
     </a>
    </li>
@@ -1091,7 +1091,7 @@ title="Source repository"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Abstract Syntax Tree</h1>
+                <h1>Debian Packing</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1102,11 +1102,30 @@ title="Source repository"
             <main id="main-content" role="main">
                 
               <div>
-                 <section id="abstract-syntax-tree">
-<h1>Abstract Syntax Tree<a class="headerlink" href="#abstract-syntax-tree" title="永久链接至标题">#</a></h1>
-<ul class="simple">
-<li><p><a class="reference external" href="https://yuroyoro.github.io/goast-viewer/index.html">Online Go AST Viewer</a></p></li>
-</ul>
+                 <section id="debian-packing">
+<h1>Debian Packing<a class="headerlink" href="#debian-packing" title="永久链接至标题">#</a></h1>
+<p><code class="file docutils literal notranslate"><span class="pre">debian/rules</span></code> 其实就是一个 <a class="reference internal" href="make.html"><span class="doc">Makefile</span></a> 文件。</p>
+<p>构建 deb 包 <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>fakeroot debian/rules binary
+</pre></div>
+</div>
+<p>安装本地的deb 包:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>dpkg -i ./xxx.deb
+</pre></div>
+</div>
+<p>更新 <code class="file docutils literal notranslate"><span class="pre">debian/changelog</span></code> <a class="footnote-reference brackets" href="#id4" id="id2">2</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>dch -i
+</pre></div>
+</div>
+<p><code class="code docutils literal notranslate"><span class="pre">dch</span></code> 命令位于 <code class="code docutils literal notranslate"><span class="pre">devscripts</span></code> 包中。</p>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.debian.org/doc/manuals/maint-guide/build.en.html">https://www.debian.org/doc/manuals/maint-guide/build.en.html</a></p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://www.debian.org/doc/manuals/maint-guide/update.en.html">https://www.debian.org/doc/manuals/maint-guide/update.en.html</a></p>
+</dd>
+</dl>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
@@ -1121,7 +1140,7 @@ title="Source repository"
         }
     )
 );</script> 回复你。</p>
-<section data-isso-id="/notes/go/ast" data-title="Abstract Syntax Tree" id="isso-thread"></section></div>
+<section data-isso-id="/notes/man/deb" data-title="Debian Packing" id="isso-thread"></section></div>
 </div>
 </section>
 
@@ -1136,17 +1155,17 @@ title="Source repository"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="escape-analysis.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="awk.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">逃逸分析</p>
+            <p class="prev-next-title">Awk</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ssa.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="gdb.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">Static Single-Assignment</p>
+        <p class="prev-next-title">GDB</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
