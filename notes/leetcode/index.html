@@ -45,7 +45,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
@@ -65,7 +65,7 @@
     <script src="../../_static/asciinema-player_2.6.1.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -74,8 +74,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="配置向导" href="../wizard/index.html" />
-    <link rel="prev" title="Type Assertion" href="../go/type-assertion.html" /> 
+    <link rel="next" title="完全用理性作画" href="../paint-with-reason/index.html" />
+    <link rel="prev" title="Static Single-Assignment" href="../go/ssa.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -401,6 +401,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../man/deb.html">
+     Debian Packing
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../man/gdb.html">
      GDB
     </a>
@@ -448,6 +453,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../man/make.html">
      Makefile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../man/man.html">
+     Man
     </a>
    </li>
    <li class="toctree-l2">
@@ -589,11 +599,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../go/escape-analysis.html">
-     逃逸分析
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../go/dev.html">
      Develop Go
     </a>
@@ -608,11 +613,31 @@
      Type Assertion
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go/escape-analysis.html">
+     逃逸分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go/ast.html">
+     Abstract Syntax Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../go/ssa.html">
+     Static Single-Assignment
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Leetcode 刷题记录
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../paint-with-reason/index.html">
+   完全用理性作画
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -679,6 +704,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../abraxas.html">
    人造上帝
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nju-static-program-analysis.html">
+   静态程序分析
   </a>
  </li>
 </ul>
@@ -3149,7 +3179,7 @@ frequency 的桶里，并且 cache 内维护一个 minFreq 方便立刻找到最
 </pre></div>
 </div>
 </div>
-</details><p>遥想 <code class="xref any any-friend docutils literal notranslate"><span class="pre">pcf</span></code> 师傅还跟我讨论过这题，可惜没记住。反正不看题解打死也做不出来。</p>
+</details><p>遥想 <a class="reference internal" href="../../about/people.html#people-pcf" title="people pcf"><code class="xref any any-people docutils literal notranslate"><span class="pre">👤pcf</span></code></a> 师傅还跟我讨论过这题，可惜没记住。反正不看题解打死也做不出来。</p>
 </section>
 <section class="any" id="diameter-of-binary-tree">
 <h2 id="leetcode-diameter-of-binary-tree">Diameter Of Binary Tree<a class="headerlink" href="#diameter-of-binary-tree" title="永久链接至标题">#</a></h2>
@@ -4254,10 +4284,10 @@ frequency 的桶里，并且 cache 内维护一个 minFreq 方便立刻找到最
 </div>
 </div>
 </details><p>无论如何时间复杂度都是 <span class="math notranslate nohighlight">\(O(n)\)</span>，用哈希标表存 visited 的做法不用说了。</p>
-<p>题目要求用 <span class="math notranslate nohighlight">\(O(1)\)</span> 空间，估计我独立做不出来。很久前听 <code class="xref any any-friend docutils literal notranslate"><span class="pre">pcf</span></code> 说到用两个指针，所以稍微回忆了一下：用两个步长不一致的指针，一个每次一个节点，一个每次两个节点，如果成环的话总会相遇。</p>
+<p>题目要求用 <span class="math notranslate nohighlight">\(O(1)\)</span> 空间，估计我独立做不出来。很久前听 <a class="reference internal" href="../../about/people.html#people-pcf" title="people pcf"><code class="xref any any-people docutils literal notranslate"><span class="pre">👤pcf</span></code></a> 说到用两个指针，所以稍微回忆了一下：用两个步长不一致的指针，一个每次一个节点，一个每次两个节点，如果成环的话总会相遇。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><code class="xref any any-friend docutils literal notranslate"><span class="pre">fei.li</span></code> 的 <a class="reference external" href="https://leetcode-cn.com/problems/linked-list-cycle/solution/qiao-miao-li-yong-zhi-zhen-cun-chu-jie-d-xeca/">解法</a> 惊为天人</p>
+<p><a class="reference internal" href="../../about/people.html#people-lifeiren" title="people lifeiren"><code class="xref any any-people docutils literal notranslate"><span class="pre">👤lifeiren</span></code></a> 的 <a class="reference external" href="https://leetcode-cn.com/problems/linked-list-cycle/solution/qiao-miao-li-yong-zhi-zhen-cun-chu-jie-d-xeca/">解法</a> 惊为天人</p>
 </div>
 </section>
 <section class="any" id="linked-list-cycle-ii">
@@ -4473,7 +4503,7 @@ frequency 的桶里，并且 cache 内维护一个 minFreq 方便立刻找到最
 </pre></div>
 </div>
 </div>
-</details><p>似乎 <code class="xref any any-friend docutils literal notranslate"><span class="pre">pcf</span></code> 也和我提到过，然而完全忘了。</p>
+</details><p>似乎 <a class="reference internal" href="../../about/people.html#people-pcf" title="people pcf"><code class="xref any any-people docutils literal notranslate"><span class="pre">👤pcf</span></code></a> 也和我提到过，然而完全忘了。</p>
 <p>看题解。</p>
 <dl>
 <dt>动态规划</dt><dd><p>其实也不像动态规划……倒不如说是 <a class="reference internal" href="#leetcode-product-of-array-except-self" title="leetcode Product of Array Except Self"><code class="xref any any-leetcode docutils literal notranslate"><span class="pre">🧮Product</span> <span class="pre">of</span> <span class="pre">Array</span> <span class="pre">Except</span> <span class="pre">Self</span></code></a> 的变种，同样用到两个数组。</p>
@@ -5928,17 +5958,17 @@ frequency 的桶里，并且 cache 内维护一个 minFreq 方便立刻找到最
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../go/type-assertion.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="../go/ssa.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">Type Assertion</p>
+            <p class="prev-next-title">Static Single-Assignment</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../wizard/index.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="../paint-with-reason/index.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">配置向导</p>
+        <p class="prev-next-title">完全用理性作画</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -5952,7 +5982,7 @@ frequency 的桶里，并且 cache 内维护一个 minFreq 方便立刻找到最
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-07-07.<br/>
+    Last updated on 2022-07-20.<br/>
 </p>
         </footer>
     </div>

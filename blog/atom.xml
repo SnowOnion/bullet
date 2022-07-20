@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-07-20T16:18:16.661178+00:00</updated>
+  <updated>2022-07-20T17:39:04.352585+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
@@ -2992,11 +2992,6 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由&lt;
     </author>
     <content type="html">&lt;section id="ctf-reverse-300"&gt;
 
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/2015-huashangctf-re300.rst&lt;/span&gt;, line 9)&lt;/p&gt;
-&lt;p&gt;No directive entry for “hint” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “hint”.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div class="admonition hint"&gt;
 &lt;p class="admonition-title"&gt;提示&lt;/p&gt;
 &lt;p&gt;这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 &lt;a class="reference external" href="https://github.com/SilverRainZ/bullet"&gt;⛺ SilverRainZ/bullet&lt;/a&gt; 反馈&lt;/p&gt;
@@ -3230,8 +3225,7 @@ Using English fallback for directive “note”.&lt;/p&gt;
 &lt;/section&gt;
 </content>
     <link href="https://silverrainz.me/blog/2015-huashangctf-re300.html" rel="alternate"/>
-    <summary>No directive entry for “hint” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “hint”.</summary>
+    <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
     <category term="CTF" label="CTF"/>
     <published>2015-11-02T00:00:00+00:00</published>
   </entry>
@@ -5635,7 +5629,7 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;figure class="align-default" id="id9"&gt;
-&lt;a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg"&gt;&lt;img alt="_any/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" src="_any/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://raw.githubusercontent.com/SilverRainZ/bullet/master/_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg"&gt;&lt;img alt="_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" src="_images/800px-Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" /&gt;&lt;/a&gt;
 &lt;figcaption&gt;
 &lt;p&gt;&lt;span class="caption-text"&gt;Bell Rock Lighthouse&lt;/span&gt;&lt;/p&gt;
 &lt;/figcaption&gt;
@@ -5705,7 +5699,7 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-lilypond"&gt;📦 sphinxnotes-lilypond&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;用来显示音符 &lt;div class="system-message"&gt;
 &lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;\relative { c' }&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;No score generated, please check &amp;quot;*.music&amp;quot; files under &amp;quot;/tmp/sphinxnotes-lilypond9hqbaqrj&amp;quot;&lt;/p&gt;
+&lt;p&gt;No score generated, please check &amp;quot;*.music&amp;quot; files under &amp;quot;/tmp/sphinxnotes-lilypond55fxp39w&amp;quot;&lt;/p&gt;
 &lt;/div&gt;
   和 &lt;a class="reference internal" href="collections/scores/index.html"&gt;&lt;span class="doc"&gt;带试听音频的乐谱&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
@@ -5934,11 +5928,6 @@ reST&lt;/div&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;在大量的小稿中，有不少带上了文字，用来补充未能用画面良好记录的信息：&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/xzzh-after-40-yrs.rst&lt;/span&gt;, line 60)&lt;/p&gt;
-&lt;p&gt;No directive entry for “image” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “image”.&lt;/p&gt;
-&lt;/div&gt;
 &lt;img alt="_images/IMG_20210627_145646.jpg" src="_images/IMG_20210627_145646.jpg" style="width: 30%;" /&gt;
 &lt;img alt="_images/IMG_20210627_144838.jpg" src="_images/IMG_20210627_144838.jpg" style="width: 30%;" /&gt;
 &lt;img alt="_images/IMG_20210627_144932.jpg" src="_images/IMG_20210627_144932.jpg" style="width: 30%;" /&gt;
@@ -6061,11 +6050,6 @@ Using English fallback for role “sub”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/xzzh-after-40-yrs.rst&lt;/span&gt;, line 158)&lt;/p&gt;
-&lt;p&gt;No directive entry for “rubric” in module “docutils.parsers.rst.languages.zh_cn”.
-Using English fallback for directive “rubric”.&lt;/p&gt;
-&lt;/div&gt;
 &lt;p class="rubric"&gt;脚注&lt;/p&gt;
 &lt;dl class="footnote brackets"&gt;
 &lt;dt class="label" id="id12"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
