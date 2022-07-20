@@ -658,6 +658,11 @@
    人造上帝
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes/nju-static-program-analysis.html">
+   静态程序分析
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -1062,13 +1067,17 @@ title="Source repository"
    <div class="modindex-jumpbox">
    <a href="#cap-BFE"><strong>BFE</strong></a> | 
    <a href="#cap-BFF"><strong>BFF</strong></a> | 
+   <a href="#cap-Complete"><strong>Complete</strong></a> | 
    <a href="#cap-Dominate"><strong>Dominate</strong></a> | 
    <a href="#cap-Kappa Architecture"><strong>Kappa Architecture</strong></a> | 
    <a href="#cap-Kappa 架构"><strong>Kappa 架构</strong></a> | 
    <a href="#cap-Lambda Architecture"><strong>Lambda Architecture</strong></a> | 
    <a href="#cap-Lambda 架构"><strong>Lambda 架构</strong></a> | 
+   <a href="#cap-Rice's theorem"><strong>Rice's theorem</strong></a> | 
    <a href="#cap-SLE"><strong>SLE</strong></a> | 
    <a href="#cap-Shuffle Service"><strong>Shuffle Service</strong></a> | 
+   <a href="#cap-Sound"><strong>Sound</strong></a> | 
+   <a href="#cap-Sound and Complete"><strong>Sound and Complete</strong></a> | 
    <a href="#cap-VPC"><strong>VPC</strong></a> | 
    <a href="#cap-vDSO"><strong>vDSO</strong></a> | 
    <a href="#cap-virtual ELF dynamic shared object"><strong>virtual ELF dynamic shared object</strong></a> | 
@@ -1084,6 +1093,7 @@ title="Source repository"
    <a href="#cap-影线"><strong>影线</strong></a> | 
    <a href="#cap-支配关系"><strong>支配关系</strong></a> | 
    <a href="#cap-眉弓"><strong>眉弓</strong></a> | 
+   <a href="#cap-莱斯定理"><strong>莱斯定理</strong></a> | 
    <a href="#cap-虎牙"><strong>虎牙</strong></a> | 
    <a href="#cap-虚拟私有云"><strong>虚拟私有云</strong></a> | 
    <a href="#cap-颧骨"><strong>颧骨</strong></a> | 
@@ -1110,6 +1120,15 @@ title="Source repository"
        <td>
        <a href="jour/2021/07.html#term-30d4876"><code class="xref">BFF</code></a> <em>(30d4876)</em></td><td>
        <em>Backend for Frontend</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Complete"><td></td><td>
+       <strong>Complete</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-b84b8d9"><code class="xref">Sound and Complete</code></a> <em>(b84b8d9)</em></td><td>
+       <em>Sound by default
+   在静态分析中，几乎所有的分析方法都追求 Sound 而非 C…</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-Dominate"><td></td><td>
        <strong>Dominate</strong></td><td></td></tr>
@@ -1155,6 +1174,14 @@ title="Source repository"
 
 - Batch Layer：…</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Rice's theorem"><td></td><td>
+       <strong>Rice's theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-53cfdb1"><code class="xref">莱斯定理</code></a> <em>(53cfdb1)</em></td><td>
+       <em>:zhwiki:`递归可枚举语言` 的所有非平凡（nontrival）性质都是 :zhwiki:`不…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-SLE"><td></td><td>
        <strong>SLE</strong></td><td></td></tr>
      <tr>
@@ -1173,6 +1200,24 @@ title="Source repository"
 
 - ESS
 - CSS</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Sound"><td></td><td>
+       <strong>Sound</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-b84b8d9"><code class="xref">Sound and Complete</code></a> <em>(b84b8d9)</em></td><td>
+       <em>Sound by default
+   在静态分析中，几乎所有的分析方法都追求 Sound 而非 C…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Sound and Complete"><td></td><td>
+       <strong>Sound and Complete</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-b84b8d9"><code class="xref">Sound and Complete</code></a> <em>(b84b8d9)</em></td><td>
+       <em>Sound by default
+   在静态分析中，几乎所有的分析方法都追求 Sound 而非 C…</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-VPC"><td></td><td>
        <strong>VPC</strong></td><td></td></tr>
@@ -1296,6 +1341,14 @@ title="Source repository"
 
 空间上：TOD…</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-莱斯定理"><td></td><td>
+       <strong>莱斯定理</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-53cfdb1"><code class="xref">莱斯定理</code></a> <em>(53cfdb1)</em></td><td>
+       <em>:zhwiki:`递归可枚举语言` 的所有非平凡（nontrival）性质都是 :zhwiki:`不…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-虎牙"><td></td><td>
        <strong>虎牙</strong></td><td></td></tr>
      <tr>
@@ -1371,7 +1424,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-07-19.<br/>
+    Last updated on 2022-07-20.<br/>
 </p>
         </footer>
     </div>
