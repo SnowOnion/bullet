@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-07-22T09:10:53.988143+00:00</updated>
+  <updated>2022-07-23T15:03:03.991860+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
@@ -5699,7 +5699,7 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-lilypond"&gt;📦 sphinxnotes-lilypond&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;用来显示音符 &lt;div class="system-message"&gt;
 &lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;\relative { c' }&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;No score generated, please check &amp;quot;*.music&amp;quot; files under &amp;quot;/tmp/sphinxnotes-lilypondfezpt4rj&amp;quot;&lt;/p&gt;
+&lt;p&gt;No score generated, please check &amp;quot;*.music&amp;quot; files under &amp;quot;/tmp/sphinxnotes-lilypondigowful1&amp;quot;&lt;/p&gt;
 &lt;/div&gt;
   和 &lt;a class="reference internal" href="collections/scores/index.html"&gt;&lt;span class="doc"&gt;带试听音频的乐谱&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
