@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-07-30T13:15:40.030079+00:00</updated>
+  <updated>2022-08-05T12:17:29.698171+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.27">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.28">ABlog</generator>
   <subtitle>Yes silver bullet here.</subtitle>
   <entry>
     <id>https://silverrainz.me/blog/idf-reverse-writeup.html</id>
@@ -395,8 +395,8 @@ byte_415768 db 73h
 </content>
     <link href="https://silverrainz.me/blog/haskell-beginning.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="函数式编程" label="函数式编程"/>
     <category term="Haskell" label="Haskell"/>
+    <category term="函数式编程" label="函数式编程"/>
     <published>2015-01-30T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -589,8 +589,8 @@ byte_415768 db 73h
 </content>
     <link href="https://silverrainz.me/blog/syntax-highlight-in-haskell.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="函数式编程" label="函数式编程"/>
     <category term="Haskell" label="Haskell"/>
+    <category term="函数式编程" label="函数式编程"/>
     <published>2015-02-16T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -767,8 +767,8 @@ byte_415768 db 73h
 </content>
     <link href="https://silverrainz.me/blog/matrix-arithmetic-in-haskell.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="函数式编程" label="函数式编程"/>
     <category term="Haskell" label="Haskell"/>
+    <category term="函数式编程" label="函数式编程"/>
     <published>2015-03-17T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -978,8 +978,8 @@ winetricks就会提示 wineserver not found, 不能启动, 安装了完整的win
 </content>
     <link href="https://silverrainz.me/blog/do-notation-and-bind-of-haskell.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="函数式编程" label="函数式编程"/>
     <category term="Haskell" label="Haskell"/>
+    <category term="函数式编程" label="函数式编程"/>
     <published>2015-04-09T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -3852,8 +3852,8 @@ cat - &lt;span class="p"&gt;|&lt;/span&gt; dzen2 &lt;span class="nv"&gt;$arg&lt;
 </content>
     <link href="https://silverrainz.me/blog/thinkpad-l450.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="设备" label="设备"/>
     <category term="ArchLinux" label="Arch Linux"/>
+    <category term="设备" label="设备"/>
     <published>2016-03-11T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -4198,8 +4198,8 @@ package&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt
 </content>
     <link href="https://silverrainz.me/blog/practical-makefile-for-packaging.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="Linux" label="Linux"/>
     <category term="C" label="C"/>
+    <category term="Linux" label="Linux"/>
     <category term="Makefile" label="Makefile"/>
     <published>2016-06-25T00:00:00+00:00</published>
   </entry>
@@ -4707,8 +4707,8 @@ Read The Docs 上的文档。&lt;/p&gt;
     <summary>No directive entry for “attention” in module “docutils.parsers.rst.languages.zh_cn”.
 Using English fallback for directive “attention”.</summary>
     <category term="Sphinx" label="Sphinx"/>
-    <category term="笔记系统" label="笔记系统"/>
     <category term="reStructuredText" label="reStructuredText"/>
+    <category term="笔记系统" label="笔记系统"/>
     <published>2017-03-29T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -5063,8 +5063,8 @@ $ python2 duoshuo-migrator.py -i duoshuo.json -o wp.xml
 </content>
     <link href="https://silverrainz.me/blog/switch-from-duoshuo-to-isso.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="多说" label="多说"/>
     <category term="Isso" label="Isso"/>
+    <category term="多说" label="多说"/>
     <published>2017-06-10T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -5135,8 +5135,8 @@ Srain 未来会继续开发下去，跟着 IRC 一起慢慢消失在历史里。
 </content>
     <link href="https://silverrainz.me/blog/srain-and-me.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="IRC" label="IRC"/>
     <category term="GTK" label="GTK"/>
+    <category term="IRC" label="IRC"/>
     <category term="Srain" label="Srain"/>
     <published>2020-02-29T00:00:00+00:00</published>
   </entry>
@@ -5196,8 +5196,8 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。但遗�
 </content>
     <link href="https://silverrainz.me/blog/migrate-to-sphinx.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="Sphinx" label="Sphinx"/>
     <category term="Python" label="Python"/>
+    <category term="Sphinx" label="Sphinx"/>
     <category term="变更" label="变更"/>
     <published>2020-12-26T00:00:00+00:00</published>
   </entry>
@@ -5433,8 +5433,8 @@ Using English fallback for directive “rubric”.&lt;/p&gt;
     <link href="https://silverrainz.me/blog/sphinx-as-note-taking-system-1.html" rel="alternate"/>
     <summary>这是 category-我如何用-sphinx-建立笔记系统 系列的第 一 篇，你可以通过订阅 RSS 来获取后续更新。rst-badge</summary>
     <category term="Sphinx" label="Sphinx"/>
-    <category term="笔记系统" label="笔记系统"/>
     <category term="reStructuredText" label="reStructuredText"/>
+    <category term="笔记系统" label="笔记系统"/>
     <published>2021-05-24T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -5699,7 +5699,7 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-lilypond"&gt;📦 sphinxnotes-lilypond&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;用来显示音符 &lt;div class="system-message"&gt;
 &lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;\relative { c' }&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;No score generated, please check &amp;quot;*.music&amp;quot; files under &amp;quot;/tmp/sphinxnotes-lilypondzfafkagv&amp;quot;&lt;/p&gt;
+&lt;p&gt;No score generated, please check &amp;quot;*.music&amp;quot; files under &amp;quot;/tmp/sphinxnotes-lilypondo9rhukjx&amp;quot;&lt;/p&gt;
 &lt;/div&gt;
   和 &lt;a class="reference internal" href="collections/scores/index.html"&gt;&lt;span class="doc"&gt;带试听音频的乐谱&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
@@ -5857,8 +5857,8 @@ reST&lt;/div&gt;
     <link href="https://silverrainz.me/blog/sphinx-as-note-taking-system-2.html" rel="alternate"/>
     <summary>这是 category-我如何用-sphinx-建立笔记系统 系列的第 二 篇，你可以通过订阅 RSS 来获取后续更新。</summary>
     <category term="Sphinx" label="Sphinx"/>
-    <category term="笔记系统" label="笔记系统"/>
     <category term="reStructuredText" label="reStructuredText"/>
+    <category term="笔记系统" label="笔记系统"/>
     <published>2021-05-25T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -6624,9 +6624,9 @@ func IsSigned[T Int](n T) {
 </content>
     <link href="https://silverrainz.me/blog/funtional-programming-in-go-generics.html" rel="alternate"/>
     <summary>函数式编程（Functional Programming / FP）作为一种编程范式，具有无状态、无副作用、并发友好、抽象程度高等优点。目前流行的编程语言（C++、Python、Rust）都或多或少地引入了函数式特性，但在同作为流行语言的 Golang 中却少有讨论。</summary>
+    <category term="Golang" label="Golang"/>
     <category term="函数式编程" label="函数式编程"/>
     <category term="泛型" label="泛型"/>
-    <category term="Golang" label="Golang"/>
     <published>2021-10-27T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -6848,9 +6848,9 @@ func IsSigned[T Int](n T) {
 </content>
     <link href="https://silverrainz.me/blog/when-go-generics.html" rel="alternate"/>
     <summary>这篇文章是 When To Use Generics 的中文翻译，作者是 Go Team 的 👤 ianlancetaylor。</summary>
-    <category term="翻译" label="翻译"/>
-    <category term="泛型" label="泛型"/>
     <category term="Golang" label="Golang"/>
+    <category term="泛型" label="泛型"/>
+    <category term="翻译" label="翻译"/>
     <published>2022-06-03T00:00:00+00:00</published>
   </entry>
   <entry>
