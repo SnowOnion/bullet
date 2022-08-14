@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-07-30T13:16:21.623421+00:00</updated>
+  <updated>2022-08-14T01:57:04.624094+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.27">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <subtitle>Yes silver bullet here.</subtitle>
   <entry>
     <id>https://silverrainz.me/blog/idf-reverse-writeup.html</id>
@@ -3852,8 +3852,8 @@ cat - &lt;span class="p"&gt;|&lt;/span&gt; dzen2 &lt;span class="nv"&gt;$arg&lt;
 </content>
     <link href="https://silverrainz.me/blog/thinkpad-l450.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="设备" label="设备"/>
     <category term="ArchLinux" label="Arch Linux"/>
+    <category term="设备" label="设备"/>
     <published>2016-03-11T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -4198,9 +4198,9 @@ package&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt
 </content>
     <link href="https://silverrainz.me/blog/practical-makefile-for-packaging.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="Makefile" label="Makefile"/>
-    <category term="Linux" label="Linux"/>
     <category term="C" label="C"/>
+    <category term="Linux" label="Linux"/>
+    <category term="Makefile" label="Makefile"/>
     <published>2016-06-25T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -4706,9 +4706,9 @@ Read The Docs 上的文档。&lt;/p&gt;
     <link href="https://silverrainz.me/blog/use-sphinx-and-rst-to-manage-your-notes.html" rel="alternate"/>
     <summary>No directive entry for “attention” in module “docutils.parsers.rst.languages.zh_cn”.
 Using English fallback for directive “attention”.</summary>
+    <category term="Sphinx" label="Sphinx"/>
     <category term="reStructuredText" label="reStructuredText"/>
     <category term="笔记系统" label="笔记系统"/>
-    <category term="Sphinx" label="Sphinx"/>
     <published>2017-03-29T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -5063,8 +5063,8 @@ $ python2 duoshuo-migrator.py -i duoshuo.json -o wp.xml
 </content>
     <link href="https://silverrainz.me/blog/switch-from-duoshuo-to-isso.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="多说" label="多说"/>
     <category term="Isso" label="Isso"/>
+    <category term="多说" label="多说"/>
     <published>2017-06-10T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -5135,9 +5135,9 @@ Srain 未来会继续开发下去，跟着 IRC 一起慢慢消失在历史里。
 </content>
     <link href="https://silverrainz.me/blog/srain-and-me.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
+    <category term="GTK" label="GTK"/>
     <category term="IRC" label="IRC"/>
     <category term="Srain" label="Srain"/>
-    <category term="GTK" label="GTK"/>
     <published>2020-02-29T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -5196,9 +5196,9 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。但遗�
 </content>
     <link href="https://silverrainz.me/blog/migrate-to-sphinx.html" rel="alternate"/>
     <summary>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 ⛺ SilverRainZ/bullet 反馈</summary>
-    <category term="变更" label="变更"/>
-    <category term="Sphinx" label="Sphinx"/>
     <category term="Python" label="Python"/>
+    <category term="Sphinx" label="Sphinx"/>
+    <category term="变更" label="变更"/>
     <published>2020-12-26T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -5432,9 +5432,9 @@ Using English fallback for directive “rubric”.&lt;/p&gt;
 </content>
     <link href="https://silverrainz.me/blog/sphinx-as-note-taking-system-1.html" rel="alternate"/>
     <summary>这是 category-我如何用-sphinx-建立笔记系统 系列的第 一 篇，你可以通过订阅 RSS 来获取后续更新。rst-badge</summary>
+    <category term="Sphinx" label="Sphinx"/>
     <category term="reStructuredText" label="reStructuredText"/>
     <category term="笔记系统" label="笔记系统"/>
-    <category term="Sphinx" label="Sphinx"/>
     <published>2021-05-24T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -5697,11 +5697,7 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;p&gt;这里仅列出我正在使用的扩展及其效果，想了解它们的具体配置，请看 &lt;a class="reference external" href="https://github.com/SilverRainZ/bullet/blob/master/conf.py"&gt;conf.py&lt;/a&gt; ，也许我会写一篇文章里来它们的使用技巧。&lt;/p&gt;
 &lt;/div&gt;
 &lt;dl&gt;
-&lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-lilypond"&gt;📦 sphinxnotes-lilypond&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;用来显示音符 &lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;\relative { c' }&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;No score generated, please check &amp;quot;*.music&amp;quot; files under &amp;quot;/tmp/sphinxnotes-lilypond1lo0xlif&amp;quot;&lt;/p&gt;
-&lt;/div&gt;
-  和 &lt;a class="reference internal" href="collections/scores/index.html"&gt;&lt;span class="doc"&gt;带试听音频的乐谱&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-lilypond"&gt;📦 sphinxnotes-lilypond&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;用来显示音符 &lt;img class="lilypond-score" src=".././_lilypond/fe054cc0f6577b37cbee4644af6855a6ff620a5c/music.preview.png" alt="\relative { c' }" style="height:2.5em;", align="absbottom"/&gt;  和 &lt;a class="reference internal" href="collections/scores/index.html"&gt;&lt;span class="doc"&gt;带试听音频的乐谱&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;&lt;a class="reference external" href="https://pypi.org/project/sphinxnotes-strike"&gt;📦 sphinxnotes-strike&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;提供了 &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;del&lt;/span&gt;&lt;/code&gt; role 用来显示 reST 不支持的删除线&lt;/p&gt;
 &lt;table class="table"&gt;
@@ -5752,9 +5748,9 @@ reST&lt;/div&gt;
 &lt;div class="sd-card-body docutils"&gt;
 &lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
 效果&lt;/div&gt;
-digraph dot {
+&lt;div class="graphviz"&gt;&lt;img src="_images/graphviz-b2b7db9f696a0fb7d43ba60c44e952704da3e867.png" alt="digraph dot {
 Alice -&amp;gt; Bob
-}
+}" class="graphviz" /&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -5856,9 +5852,9 @@ reST&lt;/div&gt;
 </content>
     <link href="https://silverrainz.me/blog/sphinx-as-note-taking-system-2.html" rel="alternate"/>
     <summary>这是 category-我如何用-sphinx-建立笔记系统 系列的第 二 篇，你可以通过订阅 RSS 来获取后续更新。</summary>
+    <category term="Sphinx" label="Sphinx"/>
     <category term="reStructuredText" label="reStructuredText"/>
     <category term="笔记系统" label="笔记系统"/>
-    <category term="Sphinx" label="Sphinx"/>
     <published>2021-05-25T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -6086,9 +6082,9 @@ Using English fallback for role “sub”.&lt;/p&gt;
 </content>
     <link href="https://silverrainz.me/blog/xzzh-after-40-yrs.html" rel="alternate"/>
     <summary>2021-06-30</summary>
+    <category term="展览" label="展览"/>
     <category term="绘画" label="绘画"/>
     <category term="陈丹青" label="陈丹青"/>
-    <category term="展览" label="展览"/>
     <published>2021-07-03T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -6634,7 +6630,7 @@ func IsSigned[T Int](n T) {
     <title>何时使用 Go 泛型</title>
     <updated>2022-06-03T00:00:00+00:00</updated>
     <author>
-      <name>Ian Lance Taylor</name>
+      <name>Shengyu Zhang</name>
     </author>
     <content type="html">&lt;section id="go"&gt;
 
