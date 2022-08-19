@@ -480,6 +480,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../man/rsync.html">
+     rsync
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../man/sh.html">
      Shell Script
     </a>
@@ -1213,7 +1218,7 @@ title="Source repository"
 <span class="w">        </span><span class="nx">rtypeSize</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">(</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">((</span><span class="mi">1</span><span class="p">))).</span><span class="nx">Elem</span><span class="p">().</span><span class="nx">Size</span><span class="p">()</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="kd">func</span><span class="w"> </span><span class="nx">CastInterface</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">](</span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{})</span><span class="w"> </span><span class="nx">T</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">CastInterface</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="kt">any</span><span class="p">](</span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{})</span><span class="w"> </span><span class="nx">T</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="nx">xi</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="nx">xface</span><span class="p">)(</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">z</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="nx">T</span><span class="p">)(</span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
@@ -1276,7 +1281,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-08-14.<br/>
+    Last updated on 2022-08-19.<br/>
 </p>
         </footer>
     </div>

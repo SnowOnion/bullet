@@ -480,6 +480,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="rsync.html">
+     rsync
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="sh.html">
      Shell Script
     </a>
@@ -1384,18 +1389,18 @@ title="Source repository"
 <section id="id10">
 <h4>五线谱六线谱混排<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h4>
 <p><code class="code docutils literal notranslate"><span class="pre">\symbols</span></code> 是个 music expression <a class="reference internal" href="#music-expr" id="id11"><span>[music-expr]</span></a></p>
-<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class=" -Whitespace"> </span><span class="k">\score</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">   </span><span class="p">&lt;&lt;</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">     </span><span class="k">\new</span><span class=" -Whitespace"> </span><span class="nb nb-Context">Staff</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">       </span><span class="nb nb-MusicFunction">\clef</span><span class=" -Whitespace"> </span><span class="s">&quot;G_8&quot;</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">       </span><span class="n n-BackslashReference">\symbols</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">     </span><span class="p">}</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">     </span><span class="k">\new</span><span class=" -Whitespace"> </span><span class="nb nb-Context">TabStaff</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">       </span><span class="nb nb-MusicCommand">\tabFullNotation</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">       </span><span class="n n-BackslashReference">\symbols</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">     </span><span class="p">}</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">   </span><span class="p">&gt;&gt;</span><span class=" -Whitespace"></span>
-<span class="p">}</span><span class=" -Whitespace"></span>
+<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="k">\score</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="p">&lt;&lt;</span><span class="w"></span>
+<span class="w">     </span><span class="k">\new</span><span class="w"> </span><span class="nb nb-Context">Staff</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="nb nb-MusicFunction">\clef</span><span class="w"> </span><span class="s">&quot;G_8&quot;</span><span class="w"></span>
+<span class="w">       </span><span class="n n-BackslashReference">\symbols</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="w">     </span><span class="k">\new</span><span class="w"> </span><span class="nb nb-Context">TabStaff</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="nb nb-MusicCommand">\tabFullNotation</span><span class="w"></span>
+<span class="w">       </span><span class="n n-BackslashReference">\symbols</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="p">&gt;&gt;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1428,9 +1433,9 @@ title="Source repository"
 <section id="id17">
 <h3>指定输出文件名称<a class="headerlink" href="#id17" title="永久链接至标题">#</a></h3>
 <p>在 <code class="code docutils literal notranslate"><span class="pre">\score</span></code> block 显式地指定 <code class="code docutils literal notranslate"><span class="pre">\book</span></code>， 再指定 <code class="code docutils literal notranslate"><span class="pre">\bookOutputSuffix</span></code> 即可 <a class="footnote-reference brackets" href="#id25" id="id18">3</a></p>
-<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\book</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">  </span><span class="nb nb-MusicFunction">\bookOutputSuffix</span><span class=" -Whitespace"> </span><span class="s">&quot;alice&quot;</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">  </span><span class="k">\score</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"> </span>…<span class=" -Whitespace"> </span><span class="p">}</span><span class=" -Whitespace"></span>
+<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\book</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nb nb-MusicFunction">\bookOutputSuffix</span><span class="w"> </span><span class="s">&quot;alice&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="k">\score</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>…<span class="w"> </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -1438,19 +1443,19 @@ title="Source repository"
 <h3>MIDI<a class="headerlink" href="#midi" title="永久链接至标题">#</a></h3>
 <section id="id19">
 <h4>输出 MIDI 文件<a class="headerlink" href="#id19" title="永久链接至标题">#</a></h4>
-<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\score</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">   </span><span class="c1">% ...</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">  </span><span class="k">\midi</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"> </span><span class="p">}</span><span class=" -Whitespace"></span>
-<span class="p">}</span><span class=" -Whitespace"></span>
+<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\score</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="c1">% ...</span><span class="w"></span>
+<span class="w">  </span><span class="k">\midi</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="id20">
 <h4>指定乐器<a class="headerlink" href="#id20" title="永久链接至标题">#</a></h4>
 <p>设置 Staff 的 <code class="code docutils literal notranslate"><span class="pre">midiInstrument</span></code> <a class="footnote-reference brackets" href="#id26" id="id21">4</a> 属性为乐器的名称 <a class="footnote-reference brackets" href="#id27" id="id22">5</a></p>
-<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\new</span><span class=" -Whitespace"> </span><span class="nb nb-Context">Staff</span><span class=" -Whitespace"> </span><span class="k">\with</span><span class=" -Whitespace"> </span><span class="p">{</span><span class="nb nb-ContextProperty">midiInstrument</span><span class=" -Whitespace"> </span><span class="p">=</span><span class=" -Whitespace"> </span><span class="s">&quot;acoustic guitar (nylon)&quot;</span><span class="p">}</span><span class=" -Whitespace"> </span><span class="p">{</span><span class=" -Whitespace"></span>
-<span class=" -Whitespace">  </span><span class="c1">% ...</span><span class=" -Whitespace"></span>
-<span class="p">}</span><span class=" -Whitespace"></span>
+<div class="highlight-lilypond notranslate"><div class="highlight"><pre><span></span><span class="k">\new</span><span class="w"> </span><span class="nb nb-Context">Staff</span><span class="w"> </span><span class="k">\with</span><span class="w"> </span><span class="p">{</span><span class="nb nb-ContextProperty">midiInstrument</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;acoustic guitar (nylon)&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">% ...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p class="rubric">脚注</p>
@@ -1534,7 +1539,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-08-14.<br/>
+    Last updated on 2022-08-19.<br/>
 </p>
         </footer>
     </div>

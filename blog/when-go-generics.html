@@ -185,8 +185,8 @@
   >
    
   <a href="tag/%E6%B3%9B%E5%9E%8B.html">泛型</a>   
-  <a href="tag/golang.html">Golang</a>   
-  <a href="tag/%E7%BF%BB%E8%AF%91.html">翻译</a>  
+  <a href="tag/%E7%BF%BB%E8%AF%91.html">翻译</a>   
+  <a href="tag/golang.html">Golang</a>  
 </li>
  
 </ul>
@@ -727,7 +727,7 @@ title="Source repository"
 <p>例如，这是一个返回任意类型 map 中所有 key 的函数:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// MapKeys returns a slice of all the keys in m.</span><span class="w"></span>
 <span class="c1">// The keys are not returned in any particular order.</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="nx">MapKeys</span><span class="p">[</span><span class="nx">Key</span><span class="w"> </span><span class="nx">comparable</span><span class="p">,</span><span class="w"> </span><span class="nx">Val</span><span class="w"> </span><span class="nx">any</span><span class="p">](</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="nx">Key</span><span class="p">]</span><span class="nx">Val</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="nx">Key</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">MapKeys</span><span class="p">[</span><span class="nx">Key</span><span class="w"> </span><span class="kt">comparable</span><span class="p">,</span><span class="w"> </span><span class="nx">Val</span><span class="w"> </span><span class="kt">any</span><span class="p">](</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="nx">Key</span><span class="p">]</span><span class="nx">Val</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="nx">Key</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nx">s</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="nx">Key</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">m</span><span class="p">))</span><span class="w"></span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">k</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="w"> </span><span class="nx">k</span><span class="p">)</span><span class="w"></span>
@@ -750,13 +750,13 @@ title="Source repository"
 <p>用 type parameter 替换特定元素类型可以生成更通用的数据结构，可以在程序的其他部分或其他程序中使用。用类型参数替换 <code class="code docutils literal notranslate"><span class="pre">interface{}</span></code> 则可以让数据更高效地存储数据，节省内存资源；它还可以允许代码避免类型断言（type assertion），并在编译时进行全面的类型检查。</p>
 <p>下面节选了用 type parameter 实现的二叉树作为例子:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Tree is a binary tree.</span><span class="w"></span>
-<span class="kd">type</span><span class="w"> </span><span class="nx">Tree</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">type</span><span class="w"> </span><span class="nx">Tree</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nx">cmp</span><span class="w">  </span><span class="kd">func</span><span class="p">(</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
 <span class="w">    </span><span class="nx">root</span><span class="w"> </span><span class="o">*</span><span class="nx">node</span><span class="p">[</span><span class="nx">T</span><span class="p">]</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
 <span class="c1">// A node in a Tree.</span><span class="w"></span>
-<span class="kd">type</span><span class="w"> </span><span class="nx">node</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">type</span><span class="w"> </span><span class="nx">node</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nx">left</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="w">  </span><span class="o">*</span><span class="nx">node</span><span class="p">[</span><span class="nx">T</span><span class="p">]</span><span class="w"></span>
 <span class="w">    </span><span class="nx">val</span><span class="w">          </span><span class="nx">T</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -814,7 +814,7 @@ title="Source repository"
 <p>例如，考虑标准库的 <code class="code docutils literal notranslate"><span class="pre">sort.Interface</span></code>。它要求一个类型实现三种方法：<code class="code docutils literal notranslate"><span class="pre">Len</span></code>、<code class="code docutils literal notranslate"><span class="pre">Swap</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">Less</span></code>。</p>
 <p>下面是一个泛型类型 <code class="code docutils literal notranslate"><span class="pre">SliceFn</span></code> 的示例，它为任意的 slice 类型实现了 <code class="code docutils literal notranslate"><span class="pre">sort.Interface</span></code>:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// SliceFn implements sort.Interface for a slice of T.</span><span class="w"></span>
-<span class="kd">type</span><span class="w"> </span><span class="nx">SliceFn</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">type</span><span class="w"> </span><span class="nx">SliceFn</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nx">s</span><span class="w">    </span><span class="p">[]</span><span class="nx">T</span><span class="w"></span>
 <span class="w">    </span><span class="nx">less</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="kt">bool</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -833,7 +833,7 @@ title="Source repository"
 <p>对于任何 slice 类型，<code class="code docutils literal notranslate"><span class="pre">Len</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">Swap</span></code> 方法都是完全相同的。 <code class="code docutils literal notranslate"><span class="pre">Less</span></code> 方法需要一个比较函数，也就是 <code class="code docutils literal notranslate"><span class="pre">SliceFn</span></code> 的 <code class="code docutils literal notranslate"><span class="pre">Fn</span></code> 部分（<em>F</em>u<em>n</em>ction 的缩写）。与前面的 <code class="code docutils literal notranslate"><span class="pre">Tree</span></code> 示例一样，我们将在创建 <code class="code docutils literal notranslate"><span class="pre">SliceFn</span></code> 时传入一个函数。</p>
 <p>下面展示了 <code class="code docutils literal notranslate"><span class="pre">SliceFn</span></code> 如何使用比较函数对 slice 进行排序:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// SortFn sorts s in place using a comparison function.</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="nx">SortFn</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">](</span><span class="nx">s</span><span class="w"> </span><span class="p">[]</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">less</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">SortFn</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="kt">any</span><span class="p">](</span><span class="nx">s</span><span class="w"> </span><span class="p">[]</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">less</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nx">sort</span><span class="p">.</span><span class="nx">Sort</span><span class="p">(</span><span class="nx">SliceFn</span><span class="p">[</span><span class="nx">T</span><span class="p">]{</span><span class="nx">s</span><span class="p">,</span><span class="w"> </span><span class="nx">cmp</span><span class="p">})</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
@@ -946,7 +946,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-08-14.<br/>
+    Last updated on 2022-08-19.<br/>
 </p>
         </footer>
     </div>
