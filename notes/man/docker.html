@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="Build image: Get a clean Debian 10 shell with PWD mounted:-i,--interactive, Keep STDIN open even if not attached,,-t,--tty, Allocate a pseudo-TTY,,-v, Start a container with a bind mount,. 评论 如果你有任..." />
+<meta property="og:description" content="Build image: Get a clean Debian 10 shell with PWD mounted and 80 port exposed:-i,--interactive, Keep STDIN open even if not attached,,-t,--tty, Allocate a pseudo-TTY,,-v, Start a container with a b..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -53,7 +53,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -613,6 +613,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../go/godoc.html">
+     Godoc
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../go/dev.html">
      Develop Go
     </a>
@@ -1128,9 +1133,9 @@ title="Source repository"
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>docker build .
 </pre></div>
 </div>
-<p>Get a clean Debian 10 shell with PWD mounted:</p>
+<p>Get a clean Debian 10 shell with PWD mounted and 80 port exposed:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>docker pull debian:10
-<span class="gp">$ </span>docker run -it -v <span class="nv">$PWD</span>:/app debian:10 bash
+<span class="gp">$ </span>docker run -it -v <span class="nv">$PWD</span>:/app -p <span class="m">127</span>.0.0.1:80:8080/tcp debian:10 bash
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1141,7 +1146,19 @@ title="Source repository"
 <dd class="field-even"><p>Allocate a pseudo-TTY</p>
 </dd>
 <dt class="field-odd"><code class="code docutils literal notranslate"><span class="pre">-v</span></code></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.docker.com/storage/bind-mounts/#start-a-container-with-a-bind-mount">Start a container with a bind mount</a></p>
+<dd class="field-odd"><p>Start a container with a bind mount <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
+</dd>
+<dt class="field-even"><code class="code docutils literal notranslate"><span class="pre">-p</span></code>, <code class="code docutils literal notranslate"><span class="pre">--expose</span></code></dt>
+<dd class="field-even"><p>Bind port 8080 of the <em>container</em> to TCP port 80 of
+<em>host</em> on 127.0.0 <a class="footnote-reference brackets" href="#id4" id="id2">2</a></p>
+</dd>
+</dl>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/storage/bind-mounts/#start-a-container-with-a-bind-mount">https://docs.docker.com/storage/bind-mounts/#start-a-container-with-a-bind-mount</a></p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose">https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port–p—expose</a></p>
 </dd>
 </dl>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -1197,7 +1214,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-08-19.<br/>
+    Last updated on 2022-08-24.<br/>
 </p>
         </footer>
     </div>

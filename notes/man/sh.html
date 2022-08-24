@@ -24,7 +24,7 @@
   
 <meta property="og:site_name" content="银色子弹" />
   
-<meta property="og:description" content="sh, bash, zsh and so on: date, 2020-12-26,, version, 1,. String: Get length: Substring / Slice: Replace: Heredoc: Syntax: Avoid shell expanding variables: Command Line Arguments: Number of pass-in ..." />
+<meta property="og:description" content="date, 2020-12-26,, version, 1,. String: Get length: Substring / Slice: Replace: Heredoc: Syntax: Avoid shell expanding variables: Command Line Arguments: Number of pass-in arguments: The “pass-in a..." />
   
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
   
@@ -53,7 +53,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -613,6 +613,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../go/godoc.html">
+     Godoc
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../go/dev.html">
      Develop Go
     </a>
@@ -1122,28 +1127,32 @@ title="Source repository"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sh-bash-zsh-and-so-on">
-   sh, bash, zsh and so on
+  <a class="reference internal nav-link" href="#string">
+   String
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#string">
-     String
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#heredoc">
-       Heredoc
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#command-line-arguments">
-     Command Line Arguments
+    <a class="reference internal nav-link" href="#heredoc">
+     Heredoc
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#command-line-arguments">
+   Command Line Arguments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bash-set-options">
+   Bash
+   <code class="code docutils literal notranslate">
+    <span class="pre">
+     set
+    </span>
+   </code>
+   options
+  </a>
  </li>
 </ul>
 
@@ -1165,28 +1174,32 @@ title="Source repository"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sh-bash-zsh-and-so-on">
-   sh, bash, zsh and so on
+  <a class="reference internal nav-link" href="#string">
+   String
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#string">
-     String
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#heredoc">
-       Heredoc
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#command-line-arguments">
-     Command Line Arguments
+    <a class="reference internal nav-link" href="#heredoc">
+     Heredoc
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#command-line-arguments">
+   Command Line Arguments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bash-set-options">
+   Bash
+   <code class="code docutils literal notranslate">
+    <span class="pre">
+     set
+    </span>
+   </code>
+   options
+  </a>
  </li>
 </ul>
 
@@ -1199,8 +1212,6 @@ title="Source repository"
               <div>
                  <section id="shell-script">
 <h1>Shell Script<a class="headerlink" href="#shell-script" title="永久链接至标题">#</a></h1>
-<section id="sh-bash-zsh-and-so-on">
-<h2>sh, bash, zsh and so on<a class="headerlink" href="#sh-bash-zsh-and-so-on" title="永久链接至标题">#</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">date</dt>
 <dd class="field-odd"><p>2020-12-26</p>
@@ -1210,7 +1221,7 @@ title="Source repository"
 </dd>
 </dl>
 <section id="string">
-<h3>String<a class="headerlink" href="#string" title="永久链接至标题">#</a></h3>
+<h2>String<a class="headerlink" href="#string" title="永久链接至标题">#</a></h2>
 <p>Get length:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="si">${#</span><span class="nv">str</span><span class="si">}</span>
 </pre></div>
@@ -1224,7 +1235,7 @@ title="Source repository"
 </pre></div>
 </div>
 <section id="heredoc">
-<h4>Heredoc<a class="headerlink" href="#heredoc" title="永久链接至标题">#</a></h4>
+<h3>Heredoc<a class="headerlink" href="#heredoc" title="永久链接至标题">#</a></h3>
 <p>Syntax:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt;EOF</span>
 <span class="s">... Heredoc content</span>
@@ -1244,7 +1255,7 @@ title="Source repository"
 </section>
 </section>
 <section id="command-line-arguments">
-<h3>Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="永久链接至标题">#</a></h3>
+<h2>Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="永久链接至标题">#</a></h2>
 <p>Number of pass-in arguments:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$#</span>
 </pre></div>
@@ -1262,6 +1273,25 @@ title="Source repository"
 !:n-m   <span class="c1"># Range n~m</span>
 </pre></div>
 </div>
+</section>
+<section id="bash-set-options">
+<h2>Bash <code class="code docutils literal notranslate"><span class="pre">set</span></code> options<a class="headerlink" href="#bash-set-options" title="永久链接至标题">#</a></h2>
+<p>Get help:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ bash -c <span class="s1">&#39;help set&#39;</span>
+</pre></div>
+</div>
+<p>脚本常用参数：</p>
+<dl class="field-list simple">
+<dt class="field-odd">-e</dt>
+<dd class="field-odd"><p>Exit immediately if a command exits with a non-zero status.</p>
+</dd>
+<dt class="field-even">-x</dt>
+<dd class="field-even"><p>Print commands and their arguments as they are executed.</p>
+</dd>
+<dt class="field-odd">-u</dt>
+<dd class="field-odd"><p>Treat unset variables as an error when substituting.</p>
+</dd>
+</dl>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
@@ -1278,7 +1308,6 @@ title="Source repository"
 );</script> 回复你。</p>
 <section data-isso-id="/notes/man/sh" data-title="Shell Script" id="isso-thread"></section></div>
 </div>
-</section>
 </section>
 </section>
 
@@ -1317,7 +1346,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-08-19.<br/>
+    Last updated on 2022-08-24.<br/>
 </p>
         </footer>
     </div>
