@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-08-24T09:38:58.032774+00:00</updated>
+  <updated>2022-08-27T06:46:58.234313+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -675,7 +675,7 @@ n
 &lt;p&gt;这学期开线性代数, 虽然我一向不喜欢数学, 本着将Haskell运用到实践中的精神,
 想把上课教的几个矩阵运算写出来…虽然调试了半天, 回头一看,
 好吧原来这么久简单的东西花了我那么多时间.&lt;/p&gt;
-&lt;p&gt;虽然到现在的我都没把趣学指南看完因为课有点多&lt;span class="sphinxnotes-strike"&gt;事实上是太懒了&lt;/span&gt;, 只看到了State Monad这里吧,
+&lt;p&gt;虽然到现在的我都没把趣学指南看完因为课有点多&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;事实上是太懒了&lt;/span&gt;, 只看到了State Monad这里吧,
 还不是太懂, 一旦碰到「作为Monad值的函数」,「作为Applicate值的函数」这种东西我就抓瞎了.&lt;/p&gt;
 &lt;p&gt;说回矩阵吧, 用Haskell写这个还是挺爽的, 相较于C来说:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -1526,7 +1526,7 @@ Hide Debugger插件的OutputDebugString exploit选项&lt;/p&gt;&lt;/li&gt;
 &lt;section id="id1"&gt;
 &lt;h2&gt;脚本&lt;/h2&gt;
 &lt;p&gt;这个脚本的功能很简单, 就是根据指定的参数, 把指定的配置从仓库中复制到用户目录(deploy),
-或者把用户目录下的配置复制到仓库(collect).&lt;span class="sphinxnotes-strike"&gt;这样都能写100多行!&lt;/span&gt;&lt;/p&gt;
+或者把用户目录下的配置复制到仓库(collect).&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;这样都能写100多行!&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;现在只支持我常用的三个软件的配置: vim, pentadacytl, zsh.&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sync&lt;/span&gt;   &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;simple&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;sync&lt;/span&gt; &lt;span class="n"&gt;profile&lt;/span&gt;
 &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -1610,7 +1610,7 @@ sync.py 这个脚本是一个带参数运行的小工具, 需要输出 help 信�
 没有用到什么特别的库.&lt;/p&gt;
 &lt;p&gt;不过拜 Python 良好的跨平台能力, 我不需要为处理 Windows 和 Linux 下不同的文件操作各写一份代码,
 只需要对路径做些处理就行了.&lt;/p&gt;
-&lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;感觉好像什么都没写啊(摔…&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;感觉好像什么都没写啊(摔…&lt;/span&gt;&lt;/p&gt;
 &lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
 &lt;div class="sd-card-body docutils"&gt;
 &lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
@@ -1835,7 +1835,7 @@ $ ~ ./install.sh
 &lt;li&gt;&lt;p&gt;xmonad, xmonad-contrib&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;xmobar&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;dmenu&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;trayer&lt;/span&gt; trayer-srg&lt;sup&gt;AUR&lt;/sup&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;trayer&lt;/span&gt; trayer-srg&lt;sup&gt;AUR&lt;/sup&gt;&lt;/p&gt;
 &lt;div class="system-message"&gt;
 &lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/bullet/bullet/blog/configure-of-archlinux.rst&lt;/span&gt;, line 35)&lt;/p&gt;
 &lt;p&gt;No role entry for “sup” in module “docutils.parsers.rst.languages.zh_cn”.
@@ -1847,7 +1847,7 @@ Using English fallback for role “sup”.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;compton&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;xmobar, 配置文件在&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;.xmobarrc&lt;/span&gt;&lt;/code&gt;, 是个基于文字的状态栏, 可以显示从 stdin 接收到的内容,
-也可以自己获取系统信息, &lt;span class="sphinxnotes-strike"&gt;我这里的中文显示还有问题, 部分中文乱码, 应该是字体的锅.&lt;/span&gt;&lt;/p&gt;
+也可以自己获取系统信息, &lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;我这里的中文显示还有问题, 部分中文乱码, 应该是字体的锅.&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;2015-8-30: 使用 ArchLinux Wiki 中建议的字体, 效果良好.
 &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;font&lt;/span&gt; &lt;span class="pre"&gt;=&lt;/span&gt; &lt;span class="pre"&gt;&amp;quot;xft:Bitstream&lt;/span&gt; &lt;span class="pre"&gt;Vera&lt;/span&gt; &lt;span class="pre"&gt;Sans&lt;/span&gt; &lt;span class="pre"&gt;Mono:size=9:bold:antialias=true&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
@@ -1931,7 +1931,7 @@ Using English fallback for directive “topic”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="topic"&gt;
 &lt;p class="topic-title"&gt;Update&lt;/p&gt;
-&lt;p&gt;2015-7-24: 经过 IRC 里 &lt;a class="reference internal" href="about/friends.html#friend-farseerfc" title="friend farseerfc"&gt;&lt;code class="xref any any-friend docutils literal notranslate"&gt;&lt;span class="pre"&gt;👤farseerfc&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 前辈和 &lt;a class="reference internal" href="about/friends.html#friend-quininer" title="friend quininer"&gt;&lt;code class="xref any any-friend docutils literal notranslate"&gt;&lt;span class="pre"&gt;👤quininer&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 的 &lt;span class="sphinxnotes-strike"&gt;调教&lt;/span&gt; ,
+&lt;p&gt;2015-7-24: 经过 IRC 里 &lt;a class="reference internal" href="about/friends.html#friend-farseerfc" title="friend farseerfc"&gt;&lt;code class="xref any any-friend docutils literal notranslate"&gt;&lt;span class="pre"&gt;👤farseerfc&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 前辈和 &lt;a class="reference internal" href="about/friends.html#friend-quininer" title="friend quininer"&gt;&lt;code class="xref any any-friend docutils literal notranslate"&gt;&lt;span class="pre"&gt;👤quininer&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 的 &lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;调教&lt;/span&gt; ,
 发现原来 dolphin 还是 kde4 而 konsole 已经是 kde5 了.&lt;/p&gt;
 &lt;p&gt;2015-8-30: 安装社区源&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;gnome-breeze-git&lt;/span&gt;&lt;/code&gt;主题, 以及 plasma5 的&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;breeze&lt;/span&gt;&lt;/code&gt;主题,
 可以有比较统一的外表. 设置 Qt5 应用程序的主题可以设置环境变量&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;QT_STYLE_OVERRIDE=breeze&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
@@ -1991,7 +1991,7 @@ Using English fallback for directive “topic”.&lt;/p&gt;
 &lt;p&gt;题目地址: &lt;a class="reference external" href="http://overthewire.org/wargames/bandit/"&gt;OverTheWire: Bandit&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;考的都是些 Linux 下的基本操作, 虽然说是基本操作, 不过那些命令都没用过,
 所以做了这些题依然觉得受益匪浅. 其中还有有几道题很有意思…
-&lt;span class="sphinxnotes-strike"&gt;有意思的意思是我不会做&lt;/span&gt;.&lt;/p&gt;
+&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;有意思的意思是我不会做&lt;/span&gt;.&lt;/p&gt;
 &lt;section id="wechall"&gt;
 &lt;h2&gt;WeChall 计分板&lt;/h2&gt;
 &lt;p&gt;OverTheWire 使用 Wechall 的计分板来计分,
@@ -2560,7 +2560,7 @@ i 节点位图占据 &lt;code class="code docutils literal notranslate"&gt;&lt;s
 &lt;section id="id5"&gt;
 &lt;h3&gt;文件和系统调用&lt;/h3&gt;
 &lt;p&gt;这一层是最上一层, 文件是对 i 节点的简单封装, 提供了&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;fread&lt;/span&gt;&lt;/code&gt; &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;fwrite&lt;/span&gt;&lt;/code&gt; &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;fclose&lt;/span&gt;&lt;/code&gt;等函数.
-此处涉及到进程的文件表, 因此这一层暂时没有&lt;span class="sphinxnotes-strike"&gt;抄&lt;/span&gt;写.&lt;/p&gt;
+此处涉及到进程的文件表, 因此这一层暂时没有&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;抄&lt;/span&gt;写.&lt;/p&gt;
 &lt;p&gt;不过在前面几层的基础上, 实现这一层应该没什么问题.&lt;/p&gt;
 &lt;/section&gt;
 &lt;/section&gt;
@@ -2955,7 +2955,7 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由&lt;
 &lt;p&gt;至此, 用户级进程已经成功实现并且被调度. 但是没有有效的接口来启动更多的进程.
 我们需要实现一些系统调用比如&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;fork&lt;/span&gt;&lt;/code&gt;和&lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;exec&lt;/span&gt;&lt;/code&gt;来做这些事情.
 :( 但是我已经写不下去了… 如果可以话下次再写吧.&lt;/p&gt;
-&lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;不一定有下次&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;不一定有下次&lt;/span&gt;&lt;/p&gt;
 &lt;div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils"&gt;
 &lt;div class="sd-card-body docutils"&gt;
 &lt;div class="sd-card-title sd-font-weight-bold docutils"&gt;
@@ -3316,7 +3316,7 @@ Using English fallback for directive “note”.&lt;/p&gt;
 &lt;div&gt;&lt;p&gt;注意：这里没有处理 boot 模块和 usr 模块，因为 boot 里面都是汇编程序，
 而 usr 里面的用户程序都有 main 函数会导致冲突而画出奇怪的图，所以就没有包含了。&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;另外 graphviz 还支持把 dot 文件转成 dia 格式，所以如果对各个顶点的位置不满意的话，我们可以用 Dia 来调整。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;另外 graphviz 还支持把 dot 文件转成 dia 格式，所以如果对各个顶点的位置不满意的话，我们可以用 Dia 来调整。&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;刚说完就被打脸了，graphviz 的 dia 输出支持在 2.26.0 的时候被移除了。&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
@@ -3699,7 +3699,7 @@ Check Update 一直不动，从官网下载了在线升级器，下完了整个�
 &lt;li&gt;&lt;p&gt;使用 xbindskey 管理快捷键，而不是用 xmoand 的 &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;additionalKeys&lt;/span&gt;&lt;/code&gt;
 （听小药壶说可以用 scheme 来写 .xbindskeyrc）&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;使用 terminator 代替 konsole&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用 dzen2 + &lt;span class="sphinxnotes-strike"&gt;condy&lt;/span&gt; conky 代替 xmobar&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;使用 dzen2 + &lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;condy&lt;/span&gt; conky 代替 xmobar&lt;/p&gt;
 &lt;p&gt;需要启动两个 dzen2，一个接受 xmoand 的输出，一个接受 conky 的输出，
 需要注意的是 dzen2 &lt;em&gt;不支持&lt;/em&gt; 按屏幕的百分比显示，
 我在网上找到了&lt;a class="reference external" href="https://github.com/ervandew/dotfiles/blob/master/bin/dzen2"&gt;这个脚本&lt;/a&gt;，
@@ -4103,7 +4103,7 @@ Arch Linux 的包的 prefix 通常是 &lt;code class="code docutils literal notr
 &lt;p&gt;这里&lt;a class="footnote-reference brackets" href="#fn-practical-makefiles" id="id7"&gt;5&lt;/a&gt;提供了一个脚本来让解决这个问题，将 Makefile 改名为 Makefile.in，
 运行 &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;./configure&lt;/span&gt; &lt;span class="pre"&gt;--prefix=xxx&lt;/span&gt;&lt;/code&gt; 来获得一个拥有指定 prefix 的 Makefile，
 这样就可以不用每次敲 make 都输入 &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;PREFIX=xxx&lt;/span&gt;&lt;/code&gt; 了。&lt;/p&gt;
-&lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;于是大家都去用 autotools 了&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;于是大家都去用 autotools 了&lt;/span&gt;&lt;/p&gt;
 &lt;div class="highlight-sh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/sh&lt;/span&gt;
 
 &lt;span class="nv"&gt;prefix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local
@@ -4223,7 +4223,7 @@ $5500 的报酬，同时开源社区也能得到 $500 的赞助。&lt;/p&gt;
 &lt;section id="proposal"&gt;
 &lt;h2&gt;从写 Proposal 到放弃&lt;/h2&gt;
 &lt;p&gt;三月初的时候在 #archlinux-cn 听 &lt;a class="reference internal" href="about/friends.html#friend-quininer" title="friend quininer"&gt;&lt;code class="xref any any-friend docutils literal notranslate"&gt;&lt;span class="pre"&gt;👤quininer&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; 说今年 Tox
-社区要参加 GSoC 并开始招人的事情， &lt;span class="sphinxnotes-strike"&gt;当然也提及了 Tox 去年闹出的一桩事：&lt;/span&gt;
+社区要参加 GSoC 并开始招人的事情， &lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;当然也提及了 Tox 去年闹出的一桩事：&lt;/span&gt;
 &lt;a class="reference external" href="https://github.com/irungentoo/toxcore/issues/1379"&gt;Current situation of Tox #1379&lt;/a&gt;
 这时候我才知道 GSoC 的存在。简单在网上搜索了一下，正好大三下学期也基本没课了，
 便萌生了要试试的想法。&lt;/p&gt;
@@ -4733,7 +4733,7 @@ Using English fallback for directive “attention”.</summary>
 &lt;p&gt;我所见的各种静态博客用得最多的还是 Disqus，曾经我也是 Disqus 的用户，但是 Disqus
 存在着一些问题：&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;被墙，这当然不是 Disqus 本身的问题，这甚至不算是个问题&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;被墙，这当然不是 Disqus 本身的问题，这甚至不算是个问题&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;评论无法彻底被删除，我曾经在 #archlinux-cn 讨论过这个问题，有人说既然你把数据
 公开地 post 到网上来了，就别想着它能够被删除，因为任何人都可以将他备份起来。
 我不敢苟同，数据是公开的没错，但作为这个评论系统的管理员，我应当有权利让这些
@@ -4761,7 +4761,7 @@ Isso 则将部署在一台跑着 Arch Linux 的小破 vps 上。 &lt;em&gt;以�
 我们安装上。AUR 虽好，但在安装的时候最好还是检查一下 PKGBUILD 和 .install 文件，
 以避免来自收到来自一些混乱邪恶的打包者的恶意（比如前阵子就有人在 Pypi 和 Gem
 投了恶意包 Orz）。&lt;/p&gt;
-&lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;考虑把 Isso 收养到 archlinuxcn 源里，这个以后再说吧……&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;考虑把 Isso 收养到 archlinuxcn 源里，这个以后再说吧……&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;安装完成后，打开 &lt;code class="code docutils literal notranslate"&gt;&lt;span class="pre"&gt;/etc/isso.conf&lt;/span&gt;&lt;/code&gt; 文件，文件对各个配置项都有详细的解释，
 需要重点关注的配置如下：&lt;/p&gt;
 &lt;div class="highlight-ini notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Isso configuration file&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -5306,7 +5306,7 @@ Using English fallback for directive “replace”.&lt;/p&gt;
 &lt;p&gt;2020 年，3、4 月的时候我尝试用 Golang 从零开始写一个笔记软件，后来发现无论是设计和工作量都不是我单枪匹马能胜任的，最后只留下只有零星几个 commit 的仓库。&lt;/p&gt;
 &lt;p&gt;5 月，我建立了 &lt;a class="reference external" href="https://github.com/SilverRainZ/bullet"&gt;⛺ SilverRainZ/bullet&lt;/a&gt; 仓库准备再试试 Sphinx，之后学画需要记 &lt;a class="reference internal" href="notes/zxsys/index.html"&gt;&lt;span class="doc"&gt;大量的笔记&lt;/span&gt;&lt;/a&gt;，将他们电子化也是一个强大的驱动力。&lt;/p&gt;
 &lt;p&gt;9 月的时候生病，居然也因祸得福，捡到了几个月的疗养时间。在家的时候里我好好学习了一下 Sphinx 和 Docutils，思考各种类型的文档要如何组织，尝试使用社区提供的 &lt;a class="reference external" href="https://github.com/sphinx-contrib"&gt;各种扩展&lt;/a&gt; 来增强文档的功能，再后来发现自己的需求社区并不能满足，便自己建立了一个一人社区 &lt;a class="reference external" href="https://github.com/sphinx-notes"&gt;👥 sphinx-notes&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;2021 年，在陆续完善一些关键的 Sphinx 扩展之后，我的笔记系统 &lt;span class="sphinxnotes-strike"&gt;发出了响亮的第一声啼哭&lt;/span&gt; 开始慢慢形成了。&lt;/p&gt;
+&lt;p&gt;2021 年，在陆续完善一些关键的 Sphinx 扩展之后，我的笔记系统 &lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;发出了响亮的第一声啼哭&lt;/span&gt; 开始慢慢形成了。&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="id3"&gt;
 &lt;span id="id4"&gt;&lt;/span&gt;&lt;h2&gt;需求&lt;/h2&gt;
@@ -5314,7 +5314,7 @@ Using English fallback for directive “replace”.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;我希望 &lt;em&gt;笔记被良好分类且结构合理&lt;/em&gt; ，对目录（Table Of Content）、交叉引用（Cross Reference）有一定需求&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;我有一个 &lt;a class="reference internal" href="#" title="Posts"&gt;&lt;span class="xref std std-ref"&gt;博客&lt;/span&gt;&lt;/a&gt;，我认为它一种 &lt;span class="sphinxnotes-strike"&gt;生产级别的&lt;/span&gt; 笔记，应当作为系统的一部分&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;我有一个 &lt;a class="reference internal" href="#" title="Posts"&gt;&lt;span class="xref std std-ref"&gt;博客&lt;/span&gt;&lt;/a&gt;，我认为它一种 &lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;生产级别的&lt;/span&gt; 笔记，应当作为系统的一部分&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;一些不成体系的 &lt;a class="reference internal" href="jour/2021/index.html"&gt;&lt;span class="doc"&gt;笔记片段&lt;/span&gt;&lt;/a&gt; 有碎片化的属性，我需要他们能被合理组织&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -5381,7 +5381,7 @@ Using English fallback for directive “replace”.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Sphinx 作为 Python 官方的文档生产系统，久经考验，同时也被大量著名非 Python项目（Blender、DPDK、Linux Kernel）采用&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Sphinx 在 reST 的基础上实现了优秀的扩展机制，同时有 &lt;a class="reference external" href="https://pypi.org/search/?q=sphinxcontrib"&gt;大量的现成的扩展&lt;/a&gt; 可用&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;更细节一点，Sphinx 提供的功能直击我的痛点（&lt;span class="sphinxnotes-strike"&gt;组合拳来一套&lt;/span&gt;）：&lt;/p&gt;
+&lt;p&gt;更细节一点，Sphinx 提供的功能直击我的痛点（&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;组合拳来一套&lt;/span&gt;）：&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;toctree 指令能将文档以树状的形式组织起来&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;交叉引用功能非常全面&lt;/p&gt;&lt;/li&gt;
@@ -5704,7 +5704,7 @@ Using English fallback for directive “tip”.&lt;/p&gt;
 &lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:del:`Sphinx`&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;&lt;span class="sphinxnotes-strike"&gt;Sphinx&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;span class="sphinxnotes-strike" style="text-decoration: line-through;"&gt;Sphinx&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
