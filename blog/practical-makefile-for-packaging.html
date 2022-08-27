@@ -50,7 +50,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxnotes-strike.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/ablog-custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
@@ -183,8 +182,8 @@
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/c.html">C</a>   
   <a href="tag/makefile.html">Makefile</a>   
+  <a href="tag/c.html">C</a>   
   <a href="tag/linux.html">Linux</a>  
 </li>
  
@@ -827,7 +826,7 @@ Arch Linux 的包的 prefix 通常是 <code class="code docutils literal notrans
 <p>这里<a class="footnote-reference brackets" href="#fn-practical-makefiles" id="id7">5</a>提供了一个脚本来让解决这个问题，将 Makefile 改名为 Makefile.in，
 运行 <code class="code docutils literal notranslate"><span class="pre">./configure</span> <span class="pre">--prefix=xxx</span></code> 来获得一个拥有指定 prefix 的 Makefile，
 这样就可以不用每次敲 make 都输入 <code class="code docutils literal notranslate"><span class="pre">PREFIX=xxx</span></code> 了。</p>
-<p><span class="sphinxnotes-strike">于是大家都去用 autotools 了</span></p>
+<p><span class="sphinxnotes-strike" style="text-decoration: line-through;">于是大家都去用 autotools 了</span></p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 
 <span class="nv">prefix</span><span class="o">=</span>/usr/local
@@ -960,7 +959,7 @@ package<span class="o">()</span> <span class="o">{</span>
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-08-24.<br/>
+    Last updated on 2022-08-27.<br/>
 </p>
         </footer>
     </div>

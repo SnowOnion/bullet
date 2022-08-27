@@ -50,7 +50,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player_2.6.1.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/asciinema-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinxnotes-strike.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/ablog-custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
@@ -402,6 +401,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../notes/man/deb.html">
      Debian Packing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notes/man/dns.html">
+     DNS
     </a>
    </li>
    <li class="toctree-l2">
@@ -1196,9 +1200,9 @@ title="Source repository"
 <dd class="field-even"><p><a class="reference external" href="https://wikipedia.org/wiki/VDSO">📖 VDSO</a></p>
 </dd>
 </dl>
-<p><em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/7/vdso">vdso(7)</a></em>，即 virtual ELF dynamic shared object，是一个很小的动态链接库（Shared library），在用户进程启动时会被 linux kernel 自动映射到进程的地址空间里。</p>
-<p>vDSO 被设计用来用来加速一些 <em>频繁被调用</em> 且 <em>不涉及数据安全问题</em>  的系统调用，例如 <em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/2/gettimeofday">gettimeofday(2)</a></em>、<em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/2/getpid">getpid(2)</a></em> 等，随架构不同有所不同。用户基本上不需要知道 vDSO 的存在，这部分的细节被 glibc 隐藏了。</p>
-<p>用 <em class="manpage"><a class="manpage reference external" href="https://linux.die.net/man/1/ldd">ldd(1)</a></em> 可以看到每个程序都依赖了 <code class="code docutils literal notranslate"><span class="pre">linux-vdso.so.1</span></code>，并且这个 so 并不存在于磁盘上：</p>
+<p><em class="manpage"><a class="manpage reference external" href="https://man7.org/linux/man-pages/man7/vdso.7.html">vdso(7)</a></em>，即 virtual ELF dynamic shared object，是一个很小的动态链接库（Shared library），在用户进程启动时会被 linux kernel 自动映射到进程的地址空间里。</p>
+<p>vDSO 被设计用来用来加速一些 <em>频繁被调用</em> 且 <em>不涉及数据安全问题</em>  的系统调用，例如 <em class="manpage"><a class="manpage reference external" href="https://man7.org/linux/man-pages/man2/gettimeofday.2.html">gettimeofday(2)</a></em>、<em class="manpage"><a class="manpage reference external" href="https://man7.org/linux/man-pages/man2/getpid.2.html">getpid(2)</a></em> 等，随架构不同有所不同。用户基本上不需要知道 vDSO 的存在，这部分的细节被 glibc 隐藏了。</p>
+<p>用 <em class="manpage"><a class="manpage reference external" href="https://man7.org/linux/man-pages/man1/ldd.1.html">ldd(1)</a></em> 可以看到每个程序都依赖了 <code class="code docutils literal notranslate"><span class="pre">linux-vdso.so.1</span></code>，并且这个 so 并不存在于磁盘上：</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ldd /bin/ls
 <span class="go">        linux-vdso.so.1 (0x00007ffde9bae000)</span>
 <span class="go">        libcap.so.2 =&gt; /usr/lib/libcap.so.2 (0x00007fd45ef0c000)</span>
@@ -1316,7 +1320,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-08-24.<br/>
+    Last updated on 2022-08-27.<br/>
 </p>
         </footer>
     </div>
