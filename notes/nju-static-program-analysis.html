@@ -1136,6 +1136,18 @@ title="Source repository"
    1. Course Introduction
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intermediate-representation">
+   2. Intermediate Representation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-soot-stuffs">
+     Some Soot Stuffs
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -1159,6 +1171,18 @@ title="Source repository"
   <a class="reference internal nav-link" href="#course-introduction">
    1. Course Introduction
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intermediate-representation">
+   2. Intermediate Representation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-soot-stuffs">
+     Some Soot Stuffs
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1226,9 +1250,85 @@ title="Source repository"
 </li>
 </ul>
 </dd>
-<dt><span class="math notranslate nohighlight">\(\top\)</span>: Top</dt><dd><p>Unknown sign, 用来表示一个符号是未知的</p>
+<dt><span class="math notranslate nohighlight">\(\top\)</span></dt><dd><p>Top sign, 用来表示一个符号是未知的（Unknown）</p>
 </dd>
-<dt><span class="math notranslate nohighlight">\(\bot\)</span>: Bottom</dt><dd><p>Undefined sign, 用来表示一个符号是未定义的</p>
+<dt><span class="math notranslate nohighlight">\(\bot\)</span></dt><dd><p>Bottom sign, 用来表示一个符号是未定义的（Undefined ）</p>
+</dd>
+</dl>
+</section>
+<section id="intermediate-representation">
+<h2>2. Intermediate Representation<a class="headerlink" href="#intermediate-representation" title="永久链接至标题">#</a></h2>
+<p>Intermediate Representation (IR) 是介于高级编程语言和字节码之间的一种中间表现形式，通常是 语言无关 + 机器无关的。用于编译优化和程序分析。</p>
+<p>AST 和 IR 的异同：</p>
+<figure class="align-default">
+<img alt="../_images/18492e22-a308-4a83-9c1a-6819d8025917.png" src="../_images/18492e22-a308-4a83-9c1a-6819d8025917.png" />
+</figure>
+<p>常见的 IR 形式：</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#term-ba241da" title="term 3AC"><code class="xref any any-term docutils literal notranslate"><span class="pre">#️⃣Three-Addrress</span> <span class="pre">Code</span></code></a> 最常用</p></li>
+<li><p><a class="reference internal" href="#term-7bbbd80" title="term SSA"><code class="xref any any-term docutils literal notranslate"><span class="pre">#️⃣Static</span> <span class="pre">Single-Assignment</span></code></a></p></li>
+</ul>
+<p>常见的 IR 语言：</p>
+<ul class="simple">
+<li><p>C - 天然的汇编抽象语言</p></li>
+<li><p>LLVM IR</p></li>
+<li><p>Soot (3AC)</p></li>
+<li><p>Jimple (Typed 3AC)</p></li>
+</ul>
+<dl class="any">
+<dt class="sig sig-object any" id="term-ba241da">
+<span class="sig-name descname"><span class="pre">Three-Addrress</span> <span class="pre">Code</span></span><a class="headerlink" href="#term-ba241da" title="永久链接至目标">#</a></dt>
+<dd><p><a class="reference external" href="https://wikipedia.org/wiki/Three-address_code">📖 Three-address_code</a></p>
+<figure class="align-default">
+<img alt="../_images/6e1456b0-5734-4083-8617-fb8676028fe3.png" src="../_images/6e1456b0-5734-4083-8617-fb8676028fe3.png" />
+</figure>
+</dd></dl>
+
+<dl class="any">
+<dt class="sig sig-object any" id="term-7bbbd80">
+<span class="sig-name descname"><span class="pre">Static</span> <span class="pre">Single-Assignment</span></span><a class="headerlink" href="#term-7bbbd80" title="永久链接至目标">#</a></dt>
+<dd><figure class="align-default">
+<img alt="../_images/00cce13d-de57-41ac-b41b-84455cc2d6d7.png" src="../_images/00cce13d-de57-41ac-b41b-84455cc2d6d7.png" />
+</figure>
+</dd></dl>
+
+<dl class="any">
+<dt class="sig sig-object any" id="term-5884c19">
+<span class="sig-name descname"><span class="pre">Control</span> <span class="pre">Flow</span> <span class="pre">Graph</span></span><a class="headerlink" href="#term-5884c19" title="永久链接至目标">#</a></dt>
+<dd><figure class="align-default">
+<img alt="../_images/0bc9d1e2-3ea7-4c5f-b1ea-6f948c8684fb.png" src="../_images/0bc9d1e2-3ea7-4c5f-b1ea-6f948c8684fb.png" />
+</figure>
+</dd></dl>
+
+<dl class="any">
+<dt class="sig sig-object any" id="term-f43022e">
+<span class="sig-name descname"><span class="pre">Basic</span> <span class="pre">Block</span></span><a class="headerlink" href="#term-f43022e" title="永久链接至目标">#</a></dt>
+<dd><p>Entry of BB must be dest of a JUMP instr.
+Exit of BB must be a JUMP instr.</p>
+<figure class="align-default">
+<img alt="../_images/dd34afeb-87e1-4cea-b8d5-d903eb179cb8.png" src="../_images/dd34afeb-87e1-4cea-b8d5-d903eb179cb8.png" />
+</figure>
+</dd></dl>
+
+<section id="some-soot-stuffs">
+<h3>Some Soot Stuffs<a class="headerlink" href="#some-soot-stuffs" title="永久链接至标题">#</a></h3>
+<p><code class="code docutils literal notranslate"><span class="pre">$x</span></code>: temp var of soot.</p>
+<p>Java invoke type:</p>
+<dl class="field-list simple">
+<dt class="field-odd">special</dt>
+<dd class="field-odd"><p>constructor, super class mentod, private method</p>
+</dd>
+<dt class="field-even">virtual</dt>
+<dd class="field-even"><p>instance method call (virtual dispatch)</p>
+</dd>
+<dt class="field-odd">interface</dt>
+<dd class="field-odd"><p>can not optmizetion, check interface implementation</p>
+</dd>
+<dt class="field-even">static</dt>
+<dd class="field-even"><p>call static method</p>
+</dd>
+<dt class="field-odd">dynamic</dt>
+<dd class="field-odd"><p>for lambda</p>
 </dd>
 </dl>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -1247,6 +1347,7 @@ title="Source repository"
 );</script> 回复你。</p>
 <section data-isso-id="/notes/nju-static-program-analysis" data-title="静态程序分析" id="isso-thread"></section></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -1285,7 +1386,7 @@ title="Source repository"
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-08-27.<br/>
+    Last updated on 2022-09-02.<br/>
 </p>
         </footer>
     </div>
