@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://silverrainz.me/</id>
   <title>银色子弹</title>
-  <updated>2022-09-02T08:48:43.022402+00:00</updated>
+  <updated>2022-09-09T05:56:31.485180+00:00</updated>
   <link href="https://silverrainz.me/"/>
   <link href="https://silverrainz.me/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -6627,7 +6627,7 @@ Using English fallback for role “math”.&lt;/p&gt;
     <title>何时使用 Go 泛型</title>
     <updated>2022-06-03T00:00:00+00:00</updated>
     <author>
-      <name>Shengyu Zhang</name>
+      <name>Ian Lance Taylor</name>
     </author>
     <content type="html">&lt;section id="go"&gt;
 

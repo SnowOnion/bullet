@@ -1094,14 +1094,19 @@ title="Source repository"
    <a href="#cap-BFE"><strong>BFE</strong></a> | 
    <a href="#cap-BFF"><strong>BFF</strong></a> | 
    <a href="#cap-Basic Block"><strong>Basic Block</strong></a> | 
+   <a href="#cap-Bottom"><strong>Bottom</strong></a> | 
    <a href="#cap-CFG"><strong>CFG</strong></a> | 
    <a href="#cap-Complete"><strong>Complete</strong></a> | 
    <a href="#cap-Control Flow Graph"><strong>Control Flow Graph</strong></a> | 
+   <a href="#cap-DFA"><strong>DFA</strong></a> | 
+   <a href="#cap-Data Flow Analysis"><strong>Data Flow Analysis</strong></a> | 
    <a href="#cap-Dominate"><strong>Dominate</strong></a> | 
    <a href="#cap-Kappa Architecture"><strong>Kappa Architecture</strong></a> | 
    <a href="#cap-Kappa 架构"><strong>Kappa 架构</strong></a> | 
    <a href="#cap-Lambda Architecture"><strong>Lambda Architecture</strong></a> | 
    <a href="#cap-Lambda 架构"><strong>Lambda 架构</strong></a> | 
+   <a href="#cap-May Analysis::"><strong>May Analysis::</strong></a> | 
+   <a href="#cap-Must Analysis::"><strong>Must Analysis::</strong></a> | 
    <a href="#cap-Rice's theorem"><strong>Rice's theorem</strong></a> | 
    <a href="#cap-SLE"><strong>SLE</strong></a> | 
    <a href="#cap-SSA"><strong>SSA</strong></a> | 
@@ -1111,6 +1116,7 @@ title="Source repository"
    <a href="#cap-Static Single-Assignment"><strong>Static Single-Assignment</strong></a> | 
    <a href="#cap-TAC"><strong>TAC</strong></a> | 
    <a href="#cap-Three-Addrress Code"><strong>Three-Addrress Code</strong></a> | 
+   <a href="#cap-Top"><strong>Top</strong></a> | 
    <a href="#cap-VPC"><strong>VPC</strong></a> | 
    <a href="#cap-vDSO"><strong>vDSO</strong></a> | 
    <a href="#cap-virtual ELF dynamic shared object"><strong>virtual ELF dynamic shared object</strong></a> | 
@@ -1128,6 +1134,7 @@ title="Source repository"
    <a href="#cap-影线"><strong>影线</strong></a> | 
    <a href="#cap-控制流程图"><strong>控制流程图</strong></a> | 
    <a href="#cap-支配关系"><strong>支配关系</strong></a> | 
+   <a href="#cap-数据流分析"><strong>数据流分析</strong></a> | 
    <a href="#cap-眉弓"><strong>眉弓</strong></a> | 
    <a href="#cap-莱斯定理"><strong>莱斯定理</strong></a> | 
    <a href="#cap-虎牙"><strong>虎牙</strong></a> | 
@@ -1186,6 +1193,14 @@ Exit of …</em></td></tr>
        <em>Entry of BB must be dest of a JUMP instr.
 Exit of …</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Bottom"><td></td><td>
+       <strong>Bottom</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-0f24ae8"><code class="xref">Bottom</code></a> <em>(0f24ae8)</em></td><td>
+       <em>:math:`\bot`, 用来表示一个符号是未定义的（Undefined ）</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-CFG"><td></td><td>
        <strong>CFG</strong></td><td></td></tr>
      <tr>
@@ -1210,6 +1225,26 @@ Exit of …</em></td></tr>
        <td>
        <a href="notes/nju-static-program-analysis.html#term-5884c19"><code class="xref">Control Flow Graph</code></a> <em>(5884c19)</em></td><td>
        <em>.. figure:: /_images/0bc9d1e2-3ea7-4c5f-b1ea-6f948…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-DFA"><td></td><td>
+       <strong>DFA</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-f5e3665"><code class="xref">Data Flow Analysis</code></a> <em>(f5e3665)</em></td><td>
+       <em>How *Data* is *Flow* on :term:`CFG`?
+
+:Data: is ap…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Data Flow Analysis"><td></td><td>
+       <strong>Data Flow Analysis</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-f5e3665"><code class="xref">Data Flow Analysis</code></a> <em>(f5e3665)</em></td><td>
+       <em>How *Data* is *Flow* on :term:`CFG`?
+
+:Data: is ap…</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-Dominate"><td></td><td>
        <strong>Dominate</strong></td><td></td></tr>
@@ -1254,6 +1289,22 @@ Exit of …</em></td></tr>
        <em>通过流式处理和批式处理系统的结合，平衡一个数据处理系统的吞吐和延时。
 
 - Batch Layer：…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-May Analysis::"><td></td><td>
+       <strong>May Analysis::</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-0178598"><code class="xref">May Analysis::</code></a> <em>(0178598)</em></td><td>
+       <em>Output information *may* be true (over-approximati…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Must Analysis::"><td></td><td>
+       <strong>Must Analysis::</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-3261937"><code class="xref">Must Analysis::</code></a> <em>(3261937)</em></td><td>
+       <em>Output information *must* be must (under-approxima…</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-Rice's theorem"><td></td><td>
        <strong>Rice's theorem</strong></td><td></td></tr>
@@ -1335,6 +1386,14 @@ Exit of …</em></td></tr>
        <em>:enwiki:`Three-address_code`
 
 .. figure:: /_images…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Top"><td></td><td>
+       <strong>Top</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-ad0f857"><code class="xref">Top</code></a> <em>(ad0f857)</em></td><td>
+       <em>:math:`\top`，用来表示一个符号是未知的（Unknown）</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-VPC"><td></td><td>
        <strong>VPC</strong></td><td></td></tr>
@@ -1475,6 +1534,16 @@ Exit of …</em></td></tr>
        <a href="notes/go/ssa.html#term-0c26078"><code class="xref">Dominate</code></a> <em>(0c26078)</em></td><td>
        <em>若从进入程式块到达基本块 N 的所有路径，都会在到达基本块 N 之前先到达基本块 M，则基本块 M …</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-数据流分析"><td></td><td>
+       <strong>数据流分析</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="notes/nju-static-program-analysis.html#term-f5e3665"><code class="xref">Data Flow Analysis</code></a> <em>(f5e3665)</em></td><td>
+       <em>How *Data* is *Flow* on :term:`CFG`?
+
+:Data: is ap…</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-眉弓"><td></td><td>
        <strong>眉弓</strong></td><td></td></tr>
      <tr>
@@ -1576,7 +1645,7 @@ Exit of …</em></td></tr>
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-09-02.<br/>
+    Last updated on 2022-09-09.<br/>
 </p>
         </footer>
     </div>
