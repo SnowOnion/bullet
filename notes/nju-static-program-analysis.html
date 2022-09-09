@@ -1148,6 +1148,25 @@ title="Source repository"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-flow-analysis-i">
+   3. Data Flow Analysis I
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application">
+     Application
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reaching-definitions-analysis">
+       Reaching Definitions Analysis
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -1181,6 +1200,25 @@ title="Source repository"
     <a class="reference internal nav-link" href="#some-soot-stuffs">
      Some Soot Stuffs
     </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-flow-analysis-i">
+   3. Data Flow Analysis I
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application">
+     Application
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reaching-definitions-analysis">
+       Reaching Definitions Analysis
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -1250,11 +1288,19 @@ title="Source repository"
 </li>
 </ul>
 </dd>
-<dt><span class="math notranslate nohighlight">\(\top\)</span></dt><dd><p>Top sign, 用来表示一个符号是未知的（Unknown）</p>
-</dd>
-<dt><span class="math notranslate nohighlight">\(\bot\)</span></dt><dd><p>Bottom sign, 用来表示一个符号是未定义的（Undefined ）</p>
-</dd>
 </dl>
+<dl class="any">
+<dt class="sig sig-object any" id="term-ad0f857">
+<span class="sig-name descname"><span class="pre">Top</span></span><a class="headerlink" href="#term-ad0f857" title="永久链接至目标">#</a></dt>
+<dd><p><span class="math notranslate nohighlight">\(\top\)</span>，用来表示一个符号是未知的（Unknown）</p>
+</dd></dl>
+
+<dl class="any">
+<dt class="sig sig-object any" id="term-0f24ae8">
+<span class="sig-name descname"><span class="pre">Bottom</span></span><a class="headerlink" href="#term-0f24ae8" title="永久链接至目标">#</a></dt>
+<dd><p><span class="math notranslate nohighlight">\(\bot\)</span>, 用来表示一个符号是未定义的（Undefined ）</p>
+</dd></dl>
+
 </section>
 <section id="intermediate-representation">
 <h2>2. Intermediate Representation<a class="headerlink" href="#intermediate-representation" title="永久链接至标题">#</a></h2>
@@ -1331,6 +1377,81 @@ Exit of BB must be a JUMP instr.</p>
 <dd class="field-odd"><p>for lambda</p>
 </dd>
 </dl>
+</section>
+</section>
+<section id="data-flow-analysis-i">
+<h2>3. Data Flow Analysis I<a class="headerlink" href="#data-flow-analysis-i" title="永久链接至标题">#</a></h2>
+<dl class="any">
+<dt class="sig sig-object any" id="term-f5e3665">
+<span class="sig-name descname"><span class="pre">Data</span> <span class="pre">Flow</span> <span class="pre">Analysis</span></span><a class="headerlink" href="#term-f5e3665" title="永久链接至目标">#</a></dt>
+<dd><p>How <em>Data</em> is <em>Flow</em> on <a class="reference internal" href="../any-term.html#cap-CFG" title="term CFG"><code class="xref any any-term docutils literal notranslate"><span class="pre">#️⃣CFG</span></code></a>?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Data</dt>
+<dd class="field-odd"><p>is application-specific data, an abstraction (such as <a class="reference internal" href="#term-ad0f857" title="term Top"><code class="xref any any-term docutils literal notranslate"><span class="pre">#️⃣Top</span></code></a>, <a class="reference internal" href="#term-0f24ae8" title="term Bottom"><code class="xref any any-term docutils literal notranslate"><span class="pre">#️⃣Bottom</span></code></a>)</p>
+</dd>
+<dt class="field-even">Flow</dt>
+<dd class="field-even"><p>through the nodes(<a class="reference internal" href="#term-f43022e" title="term BB"><code class="xref any any-term docutils literal notranslate"><span class="pre">#️⃣Basic</span> <span class="pre">Block</span></code></a>s, statements) and edges (control flows)
+of CFG (program). Safe-approximation?</p>
+</dd>
+</dl>
+<p>Different data flow analysis application has:</p>
+<ul class="simple">
+<li><p>different data abstraction</p></li>
+<li><p>different flow safe-approximation strategies (策略)</p></li>
+<li><p>different transfer functions and control-flow handlings</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/screenshot-20220906-202633.png" src="../_images/screenshot-20220906-202633.png" />
+</figure>
+</dd></dl>
+
+<dl class="any">
+<dt class="sig sig-object any" id="term-0178598">
+<span class="sig-name descname"><span class="pre">May</span> <span class="pre">Analysis::</span></span><a class="headerlink" href="#term-0178598" title="永久链接至目标">#</a></dt>
+<dd><p>Output information <em>may</em> be true (over-approximation, sound?).</p>
+<p>Most static analyses is <em>May Analysis</em>.</p>
+</dd></dl>
+
+<dl class="any">
+<dt class="sig sig-object any" id="term-3261937">
+<span class="sig-name descname"><span class="pre">Must</span> <span class="pre">Analysis::</span></span><a class="headerlink" href="#term-3261937" title="永久链接至目标">#</a></dt>
+<dd><p>Output information <em>must</em> be must (under-approximation, complete?).</p>
+</dd></dl>
+
+<p>Over- and under-approximation are both safty of analysis.</p>
+<dl>
+<dt>Input/Ouput States</dt><dd><p>The set of possible data flow values is the domain for this application.</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/screenshot-20220906-203643.png" src="../_images/screenshot-20220906-203643.png" />
+<figcaption>
+<p><span class="caption-text">Target of <a class="reference internal" href="#term-f5e3665" title="term DFA"><code class="xref any any-term docutils literal notranslate"><span class="pre">#️⃣Data</span> <span class="pre">Flow</span> <span class="pre">Analysis</span></code></a>.</span><a class="headerlink" href="#id4" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
+</dd>
+<dt>Forward/Backward Analysis</dt><dd><p>Nothing special.</p>
+</dd>
+</dl>
+<section id="application">
+<h3>Application<a class="headerlink" href="#application" title="永久链接至标题">#</a></h3>
+<section id="reaching-definitions-analysis">
+<h4>Reaching Definitions Analysis<a class="headerlink" href="#reaching-definitions-analysis" title="永久链接至标题">#</a></h4>
+<ol class="arabic simple">
+<li><p>Intra-producedural CFG</p></li>
+<li><p>No alias (alias: Pointer Analysis)</p></li>
+</ol>
+<p>Dummy definition.</p>
+<p>Bit Vectors</p>
+<p>不动点计算</p>
+<p>AB =&gt; A but exclude B</p>
+<p>模版</p>
+<p>停机：IN[S] 不变时，OUT[S] 不变</p>
+<p>OUT[S] never shrinks</p>
+<figure class="align-default" id="id5">
+<img alt="../_images/screenshot-20220906-212807.png" src="../_images/screenshot-20220906-212807.png" />
+<figcaption>
+<p><span class="caption-text">Iteration Cycles</span><a class="headerlink" href="#id5" title="永久链接至图片">#</a></p>
+</figcaption>
+</figure>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
@@ -1347,6 +1468,7 @@ Exit of BB must be a JUMP instr.</p>
 );</script> 回复你。</p>
 <section data-isso-id="/notes/nju-static-program-analysis" data-title="静态程序分析" id="isso-thread"></section></div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -1386,7 +1508,7 @@ Exit of BB must be a JUMP instr.</p>
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-09-02.<br/>
+    Last updated on 2022-09-09.<br/>
 </p>
         </footer>
     </div>
