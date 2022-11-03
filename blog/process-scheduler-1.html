@@ -15,21 +15,15 @@
             gtag('config', 'G-FYHS50G6DL');
             
         </script>
-    
-<meta property="og:title" content="用户态进程的简单实现及调度(一)" />
-  
+    <meta property="og:title" content="用户态进程的简单实现及调度(一)" />
 <meta property="og:type" content="website" />
-  
 <meta property="og:url" content="https://silverrainz.me/blog/process-scheduler-1.html" />
-  
 <meta property="og:site_name" content="银色子弹" />
-  
 <meta property="og:description" content="自从上次完成了 Minix v1 文件系统的实现 之后, 就开始看 xv6 中进程相关的代码, 并把它抄进 OS67 中, 到今天为止, 总算是完成地差不多了. 进程的实现可能是 xv6 中耦合度最高的一部分, 在完成大部分的代码 (GDT,TSS 的设置, 上下文保存和切换, 虚拟内存映射, 系统调用)之前, 你很难让你的内核跑起来. xv6 已经尽量使用容易理解的方式来书写这些代码了, ..." />
-  
 <meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
-  
 <meta property="og:image:alt" content="银色子弹" />
-  
+<meta name="description" content="自从上次完成了 Minix v1 文件系统的实现 之后, 就开始看 xv6 中进程相关的代码, 并把它抄进 OS67 中, 到今天为止, 总算是完成地差不多了. 进程的实现可能是 xv6 中耦合度最高的一部分, 在完成大部分的代码 (GDT,TSS 的设置, 上下文保存和切换, 虚拟内存映射, 系统调用)之前, 你很难让你的内核跑起来. xv6 已经尽量使用容易理解的方式来书写这些代码了, ..." />
+
     <title>用户态进程的简单实现及调度(一) &#8212; 银色子弹</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -1079,7 +1073,7 @@ iret 就会将我们特地安排的值覆盖到寄存器上, 这个工作由<cod
     By Shengyu Zhang<br/>
   
       &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
-    Last updated on 2022-10-30.<br/>
+    Last updated on 2022-11-03.<br/>
 </p>
         </footer>
     </div>
