@@ -1,20 +1,1387 @@
+
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
-<head>
-<meta charset="utf-8">
-<script src="/assets/script.js"></script>
-<script>
-    var path = new URL(window.location.href).pathname;
-    var url = "https://silverrainz.me/" + path;
-    if (confirm("本页内容因 Gitee 策略无法显示😊，是否跳转到源站点（托管于 Github Pages）？")) {
-        window.location.replace(url);
-    }
-</script>
-<title>本页内容因 Gitee 策略无法显示😊</title>
-</head>
-<center>
-    请刷新本页前往源站点（托管于 Github Pages）查看。
-</center>
-<body>
-</body>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    
+    <title>Friend Reference Index &#8212; 银色子弹</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/asciinema-player_2.6.1.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/any-friend.html" />
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">银色子弹</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  笔记
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/zxsys/index.html">
+   造型实验室
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/prelude.html">
+     暴露问题
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/light-and-shadow.html">
+     光影分解训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/indoor-sketching.html">
+     室内场景训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/outdoor-sketching.html">
+     室外夜景训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/modeling.html">
+     形体分解训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/fast-modeling.html">
+     快速形体分解
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="notes/zxsys/way-to-artist/index.html">
+     艺术创作方法
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/zxsys/way-to-artist/prepare.html">
+       课前准备
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/zxsys/way-to-artist/find-yourself.html">
+       找自己
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/zxsys/way-to-artist/find-topic.html">
+       找主题
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/zxsys/way-to-artist/find-language.html">
+       找语言
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/zxsys/way-to-artist/stealing.html">
+       偷师学艺
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/zxsys/way-to-artist/exhibition.html">
+       参展须知
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/learn-from-master.html">
+     向大师学绘画
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/string-modeling.html">
+     线造型训练
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/tips.html">
+     一些零碎知识
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/zxsys/glossary.html">
+     术语
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/artstory/index.html">
+   增量艺术史
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/artstory/artistory.html">
+     艺术家史
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/artstory/gallery.html">
+     画廊
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/artstory/gossip.html">
+     逸闻
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/books/index.html">
+   读书笔记
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/code-complete-2.html">
+     代码大全 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/codex-hammer.html">
+     哈默手稿
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/cpp-primer-plus.html">
+     C++ Primer Plus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/drawing-course-of-charles-bargue-and-jean-leon-gerome.html">
+     查尔斯巴尔格素描教程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/drawing-lessons-from-the-great-masters.html">
+     向大师学绘画·素描基础
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/teach-yourself-scheme-in-fixnum-days.html">
+     Learning Scheme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/the-art-of-color.html">
+     色彩艺术
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/the-rust-programming-language.html">
+     The Rust Programming Language
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/the-story-of-art.html">
+     艺术的故事
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/books/a-modern-method-for-guitar-vol1/index.html">
+     伯克利现代吉他教程·卷一
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="notes/books/linux-kernel-development/index.html">
+     Linux Kernel Development
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/books/linux-kernel-development/chapter-1_2.html">
+       Chapter 1 and 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/books/linux-kernel-development/compile-and-run-kernel-in-qemu.html">
+       Compile and Run Kernel in Qemu
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/books/linux-kernel-development/misc.html">
+       一些零碎的东西
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/man/index.html">
+   工具手册
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/awk.html">
+     Awk
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/deb.html">
+     Debian Packing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/dns.html">
+     DNS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/docker.html">
+     Docker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/ffmpeg.html">
+     ffmpeg
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/gdb.html">
+     GDB
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/git.html">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/gpg.html">
+     GnuPG
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/grep.html">
+     Grep
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/irc.html">
+     IRC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/krita.html">
+     Krita
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/latex.html">
+     LaTeX
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/lily.html">
+     LilyPond
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/magick.html">
+     ImageMagick
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/make.html">
+     Makefile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/man.html">
+     Man
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/pacman.html">
+     Pacman
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/py.html">
+     Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/rst.html">
+     reStructuredText
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/rsync.html">
+     rsync
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/sh.html">
+     Shell Script
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/sign.html">
+     常用的符号和 Emoji
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/sphinx.html">
+     Sphinx
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/systemd.html">
+     SystemD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/tcpdump.html">
+     tcpdump
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/man/vim.html">
+     Vim
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/music-theory/index.html">
+   乐理笔记
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/music-theory/cadge-system.html">
+     CAGED 系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/music-theory/interval-of-music.html">
+     音程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/music-theory/ionian/index.html">
+     大调训练计划
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/music-theory/solfeggio-lesson-of-daluobei/index.html">
+     大萝北的视唱课
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes/6-lectures-on-sketch.html">
+   素描六讲
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/2021-interview/index.html">
+   2021 面试记录
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/2021-interview/checklist.html">
+     知识点 Check List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/2021-interview/leetcode.html">
+     Leetcode 刷题日记
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/2021-interview/dp.html">
+     动态规划
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/color/index.html">
+   现代色彩理论
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/color/primary-color.html">
+     原色
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/docutils/index.html">
+   Docutils 文档阅读
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/docutils/doctree.html">
+     The Docutils Document Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/docutils/docutils-hacker-guide.html">
+     Docutils Hacker’s Guide
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/go/index.html">
+   Golang
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/pprof.html">
+     PProf
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/coverage.html">
+     覆盖率
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/godoc.html">
+     Godoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/dev.html">
+     Develop Go
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/asm.html">
+     Go’s Assembler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/type-assertion.html">
+     Type Assertion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/escape-analysis.html">
+     逃逸分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/ast.html">
+     Abstract Syntax Tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/ssa.html">
+     Static Single-Assignment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/go/generics.html">
+     泛型
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes/leetcode/index.html">
+   Leetcode 刷题记录
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/wizard/index.html">
+   配置向导
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/wizard/pi.html">
+     家用树莓派 3B+ 配置
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notes/writeups/index.html">
+   Capture the Flag
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/writeups/wargame-leviathan.html">
+     wargame-leviathan
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="notes/writeups/seedlabs/index.html">
+     Seed Lab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notes/writeups/seedlabs/format-string-vulnerability-lab/index.html">
+       Format String Vulnerability Lab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/writeups/wargame-bandit/index.html">
+     wargme-bandit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notes/writeups/wargame-narnia/index.html">
+     wargame-narnia
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes/abraxas.html">
+   人造上帝
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes/nju-static-program-analysis.html">
+   静态程序分析
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  博客
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="blog/index.html">
+   博客首页
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  随记
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="jour/2022/index.html">
+   2022
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2022/07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2022/06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2022/05.html">
+     五月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2022/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2022/03.html">
+     三月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2022/02.html">
+     二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2022/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="jour/2021/index.html">
+   2021
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/12.html">
+     十二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/11.html">
+     十一月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/10.html">
+     十月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/09.html">
+     九月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/08.html">
+     八月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/05.html">
+     五月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/03.html">
+     三月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/02.html">
+     二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2021/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="jour/2020/index.html">
+   2020
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2020/12.html">
+     十二月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2020/11.html">
+     十一月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2020/08.html">
+     八月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2020/07.html">
+     七月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2020/06.html">
+     六月
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="jour/2017/index.html">
+   2017
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2017/06.html">
+     六月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2017/04.html">
+     四月
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jour/2017/01.html">
+     一月
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  关于
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="about/me.html">
+   我
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="about/site.html">
+   本站
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="about/friends.html">
+   友人帐
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="about/resume.html">
+   简历
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  收集室
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="collections/github-halloween.html">
+   Github 万圣节彩蛋
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="collections/art-works/index.html">
+   Art Works
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="collections/scores/index.html">
+   乐谱夹
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+
+   <h1>Friend Reference Index</h1>
+
+   <div class="modindex-jumpbox">
+   <a href="#cap-B 医生"><strong>B 医生</strong></a> | 
+   <a href="#cap-Beval"><strong>Beval</strong></a> | 
+   <a href="#cap-KenOokamiHoro"><strong>KenOokamiHoro</strong></a> | 
+   <a href="#cap-LA"><strong>LA</strong></a> | 
+   <a href="#cap-LQYMGT"><strong>LQYMGT</strong></a> | 
+   <a href="#cap-Ricter"><strong>Ricter</strong></a> | 
+   <a href="#cap-Shengyu Zhang"><strong>Shengyu Zhang</strong></a> | 
+   <a href="#cap-SilverRainZ"><strong>SilverRainZ</strong></a> | 
+   <a href="#cap-VOID001"><strong>VOID001</strong></a> | 
+   <a href="#cap-farseerfc"><strong>farseerfc</strong></a> | 
+   <a href="#cap-fc"><strong>fc</strong></a> | 
+   <a href="#cap-flaneur"><strong>flaneur</strong></a> | 
+   <a href="#cap-fleurer"><strong>fleurer</strong></a> | 
+   <a href="#cap-fleuria"><strong>fleuria</strong></a> | 
+   <a href="#cap-frantic1048"><strong>frantic1048</strong></a> | 
+   <a href="#cap-https://lgf.im/"><strong>https://lgf.im/</strong></a> | 
+   <a href="#cap-i"><strong>i</strong></a> | 
+   <a href="#cap-iovxw"><strong>iovxw</strong></a> | 
+   <a href="#cap-lilydjwg"><strong>lilydjwg</strong></a> | 
+   <a href="#cap-me"><strong>me</strong></a> | 
+   <a href="#cap-quininer"><strong>quininer</strong></a> | 
+   <a href="#cap-zu1k"><strong>zu1k</strong></a> | 
+   <a href="#cap-偶像"><strong>偶像</strong></a> | 
+   <a href="#cap-卡夫"><strong>卡夫</strong></a> | 
+   <a href="#cap-夏娜"><strong>夏娜</strong></a> | 
+   <a href="#cap-奎宁"><strong>奎宁</strong></a> | 
+   <a href="#cap-百合"><strong>百合</strong></a> | 
+   <a href="#cap-萌狼"><strong>萌狼</strong></a> | 
+   <a href="#cap-蓝猫"><strong>蓝猫</strong></a> | 
+   <a href="#cap-谷月轩"><strong>谷月轩</strong></a>
+   </div>
+
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-B 医生"><td></td><td>
+       <strong>B 医生</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-Beval"><code class="xref">Beval</code></a></td><td>
+       <em>[&#39;- Powered by Linux 的准协和医生&#39;, &#39;- :del:`Arch Linux CN 群医`&#39;, &#39;- 不知道啥时候有机会一起喝酒&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Beval"><td></td><td>
+       <strong>Beval</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-Beval"><code class="xref">Beval</code></a></td><td>
+       <em>[&#39;- Powered by Linux 的准协和医生&#39;, &#39;- :del:`Arch Linux CN 群医`&#39;, &#39;- 不知道啥时候有机会一起喝酒&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-KenOokamiHoro"><td></td><td>
+       <strong>KenOokamiHoro</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-KenOokamiHoro"><code class="xref">KenOokamiHoro</code></a></td><td>
+       <em>[&#39;「わっちは賢狼じゃからな，世の中には自分の知らな&#39;, &#39;いことが沢山あることくらいなら知っておる。」&#39;, &#39;在网络上是贤狼赫萝的化身，热心于普及 Linux 知识和自由软件精神&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-LA"><td></td><td>
+       <strong>LA</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/me.html#friend-SilverRainZ"><code class="xref">SilverRainZ</code></a></td><td>
+       <em>[&#39;- I am Shengyu Zhang, a.k.a *SilverRainZ*, *谷月轩*&#39;, &#39;- Programmer: :ghuser:`SilverRainZ`&#39;, &#39;- Part-time artist: :ref:`any-artwork.id`&#39;, &#39;- Arch Linux user, active member of `Arch Linux CN Community`_&#39;, &#39;- Author of `Srain IRC Client`_&#39;, &#39;- :doc:`enemy` of SilverRainZ&#39;, &#39;.. _Free Software: https://www.gnu.org/philosophy/free-sw.html&#39;, &#39;.. _Srain IRC Client: https://srain.silverrainz.me/&#39;, &#39;.. _Arch Linux CN Community: http://archlinuxcn.org&#39;, &#39;.. _LOFTER: http://silverrainz.lofter.com&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-LQYMGT"><td></td><td>
+       <strong>LQYMGT</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-LQYMGT"><code class="xref">LQYMGT</code></a></td><td>
+       <em>[&#39;- #archlinux-cn 公认偶像&#39;, &#39;- （不知道现在还是不是）.sm 最多的人&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Ricter"><td></td><td>
+       <strong>Ricter</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-Ricter"><code class="xref">Ricter</code></a></td><td>
+       <em>[&#39;- Chaitin 前同事；&#39;, &#39;- 著名 CTF 选手&#39;, &#39;- 我大哥的偶像&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Shengyu Zhang"><td></td><td>
+       <strong>Shengyu Zhang</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/me.html#friend-SilverRainZ"><code class="xref">SilverRainZ</code></a></td><td>
+       <em>[&#39;- I am Shengyu Zhang, a.k.a *SilverRainZ*, *谷月轩*&#39;, &#39;- Programmer: :ghuser:`SilverRainZ`&#39;, &#39;- Part-time artist: :ref:`any-artwork.id`&#39;, &#39;- Arch Linux user, active member of `Arch Linux CN Community`_&#39;, &#39;- Author of `Srain IRC Client`_&#39;, &#39;- :doc:`enemy` of SilverRainZ&#39;, &#39;.. _Free Software: https://www.gnu.org/philosophy/free-sw.html&#39;, &#39;.. _Srain IRC Client: https://srain.silverrainz.me/&#39;, &#39;.. _Arch Linux CN Community: http://archlinuxcn.org&#39;, &#39;.. _LOFTER: http://silverrainz.lofter.com&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-SilverRainZ"><td></td><td>
+       <strong>SilverRainZ</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/me.html#friend-SilverRainZ"><code class="xref">SilverRainZ</code></a></td><td>
+       <em>[&#39;- I am Shengyu Zhang, a.k.a *SilverRainZ*, *谷月轩*&#39;, &#39;- Programmer: :ghuser:`SilverRainZ`&#39;, &#39;- Part-time artist: :ref:`any-artwork.id`&#39;, &#39;- Arch Linux user, active member of `Arch Linux CN Community`_&#39;, &#39;- Author of `Srain IRC Client`_&#39;, &#39;- :doc:`enemy` of SilverRainZ&#39;, &#39;.. _Free Software: https://www.gnu.org/philosophy/free-sw.html&#39;, &#39;.. _Srain IRC Client: https://srain.silverrainz.me/&#39;, &#39;.. _Arch Linux CN Community: http://archlinuxcn.org&#39;, &#39;.. _LOFTER: http://silverrainz.lofter.com&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-VOID001"><td></td><td>
+       <strong>VOID001</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-VOID001"><code class="xref">VOID001</code></a></td><td>
+       <em>[&#39;- 正在国外留学的夏娜，研究方向似乎是数据库&#39;, &#39;- 在霓虹某个机架上共同饲养了一只猫&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-farseerfc"><td></td><td>
+       <strong>farseerfc</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-farseerfc"><code class="xref">farseerfc</code></a></td><td>
+       <em>[&#39;- 在霓虹读 PHD 的博学的 F\\ :del:`ire`\\ C\\ :del:`hild` 前辈，人生赢家&#39;, &#39;- 学识渊博，性格儒雅&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-fc"><td></td><td>
+       <strong>fc</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-farseerfc"><code class="xref">farseerfc</code></a></td><td>
+       <em>[&#39;- 在霓虹读 PHD 的博学的 F\\ :del:`ire`\\ C\\ :del:`hild` 前辈，人生赢家&#39;, &#39;- 学识渊博，性格儒雅&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-flaneur"><td></td><td>
+       <strong>flaneur</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-fleuria"><code class="xref">fleuria</code></a></td><td>
+       <em>[&#39;对 infra 研究颇深，什么都会的 F 叔。&#39;, &#39;- :book:`Haskell 趣学指南` 的翻译者之一&#39;, &#39;- 毕业设计是一个 `kernel &lt;https://github.com/fleurer/fleurix&gt;`_&#39;, &#39;- 在写 `OS67 &lt;https://github.com/SilverRainZ/OS67&gt;`_ 的时候给我很大的帮助&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-fleurer"><td></td><td>
+       <strong>fleurer</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-fleuria"><code class="xref">fleuria</code></a></td><td>
+       <em>[&#39;对 infra 研究颇深，什么都会的 F 叔。&#39;, &#39;- :book:`Haskell 趣学指南` 的翻译者之一&#39;, &#39;- 毕业设计是一个 `kernel &lt;https://github.com/fleurer/fleurix&gt;`_&#39;, &#39;- 在写 `OS67 &lt;https://github.com/SilverRainZ/OS67&gt;`_ 的时候给我很大的帮助&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-fleuria"><td></td><td>
+       <strong>fleuria</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-fleuria"><code class="xref">fleuria</code></a></td><td>
+       <em>[&#39;对 infra 研究颇深，什么都会的 F 叔。&#39;, &#39;- :book:`Haskell 趣学指南` 的翻译者之一&#39;, &#39;- 毕业设计是一个 `kernel &lt;https://github.com/fleurer/fleurix&gt;`_&#39;, &#39;- 在写 `OS67 &lt;https://github.com/SilverRainZ/OS67&gt;`_ 的时候给我很大的帮助&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-frantic1048"><td></td><td>
+       <strong>frantic1048</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-frantic1048"><code class="xref">frantic1048</code></a></td><td>
+       <em>[&#39;- 萌萌的现代前端魔法师&#39;, &#39;- 各种领域 :del:`（包括纸片人）` 的 Power User&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-https://lgf.im/"><td></td><td>
+       <strong>https://lgf.im/</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-zu1k"><code class="xref">zu1k</code></a></td><td>
+       <em>[&#39;- :ghrepo:`zu1k/good-mitm` 和 :ghrepo:`zu1k/copy-translator` 作者&#39;, &#39;- `破解过贵司的 XRay`__&#39;, &#39;__ https://github.com/zu1k/xray-crack-rm&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-i"><td></td><td>
+       <strong>i</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/me.html#friend-SilverRainZ"><code class="xref">SilverRainZ</code></a></td><td>
+       <em>[&#39;- I am Shengyu Zhang, a.k.a *SilverRainZ*, *谷月轩*&#39;, &#39;- Programmer: :ghuser:`SilverRainZ`&#39;, &#39;- Part-time artist: :ref:`any-artwork.id`&#39;, &#39;- Arch Linux user, active member of `Arch Linux CN Community`_&#39;, &#39;- Author of `Srain IRC Client`_&#39;, &#39;- :doc:`enemy` of SilverRainZ&#39;, &#39;.. _Free Software: https://www.gnu.org/philosophy/free-sw.html&#39;, &#39;.. _Srain IRC Client: https://srain.silverrainz.me/&#39;, &#39;.. _Arch Linux CN Community: http://archlinuxcn.org&#39;, &#39;.. _LOFTER: http://silverrainz.lofter.com&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-iovxw"><td></td><td>
+       <strong>iovxw</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-iovxw"><code class="xref">iovxw</code></a></td><td>
+       <em>[&#39;- 神秘的有猫人士&#39;, &#39;- 总是能够回应我的 `Q_Q` 的热心群友&#39;, &#39;- 专治 troll&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lilydjwg"><td></td><td>
+       <strong>lilydjwg</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-lilydjwg"><code class="xref">lilydjwg</code></a></td><td>
+       <em>[&#39;- Arch Linux CN 社区管理员&#39;, &#39;- 美味或者流浪的百合仙子&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-me"><td></td><td>
+       <strong>me</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/me.html#friend-SilverRainZ"><code class="xref">SilverRainZ</code></a></td><td>
+       <em>[&#39;- I am Shengyu Zhang, a.k.a *SilverRainZ*, *谷月轩*&#39;, &#39;- Programmer: :ghuser:`SilverRainZ`&#39;, &#39;- Part-time artist: :ref:`any-artwork.id`&#39;, &#39;- Arch Linux user, active member of `Arch Linux CN Community`_&#39;, &#39;- Author of `Srain IRC Client`_&#39;, &#39;- :doc:`enemy` of SilverRainZ&#39;, &#39;.. _Free Software: https://www.gnu.org/philosophy/free-sw.html&#39;, &#39;.. _Srain IRC Client: https://srain.silverrainz.me/&#39;, &#39;.. _Arch Linux CN Community: http://archlinuxcn.org&#39;, &#39;.. _LOFTER: http://silverrainz.lofter.com&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-quininer"><td></td><td>
+       <strong>quininer</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-quininer"><code class="xref">quininer</code></a></td><td>
+       <em>[&#39;- 前 `Tox &lt;https://tox.chat/&gt;`_ 支持者&#39;, &#39;- 现 Rust 支持者，在 Rust 上的造诣仅次于 :ghorg:`AwesomeDCjanus`&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-zu1k"><td></td><td>
+       <strong>zu1k</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-zu1k"><code class="xref">zu1k</code></a></td><td>
+       <em>[&#39;- :ghrepo:`zu1k/good-mitm` 和 :ghrepo:`zu1k/copy-translator` 作者&#39;, &#39;- `破解过贵司的 XRay`__&#39;, &#39;__ https://github.com/zu1k/xray-crack-rm&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-偶像"><td></td><td>
+       <strong>偶像</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-LQYMGT"><code class="xref">LQYMGT</code></a></td><td>
+       <em>[&#39;- #archlinux-cn 公认偶像&#39;, &#39;- （不知道现在还是不是）.sm 最多的人&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-卡夫"><td></td><td>
+       <strong>卡夫</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-frantic1048"><code class="xref">frantic1048</code></a></td><td>
+       <em>[&#39;- 萌萌的现代前端魔法师&#39;, &#39;- 各种领域 :del:`（包括纸片人）` 的 Power User&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-夏娜"><td></td><td>
+       <strong>夏娜</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-VOID001"><code class="xref">VOID001</code></a></td><td>
+       <em>[&#39;- 正在国外留学的夏娜，研究方向似乎是数据库&#39;, &#39;- 在霓虹某个机架上共同饲养了一只猫&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-奎宁"><td></td><td>
+       <strong>奎宁</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-quininer"><code class="xref">quininer</code></a></td><td>
+       <em>[&#39;- 前 `Tox &lt;https://tox.chat/&gt;`_ 支持者&#39;, &#39;- 现 Rust 支持者，在 Rust 上的造诣仅次于 :ghorg:`AwesomeDCjanus`&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-百合"><td></td><td>
+       <strong>百合</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-lilydjwg"><code class="xref">lilydjwg</code></a></td><td>
+       <em>[&#39;- Arch Linux CN 社区管理员&#39;, &#39;- 美味或者流浪的百合仙子&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-萌狼"><td></td><td>
+       <strong>萌狼</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-KenOokamiHoro"><code class="xref">KenOokamiHoro</code></a></td><td>
+       <em>[&#39;「わっちは賢狼じゃからな，世の中には自分の知らな&#39;, &#39;いことが沢山あることくらいなら知っておる。」&#39;, &#39;在网络上是贤狼赫萝的化身，热心于普及 Linux 知识和自由软件精神&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-蓝猫"><td></td><td>
+       <strong>蓝猫</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/friends.html#friend-iovxw"><code class="xref">iovxw</code></a></td><td>
+       <em>[&#39;- 神秘的有猫人士&#39;, &#39;- 总是能够回应我的 `Q_Q` 的热心群友&#39;, &#39;- 专治 troll&#39;]</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-谷月轩"><td></td><td>
+       <strong>谷月轩</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="about/me.html#friend-SilverRainZ"><code class="xref">SilverRainZ</code></a></td><td>
+       <em>[&#39;- I am Shengyu Zhang, a.k.a *SilverRainZ*, *谷月轩*&#39;, &#39;- Programmer: :ghuser:`SilverRainZ`&#39;, &#39;- Part-time artist: :ref:`any-artwork.id`&#39;, &#39;- Arch Linux user, active member of `Arch Linux CN Community`_&#39;, &#39;- Author of `Srain IRC Client`_&#39;, &#39;- :doc:`enemy` of SilverRainZ&#39;, &#39;.. _Free Software: https://www.gnu.org/philosophy/free-sw.html&#39;, &#39;.. _Srain IRC Client: https://srain.silverrainz.me/&#39;, &#39;.. _Arch Linux CN Community: http://archlinuxcn.org&#39;, &#39;.. _LOFTER: http://silverrainz.lofter.com&#39;]</em></td></tr>
+   </table>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-11-04.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
 </html>
