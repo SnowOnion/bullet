@@ -1,20 +1,1309 @@
+
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
-<head>
-<meta charset="utf-8">
-<script src="/assets/script.js"></script>
-<script>
-    var path = new URL(window.location.href).pathname;
-    var url = "https://silverrainz.me/" + path;
-    if (confirm("本页内容因 Gitee 策略无法显示😊，是否跳转到源站点（托管于 Github Pages）？")) {
-        window.location.replace(url);
-    }
-</script>
-<title>本页内容因 Gitee 策略无法显示😊</title>
-</head>
-<center>
-    请刷新本页前往源站点（托管于 Github Pages）查看。
-</center>
-<body>
-</body>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYHS50G6DL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-FYHS50G6DL');
+            
+        </script>
+    <meta property="og:title" content="几种简单的反调试方法" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://silverrainz.me/blog/threee-way-of-anti-debug.html" />
+<meta property="og:site_name" content="银色子弹" />
+<meta property="og:description" content="这里面没有什么自己的东西, 都是从看雪的 OD从零系列教程 里看来的. 最近看到的几章都是讲反调试的, 虽然对其本质还没有去深入了解, 还是觉得应该先把这些记下来. 下面的一些信息是基于自己现有的知识推测出来的, 不一定对. 关于函数的说明, 都是基于MSDN的粗浅翻译, 要想了解更准确的信息, 请查阅MSDN. 0x0 利用IsDebuggerParent(): 0x0.0 介绍: 该函数..." />
+<meta property="og:image" content="https://silverrainz.me/_static/logo.png" />
+<meta property="og:image:alt" content="银色子弹" />
+<meta name="description" content="这里面没有什么自己的东西, 都是从看雪的 OD从零系列教程 里看来的. 最近看到的几章都是讲反调试的, 虽然对其本质还没有去深入了解, 还是觉得应该先把这些记下来. 下面的一些信息是基于自己现有的知识推测出来的, 不一定对. 关于函数的说明, 都是基于MSDN的粗浅翻译, 要想了解更准确的信息, 请查阅MSDN. 0x0 利用IsDebuggerParent(): 0x0.0 介绍: 该函数..." />
+
+    <title>几种简单的反调试方法 &#8212; 银色子弹</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ablog-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script data-isso="https://comments.silverrainz.me:30500" src="https://comments.silverrainz.me:30500/js/embed.min.js"></script>
+    <link rel="canonical" href="https://silverrainz.me/blog/threee-way-of-anti-debug.html" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="银色子弹"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">银色子弹</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>  
+<h2>
+   <i class="fa fa-calendar"></i>
+  2015-05-19 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="author/shengyu-zhang.html">Shengyu Zhang</a>  
+</li>
+  
+<li id="language">
+  <span
+    ><i class="fa-fw fa fa-language"></i></span
+  >
+   
+  <a href="language/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87.html">简体中文</a>  
+</li>
+  
+<li id="tags">
+  <span
+    ><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
+  >
+   
+  <a href="tag/reverse.html">Reverse</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../blog.html">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="paper-size.html"
+      >26 June - 纸张尺寸标准以及非标准纸张的收纳技巧</a
+    >
+  </li>
+  
+  <li>
+    <a href="when-go-generics.html"
+      >03 June - 何时使用 Go 泛型</a
+    >
+  </li>
+  
+  <li>
+    <a href="funtional-programming-in-go-generics.html"
+      >27 October - 函数式编程在 Go 泛型下的实用性探索</a
+    >
+  </li>
+  
+  <li>
+    <a href="xzzh-after-40-yrs.html"
+      >03 July - 四十年后再看西藏组画</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx-as-note-taking-system-2.html"
+      >25 May - 我如何用 Sphinx 建立笔记系统（二）系统架构</a
+    >
+  </li>
+  
+</ul>
+
+<h3><a href="tag.html">Tags</a></h3>
+<style type="text/css">
+  ul.ablog-cloud {
+    list-style: none;
+    overflow: auto;
+  }
+  ul.ablog-cloud li {
+    float: left;
+    height: 20pt;
+    line-height: 18pt;
+    margin-right: 5px;
+  }
+  ul.ablog-cloud a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  li.ablog-cloud-1 {
+    font-size: 80%;
+  }
+  li.ablog-cloud-2 {
+    font-size: 95%;
+  }
+  li.ablog-cloud-3 {
+    font-size: 110%;
+  }
+  li.ablog-cloud-4 {
+    font-size: 125%;
+  }
+  li.ablog-cloud-5 {
+    font-size: 140%;
+  }
+</style>
+<ul class="ablog-cloud">
+   
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/arch-linux.html">Arch Linux</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/c.html">C</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/ctf.html">CTF</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/gsoc.html">GSoC</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/gtk.html">GTK</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/golang.html">Golang</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/haskell.html">Haskell</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/irc.html">IRC</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/isso.html">Isso</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/linux.html">Linux</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/makefile.html">Makefile</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/os.html">OS</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/python.html">Python</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/reverse.html">Reverse</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-4">
+    <a href="tag/sphinx.html">Sphinx</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/srain.html">Srain</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/teeworlds.html">Teeworlds</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/vim.html">Vim</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/windows.html">Windows</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/restructuredtext.html">reStructuredText</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="tag/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B.html">函数式编程</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%8D%B0%E5%88%B7-%E7%94%BB%E7%94%BB.html">印刷 画画</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%8F%98%E6%9B%B4.html">变更</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%A4%9A%E8%AF%B4.html">多说</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E5%B1%95%E8%A7%88.html">展览</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-2">
+    <a href="tag/%E6%B3%9B%E5%9E%8B.html">泛型</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%94%9F%E6%B4%BB.html">生活</a>
+  </li>
+      
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%9E%8E%E6%89%AF.html">瞎扯</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="tag/%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F.html">笔记系统</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%BB%98%E7%94%BB.html">绘画</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E7%BF%BB%E8%AF%91.html">翻译</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E8%AE%BE%E5%A4%87.html">设备</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/%E9%99%88%E4%B8%B9%E9%9D%92.html">陈丹青</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="category.html">Categories</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="category/gsoc-2016.html">GSoc 2016 (2)</a>
+  </li>
+    
+  <li>
+    <a href="category/%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8-sphinx-%E5%BB%BA%E7%AB%8B%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F.html">我如何用 Sphinx 建立笔记系统 (2)</a>
+  </li>
+   
+</ul>
+
+<h3>
+  <a href="archive.html">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="2022.html">2022 (2)</a>
+  </li>
+    
+  <li>
+    <a href="2021.html">2021 (5)</a>
+  </li>
+    
+  <li>
+    <a href="2020.html">2020 (2)</a>
+  </li>
+    
+  <li>
+    <a href="2017.html">2017 (2)</a>
+  </li>
+    
+  <li>
+    <a href="2016.html">2016 (6)</a>
+  </li>
+    
+  <li>
+    <a href="2015.html">2015 (18)</a>
+  </li>
+   
+</ul>
+</div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/SilverRainZ/bullet"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x0-isdebuggerparent">
+   0x0  利用IsDebuggerParent()
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x0-0">
+     0x0.0 介绍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x0-1">
+     0x0.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x0-2">
+     0x0.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x1-i">
+   0x1 检测进程名I
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x1-0">
+     0x1.0 介绍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x1-1">
+     0x1.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x1-2">
+     0x1.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x2-ii">
+   0x2 检测进程名II
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x2-0">
+     0x2.0 介绍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x2-1">
+     0x2.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x2-2">
+     0x2.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   检测窗口类名
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x3-0">
+     0x3.0 介绍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x3-1">
+     0x3.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x3-2">
+     0x3.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x3-unhandledexcepitonzwqueryinformationprocess">
+   0x3 UnhandledExcepiton和ZwQueryInformationProcess
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x4-ntglobalflag-processheap-outputdebugstringa">
+   0x4 NtGlobalFlag,ProcessHeap,OutputDebugStringA
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ntglobalflag">
+     NtGlobalFlag
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processheap">
+     ProcessHeap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outputdebugstringa">
+     OutputDebugStringA
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x4-1">
+     0x4.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x4-2">
+     0x4.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>几种简单的反调试方法</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x0-isdebuggerparent">
+   0x0  利用IsDebuggerParent()
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x0-0">
+     0x0.0 介绍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x0-1">
+     0x0.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x0-2">
+     0x0.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x1-i">
+   0x1 检测进程名I
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x1-0">
+     0x1.0 介绍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x1-1">
+     0x1.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x1-2">
+     0x1.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x2-ii">
+   0x2 检测进程名II
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x2-0">
+     0x2.0 介绍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x2-1">
+     0x2.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x2-2">
+     0x2.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   检测窗口类名
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x3-0">
+     0x3.0 介绍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x3-1">
+     0x3.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x3-2">
+     0x3.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x3-unhandledexcepitonzwqueryinformationprocess">
+   0x3 UnhandledExcepiton和ZwQueryInformationProcess
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#x4-ntglobalflag-processheap-outputdebugstringa">
+   0x4 NtGlobalFlag,ProcessHeap,OutputDebugStringA
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ntglobalflag">
+     NtGlobalFlag
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processheap">
+     ProcessHeap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outputdebugstringa">
+     OutputDebugStringA
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x4-1">
+     0x4.1 栗子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#x4-2">
+     0x4.2 绕过
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                 <section id="id1">
+<h1>几种简单的反调试方法<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>这是一篇迁移自 Jekyll 的文章，如有格式问题，可到 <a class="reference external" href="https://github.com/SilverRainZ/bullet">⛺ SilverRainZ/bullet</a> 反馈</p>
+</div>
+<p>这里面没有什么自己的东西,
+都是从看雪的<a class="reference external" href="http://bbs.pediy.com/showthread.php?t=184679">OD从零系列教程</a>里看来的.
+最近看到的几章都是讲反调试的, 虽然对其本质还没有去深入了解,
+还是觉得应该先把这些记下来.</p>
+<p><em>下面的一些信息是基于自己现有的知识推测出来的, 不一定对.</em>
+关于函数的说明, 都是基于MSDN的粗浅翻译, 要想了解更准确的信息, 请查阅MSDN.</p>
+<section id="x0-isdebuggerparent">
+<h2>0x0  利用IsDebuggerParent()<a class="headerlink" href="#x0-isdebuggerparent" title="永久链接至标题">#</a></h2>
+<section id="x0-0">
+<h3>0x0.0 介绍<a class="headerlink" href="#x0-0" title="永久链接至标题">#</a></h3>
+<p>该函数检测程序是否正在被调试, 是的话返回1,否则返回0,
+该函数位于<code class="code docutils literal notranslate"><span class="pre">Kernel32.dll</span></code>中, 其代码如下:</p>
+<div class="highlight-nasm notranslate"><div class="highlight"><pre><span></span><span class="nf">mov</span><span class="w"> </span><span class="nb">eax</span><span class="p">,</span><span class="w"> </span><span class="kt">dword</span><span class="w"> </span><span class="nv">ptr</span><span class="w"> </span><span class="nb">fs</span><span class="p">:[</span><span class="mh">0x18</span><span class="p">]</span><span class="w"></span>
+<span class="nf">mov</span><span class="w"> </span><span class="nb">eax</span><span class="p">,</span><span class="w"> </span><span class="kt">dword</span><span class="w"> </span><span class="nv">ptr</span><span class="w"> </span><span class="nb">fs</span><span class="p">:[</span><span class="nb">eax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">0x30</span><span class="p">]</span><span class="w"></span>
+<span class="nf">movzx</span><span class="w"> </span><span class="nb">eax</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="w"> </span><span class="nv">ptr</span><span class="w"> </span><span class="nb">ds</span><span class="p">:[</span><span class="nb">eax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">0x2</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+<p>fs寄存器指示了(并不是储存了)<code class="code docutils literal notranslate"><span class="pre">PEB</span></code>(Process Environment Block)的地址,
+因为GDT的关系,fs寄存器中储存的只是选择子而不是地址,
+因此要从fs的0x18偏移处取一个指向自己的self指针(这一步实际上是可以省略的).</p>
+<p>接下来从<code class="code docutils literal notranslate"><span class="pre">PEB</span></code>的0x30偏移处取得<code class="code docutils literal notranslate"><span class="pre">NT_TIB</span></code>结构的首地址,
+该结构的0x2偏移处是<code class="code docutils literal notranslate"><span class="pre">BeingDebugged</span></code>字段, 表示当前进程是否被调试,
+因此通过这个函数可以检测调试器.</p>
+<p>你可以在代码中直接使用<code class="code docutils literal notranslate"><span class="pre">IsDebuggerParent</span></code>或者嵌入等价的汇编代码.
+动态载入函数比直接引入好些.</p>
+</section>
+<section id="x0-1">
+<h3>0x0.1 栗子<a class="headerlink" href="#x0-1" title="永久链接至标题">#</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span><span class="cp"></span>
+
+<span class="cm">/* 内联汇编 */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">foo</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 这里的 movl %fs:30, %ebx 就相当于</span>
+<span class="cm">     * mov eax, dword ptr fs:[0x18]</span>
+<span class="cm">     * mov eax, dword ptr fs:[eax + 0x30]</span>
+<span class="cm">     */</span><span class="w"></span>
+<span class="w">    </span><span class="k">asm</span><span class="p">(</span><span class="s">&quot;movl %fs:0x30, %ebx; movzx 2(%ebx), %eax&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="cm">/* 动态载入 */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">bar</span><span class="p">(){</span><span class="w"></span>
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="n">HINSTANCE</span><span class="w"> </span><span class="n">kern_lib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoadLibraryEx</span><span class="p">(</span><span class="s">&quot;kernel32.dll&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">kern_lib</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="n">FARPROC</span><span class="w"> </span><span class="n">lIsDebuggerPresent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">kern_lib</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;IsDebuggerPresent&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">lIsDebuggerPresent</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">lIsDebuggerPresent</span><span class="p">()){</span><span class="w"></span>
+<span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">FreeLibrary</span><span class="p">(</span><span class="n">kern_lib</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="cm">/* 测试的时候记得关掉OD的插件, 或者直接用原版 */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;foo = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">foo</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;bar = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">bar</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="x0-2">
+<h3>0x0.2 绕过<a class="headerlink" href="#x0-2" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>如果能定位到函数的话, 修改他的流程.</p></li>
+<li><p>可以在载入程序后, 把那个<code class="code docutils literal notranslate"><span class="pre">BeingDebugged</span></code>位置0,
+当然, HideDebugger插件已经替我们做了这件事.</p></li>
+</ul>
+</section>
+</section>
+<section id="x1-i">
+<h2>0x1 检测进程名I<a class="headerlink" href="#x1-i" title="永久链接至标题">#</a></h2>
+<section id="x1-0">
+<h3>0x1.0 介绍<a class="headerlink" href="#x1-0" title="永久链接至标题">#</a></h3>
+<p>通过检测特定调试器(常常是OD)的进程是否存在来防止被调试.</p>
+<p>用到了下面几个API:</p>
+<ul class="simple">
+<li><p>EnumProcesses</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">BOOL</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">EnumProcesses</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">_Out_</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="o">*</span><span class="n">pProcessIds</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w">  </span><span class="n">DWORD</span><span class="w"> </span><span class="n">cb</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_Out_</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="o">*</span><span class="n">pBytesReturned</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>EnumProcesses 枚举所有的进程PID, 第一个参数是缓冲区, 储存所有进程PID的列表,
+参数二是以byte计数的数组长度, 参数三是阶收到的数组长度, 同样以byte计数.
+函数执行成功返回非零值.</p>
+<ul class="simple">
+<li><p>GetModuleBaseNameA</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">DWORD</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">GetModuleBaseName</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w">     </span><span class="n">HANDLE</span><span class="w">  </span><span class="n">hProcess</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_opt_</span><span class="w"> </span><span class="n">HMODULE</span><span class="w"> </span><span class="n">hModule</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_Out_</span><span class="w">    </span><span class="n">LPTSTR</span><span class="w">  </span><span class="n">lpBaseName</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w">     </span><span class="n">DWORD</span><span class="w">   </span><span class="n">nSize</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>该函数取得某个模块的名称, 参数一是线程句柄,  参数二是模块句柄,
+参数三是储存返回模块名的缓冲区, 最后是缓冲区的长度, 以char计数.
+函数执行成功则返回接收到的模块名的长度</p>
+<ul class="simple">
+<li><p>OpenProcess</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">HANDLE</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">OpenProcess</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwDesiredAccess</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w"> </span><span class="n">BOOL</span><span class="w">  </span><span class="n">bInheritHandle</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwProcessId</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>该函数通过PID(参数4)获得进程句柄失败则返回NULL.
+(获得句柄后可以在OD的H窗口看到该句柄).</p>
+<ul class="simple">
+<li><p>EnumProcessModules</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">BOOL</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">EnumProcessModules</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w">  </span><span class="n">HANDLE</span><span class="w">  </span><span class="n">hProcess</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_Out_</span><span class="w"> </span><span class="n">HMODULE</span><span class="w"> </span><span class="o">*</span><span class="n">lphModule</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w">  </span><span class="n">DWORD</span><span class="w">   </span><span class="n">cb</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_Out_</span><span class="w"> </span><span class="n">LPDWORD</span><span class="w"> </span><span class="n">lpcbNeeded</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>函数枚举指定进程里的所有Modules, 取回句柄. 参数一指定了进程句柄,
+参数二是返回的模块句柄缓冲区, 参数三是以byte计数的缓冲区大小,
+四是最终取回句柄的大小, byte计数. 函数执行成功返回非零值.</p>
+<p>利用这些函数检测调试器的经典过程是这样的:</p>
+<ol class="arabic simple">
+<li><p>首先用<code class="code docutils literal notranslate"><span class="pre">GetProcAddress</span></code>动态载入上面的其他函数</p></li>
+<li><p>调用<code class="code docutils literal notranslate"><span class="pre">EnumProcesses</span></code>对所有进程进行枚举, 实际上是获得一个储存了所有进程PID的列表</p></li>
+<li><p>以获取到的PID为参数调用<code class="code docutils literal notranslate"><span class="pre">OpenProcess</span></code>, 取得进程句柄</p></li>
+<li><p>用获取到的句柄执行<code class="code docutils literal notranslate"><span class="pre">EnumProcessModules</span></code>枚举进程的模块, 只取第一个模块</p></li>
+<li><p>使用进程句柄和模块句柄为参数调用<code class="code docutils literal notranslate"><span class="pre">GetModuleBaseNameA</span></code>得到进程名</p></li>
+<li><p>和要检测的进程名作比较, 这决定了程序的流程</p></li>
+<li><p>如果是待检测进程的话, 选择自行退出或者是结束调试器, 可能用到<code class="code docutils literal notranslate"><span class="pre">TerminatePorcess</span></code></p></li>
+<li><p>调用<code class="code docutils literal notranslate"><span class="pre">CloseHandle</span></code>关闭句柄</p></li>
+</ol>
+</section>
+<section id="x1-1">
+<h3>0x1.1 栗子<a class="headerlink" href="#x1-1" title="永久链接至标题">#</a></h3>
+<p><code class="code docutils literal notranslate"><span class="pre">//TODO</span></code></p>
+</section>
+<section id="x1-2">
+<h3>0x1.2 绕过<a class="headerlink" href="#x1-2" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>令OpenProcess始终返回<code class="code docutils literal notranslate"><span class="pre">NULL</span></code>, 打不开任何进程.</p></li>
+<li><p>改动OpenProcess后的程序流程</p></li>
+<li><p>更改OD的名字, 进程名也会同时被更改;(最简单的做法了)</p></li>
+</ul>
+</section>
+</section>
+<section id="x2-ii">
+<h2>0x2 检测进程名II<a class="headerlink" href="#x2-ii" title="永久链接至标题">#</a></h2>
+<section id="x2-0">
+<h3>0x2.0 介绍<a class="headerlink" href="#x2-0" title="永久链接至标题">#</a></h3>
+<p>使用的API:</p>
+<ul class="simple">
+<li><p>CreateToolhelp32Snapshot</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">HANDLE</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">CreateToolhelp32Snapshot</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwFlags</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">th32ProcessID</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>该函数对指定的进程做快照, dwFlags参数决定进程的那一部分会被包含在快照中.
+参数二为PID, 返回快照句柄. 指定参数 <code class="code docutils literal notranslate"><span class="pre">CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS,</span> <span class="pre">0)</span></code>
+则对系统中所有的进程进行快照, 可以被<code class="code docutils literal notranslate"><span class="pre">Process32First</span></code>进行枚举.</p>
+<ul class="simple">
+<li><p>Process32First</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">BOOL</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">Process32First</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w">    </span><span class="n">HANDLE</span><span class="w">           </span><span class="n">hSnapshot</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_Inout_</span><span class="w"> </span><span class="n">LPPROCESSENTRY32</span><span class="w"> </span><span class="n">lppe</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>在快照中取得第一个进程的相关信息.
+参数一: 由CreateToolhelp32Snapshot返回的快照句柄.
+参数二: 指向PORCESSENTRY32结构体的指针, 包含可执行文件名, PID,和父进程PID等.
+执行成功返回true.</p>
+<ul class="simple">
+<li><p>Process32Next</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">BOOL</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">Process32Next</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_</span><span class="w">  </span><span class="n">HANDLE</span><span class="w">           </span><span class="n">hSnapshot</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_Out_</span><span class="w"> </span><span class="n">LPPROCESSENTRY32</span><span class="w"> </span><span class="n">lppe</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>取回快照中下一个进程的信息(然而你必须先用Process32First取第一个), 参数和Process32First基本相同.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">Process32First</span></code>和<code class="code docutils literal notranslate"><span class="pre">Process32Next</span></code>中涉及到的<code class="code docutils literal notranslate"><span class="pre">PPROCESSENTRY32</span></code>结构体如下:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PROCESSENTRY32</span><span class="w"> </span><span class="n">structure</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tagPROCESSENTRY32</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">DWORD</span><span class="w">     </span><span class="n">dwSize</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">DWORD</span><span class="w">     </span><span class="n">cntUsage</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">DWORD</span><span class="w">     </span><span class="n">th32ProcessID</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">ULONG_PTR</span><span class="w"> </span><span class="n">th32DefaultHeapID</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">DWORD</span><span class="w">     </span><span class="n">th32ModuleID</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">DWORD</span><span class="w">     </span><span class="n">cntThreads</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">DWORD</span><span class="w">     </span><span class="n">th32ParentProcessID</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">LONG</span><span class="w">      </span><span class="n">pcPriClassBase</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">DWORD</span><span class="w">     </span><span class="n">dwFlags</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">TCHAR</span><span class="w">     </span><span class="n">szExeFile</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">];</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">PROCESSENTRY32</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">PPRO</span><span class="w"></span>
+</pre></div>
+</div>
+<p>最后一个参数就是进程名了好像.</p>
+<p>利用该方法检测进程的基本流程是:</p>
+<ul class="simple">
+<li><p>调用<code class="code docutils literal notranslate"><span class="pre">CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS,</span> <span class="pre">0)</span></code>获得所有进程快照</p></li>
+<li><p>用<code class="code docutils literal notranslate"><span class="pre">Process32First</span></code>取得第一个进程的信息, 判断是否是要检测的进程</p></li>
+<li><p>用<code class="code docutils literal notranslate"><span class="pre">Process32Next</span></code>循环检测其他进程</p></li>
+</ul>
+</section>
+<section id="x2-1">
+<h3>0x2.1 栗子<a class="headerlink" href="#x2-1" title="永久链接至标题">#</a></h3>
+<p><code class="code docutils literal notranslate"><span class="pre">//TODO</span></code></p>
+</section>
+<section id="x2-2">
+<h3>0x2.2 绕过<a class="headerlink" href="#x2-2" title="永久链接至标题">#</a></h3>
+<p>绕过的做法基本同I.</p>
+</section>
+</section>
+<section id="id2">
+<h2>检测窗口类名<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<section id="x3-0">
+<h3>0x3.0 介绍<a class="headerlink" href="#x3-0" title="永久链接至标题">#</a></h3>
+<p>又是API…</p>
+<ul class="simple">
+<li><p>FindWindowA</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">HWND</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">FindWindow</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_opt_</span><span class="w"> </span><span class="n">LPCTSTR</span><span class="w"> </span><span class="n">lpClassName</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">_In_opt_</span><span class="w"> </span><span class="n">LPCTSTR</span><span class="w"> </span><span class="n">lpWindowName</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>该函数取回和参数匹配的顶级窗口的句柄, 大小写不敏感.</p>
+<p>参数一: 窗口类名
+参数二: 窗口名
+参数可选, 至少一个, 另一个可置NULL.
+执行成功返回句柄.</p>
+<p>因为OD的窗口名常常不确定, 利用窗口类名往往比较靠谱;
+将窗口名置NULL, 检测OD的顶级窗体类名即可, 该类名可以通过Spy++得到.</p>
+</section>
+<section id="x3-1">
+<h3>0x3.1 栗子<a class="headerlink" href="#x3-1" title="永久链接至标题">#</a></h3>
+<p><code class="code docutils literal notranslate"><span class="pre">//TODO</span></code></p>
+</section>
+<section id="x3-2">
+<h3>0x3.2 绕过<a class="headerlink" href="#x3-2" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>HideDebugger插件有绕过 FindWindowA/EnumWindows 的选项;</p></li>
+<li><p>使用RE-Pair为OD主程序打补丁, 可更改其类名</p></li>
+</ul>
+</section>
+</section>
+<section id="x3-unhandledexcepitonzwqueryinformationprocess">
+<h2>0x3 UnhandledExcepiton和ZwQueryInformationProcess<a class="headerlink" href="#x3-unhandledexcepitonzwqueryinformationprocess" title="永久链接至标题">#</a></h2>
+<p>这种反调试方法比前面的方法更具技巧性一些, 利用了Windows的异常处理机制,
+但是我还不了解这些异常处理, 不敢胡说,暂时略过.</p>
+<p style="display:none;">
+
+* SetUnhandledExceptionFilter
+
+``c
+LPTOP_LEVEL_EXCEPTION_FILTER WINAPI SetUnhandledExceptionFilter(
+  _In_ LPTOP_LEVEL_EXCEPTION_FILTER lpTopLevelExceptionFilter
+);
+``
+该函数让应用程序可以取代该进程中所有线程的系统异常处理函数.(大概是吧...)
+
+> Enables an application to supersede the top-level exception handler of each
+> thread of a process.
+
+调用该函数后, 如果有异常发生, 且该进程当前没有被调试,
+则该异常会被 `Unhandled Exception Filter`处理 , Filter会调用异常筛选(?)函数,
+该函数由参数一指定.
+
+> After calling this function, if an exception occurs in a process that is not being debugged,
+> and the exception makes it to the unhandled exception filter,
+> that filter will call the exception filter function specified by the
+> lpTopLevelExceptionFilter parameter.
+
+* UnhandledExceptionFilter
+
+``c
+LONG WINAPI UnhandledExceptionFilter(
+  _In_ struct _EXCEPTION_POINTERS *ExceptionInfo
+);
+``
+
+如果当前进程被调试的话, 程序定义的函数(?)会将未处理的异常传递给调试器.
+否则, 它将可选地显示一个应用程序错误的消息框, 并使得异常处理函数执行.
+该函数只能在异常处理例程中的Filter Expression中被调用.
+
+> An application-defined function that passes unhandled exceptions to the debugger,
+> if the process is being debugged. Otherwise,
+> it optionally displays an Application Error message box and causes the exception handler to be executed.
+> This function can be called only from within the filter expression of an exception handler.
+
+该函数唯一的参数是一个`EXCEPTION_POINTERS`指针,
+指定了对此异常的描述和发生异常时的上下文.
+
+> A pointer to an `EXCEPTION_POINTERS` structure that specifies a description
+> of the exception and the processor context at the time of the exception.
+
+> 发生异常时系统的处理顺序(by Jeremy Gordon, Hume):
+> 1. 系统首先判断异常是否应发送给目标程序的异常处理例程,如果决定应该发送,
+>    并且目标程序正在被调试,则系统挂起程序并向调试器发送`EXCEPTION_DEBUG_EVENT`消息.
+> 1. 如果你的程序没有被调试或者调试器未能处理异常,
+>    系统就会继续查找你是否安装了线程相关的异常处理例程,
+>    如果你安装了线程相关的异常处理例程,系统就把异常发送给你的程序seh处理例程,
+>    交由其处理.
+> 1. 每个线程相关的异常处理例程可以处理或者不处理这个异常,
+>    如果他不处理并且安装了多个线程相关的异常处理例程, 可交由链起来的其他例程处理.
+> 1. 如果这些例程均选择不处理异常,如果程序处于被调试状态,操作系统仍会再次挂起程序通知debugger.
+> 1. *如果程序未处于被调试状态或者debugger没有能够处理,
+>    并且你调用SetUnhandledExceptionFilter安装了最后异常处理例程的话,系统转向对它的调用.*
+> 1. *如果你没有安装最后异常处理例程或者他没有处理这个异常,
+>    系统会调用默认的系统处理程序(UnhandledExceptionFilter),通常显示一个对话框,
+>    你可以选择关闭或者最后将其附加到调试器上的调试按钮.
+>    如果没有调试器能被附加于其上或者调试器也处理不了,系统就调用ExitProcess终结程序.*
+> 1. 不过在终结之前,系统仍然对发生异常的线程异常处理句柄来一次展开,
+>    这是线程异常处理例程最后清理的机会.
+
+利用这两个函数的流程可能是:
+
+1. 当点击CM中的check按钮时, 程序抛出不可忽略的异常, 因为程序正在被调试,
+   所以系统将异常传递给调试器(EXCEPITON_DEBUG_EVENT),
+   `SetUnhandledExceptionFilter`指定的异常处理函数并没有被执行
+   (实际上这个函数里放置的应该是程序的真正流程).
+2. 然而OD并不能处理这个异常, 因此最终将调用`UnhandledExceptionFilter`处理异常.
+
+在`UnhandledExceptionFilter`中有函数`ZwQueryInfomationProcess`,
+可以用来判断程序是否被调试, 它是随着`UnhandledExceptionFilter`被调用(在系统领空中),
+但是这个函数也可以单独抽取出来被调用.
+
+``c
+NTSTATUS WINAPI ZwQueryInformationProcess(
+  _In_      HANDLE           ProcessHandle,
+  _In_      PROCESSINFOCLASS ProcessInformationClass,
+  _Out_     PVOID            ProcessInformation,
+  _In_      ULONG            ProcessInformationLength,
+  _Out_opt_ PULONG           ReturnLength
+);
+``
+
+取得特定进程的信息.
+在这里只需要知道使ProcessInformationClass = ProcessDebugPort (7),
+就可以从ProcessInformation缓冲区中取得ProcessInformationLength长度的信息,
+返回FFFFFFFF的话表示正在被调试, 返回0反之. 对应上面步骤f的:
+
+如果没有调试器能被附加于其上或者调试器也处理不了,系统就调用ExitProcess终结程序.
+如果正在调试(返回FFFFFFF)的话->异常传递给调试器->调试器处理不了->程序退出.
+按教程的说法和实际测试的得到: 如果返回0的话跳转到SetUnhandledExceptionFilter指定的函数,
+利用异常实现了反调试.
+
+可是执行SetUnhandledExceptionFilter指定的函数不是在步骤c吗,
+UnhandledExceptionFilter可是步骤6才执行的?
+
+### 绕过
+
+* 手动修改ZwQueryInformationProcess返回值
+* HideDebugger插件的UnhandledExceptionTricks选项可以绕过此反调试.
+* HideOD插件可以单独绕过ZwQueryInformationProcess(记住勾选AutoRun)
+</p></section>
+<section id="x4-ntglobalflag-processheap-outputdebugstringa">
+<h2>0x4 NtGlobalFlag,ProcessHeap,OutputDebugStringA<a class="headerlink" href="#x4-ntglobalflag-processheap-outputdebugstringa" title="永久链接至标题">#</a></h2>
+<p>这几个都比较简单, 从略.</p>
+<section id="ntglobalflag">
+<h3>NtGlobalFlag<a class="headerlink" href="#ntglobalflag" title="永久链接至标题">#</a></h3>
+<p>该标志在<code class="code docutils literal notranslate"><span class="pre">PEB</span></code>中,对于x86, 在0x68处
+对于x64, 在 0xbc 处.</p>
+<p>定位到PEB:</p>
+<ul class="simple">
+<li><p>在EIP入口点定位到EBP的值;</p></li>
+<li><p>或者定位到FS:[0x18];</p></li>
+</ul>
+<p>NtGlobalFlag 默认总是0, 除非它被一个调试器所附加.
+当调试器创建一个进程时, NtGlobalFlag会有如下的值:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">FLG_HEAP_ENABLE_TAIL_CHECK</span> <span class="p">(</span><span class="mh">0x10</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">FLG_HEAP_ENABLE_FREE_CHECK</span> <span class="p">(</span><span class="mh">0x20</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">FLG_HEAP_VALIDATE_PARAMETERS</span> <span class="p">(</span><span class="mh">0x40</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>因此, 如果<code class="code docutils literal notranslate"><span class="pre">NtGlobalFlag</span> <span class="pre">==</span> <span class="pre">0x10</span> <span class="pre">+</span> <span class="pre">0x20</span> <span class="pre">+</span> <span class="pre">0x40</span> <span class="pre">=</span>&#160; <span class="pre">0x70</span></code>时, 程序正在被调试.</p>
+</section>
+<section id="processheap">
+<h3>ProcessHeap<a class="headerlink" href="#processheap" title="永久链接至标题">#</a></h3>
+<p>在PEB的 0x10 偏移处的一个 DWORD, 不为0则表示正在被调试.</p>
+</section>
+<section id="outputdebugstringa">
+<h3>OutputDebugStringA<a class="headerlink" href="#outputdebugstringa" title="永久链接至标题">#</a></h3>
+<p><code class="code docutils literal notranslate"><span class="pre">OutputDebugStringA</span></code>是个函数, 该函数向调试器输出一个字符串,
+它能用于反调试是因为OD的一个bug, 当用这个函数输出一长串的%s字串时, OD会崩溃.</p>
+</section>
+<section id="x4-1">
+<h3>0x4.1 栗子<a class="headerlink" href="#x4-1" title="永久链接至标题">#</a></h3>
+<p>无</p>
+</section>
+<section id="x4-2">
+<h3>0x4.2 绕过<a class="headerlink" href="#x4-2" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>修改对应的值</p></li>
+<li><p>HideOD 插件的 HideNtDebugBit选项, 以及 OutDebugStringA 选项或
+Hide Debugger插件的OutputDebugString exploit选项</p></li>
+</ul>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+评论</div>
+<p class="sd-card-text">如果你有任何意见，请在此评论。
+如果你留下了电子邮箱，我可能会通过 <script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:pbzzragf\100fvyireenvam\056zr\">pbzzragf\100fvyireenvam\056zr<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script> 回复你。</p>
+<section data-isso-id="/blog/threee-way-of-anti-debug" data-title="几种简单的反调试方法" id="isso-thread"></section></div>
+</div>
+</section>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="record-of-a-boring-hack.html">
+      <i class="fa fa-arrow-circle-left"></i> 记一次毫无技术含量的 Hack
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="first-attempt-of-python.html">
+      Python 初试 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Shengyu Zhang<br/>
+  
+      &copy; Copyright 2020-2022, Shengyu Zhang.<br/>
+    Last updated on 2022-11-09.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
 </html>
